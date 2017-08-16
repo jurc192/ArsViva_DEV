@@ -16,6 +16,11 @@ if ( ! function_exists( 'vivarse_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function vivarse_setup() {
+
+	/* JURE EDIT */
+	show_admin_bar( false );
+
+
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
