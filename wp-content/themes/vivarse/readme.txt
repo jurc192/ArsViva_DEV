@@ -13,7 +13,7 @@ A starter theme called vivarse.
 
 == Description ==
 
-Description
+Ars Viva theme
 
 == Installation ==
 
