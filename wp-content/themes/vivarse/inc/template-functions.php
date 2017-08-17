@@ -37,8 +37,12 @@ function get_git_info() {
 	// Array za shranit shell output, vrstico po vrstico
 	$shellOutput = [];
 
-	exec("git status", $shellOutput);
+	exec("git status 2>&1", $shellOutput);
 	echo $shellOutput[0];
+
+	foreach($shellOutput as $line) {
+		echo $line;
+	}
 
 }
 // bi moral tukaj dat add_action? zakaj?
