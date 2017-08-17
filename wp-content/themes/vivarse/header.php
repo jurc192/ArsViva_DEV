@@ -36,8 +36,6 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
-	<h1 id="sassTest">TESTING SASSY STUFF</h1>
-
 	<div class="git-popup" id="gitContainer" onclick="gitPopup()">
  		<span class="git-text" id="gitText"><?php get_git_info(); ?></span>
 	</div>

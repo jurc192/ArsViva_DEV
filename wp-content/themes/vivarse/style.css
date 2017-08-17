@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: vivarse
 Theme URI: http://underscores.me/
@@ -702,6 +703,67 @@ object {
 /*--------------------------------------------------------------
 # Ars Viva edits
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Site width and general stuff
+--------------------------------------------------------------*/
+/* TEMP COLORING*/
+.html {
+  background-color: #faa; }
+
+.site {
+  background-color: #fa8; }
+
+.site-header {
+  background-color: #bbb; }
+
+.site-content {
+  background-color: #faa; }
+
+.site-footer {
+  background-color: #aaa; }
+
+.main-navigation {
+  background-color: #757; }
+
+article {
+  background: #3a3; }
+
+/*--------------------------------------------------------------
+# Footer stuff
+--------------------------------------------------------------*/
+html, body {
+  height: 100%; }
+
+.site, .site-header, .site-content, .site-footer {
+  width: 100%;
+  clear: both;
+  margin: 0 auto; }
+
+.site-header, .site-content, .site-footer {
+  padding: 10px 20px; }
+
+.site {
+  /* Height ni uredu, to pa je - poštudiraj zakaj! */
+  min-height: 100%;
+  position: relative; }
+
+.site-content {
+  padding-bottom: 60px;
+  /* footer height */ }
+
+.site-footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 60px;
+  /* footer height */ }
+
+@media screen and (min-width: 700px) {
+  .site-header, .site-content, .site-footer {
+    width: 80%;
+    max-width: 1024px; } }
+
 /*--------------------------------------------------------------
 # Git current branch popup
 --------------------------------------------------------------*/
