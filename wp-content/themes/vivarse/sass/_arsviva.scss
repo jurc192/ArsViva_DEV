@@ -55,14 +55,26 @@ html, body {
 }
 
 /* Header and navigation stuff */
+$navigation-height: 75px;
+
 .main-navigation ul {
   float: right;
 
   a {
-    height: 75px;
-    line-height: 75px;
+    height: $navigation-height;
+    line-height: $navigation-height;
     margin-left: 10px;
     padding: 0 10px;
+  }
+}
+
+.main-navigation .site-logo {
+  display: inline-block;
+  position: absolute;
+  max-height: 100%;
+
+  img {
+    height: $navigation-height - 10px;
   }
 }
 
