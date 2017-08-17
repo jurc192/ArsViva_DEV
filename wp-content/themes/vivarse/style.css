@@ -703,9 +703,6 @@ object {
 /*--------------------------------------------------------------
 # Ars Viva edits
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Site width and general stuff
---------------------------------------------------------------*/
 /* TEMP COLORING*/
 .html {
   background-color: #faa; }
@@ -724,22 +721,24 @@ object {
 
 .main-navigation {
   background-color: #757; }
+  .main-navigation a {
+    background-color: #899; }
 
 article {
   background: #3a3; }
 
 /*--------------------------------------------------------------
-# Footer stuff
+# Site width and general layout
 --------------------------------------------------------------*/
 html, body {
-  height: 100%; }
+  height: 100%;
+  overflow-x: hidden; }
 
 .site, .site-header, .site-content, .site-footer {
-  width: 100%;
   clear: both;
   margin: 0 auto; }
 
-.site-header, .site-content, .site-footer {
+.site-content, .site-footer {
   padding: 10px 20px; }
 
 .site {
@@ -747,17 +746,25 @@ html, body {
   min-height: 100%;
   position: relative; }
 
+/* Header and navigation stuff */
+.main-navigation ul {
+  float: right; }
+  .main-navigation ul a {
+    height: 75px;
+    line-height: 75px;
+    margin-left: 10px;
+    padding: 0 10px; }
+
+/* Footer stuff */
 .site-content {
-  padding-bottom: 60px;
-  /* footer height */ }
+  padding-bottom: 200px; }
 
 .site-footer {
   position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
-  height: 60px;
-  /* footer height */ }
+  height: 200px; }
 
 @media screen and (min-width: 700px) {
   .site-header, .site-content, .site-footer {
