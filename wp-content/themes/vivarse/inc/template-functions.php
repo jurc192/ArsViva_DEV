@@ -36,13 +36,12 @@ function get_git_info() {
 
 	// Array za shranit shell output, vrstico po vrstico
 	$shellOutput = [];
+	$rootDirectory = ABSPATH;
 
-	exec("git status 2>&1", $shellOutput);
+	// echo ABSPATH;
+
+	exec("git -C $rootDirectory status 2>&1", $shellOutput);
 	echo $shellOutput[0];
-
-	foreach($shellOutput as $line) {
-		echo $line;
-	}
 
 }
 // bi moral tukaj dat add_action? zakaj?
