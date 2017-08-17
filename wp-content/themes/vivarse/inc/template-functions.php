@@ -30,3 +30,15 @@ function vivarse_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'vivarse_pingback_header' );
+
+
+function get_git_info() {
+
+	// Array za shranit shell output, vrstico po vrstico
+	$shellOutput = [];
+
+	exec("git status", $shellOutput);
+	echo $shellOutput[0];
+
+}
+// bi moral tukaj dat add_action? zakaj?

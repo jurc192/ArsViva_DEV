@@ -702,8 +702,29 @@ object {
 /*--------------------------------------------------------------
 # Ars Viva edits
 --------------------------------------------------------------*/
-#sassTest {
-  color: red; }
+/*--------------------------------------------------------------
+# Git current branch popup
+--------------------------------------------------------------*/
+.git-popup {
+  position: fixed;
+  top: 70px;
+  right: 100px;
+  animation: fadeinout 3s forwards; }
+  .git-popup .git-text {
+    background-color: #555;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    padding: 30px; }
+    .git-popup .git-text:hover {
+      background-color: #888; }
 
-body {
-  background-color: yellow; }
+@keyframes fadeinout {
+  0% {
+    opacity: 0; }
+  30% {
+    opacity: 1; }
+  70% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
