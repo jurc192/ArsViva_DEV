@@ -49,16 +49,31 @@ html, body {
 }
 
 .site {
-  /* Height ni uredu, to pa je - poštudiraj zakaj! */
+  /* Height ni uredu, min-height pa je - poštudiraj zakaj! */
   min-height: 100%;
   position: relative;
 }
 
-/* Header and navigation stuff */
-$navigation-height: 75px;
+@media screen and (min-width: 700px) {
+  .site-header, .site-content, .site-footer {
+    // width: 80%;
+    // max-width: 1024px;
+  }
+}
 
-.main-navigation ul {
-  float: right;
+
+/*--------------------------------------------------------------
+# Header and navigation stuff
+--------------------------------------------------------------*/
+$navigation-height: 80px;
+
+
+.main-navigation {
+
+  padding: 0 20px;
+  height: $navigation-height;
+
+  ul {float: right;}
 
   a {
     height: $navigation-height;
@@ -68,17 +83,27 @@ $navigation-height: 75px;
   }
 }
 
-.main-navigation .site-logo {
+.site-logo {
   display: inline-block;
   position: absolute;
   max-height: 100%;
 
   img {
-    height: $navigation-height - 10px;
+    display: block; // za se znebit gapa spodaj, po defoltu je img inline elemnent
+    height: $navigation-height;
+    padding: 15px;
   }
 }
 
-/* Footer stuff */
+/* Hamburger menu */
+.menu-toggle {
+  float: right;
+}
+
+
+/*--------------------------------------------------------------
+# Footer stuff
+--------------------------------------------------------------*/
 $footer-height: 200px;
 
 .site-content {
@@ -91,14 +116,6 @@ $footer-height: 200px;
   right: 0;
   left: 0;
   height: $footer-height;
-
-}
-
-@media screen and (min-width: 700px) {
-  .site-header, .site-content, .site-footer {
-    width: 80%;
-    max-width: 1024px;
-  }
 
 }
 

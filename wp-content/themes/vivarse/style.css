@@ -742,27 +742,40 @@ html, body {
   padding: 10px 20px; }
 
 .site {
-  /* Height ni uredu, to pa je - poštudiraj zakaj! */
+  /* Height ni uredu, min-height pa je - poštudiraj zakaj! */
   min-height: 100%;
   position: relative; }
 
-/* Header and navigation stuff */
-.main-navigation ul {
-  float: right; }
-  .main-navigation ul a {
-    height: 75px;
-    line-height: 75px;
+/*--------------------------------------------------------------
+# Header and navigation stuff
+--------------------------------------------------------------*/
+.main-navigation {
+  padding: 0 20px;
+  height: 80px; }
+  .main-navigation ul {
+    float: right; }
+  .main-navigation a {
+    height: 80px;
+    line-height: 80px;
     margin-left: 10px;
     padding: 0 10px; }
 
-.main-navigation .site-logo {
+.site-logo {
   display: inline-block;
   position: absolute;
   max-height: 100%; }
-  .main-navigation .site-logo img {
-    height: 65px; }
+  .site-logo img {
+    display: block;
+    height: 80px;
+    padding: 15px; }
 
-/* Footer stuff */
+/* Hamburger menu */
+.menu-toggle {
+  float: right; }
+
+/*--------------------------------------------------------------
+# Footer stuff
+--------------------------------------------------------------*/
 .site-content {
   padding-bottom: 200px; }
 
@@ -772,11 +785,6 @@ html, body {
   right: 0;
   left: 0;
   height: 200px; }
-
-@media screen and (min-width: 700px) {
-  .site-header, .site-content, .site-footer {
-    width: 80%;
-    max-width: 1024px; } }
 
 /*--------------------------------------------------------------
 # Git current branch popup
