@@ -64,7 +64,7 @@ html, body {
 /*--------------------------------------------------------------
 # Header and navigation stuff
 --------------------------------------------------------------*/
-$navigation-height: 80px;
+$navigation-height: 60px;
 
 
 .site-header {
@@ -147,6 +147,7 @@ $footer-height: 200px;
 
 article {
     @include word-wrap();
+    height: calc(100vh - 100px);  //temp hack, uporabi variable + pogruntaj kaj je z margini
 }
 
 /*--------------------------------------------------------------
