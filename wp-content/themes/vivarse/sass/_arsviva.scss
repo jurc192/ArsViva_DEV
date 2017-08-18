@@ -36,7 +36,6 @@ article {
 --------------------------------------------------------------*/
 html, body {
   height: 100%;
-  overflow-x: hidden;
 }
 
 .site, .site-header, .site-content, .site-footer {
@@ -54,6 +53,7 @@ html, body {
   position: relative;
 }
 
+
 @media screen and (min-width: 700px) {
   .site-header, .site-content, .site-footer {
     // width: 80%;
@@ -61,17 +61,24 @@ html, body {
   }
 }
 
-
 /*--------------------------------------------------------------
 # Header and navigation stuff
 --------------------------------------------------------------*/
 $navigation-height: 80px;
 
 
+.site-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
 .main-navigation {
 
-  padding: 0 20px;
+  // Nebi blo logično imet position: absolute;?
   height: $navigation-height;
+  width: 100%;
+  padding: 0 35px;
 
   ul {float: right;}
 
@@ -93,6 +100,10 @@ $navigation-height: 80px;
     height: $navigation-height;
     padding: 15px;
   }
+}
+
+.site-content {
+  margin-top: $navigation-height;
 }
 
 /* Hamburger menu */
@@ -119,6 +130,24 @@ $footer-height: 200px;
 
 }
 
+
+/*--------------------------------------------------------------
+# Posts stuff
+--------------------------------------------------------------*/
+@mixin word-wrap() {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+article {
+    @include word-wrap();
+}
 
 /*--------------------------------------------------------------
 # Git current branch popup
