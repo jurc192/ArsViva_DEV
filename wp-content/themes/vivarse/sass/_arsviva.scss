@@ -43,9 +43,9 @@ html, body {
   margin: 0 auto;
 }
 
-.site-content, .site-footer{
-    padding: 10px 20px;
-}
+// .site-content, .site-footer{
+//     padding: 10px 20px;
+// }
 
 .site {
   /* Height ni uredu, min-height pa je - poštudiraj zakaj! */
@@ -147,7 +147,11 @@ $footer-height: 200px;
 
 article {
     @include word-wrap();
-    height: calc(100vh - 100px);  //temp hack, uporabi variable + pogruntaj kaj je z margini
+    height: calc(100vh - 60px);
+}
+
+h2.entry-title {
+  margin: 0;
 }
 
 /*--------------------------------------------------------------

@@ -596,7 +596,8 @@ a {
   display: block; }
 
 .hentry {
-  margin: 0 0 1.5em; }
+  margin: 0;
+  border-bottom: 1px solid #757; }
 
 .updated:not(.published) {
   display: none; }
@@ -737,9 +738,6 @@ html, body {
   clear: both;
   margin: 0 auto; }
 
-.site-content, .site-footer {
-  padding: 10px 20px; }
-
 .site {
   /* Height ni uredu, min-height pa je - poštudiraj zakaj! */
   min-height: 100%;
@@ -806,7 +804,10 @@ article {
   -moz-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
-  height: calc(100vh - 100px); }
+  height: calc(100vh - 60px); }
+
+h2.entry-title {
+  margin: 0; }
 
 /*--------------------------------------------------------------
 # Git current branch popup

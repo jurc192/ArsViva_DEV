@@ -38,6 +38,7 @@
 	</header><!-- #masthead -->
 
 	<div class="git-popup" id="gitContainer" onclick="gitPopup()">
+	<?php global $template; echo basename($template); ?>
  		<span class="git-text" id="gitText"><?php get_git_info(); ?></span>
 	</div>
 
