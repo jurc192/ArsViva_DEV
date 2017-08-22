@@ -749,7 +749,8 @@ html, body {
 .site-header {
   position: fixed;
   width: 100%;
-  top: 0; }
+  top: 0;
+  z-index: 10; }
 
 .main-navigation {
   height: 60px;
@@ -772,9 +773,6 @@ html, body {
     height: 60px;
     padding: 15px; }
 
-.site-content {
-  margin-top: 60px; }
-
 /* Hamburger menu */
 .menu-toggle {
   float: right; }
@@ -782,10 +780,10 @@ html, body {
 /*--------------------------------------------------------------
 # Footer stuff
 --------------------------------------------------------------*/
-.site-content {
+.site-footer {
   padding-bottom: 200px; }
 
-.site-footer {
+.site-info {
   position: absolute;
   bottom: 0;
   right: 0;
