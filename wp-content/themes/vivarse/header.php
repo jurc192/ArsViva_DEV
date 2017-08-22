@@ -21,8 +21,8 @@
 <body <?php body_class(); ?>>
 
 <header id="masthead" class="site-header">
-
 	<nav id="site-navigation" class="main-navigation">
+
 		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'vivarse' ); ?></button>
 		<a class="site-logo" href="./"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="ArsViva logo"></a>
 		<?php
@@ -32,17 +32,15 @@
 				'container'			 => 'false'
 			) );
 		?>
-	</nav><!-- #site-navigation -->
-</header><!-- #masthead -->
+
+	</nav><!-- #site-navigation .main-navigation -->
+</header><!-- #masthead .site-header-->
 
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'vivarse' ); ?></a>
-
 
 
 	<?php //global $template; echo basename($template); ?>
 	<!-- <div class="git-popup" id="gitContainer" onclick="gitPopup()">
  		<span class="git-text" id="gitText"><?php //get_git_info(); ?></span>
 	</div> -->
-
-	<div id="content" class="site-content">

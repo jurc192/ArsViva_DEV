@@ -1,8 +1,6 @@
 <?php
 /**
- * The template for displaying the footer
- *
- * Contains the closing of the #content div and all content after.
+ * Vivarse footer
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
@@ -11,12 +9,10 @@
 
 ?>
 
-	</div><!-- #content -->
-
-
+<!-- IN FUTURE PASTE THE <footer> HERE!! -->
 
 
 <?php wp_footer(); ?>
-</div><!-- #page -->
+</div><!-- #page .site -->
 </body>
 </html>

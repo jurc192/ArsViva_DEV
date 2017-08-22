@@ -1,37 +1,76 @@
-<?php /* Template Name: Scroll template */
+<?php /* Template Name: Scroll template
 
+<!DOCTYPE html>
+<html>
+<head>
+	= head stuff =
+</head>
+
+<body>
+<header class='site-header'>
+	<nav class='main-navigation'> =nav stuff= </nav>
+</header>
+
+<div class='site'>
+*/
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<main id="main" class="site-main">
 
-		<?php
-		if ( have_posts() ) : ?>
+		<section class="section">
+			<h1>TEST SECTION</h1>
+			<p>Bla bla lorem ipsum Bla bla lorem ipsum Bla bla lorem ipsum
+				Bla bla lorem ipsumBla bla lorem ipsumBla bla lorem ipsumBla
+				Bla bla lorem ipsumBla bla lorem ipsumBla bla lorem ipsum
+				Bla bla lorem ipsumBla bla lorem ipsumBla bla lorem ipsum</p>
+		</section>
 
-    <?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
+		<section class="section">
+			<h1>TEST SECTION</h1>
+			<p>Bla bla lorem ipsum Bla bla lorem ipsum Bla bla lorem ipsum
+				Bla bla lorem ipsumBla bla lorem ipsumBla bla lorem ipsumBla
+				Bla bla lorem ipsumBla bla lorem ipsumBla bla lorem ipsum
+				Bla bla lorem ipsumBla bla lorem ipsumBla bla lorem ipsum</p>
+		</section>
 
-				get_template_part( 'template-parts/content', get_post_format() );
+		<section class="section">
+			<h1>TEST SECTION</h1>
+			<p>Bla bla lorem ipsum Bla bla lorem ipsum Bla bla lorem ipsum
+				Bla bla lorem ipsumBla bla lorem ipsumBla bla lorem ipsumBla
+				Bla bla lorem ipsumBla bla lorem ipsumBla bla lorem ipsum
+				Bla bla lorem ipsumBla bla lorem ipsumBla bla lorem ipsum</p>
+		</section>
 
-			endwhile;
 
-			the_posts_navigation();
+<!-- TEMPORARY HACK, PUT FOOTER OUT OF HERE! -->
+		<footer id="colophon" class="site-footer section fp-auto-height">
+	    <div class="site-info">
+	      <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'vivarse' ) ); ?>"><?php
+	        /* translators: %s: CMS name, i.e. WordPress. */
+	        printf( esc_html__( 'Proudly powered by %s', 'vivarse' ), 'WordPress' );
+	      ?></a>
+	      <span class="sep"> | </span>
+	      <?php
+	        /* translators: 1: Theme name, 2: Theme author. */
+	        printf( esc_html__( 'Theme: %1$s by %2$s.', 'vivarse' ), 'vivarse', '<a href="http://underscores.me/">Jure Vidmar, Primoz Prevc</a>' );
+	      ?>
+	    </div><!-- .site-info -->
+	  </footer><!-- #colophon .site footer -->
 
-		else :
 
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	</main><!-- #main .site-main -->
 
 <?php
-get_sidebar();
+/* Footer tags:
+
+	<footer class='site-footer'>
+		<div class='site-info'> =footer stuff= </div>
+	</footer><!-- .site-footer -->
+
+</div><!-- .site -->
+</body>
+</html>
+
+
+*/
 get_footer();
