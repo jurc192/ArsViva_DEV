@@ -1,4 +1,7 @@
-<?php /* Template Name: Scroll template
+<?php /*
+
+This page is used on "DOGODKI" page.
+Front page (real home page) uses scroll_template.php
 
 <!DOCTYPE html>
 <html>
@@ -17,36 +20,23 @@ get_header(); ?>
 
 	<main id="main" class="site-main">
 
-		<?php
-		/* Custom query za front page - upcoming events */
-		$myquery = new WP_Query(array('cat'=> 3));
+    <?php
+		if ( have_posts() ) :
 
-		if ( $myquery->have_posts() ) :
-			if ( is_front_page() ):
+			/* Start the Loop */
+			while ( have_posts() ) : the_post();
 
-				while( $myquery->have_posts() ) : $myquery->the_post();
-					get_template_part( 'template-parts/content', 'home' );
-				endwhile;
+				get_template_part( 'template-parts/content', get_post_format() );
 
-			endif;
-		endif;
-		wp_reset_postdata();
-		// 		while ( $myquery->have_posts() ) : the_post();
-		//
-		// 			get_template_part( 'template-parts/content', 'home' );
-		//
-		// 		endwhile;
-		// 		wp_reset_postdata();
-		// 		the_posts_navigation();
-		// 	endif;
-		//
-		// else :
-		// 	echo "I DONT HAVE POSTS!";
-		// 	/* Ko ni nobenih najavljenih dogodkov */
-		// 	get_template_part( 'template-parts/content', 'none' );
-		//
-		// endif;
-		?>
+			endwhile;
+
+			the_posts_navigation();
+
+		else :
+
+			get_template_part( 'template-parts/content', 'none' );
+
+		endif; ?>
 
 
 		<!-- TEMPORARY HACK, PUT FOOTER OUT OF HERE! -->
@@ -70,6 +60,7 @@ get_header(); ?>
 <?php
 /* Footer tags:
 
+  <!-- MOVED THIS TO <main> FOR CSS/FULLPAGE REASONS TEMP -->
 	<footer class='site-footer'>
 		<div class='site-info'> =footer stuff= </div>
 	</footer><!-- .site-footer -->

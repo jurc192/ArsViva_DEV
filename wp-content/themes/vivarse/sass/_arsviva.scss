@@ -119,19 +119,9 @@ $navigation-height: 60px;
 --------------------------------------------------------------*/
 $footer-height: 200px;
 
-.site {
-  // padding-bottom: $footer-height;
-}
-
-.site-footer, .site-info {
-  // position: absolute;
-  // bottom: 0;
-  // right: 0;
-  // left: 0;
+.site-info {
   height: $footer-height;
-
 }
-
 
 /*--------------------------------------------------------------
 # Posts stuff
