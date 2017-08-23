@@ -35,7 +35,7 @@
 
 	</nav><!-- #site-navigation .main-navigation -->
 </header><!-- #masthead .site-header-->
-<?php global $template; echo basename($template); ?>
+<?php //global $template; echo basename($template); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'vivarse' ); ?></a>
 

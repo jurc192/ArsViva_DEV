@@ -6,11 +6,9 @@
  *
  * @package vivarse
  */
+ ?>
 
-?>
-
-<!-- tukaj dej v post_class -> 'section' -->
-<article id="post-<?php the_ID(); ?>" <?php post_class('section'); ?>>
+<article style="background-image: url(<?php bloginfo('template_url'); ?>/images/home-fotka1.jpg);" id="post-<?php the_ID(); ?>" <?php post_class('section'); ?>>
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :

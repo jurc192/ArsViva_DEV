@@ -43,23 +43,6 @@ html, body {
   margin: 0 auto;
 }
 
-// .site-content, .site-footer{
-//     padding: 10px 20px;
-// }
-
-.site {
-  /* Height ni uredu, min-height pa je - poštudiraj zakaj! */
-  min-height: 100%;
-  position: relative;
-}
-
-
-@media screen and (min-width: 700px) {
-  .site-header, .site-content, .site-footer {
-    // width: 80%;
-    // max-width: 1024px;
-  }
-}
 
 /*--------------------------------------------------------------
 # Header and navigation stuff
@@ -124,7 +107,7 @@ $footer-height: 200px;
 }
 
 /*--------------------------------------------------------------
-# Posts stuff
+# Posts stuff @scroll template
 --------------------------------------------------------------*/
 @mixin word-wrap() {
   overflow-wrap: break-word;
@@ -139,12 +122,13 @@ $footer-height: 200px;
 
 article {
     @include word-wrap();
-    height: calc(100vh - 60px);
+    background-size: cover;
 }
 
 h2.entry-title {
   margin: 0;
 }
+
 
 /*--------------------------------------------------------------
 # Git current branch popup

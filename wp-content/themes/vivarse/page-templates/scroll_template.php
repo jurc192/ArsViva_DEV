@@ -26,48 +26,21 @@ get_header(); ?>
 
 				while( $myquery->have_posts() ) : $myquery->the_post();
 					get_template_part( 'template-parts/content', 'home' );
+					// include(locate_template('template-parts/content-home.php'));
 				endwhile;
 
+			else:
+				echo "<h1 style='z-index: 15; position: absolute; top: 100px; left: 100px;'>NOT FIRST PAGE!</h1>";
 			endif;
+
+		else:
+			echo "<h1 style='z-index: 15; position: absolute; top: 200px; left: 100px;'>I DON'T HAVE ANY POSTS</h1>";
 		endif;
+
 		wp_reset_postdata();
-		// 		while ( $myquery->have_posts() ) : the_post();
-		//
-		// 			get_template_part( 'template-parts/content', 'home' );
-		//
-		// 		endwhile;
-		// 		wp_reset_postdata();
-		// 		the_posts_navigation();
-		// 	endif;
-		//
-		// else :
-		// 	echo "I DONT HAVE POSTS!";
-		// 	/* Ko ni nobenih najavljenih dogodkov */
-		// 	get_template_part( 'template-parts/content', 'none' );
-		//
-		// endif;
-		?>
 
+		// Ideally footer would be outside <main> but
 
-		<!-- TEMPORARY HACK, PUT FOOTER OUT OF HERE! -->
-		<footer id="colophon" class="site-footer section fp-auto-height">
-	    <div class="site-info">
-	      <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'vivarse' ) ); ?>"><?php
-	        /* translators: %s: CMS name, i.e. WordPress. */
-	        printf( esc_html__( 'Proudly powered by %s', 'vivarse' ), 'WordPress' );
-	      ?></a>
-	      <span class="sep"> | </span>
-	      <?php
-	        /* translators: 1: Theme name, 2: Theme author. */
-	        printf( esc_html__( 'Theme: %1$s by %2$s.', 'vivarse' ), 'vivarse', '<a href="http://underscores.me/">Jure Vidmar, Primoz Prevc</a>' );
-	      ?>
-	    </div><!-- .site-info -->
-	  </footer><!-- #colophon .site footer -->
-
-
-	</main><!-- #main .site-main -->
-
-<?php
 /* Footer tags:
 
 	<footer class='site-footer'>
