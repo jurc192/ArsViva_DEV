@@ -42,6 +42,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 	## Galleries
 # Arsviva edits
 --------------------------------------------------------------*/
+/* Default values for _underscores starter theme */
+/* ARSVIVA colors */
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -226,8 +228,8 @@ input,
 select,
 optgroup,
 textarea {
-  color: #404040;
-  font-family: sans-serif;
+  color: #141518;
+  font-family: "Arial", sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
@@ -416,11 +418,11 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue; }
+  color: #141518; }
   a:visited {
-    color: purple; }
+    color: #141518; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #555; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -703,30 +705,6 @@ object {
 /*--------------------------------------------------------------
 # Ars Viva edits
 --------------------------------------------------------------*/
-/* TEMP COLORING*/
-.html {
-  background-color: #faa; }
-
-.site {
-  background-color: #fa8; }
-
-.site-header {
-  background-color: #bbb; }
-
-.site-content {
-  background-color: #faa; }
-
-.site-footer {
-  background-color: #aaa; }
-
-.main-navigation {
-  background-color: #757; }
-  .main-navigation a {
-    background-color: #899; }
-
-article {
-  background: #3a3; }
-
 /*--------------------------------------------------------------
 # Site width and general layout
 --------------------------------------------------------------*/
@@ -749,7 +727,8 @@ html, body {
 .main-navigation {
   height: 60px;
   width: 100%;
-  padding: 0 35px; }
+  padding: 0 35px;
+  background-color: #fff; }
   .main-navigation ul {
     float: right; }
   .main-navigation a {
@@ -789,7 +768,10 @@ article {
   -moz-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
-  background-size: cover; }
+  background-size: cover;
+  font-size: 1rem; }
+  article a {
+    text-decoration: none; }
 
 article:nth-of-type(even) img.backgr {
   right: 0;
@@ -820,7 +802,29 @@ img.backgr {
   padding: 5%;
   height: 80%;
   width: 40%;
-  background-color: #555; }
+  background-color: #fff; }
+  .text-tile h2 {
+    font-size: 2rem;
+    margin-top: 0; }
+  .text-tile p.type {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 0.3rem; }
+
+/*--------------------------------------------------------------
+# Fonts
+--------------------------------------------------------------*/
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif; }
+
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+/*--------------------------------------------------------------
+# Colors
+--------------------------------------------------------------*/
+html, body {
+  background-color: #e7e7e7; }
 
 /*--------------------------------------------------------------
 # Git current branch popup
