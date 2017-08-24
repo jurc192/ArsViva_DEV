@@ -6,9 +6,7 @@
  *
  * @package vivarse
  */
-
-
-wp_footer(); ?>
+ ?>
 
     <footer id="colophon" class="site-footer section fp-auto-height">
       <div class="site-info">
@@ -30,5 +28,6 @@ wp_footer(); ?>
   </main><!-- #main .site-main -->
 
 </div><!-- #page .site -->
+<?php wp_footer(); ?>
 </body>
 </html>
