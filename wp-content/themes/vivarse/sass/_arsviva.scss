@@ -23,6 +23,8 @@ $navigation-height: 60px;
   top: 0;
 
   z-index: 10;
+
+  box-shadow: 5px 5px 5px rgba(100, 100, 100, .25);
 }
 
 .main-navigation {
@@ -73,6 +75,24 @@ $footer-height: 200px;
 .site-info {
   height: $footer-height;
 }
+
+.site-footer {
+
+  background-color: #FAAF42;  // oranzna
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+
+    object-fit: contain;
+    object-position: left;
+
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Posts stuff @scroll template
@@ -145,6 +165,7 @@ img.backgr {
   height: 80%;
   width: 40%; // TEMP HACK, find proper way to do it
   background-color: $color_arsviva_white;
+  box-shadow: 5px 5px 5px rgba(100, 100, 100, .25);
 
   h2 {
     font-size: 2rem;
