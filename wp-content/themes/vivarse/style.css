@@ -791,17 +791,6 @@ article {
   hyphens: auto;
   background-size: cover; }
 
-h2.entry-title {
-  margin: 0; }
-
-img.backgr {
-  position: absolute;
-  width: 66.66667%;
-  height: 100%;
-  top: 0;
-  bottom: 0;
-  object-fit: cover; }
-
 article:nth-of-type(even) img.backgr {
   right: 0;
   object-position: right; }
@@ -816,9 +805,19 @@ article:nth-of-type(odd) img.backgr {
 article:nth-of-type(odd) .text-tile {
   left: 25%; }
 
+img.backgr {
+  position: absolute;
+  width: 66.66667%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  object-fit: cover; }
+
 .text-tile {
   position: relative;
   margin: 0 auto;
+  overflow: hidden;
+  padding: 5%;
   height: 80%;
   width: 40%;
   background-color: #555; }

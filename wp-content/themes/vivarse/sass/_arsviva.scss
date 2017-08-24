@@ -125,21 +125,8 @@ article {
     background-size: cover;
 }
 
-h2.entry-title {
-  margin: 0;
-}
-
-// Znotraj <main> mora bit vsaka prva slika na levi, vsaka druga na desni
-img.backgr {
-  position: absolute;
-  width: percentage(2/3);
-  height: 100%;
-  top: 0;
-  bottom: 0;
-
-  object-fit: cover;
-}
-
+// Znotraj <main> mora bit vsaka prva slika na levi, vsaka druga na desni.
+// Isto za Text ploščice
 article:nth-of-type(even) {
   & img.backgr {
     right: 0;
@@ -162,15 +149,32 @@ article:nth-of-type(odd) {
   }
 }
 
+// Slika članka
+img.backgr {
+  position: absolute;
+  width: percentage(2/3);
+  height: 100%;
+  top: 0;
+  bottom: 0;
+
+  object-fit: cover;
+}
+
 // Ploščica za text
-// centrirana je na 1/4, široka je pa cca 40% ?
 .text-tile {
   position: relative;
   margin: 0 auto;
 
+  overflow: hidden;
+  padding: 5%;
+
   height: 80%;
   width: 40%; // TEMP HACK, find proper way to do it
   background-color: $color_background-popup;
+
+  .entry-title {
+    
+  }
 }
 
 
