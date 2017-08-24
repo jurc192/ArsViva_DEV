@@ -129,6 +129,34 @@ h2.entry-title {
   margin: 0;
 }
 
+// Znotraj <main> mora bit vsaka prva slika na levi, vsaka druga na desni
+article:nth-of-type(odd) img.backgr{
+  position: absolute;
+
+  width: percentage(2/3);
+  height: 100%;
+
+  top: 0;
+  bottom: 0;
+
+  object-fit: cover; /* Baje da to ni dobro podprto - raje backgr v divu? */
+  object-position: left;
+}
+
+article:nth-of-type(even) img.backgr{
+  position: absolute;
+
+  width: percentage(2/3);
+  height: 100%;
+
+  top: 0;
+  bottom: 0;
+  right: 0;
+
+  object-fit: cover; /* Baje da to ni dobro podprto - raje backgr v divu? */
+  object-position: left;
+}
+
 
 /*--------------------------------------------------------------
 # Git current branch popup

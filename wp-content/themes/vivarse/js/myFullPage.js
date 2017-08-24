@@ -3,5 +3,8 @@ jQuery(document).ready(function() {
 
     fixedElements: '#site-header, .screen-reader-text',
     paddingTop: 60,
+		scrollingSpeed: 700,
+		easingcss3: 'linear',
+
   });
 });

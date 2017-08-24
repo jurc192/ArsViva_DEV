@@ -8,7 +8,7 @@
  */
  ?>
 
-<article style="background-image: url(<?php bloginfo('template_url'); ?>/images/home-fotka1.jpg);" id="post-<?php the_ID(); ?>" <?php post_class('section'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('section'); ?>>
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
@@ -50,4 +50,6 @@
 	<footer class="entry-footer">
 		<?php vivarse_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
+
+  <img class="backgr" src="<?php bloginfo('template_url'); ?>/images/home-fotka1.jpg" alt="fotka1">
 </article><!-- #post-<?php the_ID(); ?> -->
