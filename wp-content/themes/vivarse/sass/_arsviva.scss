@@ -130,32 +130,49 @@ h2.entry-title {
 }
 
 // Znotraj <main> mora bit vsaka prva slika na levi, vsaka druga na desni
-article:nth-of-type(odd) img.backgr{
+img.backgr {
   position: absolute;
-
   width: percentage(2/3);
   height: 100%;
-
   top: 0;
   bottom: 0;
 
-  object-fit: cover; /* Baje da to ni dobro podprto - raje backgr v divu? */
-  object-position: left;
+  object-fit: cover;
 }
 
-article:nth-of-type(even) img.backgr{
-  position: absolute;
+article:nth-of-type(even) {
+  & img.backgr {
+    right: 0;
+    object-position: right;
+  }
 
-  width: percentage(2/3);
-  height: 100%;
-
-  top: 0;
-  bottom: 0;
-  right: 0;
-
-  object-fit: cover; /* Baje da to ni dobro podprto - raje backgr v divu? */
-  object-position: left;
+  & .text-tile {
+    right: 25%;
+  }
 }
+
+article:nth-of-type(odd) {
+  & img.backgr {
+    left: 0;
+    object-position: left;
+  }
+
+  & .text-tile {
+      left: 25%;
+  }
+}
+
+// Ploščica za text
+// centrirana je na 1/4, široka je pa cca 40% ?
+.text-tile {
+  position: relative;
+  margin: 0 auto;
+
+  height: 80%;
+  width: 40%; // TEMP HACK, find proper way to do it
+  background-color: $color_background-popup;
+}
+
 
 
 /*--------------------------------------------------------------

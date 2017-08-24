@@ -794,26 +794,34 @@ article {
 h2.entry-title {
   margin: 0; }
 
-article:nth-of-type(odd) img.backgr {
+img.backgr {
   position: absolute;
   width: 66.66667%;
   height: 100%;
   top: 0;
   bottom: 0;
-  object-fit: cover;
-  /* Baje da to ni dobro podprto - raje backgr v divu? */
-  object-position: left; }
+  object-fit: cover; }
 
 article:nth-of-type(even) img.backgr {
-  position: absolute;
-  width: 66.66667%;
-  height: 100%;
-  top: 0;
-  bottom: 0;
   right: 0;
-  object-fit: cover;
-  /* Baje da to ni dobro podprto - raje backgr v divu? */
+  object-position: right; }
+
+article:nth-of-type(even) .text-tile {
+  right: 25%; }
+
+article:nth-of-type(odd) img.backgr {
+  left: 0;
   object-position: left; }
+
+article:nth-of-type(odd) .text-tile {
+  left: 25%; }
+
+.text-tile {
+  position: relative;
+  margin: 0 auto;
+  height: 80%;
+  width: 40%;
+  background-color: #555; }
 
 /*--------------------------------------------------------------
 # Git current branch popup
