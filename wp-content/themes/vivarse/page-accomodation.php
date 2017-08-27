@@ -3,7 +3,7 @@
 	<main id="main" class="site-main">
 
 <div class="section">
-	<h1>THIS IS A PAGE</h1>
+	<h1>THIS IS PAGE: ACCOMODATION</h1>
 </div>
 
 <?php

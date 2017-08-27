@@ -1,18 +1,4 @@
-<?php /* Template Name: Scroll template
-
-<!DOCTYPE html>
-<html>
-<head>
-	= head stuff =
-</head>
-
-<body>
-<header class='site-header'>
-	<nav class='main-navigation'> =nav stuff= </nav>
-</header>
-
-<div class='site'>
-*/
+<?php
 get_header(); ?>
 
 	<main id="main" class="site-main">
@@ -38,18 +24,4 @@ get_header(); ?>
 
 		wp_reset_postdata();
 
-		// Ideally footer would be outside <main> but
-
-/* Footer tags:
-
-	<footer class='site-footer'>
-		<div class='site-info'> =footer stuff= </div>
-	</footer><!-- .site-footer -->
-
-</div><!-- .site -->
-</body>
-</html>
-
-
-*/
 get_footer();
