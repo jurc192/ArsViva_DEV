@@ -3,7 +3,7 @@
 	<main id="main" class="site-main">
 
 		<article class="section">
-			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/home-fotka1.jpg" alt="fotka1">
+			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/ozavodu-fotka1.jpg" alt="fotka1">
 
 			<div class="text-tile">
 				<h2>Predstavitev</h2>
@@ -25,7 +25,7 @@
 		</div>
 
 		<article class="section">
-			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/home-fotka1.jpg" alt="fotka1">
+			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/ozavodu-fotka3.jpg" alt="fotka2">
 
 			<div class="slide">
 				<div class="text-tile">
@@ -55,7 +55,7 @@
 		</div>
 
 		<article class="section">
-			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/home-fotka1.jpg" alt="fotka1">
+			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/ozavodu-fotka3.jpg" alt="fotka1">
 
 			<div class="slide">
 				<div class="text-tile">
@@ -88,7 +88,7 @@
 		</article>
 
 		<article class="section">
-			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/home-fotka1.jpg" alt="fotka1">
+			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/ozavodu-fotka4.jpg" alt="fotka1">
 
 			<div class="slide">
 				<div class="text-tile">

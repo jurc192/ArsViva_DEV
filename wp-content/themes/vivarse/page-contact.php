@@ -3,7 +3,7 @@
 	<main id="main" class="site-main">
 
 		<article class="section">
-			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/home-fotka1.jpg" alt="fotka1">
+			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/kontakt.jpg" alt="fotka1">
 
 			<div class="text-tile">
 				<h2>ARS VIVA</h2>
