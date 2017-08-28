@@ -206,8 +206,9 @@ html, body {
 --------------------------------------------------------------*/
 .git-popup {
   position: fixed;
-  top: 70px;
+  top: 100px;
   right: 100px;
+  z-index: 50;
 
   animation: fadeinout 3s forwards;
 

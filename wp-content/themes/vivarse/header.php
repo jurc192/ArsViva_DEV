@@ -41,8 +41,6 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'vivarse' ); ?></a>
 
-
-
-	<!-- <div class="git-popup" id="gitContainer" onclick="gitPopup()">
- 		<span class="git-text" id="gitText"><?php //get_git_info(); ?></span>
-	</div> -->
+	<div class="git-popup" id="gitContainer" onclick="gitPopup()">
+		<span class="git-text" id="gitText"><?php get_git_info(); ?></span>
+	</div>
