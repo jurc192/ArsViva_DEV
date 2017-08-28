@@ -2,10 +2,14 @@
 get_header(); ?>
 
 	<main id="main" class="site-main">
-		
+
 		<?php
 		/* Custom query za front page - upcoming events */
-		$myquery = new WP_Query(array('cat'=> 3));
+		$myquery_args = array(
+			'post_type' => 'event',
+			'post_status' => 'publish',
+		);
+		$myquery = new WP_Query($myquery_args);
 
 		if ( $myquery->have_posts() ) :
 			if ( is_front_page() ):
