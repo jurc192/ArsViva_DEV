@@ -177,7 +177,7 @@ img.backgr {
 # Front page events
 --------------------------------------------------------------*/
   // Tip dogodka
-  p.type {
+  .type {
     text-transform: lowercase;
     font-weight: bold;
     font-size: 1.5rem;
@@ -186,10 +186,8 @@ img.backgr {
   }
 
   // Kdaj, kje
-  p.info {
-    span {
-      font-weight: bold;
-    }
+  .info {
+    font-weight: bold;
   }
 
 }

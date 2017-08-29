@@ -6,40 +6,68 @@
  *
  * @package vivarse
  */
+
+/*
+  General structure:
+
+  article
+    -image
+    -text_tile
+      -header
+        -title
+        -metadata (type, time, location)
+      -content
+*/
+
+
+/* I put most of the php stuff here, to make template more readable */
+
+$post_id = get_the_ID();
+$post_title = get_the_title();
+
+$dateformat = get_option( 'date_format' );
+$event_time = get_post_meta( $post_id, 'event-start-date', true );
+
+$event_location = get_post_meta( $post_id, 'event-location', true);
+
+
  ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('section'); ?>>
+<article id="post-<?php echo $post_id; ?>" <?php post_class('section'); ?>>
   <img class="backgr" src="<?php bloginfo('template_url'); ?>/images/home-fotka1.jpg" alt="fotka1">
 
   <div class="text-tile">
-
     <header class="entry-header">
-  		<?php
-  			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 
-  		if ( 'event' === get_post_type() ) : ?>
+      <!-- Event title -->
+      <h2 class="entry-title">
+        <a href=<?php echo esc_url( get_permalink()); ?> rel="bookmark"><?php echo $post_title; ?></a>
+      </h2>
+
   		<div class="entry-meta">
-        <?php
-          // tip dogodka
-          the_terms(get_the_ID(), 'event_cat', '<p class="type">', ', ', '</p>');
 
-          // Kdaj
-          $event_time = get_post_meta( get_the_ID(), 'event-start-date', true );
-          $dateformat = get_option( 'date_format' );
-         ?>
-         <p class='info'><span>Kdaj: </span> <?php echo date_i18n($dateformat, $event_time, false); ?></p>
+        <!-- Type of the event (category) -->
+        <?php the_terms($post_id, 'event_cat', '<p class="type">', ', ', '</p>'); ?>
 
-         <?php
-          // Kje
-          $event_location = get_post_meta( get_the_ID(), 'event-location', true);
-          ?>
-          <p class='info'><span>Kje: </span> <?php echo $event_location; ?></p>
+        <!-- Time of the event -->
+        <p class='info'>
+          <span>Kdaj: </span>
+          <?php echo date_i18n($dateformat, $event_time, false); ?>
+          <!-- i18n transforms time form Unix- to users- time format -->
+        </p>
+
+        <!-- Location of the event -->
+        <p class='info'>
+          <span>Kje: </span>
+          <?php echo $event_location; ?>
+        </p>
+
   		</div><!-- .entry-meta -->
-  		<?php
-  		endif; ?>
   	</header><!-- .entry-header -->
 
+
   	<div class="entry-content">
+      <!-- TO ZAENKRAT PUSTIM TAKO, PREŠTUDIRAJ! -->
   		<?php
   			the_content( sprintf(
   				wp_kses(
@@ -59,12 +87,13 @@
   				'after'  => '</div>',
   			) );
   		?>
+
   	</div><!-- .entry-content -->
 
+
   	<footer class="entry-footer">
-  		<?php //vivarse_entry_footer(); ?>
-      <!-- READ MORE -->
-  	</footer><!-- .entry-footer -->
+      <!-- EMTPY FOR NOW -->
+  	</footer>
 
   </div><!-- .text-tile -->
 </article><!-- #post-<?php the_ID(); ?> -->

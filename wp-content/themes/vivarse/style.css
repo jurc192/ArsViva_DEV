@@ -821,12 +821,12 @@ img.backgr {
   .text-tile h2 {
     font-size: 2rem;
     margin-top: 0; }
-  .text-tile p.type {
+  .text-tile .type {
     text-transform: lowercase;
     font-weight: bold;
     font-size: 1.5rem;
     margin: 0.3rem; }
-  .text-tile p.info span {
+  .text-tile .info {
     font-weight: bold; }
 
 /*--------------------------------------------------------------
