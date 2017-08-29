@@ -19,7 +19,21 @@
 
   		if ( 'event' === get_post_type() ) : ?>
   		<div class="entry-meta">
-        <h3><?php get_the_category(); ?></h3>
+        <?php
+          // tip dogodka
+          the_terms(get_the_ID(), 'event_cat', '<p class="type">', ', ', '</p>');
+
+          // Kdaj
+          $event_time = get_post_meta( get_the_ID(), 'event-start-date', true );
+          $dateformat = get_option( 'date_format' );
+         ?>
+         <p class='info'><span>Kdaj: </span> <?php echo date_i18n($dateformat, $event_time, false); ?></p>
+
+         <?php
+          // Kje
+          $event_location = get_post_meta( get_the_ID(), 'event-location', true);
+          ?>
+          <p class='info'><span>Kje: </span> <?php echo $event_location; ?></p>
   		</div><!-- .entry-meta -->
   		<?php
   		endif; ?>

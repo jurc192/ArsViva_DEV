@@ -172,12 +172,24 @@ img.backgr {
     margin-top: 0;
   }
 
+
+/*--------------------------------------------------------------
+# Front page events
+--------------------------------------------------------------*/
   // Tip dogodka
   p.type {
+    text-transform: lowercase;
     font-weight: bold;
     font-size: 1.5rem;
 
     margin: 0.3rem;
+  }
+
+  // Kdaj, kje
+  p.info {
+    span {
+      font-weight: bold;
+    }
   }
 
 }
