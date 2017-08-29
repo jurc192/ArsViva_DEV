@@ -30,11 +30,18 @@ $event_time = get_post_meta( $post_id, 'event-start-date', true );
 
 $event_location = get_post_meta( $post_id, 'event-location', true);
 
+if (has_post_thumbnail()) :
+  $thumb_id = get_post_thumbnail_id();
+  $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'full', false);
+  $thumb_url = $thumb_url_array[0];
+else:
+  $thumb_url = get_bloginfo('template_url') . "/images/home-fotka1.jpg";
+endif;
 
  ?>
 
 <article id="post-<?php echo $post_id; ?>" <?php post_class('section'); ?>>
-  <img class="backgr" src="<?php bloginfo('template_url'); ?>/images/home-fotka1.jpg" alt="fotka1">
+  <img class="backgr" src="<?php echo $thumb_url?>" alt="fotka1">
 
   <div class="text-tile">
     <header class="entry-header">
@@ -47,7 +54,10 @@ $event_location = get_post_meta( $post_id, 'event-location', true);
   		<div class="entry-meta">
 
         <!-- Type of the event (category) -->
-        <?php the_terms($post_id, 'event_cat', '<p class="type">', ', ', '</p>'); ?>
+        <?php the_terms($post_id, 'event_cat', '<span class="type">', ', ', '</span><br>'); ?>
+
+        <!-- Posted on () -->
+        <?php vivarse_posted_on(); ?>
 
         <!-- Time of the event -->
         <p class='info'>
@@ -69,18 +79,19 @@ $event_location = get_post_meta( $post_id, 'event-location', true);
   	<div class="entry-content">
       <!-- TO ZAENKRAT PUSTIM TAKO, PREŠTUDIRAJ! -->
   		<?php
-  			the_content( sprintf(
-  				wp_kses(
-  					/* translators: %s: Name of current post. Only visible to screen readers */
-  					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'vivarse' ),
-  					array(
-  						'span' => array(
-  							'class' => array(),
-  						),
-  					)
-  				),
-  				get_the_title()
-  			) );
+  			// the_content( sprintf(
+  			// 	wp_kses(
+  			// 		/* translators: %s: Name of current post. Only visible to screen readers */
+  			// 		__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'vivarse' ),
+  			// 		array(
+  			// 			'span' => array(
+  			// 				'class' => array(),
+  			// 			),
+  			// 		)
+  			// 	),
+  			// 	get_the_title()
+  			// ) );
+        the_excerpt();
 
   			wp_link_pages( array(
   				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'vivarse' ),
