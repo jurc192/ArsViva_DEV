@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts
+ * Template part for EVENTS page, EVENT TILES
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -13,9 +13,6 @@
  $post_title = get_the_title();
 
  $dateformat = get_option( 'date_format' );
- $event_time = get_post_meta( $post_id, 'event-start-date', true );
-
- $event_location = get_post_meta( $post_id, 'event-location', true);
 
  if (has_post_thumbnail()) :
    $thumb_id = get_post_thumbnail_id();
@@ -41,6 +38,7 @@
 		</h2>
 
 		<div class="entry-meta">
+
 			<!-- Type of the event (category) -->
 			<?php the_terms($post_id, 'event_cat', '<span class="type">', ', ', '</span><br>'); ?>
 
@@ -55,6 +53,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<a class="readmore" href="#">Read more</a>
+		<a class="readmore" href="<?php echo esc_url( get_permalink()); ?>">Read more</a>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -106,8 +106,8 @@ $footer-height: 200px;
     top: 0;
     bottom: 0;
 
-    object-fit: contain;
-    object-position: left;
+    object-fit: contain;  // popravi za scroll template
+    object-position: 0 0;
 
   }
 }
@@ -233,6 +233,17 @@ p.info:first-of-type {
 # Events stuff
 
 --------------------------------------------------------------*/
+
+.site-main-nofp {
+  min-height: calc(100vh - 200px);
+  padding-top: $navigation-height + 20px;
+  text-align: center;
+
+  h1 {
+    margin-top: 0;
+  }
+}
+
 /*--------------------------------------------------------------
 ### Events Article stuff
 --------------------------------------------------------------*/
@@ -242,10 +253,10 @@ article.nofp {
   display: inline-block;
 
   width: 300px;
-  max-height: 600px;
+  height: 600px;
 
-  padding: 30px;
-  margin: 25px 25px;
+  padding:  1.5rem;
+  margin:  1rem;
 
   overflow: hidden;
 
@@ -294,16 +305,6 @@ $footer-height: 200px;
 
 .site-info {
   height: $footer-height;
-}
-
-.site-main-nofp {
-  min-height: calc(100vh - 200px);
-  padding-top: $navigation-height;
-  text-align: center;
-
-  h1 {
-    margin-top: 0;
-  }
 }
 
 .site-footer.nofp {

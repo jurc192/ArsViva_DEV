@@ -781,7 +781,7 @@ html, body {
     top: 0;
     bottom: 0;
     object-fit: contain;
-    object-position: left; }
+    object-position: 0 0; }
 
 /*--------------------------------------------------------------
 
@@ -863,6 +863,13 @@ p.info:first-of-type {
 # Events stuff
 
 --------------------------------------------------------------*/
+.site-main-nofp {
+  min-height: calc(100vh - 200px);
+  padding-top: 80px;
+  text-align: center; }
+  .site-main-nofp h1 {
+    margin-top: 0; }
+
 /*--------------------------------------------------------------
 ### Events Article stuff
 --------------------------------------------------------------*/
@@ -870,9 +877,9 @@ article.nofp {
   position: relative;
   display: inline-block;
   width: 300px;
-  max-height: 600px;
-  padding: 30px;
-  margin: 25px 25px;
+  height: 600px;
+  padding: 1.5rem;
+  margin: 1rem;
   overflow: hidden;
   background-color: #fff;
   /* Trik, da tekst ne uhaja čez padding */ }
@@ -894,13 +901,6 @@ article.nofp {
 --------------------------------------------------------------*/
 .site-info {
   height: 200px; }
-
-.site-main-nofp {
-  min-height: calc(100vh - 200px);
-  padding-top: 60px;
-  text-align: center; }
-  .site-main-nofp h1 {
-    margin-top: 0; }
 
 .site-footer.nofp {
   position: relative; }
