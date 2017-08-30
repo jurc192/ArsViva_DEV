@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+	
 	<main id="main" class="site-main">
 
 		<article class="section">
@@ -21,10 +21,19 @@
 		</article>
 
 		<article class="section">
-				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/NVHcAEX-O9A" frameborder="0" allowfullscreen></iframe>	
+			<iframe class="yt-video" src="https://www.youtube.com/embed/NVHcAEX-O9A" frameborder="0" allowfullscreen></iframe>	
+			<div class="text-tile-small">
+				<h2>Prostori</h2>
+				<p>
+						Obiskovalcem domačije nudimo različne možnosti za druženje in sprostitev. Tako so vam na voljo različni
+						prostori in okolja, kjer boste zagotovo našli nekaj zase.
+				</p>
+		</div>
 		</article>
-		
+
 			
+
+
 		<article class="section">
 			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/ozavodu-fotka3.jpg" alt="fotka2">
 
@@ -51,9 +60,7 @@
 
 		</article>
 
-		<div class="section">
-				<iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125287.85042863067!2d14.320511176443311!3d45.70596760145985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4764cfaa2633ea05%3A0xbd1161b05b7f93b7!2sArs+Viva%2C+zavod+za+kulturno+integracijo+in+Socializacijo+dru%C5%BEbenih+skupin!5e1!3m2!1ssl!2ssi!4v1503920112206" allowfullscreen></iframe>
-		</div>
+		
 
 		<article class="section">
 			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/ozavodu-fotka3.jpg" alt="fotka1">
@@ -88,6 +95,24 @@
 
 		</article>
 
+		
+		
+		<article class="section">
+			<iframe class ="google-maps" src="https://www.google.com/maps/embed?pb=!1m0!3m2!1ssl!2sus!4v1504112212072!6m8!1m7!1sCAoSLEFGMVFpcE5kNFlhLWRWM2JkS2ZLUUZpNHhrMkFZcVRPenBEZDFmZm0yVnNz!2m2!1d45.71218779648877!2d14.45914779806241!3f141.89!4f-3.8299999999999983!5f0.7820865974627469" frameborder="0" style="border:0" allowfullscreen></iframe>	
+			<div class="text-tile-small">
+				<h2>Prostori</h2>
+				<p>
+						Obiskovalcem domačije nudimo različne možnosti za druženje in sprostitev. Tako so vam na voljo različni
+						prostori in okolja, kjer boste zagotovo našli nekaj zase.
+				</p>
+			</div>
+		</article>	
+		
+		
+		
+		
+		
+		
 		<article class="section">
 			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/ozavodu-fotka4.jpg" alt="fotka1">
 

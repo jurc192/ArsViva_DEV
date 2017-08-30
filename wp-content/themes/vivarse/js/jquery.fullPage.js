@@ -120,7 +120,7 @@
             showActiveTooltip: false,
             slidesNavigation: false,
             slidesNavPosition: 'bottom',
-            scrollBar: true,
+            scrollBar: false,
             hybrid: false,
 
             //scrolling
