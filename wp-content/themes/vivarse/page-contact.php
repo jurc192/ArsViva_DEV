@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 	<main id="main" class="site-main">
-
+		<?php get_sidebar(); ?>
 		<article class="section">
 			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/kontakt.jpg" alt="fotka1">
 

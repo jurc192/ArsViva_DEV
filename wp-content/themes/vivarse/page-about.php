@@ -2,6 +2,9 @@
 	
 	<main id="main" class="site-main">
 
+		<?php get_sidebar(); ?>
+	
+	
 		<article class="section">
 			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/ozavodu-fotka1.jpg" alt="fotka1">
 

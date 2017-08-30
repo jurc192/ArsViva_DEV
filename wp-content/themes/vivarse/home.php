@@ -19,7 +19,7 @@ Front page (real home page) uses scroll_template.php
 get_header(); ?>
 
 	<main id="main" class="site-main">
-
+	<?php get_sidebar(); ?>
     <?php
 		if ( have_posts() ) :
 
