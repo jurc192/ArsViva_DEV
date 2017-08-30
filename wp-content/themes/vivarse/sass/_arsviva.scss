@@ -113,6 +113,7 @@ $footer-height: 200px;
 }
 
 
+
 /*--------------------------------------------------------------
 
 # Full page scroll stuff
@@ -236,13 +237,54 @@ p.info:first-of-type {
 ### Events Article stuff
 --------------------------------------------------------------*/
 article.nofp {
-  // float: left;
+
+  position: relative;
   display: inline-block;
-  width: 400px;
-  padding: 25px;
+
+  width: 300px;
+  max-height: 600px;
+
+  padding: 30px;
   margin: 25px 25px;
 
+  overflow: hidden;
+
   background-color: $color_arsviva_white;
+
+  .entry-header {
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
+
+  .entry-content {
+    text-align: justify;
+
+    font-size: 0.8rem;
+  }
+
+  /* Trik, da tekst ne uhaja čez padding */
+  // &::after{
+  //   content: ' ';
+  //   display: block;
+  //   height: 60px;
+  //   width: 100%;
+  //   position: absolute;
+  //   bottom: 0;
+  //   background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  // }
+
+  .entry-footer {
+    text-align: right;
+  }
+
+  .thumb {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+  }
+
 }
 
 /*--------------------------------------------------------------

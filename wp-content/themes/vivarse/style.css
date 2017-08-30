@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: vivarse
 Theme URI: http://underscores.me/
@@ -866,11 +867,27 @@ p.info:first-of-type {
 ### Events Article stuff
 --------------------------------------------------------------*/
 article.nofp {
+  position: relative;
   display: inline-block;
-  width: 400px;
-  padding: 25px;
+  width: 300px;
+  max-height: 600px;
+  padding: 30px;
   margin: 25px 25px;
-  background-color: #fff; }
+  overflow: hidden;
+  background-color: #fff;
+  /* Trik, da tekst ne uhaja čez padding */ }
+  article.nofp .entry-header h2 {
+    font-size: 1.2rem; }
+  article.nofp .entry-content {
+    text-align: justify;
+    font-size: 0.8rem; }
+  article.nofp .entry-footer {
+    text-align: right; }
+  article.nofp .thumb {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center; }
 
 /*--------------------------------------------------------------
 ### Events Footer stuff
