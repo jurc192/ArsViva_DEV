@@ -19,7 +19,7 @@
 
   		if ( 'post' === get_post_type() ) : ?>
   		<div class="entry-meta">
-        <p class="type">tip dogodka</p>
+        <p class="type">tip OBJAVE</p>
   			<?php vivarse_posted_on(); ?>
   		</div><!-- .entry-meta -->
   		<?php

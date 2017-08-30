@@ -10,6 +10,25 @@ html, body {
   margin: 0 auto;
 }
 
+/*--------------------------------------------------------------
+# Fonts
+--------------------------------------------------------------*/
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+/*--------------------------------------------------------------
+# Colors
+--------------------------------------------------------------*/
+html, body {
+  background-color: $color_arsviva_grey;
+}
+
 
 /*--------------------------------------------------------------
 # Header and navigation stuff
@@ -87,13 +106,19 @@ $footer-height: 200px;
     top: 0;
     bottom: 0;
 
-    object-fit: contain;
-    object-position: left;
+    object-fit: contain;  // popravi za scroll template
+    object-position: 0 0;
 
   }
 }
 
 
+
+/*--------------------------------------------------------------
+
+# Full page scroll stuff
+
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Posts stuff @scroll template
 --------------------------------------------------------------*/
@@ -160,54 +185,142 @@ img.backgr {
   margin: 0 auto;
 
   overflow: hidden;
+  vertical-align: middle;
   padding: 5%;
 
-  height: 80%;
+  height: 70%;
   width: 40%; // TEMP HACK, find proper way to do it
+  max-width: 700px;
   background-color: $color_arsviva_white;
   box-shadow: 5px 5px 5px rgba(100, 100, 100, .25);
 
   h2 {
-    font-size: 2rem;
+    font-size: 2.3rem;
+    margin-top: 0;
+
+    font-weight: normal;
+  }
+}
+
+/*--------------------------------------------------------------
+# Front page events
+--------------------------------------------------------------*/
+// Tip dogodka
+.type {
+  text-transform: lowercase;
+  font-weight: bold;
+  // font-size: 1.5rem;
+}
+
+// Kdaj, kje
+.info {
+  font-size: 1.5rem;
+
+  span {
+    font-weight: bold;
+  }
+}
+
+p.info:first-of-type {
+  margin-top: 50px;
+}
+
+
+
+
+/*--------------------------------------------------------------
+
+# Events stuff
+
+--------------------------------------------------------------*/
+
+.site-main-nofp {
+  min-height: calc(100vh - 200px);
+  padding-top: $navigation-height + 20px;
+  text-align: center;
+
+  h1 {
     margin-top: 0;
   }
+}
 
-  // Tip dogodka
-  p.type {
-    font-weight: bold;
-    font-size: 1.5rem;
+/*--------------------------------------------------------------
+### Events Article stuff
+--------------------------------------------------------------*/
+article.nofp {
 
-    margin: 0.3rem;
+  position: relative;
+  display: inline-block;
+
+  width: 300px;
+  height: 600px;
+
+  padding:  1.5rem;
+  margin:  1rem;
+
+  overflow: hidden;
+
+  background-color: $color_arsviva_white;
+
+  .entry-header {
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
+
+  .entry-content {
+    text-align: justify;
+
+    font-size: 0.8rem;
+  }
+
+  /* Trik, da tekst ne uhaja čez padding */
+  // &::after{
+  //   content: ' ';
+  //   display: block;
+  //   height: 60px;
+  //   width: 100%;
+  //   position: absolute;
+  //   bottom: 0;
+  //   background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  // }
+
+  .entry-footer {
+    text-align: right;
+  }
+
+  .thumb {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
   }
 
 }
 
 /*--------------------------------------------------------------
-# Fonts
+### Events Footer stuff
 --------------------------------------------------------------*/
-h1, h2, h3, h4 {
-  font-family: 'Playfair Display', serif;
+$footer-height: 200px;
+
+.site-info {
+  height: $footer-height;
 }
 
-body {
-  font-family: 'Open Sans', sans-serif;
+.site-footer.nofp {
+  position: relative;
 }
 
 
-/*--------------------------------------------------------------
-# Colors
---------------------------------------------------------------*/
-html, body {
-  background-color: $color_arsviva_grey;
-}
 
 /*--------------------------------------------------------------
 # Git current branch popup
 --------------------------------------------------------------*/
 .git-popup {
   position: fixed;
-  top: 70px;
+  top: 100px;
   right: 100px;
+  z-index: 50;
 
   animation: fadeinout 3s forwards;
 

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: vivarse
 Theme URI: http://underscores.me/
@@ -715,6 +716,21 @@ html, body {
   margin: 0 auto; }
 
 /*--------------------------------------------------------------
+# Fonts
+--------------------------------------------------------------*/
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif; }
+
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+/*--------------------------------------------------------------
+# Colors
+--------------------------------------------------------------*/
+html, body {
+  background-color: #e7e7e7; }
+
+/*--------------------------------------------------------------
 # Header and navigation stuff
 --------------------------------------------------------------*/
 .site-header {
@@ -765,8 +781,13 @@ html, body {
     top: 0;
     bottom: 0;
     object-fit: contain;
-    object-position: left; }
+    object-position: 0 0; }
 
+/*--------------------------------------------------------------
+
+# Full page scroll stuff
+
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Posts stuff @scroll template
 --------------------------------------------------------------*/
@@ -810,41 +831,88 @@ img.backgr {
   position: relative;
   margin: 0 auto;
   overflow: hidden;
+  vertical-align: middle;
   padding: 5%;
-  height: 80%;
+  height: 70%;
   width: 40%;
+  max-width: 700px;
   background-color: #fff;
   box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.25); }
   .text-tile h2 {
-    font-size: 2rem;
+    font-size: 2.3rem;
+    margin-top: 0;
+    font-weight: normal; }
+
+/*--------------------------------------------------------------
+# Front page events
+--------------------------------------------------------------*/
+.type {
+  text-transform: lowercase;
+  font-weight: bold; }
+
+.info {
+  font-size: 1.5rem; }
+  .info span {
+    font-weight: bold; }
+
+p.info:first-of-type {
+  margin-top: 50px; }
+
+/*--------------------------------------------------------------
+
+# Events stuff
+
+--------------------------------------------------------------*/
+.site-main-nofp {
+  min-height: calc(100vh - 200px);
+  padding-top: 80px;
+  text-align: center; }
+  .site-main-nofp h1 {
     margin-top: 0; }
-  .text-tile p.type {
-    font-weight: bold;
-    font-size: 1.5rem;
-    margin: 0.3rem; }
 
 /*--------------------------------------------------------------
-# Fonts
+### Events Article stuff
 --------------------------------------------------------------*/
-h1, h2, h3, h4 {
-  font-family: 'Playfair Display', serif; }
-
-body {
-  font-family: 'Open Sans', sans-serif; }
+article.nofp {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  height: 600px;
+  padding: 1.5rem;
+  margin: 1rem;
+  overflow: hidden;
+  background-color: #fff;
+  /* Trik, da tekst ne uhaja čez padding */ }
+  article.nofp .entry-header h2 {
+    font-size: 1.2rem; }
+  article.nofp .entry-content {
+    text-align: justify;
+    font-size: 0.8rem; }
+  article.nofp .entry-footer {
+    text-align: right; }
+  article.nofp .thumb {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center; }
 
 /*--------------------------------------------------------------
-# Colors
+### Events Footer stuff
 --------------------------------------------------------------*/
-html, body {
-  background-color: #e7e7e7; }
+.site-info {
+  height: 200px; }
+
+.site-footer.nofp {
+  position: relative; }
 
 /*--------------------------------------------------------------
 # Git current branch popup
 --------------------------------------------------------------*/
 .git-popup {
   position: fixed;
-  top: 70px;
+  top: 100px;
   right: 100px;
+  z-index: 50;
   animation: fadeinout 3s forwards; }
   .git-popup .git-text {
     background-color: #555;

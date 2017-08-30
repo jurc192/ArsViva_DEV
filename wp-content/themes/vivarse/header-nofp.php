@@ -26,7 +26,7 @@
 	<nav id="site-navigation" class="main-navigation">
 
 		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'vivarse' ); ?></button>
-		<a class="site-logo" href="https://194.249.1.139/"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="ArsViva logo"></a>
+		<a class="site-logo" href="http://localhost/ArsViva_DEV/"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="ArsViva logo"></a>
 		<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
@@ -37,10 +37,6 @@
 
 	</nav><!-- #site-navigation .main-navigation -->
 </header><!-- #masthead .site-header-->
-<?php //global $template; echo basename($template); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'vivarse' ); ?></a>
 
-	<div class="git-popup" id="gitContainer" onclick="gitPopup()">
-		<span class="git-text" id="gitText"><?php get_git_info(); ?></span>
-	</div>
+<div id="page-nojs" class="site">
+	<!-- <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'vivarse' ); ?></a> -->
