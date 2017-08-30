@@ -1,3 +1,6 @@
+#node modules
+wp-content/themes/vivarse/node_modules/
+
 # Don't add the settings (passwords) file to the repository #
 wp-config.php
 
