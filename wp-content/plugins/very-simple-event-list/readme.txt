@@ -1,7 +1,7 @@
 === Very Simple Event List ===
 Contributors: Guido07111975
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=donation%40guidovanderleest%2enl
-Version: 6.4
+Version: 6.5
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 4.6
@@ -15,7 +15,7 @@ This is a very simple plugin to display a list of events. Use a shortcode to dis
 
 == DESCRIPTION ==
 = About =
-This is a very simple plugin to display a list of events. 
+This is a very simple plugin to display a list of events.
 
 Use a shortcode to display events on a page or use the widget.
 
@@ -30,7 +30,7 @@ After installation go to Events and start adding your events.
 = Widget =
 You can also list events in your sidebar using the widget.
 
-The pagination is hidden because it's not working properly in a widget. 
+The pagination is hidden because it's not working properly in a widget.
 
 But you can set a link to a page with all events.
 
@@ -43,39 +43,61 @@ Via Settings > VSEL you can:
 * Hide elements in event list
 
 = Shortcode attributes =
-Display events from certain categories: `[vsel event_cat="first-category, second-category"]`
+You can display events from certain categories. You should enter the category slug. The slug is not always the same as the name of the category. 
 
-You should enter the category slug. The slug is not always the same as the name of the category.
+* Example: `[vsel event_cat="first-category, second-category"]`
 
-Set amount of events per page: `[vsel posts_per_page=5]` 
+You can set amount of events per page. This will overwrite amount set in Settings > Reading.
 
-This will overwrite amount set in Settings > Reading.
-
-Change default order from ascending to descending: `[vsel order=desc]`
-
-Change default order from descending to ascending: `[vsel order=asc]`
+* Example: `[vsel posts_per_page=5]`
 
 The default order of the upcoming and current events list is ascending. The default order of the past and all events list is descending.
 
-= Change labels =
+* Change order from ascending to descending: `[vsel order=desc]`
+* Change order from descending to ascending: `[vsel order=asc]`
+
+You can change or hide labels using an attribute.
+
+Change labels:
+
 * Change date label: `[vsel date_label="Event date: %s"]`
 * Change start date label: `[vsel start_label="Event start date: %s"]`
 * Change end date label: `[vsel end_label="Event end date: %s"]`
-* Change time label: `[vsel time_label="Event time: %s"]` 
-* Change location label: `[vsel location_label="Event location: %s"]` 
-* Hide a label: `[vsel date_label="%s"]`
-* Multiple attributes: `[vsel posts_per_page=5 date_label="Event date: %s"]` 
+* Change time label: `[vsel time_label="Event time: %s"]`
+* Change location label: `[vsel location_label="Event location: %s"]`
+* Change no events text: `[vsel no_events_text="your text here"]`
+
+Hide labels (only display the variable itself):
+
+* Hide date label: `[vsel date_label="%s"]`
+* Hide start date label: `[vsel start_label="%s"]`
+* Hide end date label: `[vsel end_label="%s"]`
+* Hide time label: `[vsel time_label="%s"]`
+* Hide location label: `[vsel location_label="%s"]`
+
+You can add multiple attributes.
+
+* Example: `[vsel posts_per_page=5 date_label="Event date: %s"]`
 
 = Widget attributes =
 The widget supports the same attributes. Enter them without shortcode itself and without brackets.
 
-= Examples =
-* Events from certain categories: `event_cat="first-category, second-category"`
+* Display events from certain categories: `event_cat="first-category, second-category"`
 * Set amount of events per page: `posts_per_page=5`
-* Change default events order: `order=desc`
+* Change order from ascending to descending: `order=desc`
+* Change order from descending to ascending: `order=asc`
 * Change date label: `date_label="Event date: %s"`
-* Hide a label: `date_label="%s"`
-* Multiple attributes: `posts_per_page=5 date_label="Event date: %s"` 
+* Change start date label: `start_label="Event start date: %s"`
+* Change end date label: `end_label="Event end date: %s"`
+* Change time label: `time_label="Event time: %s"`
+* Change location label: `location_label="Event location: %s"`
+* Change no events text: `no_events_text="your text here"`
+* Hide date label: `date_label="%s"`
+* Hide start date label: `start_label="%s"`
+* Hide end date label: `end_label="%s"`
+* Hide time label: `time_label="%s"`
+* Hide location label: `location_label="%s"`
+* Multiple attributes: `posts_per_page=5 date_label="Event date: %s"`
 
 = Single event =
 Template file single.php (and in some cases single-event.php) is being used to display a single event. This file is located in your theme folder.
@@ -109,7 +131,7 @@ Enjoy!
 
 
 == INSTALLATION ==
-Installation info is moved to Description section because of the new plugin directory.
+Please check Description section for installation info.
 
 
 == Frequently Asked Questions ==
@@ -118,7 +140,7 @@ You can set date format in WP dashboard via Settings > General.
 
 The datepicker and date input field in backend accept 2 numeric date formats: "day-month-year" (30-01-2016) and "year-month-day" (2016-01-30).
 
-If the date format set in WP dashboard is not numeric it will be changed into 1 of these 2 numeric date formats.  
+If the date format set in WP dashboard is not numeric it will be changed into 1 of these 2 numeric date formats.
 
 = How do I set plugin language? =
 Plugin uses the WP Dashboard language, set in Settings > General.
@@ -146,10 +168,9 @@ You can find more info about this at the Description section.
 = Can I display a summary instead of all content? =
 Yes, this is possible.
 
-You can find more info about this at the Description section.
+You can activate the summary via Settings > VSEL.
 
-= Can I change the summary lenght? =
-Yes, you can set a custom summary while adding an event. This will replace the default summary (if activated).
+And you can set a custom summary while adding an event. This will replace the default summary (if activated).
 
 = Can I display certain events only? =
 Besides listing upcoming, current or past events you can display events from certain categories.
@@ -175,12 +196,12 @@ You can find more info about this at the Description section.
 You can find more info about this at the Description section.
 
 = Why a 404 (nothing found) when I click the pagination? =
-This might be caused because the slug of your page ends with "event". This causes a conflict with my plugin. 
+This might be caused because the slug of your page ends with "event". This causes a conflict with my plugin.
 
 You should change this slug into something else. The slug is not always the same as the name of the page.
 
 = Why a 404 (nothing found) when I click the title link? =
-This is mostly caused by a wrong permalink setting. Please reset it via Settings > Permalinks. 
+This is mostly caused by a wrong permalink setting. Please reset it via Settings > Permalinks.
 
 = Can I hide the event labels? =
 Yes, this is possible.
@@ -204,19 +225,19 @@ And you can label this link. Default label is "All events".
 = Can I use multiple shortcodes on the same page? =
 Yes, as far as I know there are no issues when using multiple shortcodes.
 
-= Why an error message instead of a date? =
-It's displayed in case start date begins after end date. To solve this please reset date.
+= Why an error notification instead of a date? =
+An error notification is displayed in case start date begins after end date. To solve this please reset date.
 
 = Why no start date in dashboard? =
-Because I have added this feature in version 4.1.
+Because I have added a multi-day feature in version 4.1.
 
-All events posted before version 4.1 have 1 date only. But you can set a start and end date for each event afterwards.
+All events posted with version 4.0 or older have 1 date only. To solve this please reset date.
 
 = Why no meta, image or categories while adding an event? =
 If these boxes are not present, they might be unchecked in Screen Options.
 
 = How do I list events in a template file? =
-* Upcoming events: `<?php echo do_shortcode( '[vsel]' ); ?>` 
+* Upcoming events: `<?php echo do_shortcode( '[vsel]' ); ?>`
 * Past events: `<?php echo do_shortcode( '[vsel-past-events]' ); ?>`
 * Current events: `<?php echo do_shortcode( '[vsel-current-events]' ); ?>`
 * All events: `<?php echo do_shortcode( '[vsel-all-events]' ); ?>`
@@ -232,6 +253,18 @@ Please open a topic in plugin forum.
 
 
 == Changelog ==
+= Version 6.5 =
+* events are now listed on start date instead of end date
+* removed support for events without start date
+* these events are posted with version 4.0 or older
+* this also means they are not listed anymore
+* to solve this please reset date for each of these events
+* new attribute to change no events text: no_events_text
+* for more info please check readme file
+* updated all shortcode files
+* updated readme file
+* updated pot file
+
 = Version 6.4 =
 * fixed pagination when event list is on static front page (thanks BC and Alan)
 * changed custom query names into unique ones to avoid conflict
@@ -255,11 +288,6 @@ Please open a topic in plugin forum.
 * minor textual changes
 * updated readme file
 * new screenshots on wp.org
-
-= Version 6.1 =
-* added shortcode attribute to change default order of events (asc or desc)
-* for more info please check readme file
-* bugfix: changed time format in shortcode files
 
 For all versions please check file changelog.
 

@@ -2,14 +2,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Very Simple Event List\n"
-"POT-Creation-Date: 2017-07-21 12:01+0200\n"
+"POT-Creation-Date: 2017-09-03 11:53+0200\n"
 "PO-Revision-Date: 2015-09-10 13:41+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0\n"
+"X-Generator: Poedit 2.0.3\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: vsel.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -19,61 +19,61 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: vsel-all.php:14 vsel-current.php:14 vsel-past.php:14 vsel-single.php:63
-#: vsel-single.php:68 vsel-upcoming.php:14
+#: vsel-all.php:14 vsel-current.php:14 vsel-past.php:14 vsel-single.php:57
+#: vsel-upcoming.php:14
 #, php-format
 msgid "Date: %s"
 msgstr ""
 
-#: vsel-all.php:15 vsel-current.php:15 vsel-past.php:15 vsel-single.php:53
+#: vsel-all.php:15 vsel-current.php:15 vsel-past.php:15 vsel-single.php:51
 #: vsel-upcoming.php:15
 #, php-format
 msgid "Start date: %s"
 msgstr ""
 
-#: vsel-all.php:16 vsel-current.php:16 vsel-past.php:16 vsel-single.php:58
+#: vsel-all.php:16 vsel-current.php:16 vsel-past.php:16 vsel-single.php:54
 #: vsel-upcoming.php:16
 #, php-format
 msgid "End date: %s"
 msgstr ""
 
-#: vsel-all.php:17 vsel-current.php:17 vsel-past.php:17 vsel-single.php:72
+#: vsel-all.php:17 vsel-current.php:17 vsel-past.php:17 vsel-single.php:62
 #: vsel-upcoming.php:17
 #, php-format
 msgid "Time: %s"
 msgstr ""
 
-#: vsel-all.php:18 vsel-current.php:18 vsel-past.php:18 vsel-single.php:75
+#: vsel-all.php:18 vsel-current.php:18 vsel-past.php:18 vsel-single.php:65
 #: vsel-upcoming.php:18
 #, php-format
 msgid "Location: %s"
 msgstr ""
 
-#: vsel-all.php:81 vsel-current.php:108 vsel-past.php:93 vsel-single.php:35
-#: vsel-upcoming.php:93
-msgid "More info"
-msgstr ""
-
-#: vsel-all.php:103 vsel-current.php:130 vsel-past.php:115 vsel-single.php:47
-#: vsel-upcoming.php:115
-msgid "Error: please reset date"
-msgstr ""
-
-#: vsel-all.php:227 vsel-current.php:254 vsel-past.php:239
-#: vsel-upcoming.php:239
-msgid "Next &raquo;"
-msgstr ""
-
-#: vsel-all.php:228 vsel-current.php:255 vsel-past.php:240
-#: vsel-upcoming.php:240
-msgid "&laquo; Previous"
-msgstr ""
-
-#: vsel-all.php:237
+#: vsel-all.php:19
 msgid "There are no events."
 msgstr ""
 
-#: vsel-current.php:264
+#: vsel-all.php:82 vsel-current.php:109 vsel-past.php:94 vsel-single.php:35
+#: vsel-upcoming.php:94
+msgid "More info"
+msgstr ""
+
+#: vsel-all.php:104 vsel-current.php:131 vsel-past.php:116 vsel-single.php:46
+#: vsel-upcoming.php:116
+msgid "Error: please reset date"
+msgstr ""
+
+#: vsel-all.php:208 vsel-current.php:235 vsel-past.php:220
+#: vsel-upcoming.php:220
+msgid "Next &raquo;"
+msgstr ""
+
+#: vsel-all.php:209 vsel-current.php:236 vsel-past.php:221
+#: vsel-upcoming.php:221
+msgid "&laquo; Previous"
+msgstr ""
+
+#: vsel-current.php:19
 msgid "There are no current events."
 msgstr ""
 
@@ -168,11 +168,11 @@ msgstr ""
 msgid "Very Simple Event List"
 msgstr ""
 
-#: vsel-past.php:249
+#: vsel-past.php:19
 msgid "There are no past events."
 msgstr ""
 
-#: vsel-upcoming.php:249
+#: vsel-upcoming.php:19
 msgid "There are no upcoming events."
 msgstr ""
 

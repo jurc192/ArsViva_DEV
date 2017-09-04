@@ -1,6 +1,18 @@
 CHANGELOG
 =========
 
+= Version 6.5 =
+* events are now listed on start date instead of end date
+* removed support for events without start date
+* these events are posted with version 4.0 or older
+* this also means they are not listed anymore
+* to solve this please reset date for each of these events
+* new attribute to change no events text: no_events_text
+* for more info please check readme file
+* updated all shortcode files
+* updated readme file
+* updated pot file
+
 = Version 6.4 =
 * fixed pagination when event list is on static front page (thanks BC and Alan)
 * changed custom query names into unique ones to avoid conflict
@@ -126,7 +138,7 @@ CHANGELOG
 
 = Version 4.1 =
 * added file vsel_single: VSEL now supports single events
-* added multi-day feature with start end end date
+* added multi-day feature with start date and end date
 * both shortcode files: hide pagination in widget because it's not working properly
 * updated readme file
  
