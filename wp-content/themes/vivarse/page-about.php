@@ -2,8 +2,14 @@
 	
 	<main id="main" class="site-main">
 
-		<?php get_sidebar(); ?>
-	
+	<?php get_sidebar(); ?>
+			<aside class="sajdbar">
+		<div style="height: 30%;"></div>
+		<a href="https://www.facebook.com/ARS-VIVA-158123837631509/">  <img id="top" class="sidebar-icon" src="<?php bloginfo('template_url'); ?>/images/sidebar-fb.png"></a>
+		<a href="http://arsviva.znidarsic.net/"> <img class="sidebar-icon" src="<?php bloginfo('template_url'); ?>/images/sidebar-google.png"></a>
+		<a href="https://www.instagram.com/explore/tags/arsviva/"> <img class="sidebar-icon" src="<?php bloginfo('template_url'); ?>/images/sidebar-insta.png"></a>
+		<a href="https://www.youtube.com/channel/UCqeegXsm_BkkVDH3mms_xdw"> <img class="sidebar-icon" src="<?php bloginfo('template_url'); ?>/images/sidebar-yt.png"></a>
+	</aside>
 	
 		<article class="section">
 			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/ozavodu-fotka1.jpg" alt="fotka1">
