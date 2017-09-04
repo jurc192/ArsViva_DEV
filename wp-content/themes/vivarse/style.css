@@ -906,6 +906,28 @@ article.nofp {
   position: relative; }
 
 /*--------------------------------------------------------------
+# Single post
+--------------------------------------------------------------*/
+article.single {
+  position: relative; }
+
+.text-tile-single {
+  position: relative;
+  margin: 0 auto 100px auto;
+  overflow: hidden;
+  vertical-align: middle;
+  padding: 5%;
+  max-width: 1024px;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.25); }
+  .text-tile-single h2 {
+    font-size: 2.3rem;
+    margin-top: 0;
+    font-weight: normal; }
+  .text-tile-single .entry-content {
+    text-align: left; }
+
+/*--------------------------------------------------------------
 # Git current branch popup
 --------------------------------------------------------------*/
 .git-popup {
