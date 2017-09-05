@@ -25,7 +25,6 @@ get_header(); ?>
 			'meta_key' => 'event-date',
 			'orderby' => 'meta_value_num',
 			'order' => 'ASC',
-			'posts_per_page' => 3,
 			'meta_query' => $my_meta_query,
 		);
 
@@ -39,11 +38,11 @@ get_header(); ?>
 				endwhile;
 
 			else:
-				// echo "<h1 style='z-index: 15; position: absolute; top: 100px; left: 100px;'>NOT FIRST PAGE!</h1>";
+				echo "<h1 style='z-index: 15; position: absolute; top: 100px; left: 100px;'>NOT FIRST PAGE!</h1>";
 			endif;
 
 		else:
-			// echo "<h1 style='z-index: 15; position: absolute; top: 200px; left: 100px;'>I DON'T HAVE ANY EVENTS</h1>";
+			echo "<h1 style='z-index: 15; position: absolute; top: 200px; left: 100px;'>I DON'T HAVE ANY EVENTS</h1>";
 		endif;
 
 		wp_reset_postdata();
@@ -54,7 +53,6 @@ get_header(); ?>
 			'post_type' => 'post',
 			'post_status' => 'publish',
 			'category_name' => 'front-page',
-			'posts_per_page' => 2,
 		);
 
 		$my_post_query = new WP_Query($my_post_query_args);
@@ -67,11 +65,11 @@ get_header(); ?>
 				endwhile;
 
 			else:
-				// echo "<h1 style='z-index: 15; position: absolute; top: 100px; left: 100px;'>NOT FIRST PAGE!</h1>";
+				echo "<h1 style='z-index: 15; position: absolute; top: 100px; left: 100px;'>NOT FIRST PAGE!</h1>";
 			endif;
 
 		else:
-			// echo "<h1 style='z-index: 15; position: absolute; top: 200px; left: 100px;'>I DON'T HAVE ANY POSTS</h1>";
+			echo "<h1 style='z-index: 15; position: absolute; top: 200px; left: 100px;'>I DON'T HAVE ANY POSTS</h1>";
 		endif;
 
 		wp_reset_postdata();
