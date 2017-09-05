@@ -14,10 +14,19 @@ get_header('nofp'); ?>
 	<?php
 	while ( have_posts() ) : the_post();
 		// če je post type: POST
-		get_template_part( 'template-parts/content-single', 'post' );
+		if ('post' == get_post_type()):
+			get_template_part( 'template-parts/content-single', 'post' );
+
 		// če je post type: EVENT
+		elseif ('event' == get_post_type()):
+			get_template_part('template-parts/content-single', 'event');
+
 		// če ni nič
 		// če gre vse v kurac
+		else:
+			echo "NEKI NE DELA!";
+		endif;
+
 	endwhile;
 	?>
 
