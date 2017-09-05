@@ -1,51 +1,35 @@
 <?php
-/**
- * The template for displaying search results pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
- *
- * @package vivarse
- */
 
-get_header(); ?>
+// This page is used on "DOGODKI" page.
+// SEARCH RESULTS
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+get_header('nofp'); ?>
 
-		<?php
-		if ( have_posts() ) : ?>
+	<main id="main" class="site-main-nofp">
 
-			<header class="page-header">
-				<h1 class="page-title"><?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'vivarse' ), '<span>' . get_search_query() . '</span>' );
-				?></h1>
-			</header><!-- .page-header -->
+		<h1>Search results</h1>
 
-			<?php
-			/* Start the Loop */
+		<?php echo do_shortcode('[searchandfilter fields="search,category,post_tag"]'); ?>
+
+    <?php
+		if ( have_posts() ) :
 			while ( have_posts() ) : the_post();
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
+				get_template_part('template-parts/content-events');
 
 			endwhile;
 
-			the_posts_navigation();
+			the_posts_pagination( array('mid_size' => 5));
 
 		else :
 
-			get_template_part( 'template-parts/content', 'none' );
+			echo "I DONT HAVE POSTS \n";
+			// get_template_part( 'template-parts/content', 'none' );
 
 		endif; ?>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
 
 <?php
-get_sidebar();
-get_footer();
+
+/* Special footer, for non-full-page scrolling stuff */
+get_footer('nofp');

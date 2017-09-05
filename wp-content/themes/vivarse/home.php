@@ -6,6 +6,8 @@ get_header('nofp'); ?>
 
 	<main id="main" class="site-main-nofp">
 
+		<?php echo do_shortcode('[searchandfilter fields="search,category"]'); ?>
+
     <?php
 		if ( have_posts() ) :
 			while ( have_posts() ) : the_post();
@@ -14,9 +16,7 @@ get_header('nofp'); ?>
 
 			endwhile;
 
-			the_posts_pagination(array(
-				'mid_size' => 5,
-			));
+			the_posts_pagination( array('mid_size' => 5));
 
 		else :
 
