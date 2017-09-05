@@ -2,7 +2,7 @@
 get_header(); ?>
 
 	<main id="main" class="site-main">
-
+	<?php get_sidebar(); ?>
 		<?php
 		/* Custom query za front page - upcoming events */
 		$myquery = new WP_Query(array('cat'=> 3));
