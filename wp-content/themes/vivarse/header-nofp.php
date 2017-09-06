@@ -26,7 +26,7 @@
 	<nav id="site-navigation" class="main-navigation">
 
 		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'vivarse' ); ?></button>
-		<a class="site-logo" href="http://localhost/ArsViva_DEV/"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="ArsViva logo"></a>
+		<a class="site-logo" href="<?php echo get_site_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="ArsViva logo"></a>
 		<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',

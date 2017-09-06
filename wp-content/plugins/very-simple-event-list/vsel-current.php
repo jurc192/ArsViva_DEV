@@ -15,7 +15,8 @@ function vsel_current_events_shortcode( $vsel_atts ) {
 		'start_label' => __('Start date: %s', 'very-simple-event-list'), // start date label
 		'end_label' => __('End date: %s', 'very-simple-event-list'), // end date label
 		'time_label' => __('Time: %s', 'very-simple-event-list'), // time label
-		'location_label' => __('Location: %s', 'very-simple-event-list') // location label
+		'location_label' => __('Location: %s', 'very-simple-event-list'), // location label
+		'no_events_text' => __('There are no current events.', 'very-simple-event-list') // no events
 	), $vsel_atts );
 
 	$output = ""; 
@@ -60,7 +61,7 @@ function vsel_current_events_shortcode( $vsel_atts ) {
 			'event_cat' => $vsel_atts['event_cat'],
 			'post_status' => 'publish', 
 			'ignore_sticky_posts' => true, 
-			'meta_key' => 'event-date', 
+			'meta_key' => 'event-start-date', 
 			'orderby' => 'meta_value_num', 
 			'order' => $vsel_atts['order'],
 			'posts_per_page' => $vsel_atts['posts_per_page'],
@@ -123,15 +124,13 @@ function vsel_current_events_shortcode( $vsel_atts ) {
 					} else {
 						$output .=  '<h4 class="vsel-meta-title"><a href="'. get_permalink() .'" rel="bookmark" title="'. get_the_title() .'">'. get_the_title() .'</a></h4>';
 					}
-					// error in case of wrong date
-					if (!empty($event_start_date)) {
+					if ( !empty($event_start_date) && !empty($event_date) ) {
+						// error in case of wrong date
 						if ($event_start_date > $event_date) {
-							$output .= '<p class="vsel-meta-date">';
-							$output .= esc_attr__( 'Error: please reset date', 'very-simple-event-list' ); 
-							$output .= '</p>';
+								$output .= '<p class="vsel-meta-date">';
+								$output .= esc_attr__( 'Error: please reset date', 'very-simple-event-list' ); 
+								$output .= '</p>';
 						}
-					}
-					if (!empty($event_start_date)) {
 						if ($event_date > $event_start_date) {
 							if ( ($event_date_hide == 'yes') && ($widget_date == 'yes') ) {
 								$output .= '<p class="vsel-meta-date vsel-page-hide vsel-widget-hide">';
@@ -145,8 +144,6 @@ function vsel_current_events_shortcode( $vsel_atts ) {
 							$output .= sprintf(esc_attr($vsel_atts['start_label']), '<span>'.date_i18n( get_option( 'date_format' ), esc_attr($event_start_date) ).'</span>' ); 
 							$output .= '</p>';
 						}
-					} 
-					if (!empty($event_start_date)) {
 						if ($event_date > $event_start_date) {
 							if ( ($event_date_hide == 'yes') && ($widget_date == 'yes') ) {
 								$output .= '<p class="vsel-meta-date vsel-page-hide vsel-widget-hide">';
@@ -160,8 +157,6 @@ function vsel_current_events_shortcode( $vsel_atts ) {
 							$output .= sprintf(esc_attr($vsel_atts['end_label']), '<span>'.date_i18n( get_option( 'date_format' ), esc_attr($event_date) ).'</span>' ); 
 							$output .= '</p>';
 						}
-					} 
-					if (!empty($event_start_date)) {
 						if ($event_date == $event_start_date) {
 							if ( ($event_date_hide == 'yes') && ($widget_date == 'yes') ) {
 								$output .= '<p class="vsel-meta-date vsel-page-hide vsel-widget-hide">';
@@ -175,20 +170,6 @@ function vsel_current_events_shortcode( $vsel_atts ) {
 							$output .= sprintf(esc_attr($vsel_atts['date_label']), '<span>'.date_i18n( get_option( 'date_format' ), esc_attr($event_date) ).'</span>' ); 
 							$output .= '</p>';
 						}
-					}
-					// support single date in old plugin versions
-					if (empty($event_start_date)) {
-						if ( ($event_date_hide == 'yes') && ($widget_date == 'yes') ) {
-							$output .= '<p class="vsel-meta-date vsel-page-hide vsel-widget-hide">';
-						} elseif ( ($event_date_hide != 'yes') && ($widget_date == 'yes') ) {
-							$output .= '<p class="vsel-meta-link vsel-widget-hide">';
-						} elseif ( ($event_date_hide == 'yes') && ($widget_date != 'yes') ) {
-							$output .= '<p class="vsel-meta-date vsel-page-hide">';
-						} else {
-							$output .= '<p class="vsel-meta-date">';
-						}
-						$output .= sprintf(esc_attr($vsel_atts['date_label']), '<span>'.date_i18n( get_option( 'date_format' ), esc_attr($event_date) ).'</span>' ); 
-						$output .= '</p>';
 					}
 					if (!empty($event_time)){
 						if ($widget_time == 'yes') {
@@ -261,7 +242,7 @@ function vsel_current_events_shortcode( $vsel_atts ) {
  
 			// if no events
 			$output .= '<p class="no-events">';
-			$output .= esc_attr__('There are no current events.', 'very-simple-event-list');
+			$output .= esc_attr($vsel_atts['no_events_text']);
 			$output .= '</p>';
 		endif; 
 	$output .= '</div>';
