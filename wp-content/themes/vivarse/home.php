@@ -28,5 +28,8 @@ get_header('nofp'); ?>
 
 <?php
 
+/* Filter sidebar */
+get_sidebar('filter');
+
 /* Special footer, for non-full-page scrolling stuff */
 get_footer('nofp');

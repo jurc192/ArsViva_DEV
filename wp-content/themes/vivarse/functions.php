@@ -108,6 +108,7 @@ add_action( 'after_setup_theme', 'vivarse_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function vivarse_widgets_init() {
+
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'vivarse' ),
 		'id'            => 'sidebar-1',
@@ -117,6 +118,18 @@ function vivarse_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+	/* JURE EDIT: Filter sidebar */
+	register_sidebar( array(
+		'name'          => esc_html__( 'Filter Sidebar', 'vivarse' ),
+		'id'            => 'sidebar-filter',
+		'description'   => esc_html__( 'Add widgets here.', 'vivarse' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
 }
 add_action( 'widgets_init', 'vivarse_widgets_init' );
 
