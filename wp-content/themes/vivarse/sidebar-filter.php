@@ -7,9 +7,7 @@
  * @package vivarse
  */
 
-// if ( ! is_active_sidebar( 'sidebar-filter' ) ) {
-// 	return;
-// }
+/* Original je tukaj bil pogoj: if sidebar active...je to važno? */
 ?>
 
 <aside id="filter-sidebar" class="filter-sidebar">
@@ -18,10 +16,12 @@
 	<?php
 		echo do_shortcode('[searchandfilter
 		fields="search,post_types,category,post_date"
-		types="select, check, radio, date"
+		types=",check,radio,daterange"
 		post_types="post,event"
 		]');
+
+		// Naredi sam!
 	?>
 
-	<a class="toggle-filter" href="#"><h3>FILTER</h3></a>
+	<h3 class="toggle-filter" onclick="toggleFilter()">FILTER</h3>
 </aside><!-- #filter-sidebar -->

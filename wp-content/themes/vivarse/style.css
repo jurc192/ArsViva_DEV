@@ -945,11 +945,22 @@ aside.filter-sidebar {
 
 .toggle-filter {
   display: block;
+  position: absolute;
+  top: 200px;
   transform: rotate(-90deg);
   text-decoration: none;
   vertical-align: middle; }
   .toggle-filter h3 {
     margin: 0; }
+
+/* Popup sidebar filter */
+.searchandfilter {
+  position: fixed;
+  top: 60px;
+  left: 60px;
+  /* filter sidebar width */
+  bottom: 0;
+  width: 200px; }
 
 /*--------------------------------------------------------------
 # Git current branch popup

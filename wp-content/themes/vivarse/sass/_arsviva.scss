@@ -391,6 +391,9 @@ aside.filter-sidebar {
 // FILTER STUFF
 .toggle-filter {
   display: block;
+  position: absolute;
+
+  top: 200px;
   transform: rotate(-90deg);
 
   text-decoration: none;
@@ -401,7 +404,17 @@ aside.filter-sidebar {
   }
 }
 
+/* Popup sidebar filter */
+.searchandfilter {
+  position: fixed;
 
+  top: $navigation-height;
+  left: 60px; /* filter sidebar width */
+  bottom: 0;
+
+  width: 200px;
+
+}
 /*--------------------------------------------------------------
 # Git current branch popup
 --------------------------------------------------------------*/
