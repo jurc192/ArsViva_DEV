@@ -864,11 +864,11 @@ p.info:first-of-type {
 
 --------------------------------------------------------------*/
 .site-main-nofp {
+  text-align: center;
   min-height: calc(100vh - 200px);
   padding-top: 80px;
-  text-align: center; }
-  .site-main-nofp h1 {
-    margin-top: 0; }
+  padding-left: 60px;
+  padding-right: 60px; }
 
 /*--------------------------------------------------------------
 ### Events Article stuff
@@ -931,6 +931,17 @@ article.single {
   display: block;
   margin: 0 auto;
   width: 100%; }
+
+/*--------------------------------------------------------------
+# Filter sidebar stuff
+--------------------------------------------------------------*/
+aside.filter-sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  height: 100%;
+  width: 60px;
+  background-color: #cccccc; }
 
 /*--------------------------------------------------------------
 # Git current branch popup
