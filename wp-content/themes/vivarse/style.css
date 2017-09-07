@@ -954,13 +954,15 @@ aside.filter-sidebar {
     margin: 0; }
 
 /* Popup sidebar filter */
-.searchandfilter {
+.filter-popup {
   position: fixed;
+  display: none;
   top: 60px;
   left: 60px;
   /* filter sidebar width */
   bottom: 0;
-  width: 200px; }
+  width: 200px;
+  background-color: red; }
 
 /*--------------------------------------------------------------
 # Git current branch popup

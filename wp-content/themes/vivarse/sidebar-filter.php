@@ -13,15 +13,10 @@
 <aside id="filter-sidebar" class="filter-sidebar">
 	<?php dynamic_sidebar( 'sidebar-filter' ); ?>
 
-	<?php
-		echo do_shortcode('[searchandfilter
-		fields="search,post_types,category,post_date"
-		types=",check,radio,daterange"
-		post_types="post,event"
-		]');
-
-		// Naredi sam!
-	?>
+	<!-- Naredi formo sam -->
+	<form id="filter-popup" class="filter-popup" action="index.html" method="post">
+		<h1>TEST FORM</h1>
+	</form>
 
 	<h3 class="toggle-filter" onclick="toggleFilter()">FILTER</h3>
 </aside><!-- #filter-sidebar -->

@@ -405,14 +405,17 @@ aside.filter-sidebar {
 }
 
 /* Popup sidebar filter */
-.searchandfilter {
+.filter-popup {
   position: fixed;
+  display: none;
 
   top: $navigation-height;
   left: 60px; /* filter sidebar width */
   bottom: 0;
 
   width: 200px;
+
+  background-color: red;
 
 }
 /*--------------------------------------------------------------
