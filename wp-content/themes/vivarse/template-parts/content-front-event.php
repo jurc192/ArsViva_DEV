@@ -54,7 +54,7 @@ endif;
   		<div class="entry-meta">
 
         <!-- Type of the event (category) -->
-        <?php the_terms($post_id, 'event_cat', '<span class="type">', ', ', '</span><br>'); ?>
+        <?php //the_terms($post_id, 'event_cat', '<span class="type">', ', ', '</span><br>'); ?>
 
         <!-- Posted on () -->
         <?php vivarse_posted_on(); ?>

@@ -801,7 +801,7 @@ article {
   -webkit-hyphens: auto;
   hyphens: auto;
   background-size: cover;
-  font-size: 1rem; }
+  font-size: 0.85rem; }
   article a {
     text-decoration: none; }
 
@@ -832,14 +832,15 @@ img.backgr {
   margin: 0 auto;
   overflow: hidden;
   vertical-align: middle;
-  padding: 5%;
+  padding: 4%;
   height: 70%;
+  min-height: 500px;
   width: 40%;
   max-width: 700px;
   background-color: #fff;
   box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.25); }
   .text-tile h2 {
-    font-size: 2.3rem;
+    font-size: 1.5rem;
     margin-top: 0;
     font-weight: normal; }
 
@@ -848,15 +849,18 @@ img.backgr {
 --------------------------------------------------------------*/
 .type {
   text-transform: lowercase;
-  font-weight: bold; }
+  font-weight: bold;
+  font-size: 0.7rem; }
 
 .info {
-  font-size: 1.5rem; }
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; }
   .info span {
     font-weight: bold; }
 
 p.info:first-of-type {
-  margin-top: 50px; }
+  margin-top: 20px; }
 
 /*--------------------------------------------------------------
 

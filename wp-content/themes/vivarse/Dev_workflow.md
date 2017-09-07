@@ -347,3 +347,17 @@ TO DO list:
   - Registriral sidebar v functions.php
   - Premaknu shortcode iz home v sidebar-filter.php
   - v shortcode nastavitvah ne uporabljaj presledkov!
+
+  - JEBEŠ PLUGIN!
+  - Naredim formo sam, toggle ne dela iz prve?
+
+
+
+## Popravljanje tekst ploščic
+- Na laptopu sploh ni placa za text
+- Naslove omejimo na 60 znakov (s presledki)
+
+- Je možno spreminjat velikost fonta glede na št znakov?
+  - max višina naslova 100px ?
+- Omeji max velikost text ploščice
+- Vrgu ven tip dogodka

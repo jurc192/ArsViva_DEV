@@ -11,7 +11,7 @@
   </main><!-- #main .site-main -->
 
   <footer id="colophon" class="site-footer nofp">
-    <img src="<?php bloginfo('template_url'); ?>/images/noga2.png" alt="footer background">
+    <img src="<?php bloginfo('template_url'); ?>/images/noga3.png" alt="footer background">
 
     <div class="site-info">
 
