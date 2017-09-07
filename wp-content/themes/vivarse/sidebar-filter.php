@@ -12,13 +12,13 @@
 // }
 ?>
 
-<aside id="filter-sidebar" class="widget-area">
+<aside id="filter-sidebar" class="filter-sidebar">
 	<?php dynamic_sidebar( 'sidebar-filter' ); ?>
 
 	<?php
 		echo do_shortcode('[searchandfilter
 		fields="search,post_types,category,post_date"
-		types="radio, radio, radio, date" 
+		types="select, check, radio, date"
 		post_types="post,event"
 		]');
 	?>
