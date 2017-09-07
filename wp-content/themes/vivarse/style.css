@@ -943,6 +943,14 @@ aside.filter-sidebar {
   width: 60px;
   background-color: #cccccc; }
 
+.toggle-filter {
+  display: block;
+  transform: rotate(-90deg);
+  text-decoration: none;
+  vertical-align: middle; }
+  .toggle-filter h3 {
+    margin: 0; }
+
 /*--------------------------------------------------------------
 # Git current branch popup
 --------------------------------------------------------------*/

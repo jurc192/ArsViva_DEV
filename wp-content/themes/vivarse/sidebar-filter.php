@@ -22,4 +22,6 @@
 		post_types="post,event"
 		]');
 	?>
+
+	<a class="toggle-filter" href="#"><h3>FILTER</h3></a>
 </aside><!-- #filter-sidebar -->

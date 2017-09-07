@@ -245,8 +245,8 @@ p.info:first-of-type {
   padding-left: 60px;
   padding-right: 60px;
 
-
 }
+
 
 /*--------------------------------------------------------------
 ### Events Article stuff
@@ -386,6 +386,19 @@ aside.filter-sidebar {
   width: 60px;
 
   background-color: #cccccc;
+}
+
+// FILTER STUFF
+.toggle-filter {
+  display: block;
+  transform: rotate(-90deg);
+
+  text-decoration: none;
+  vertical-align: middle;
+
+  h3 {
+    margin: 0;
+  }
 }
 
 
