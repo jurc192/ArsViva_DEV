@@ -1,5 +1,4 @@
 <?php
-
 // disable direct access
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
@@ -118,5 +117,3 @@ class vsel_widget extends WP_Widget {
 		echo $args['after_widget']; 
 	}
 }
-
-?>

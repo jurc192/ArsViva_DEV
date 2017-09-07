@@ -345,3 +345,5 @@ TO DO list:
   - Naredil sidebar-filter.php
   - Dodal get_sidebar('filter'); v home.php
   - Registriral sidebar v functions.php
+  - Premaknu shortcode iz home v sidebar-filter.php
+  - v shortcode nastavitvah ne uporabljaj presledkov!

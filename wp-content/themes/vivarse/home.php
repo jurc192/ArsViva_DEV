@@ -6,8 +6,6 @@ get_header('nofp'); ?>
 
 	<main id="main" class="site-main-nofp">
 
-		<?php echo do_shortcode('[searchandfilter fields="search,category"]'); ?>
-
     <?php
 		if ( have_posts() ) :
 			while ( have_posts() ) : the_post();

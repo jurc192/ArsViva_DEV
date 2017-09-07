@@ -2,7 +2,7 @@
 /*
  * Plugin Name: Very Simple Event List
  * Description: This is a very simple plugin to display a list of events. Use a shortcode to display events on a page or use the widget. For more info please check readme file.
- * Version: 6.5
+ * Version: 6.6
  * Author: Guido van der Leest
  * Author URI: http://www.guidovanderleest.nl
  * License: GNU General Public License v3 or later
@@ -319,5 +319,3 @@ include 'vsel-all.php';
 include 'vsel-widget.php';
 include 'vsel-options.php';
 include 'vsel-single.php';
-
-?>

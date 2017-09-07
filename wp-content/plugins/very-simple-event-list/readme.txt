@@ -1,7 +1,7 @@
 === Very Simple Event List ===
 Contributors: Guido07111975
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=donation%40guidovanderleest%2enl
-Version: 6.5
+Version: 6.6
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 4.6
@@ -203,7 +203,7 @@ You should change this slug into something else. The slug is not always the same
 = Why a 404 (nothing found) when I click the title link? =
 This is mostly caused by a wrong permalink setting. Please reset it via Settings > Permalinks.
 
-= Can I hide the event labels? =
+= Can I change or hide event labels? =
 Yes, this is possible.
 
 You can find more info about this at the Description section.
@@ -229,9 +229,7 @@ Yes, as far as I know there are no issues when using multiple shortcodes.
 An error notification is displayed in case start date begins after end date. To solve this please reset date.
 
 = Why no start date in dashboard? =
-Because I have added a multi-day feature in version 4.1.
-
-All events posted with version 4.0 or older have 1 date only. To solve this please reset date.
+All events posted with version 4.0 and older have 1 date only. To solve this please reset date.
 
 = Why no meta, image or categories while adding an event? =
 If these boxes are not present, they might be unchecked in Screen Options.
@@ -253,10 +251,18 @@ Please open a topic in plugin forum.
 
 
 == Changelog ==
+= Version 6.6 =
+* fix: used wrong CSS class for several date fields
+* added extra CSS class to all date fields for better customization
+* updated file vsel-style
+* updated all shortcode files
+* best practice: removed closing PHP tag from most files
+* best practice: added newline at end of most files
+
 = Version 6.5 =
 * events are now listed on start date instead of end date
 * removed support for events without start date
-* these events are posted with version 4.0 or older
+* these events are posted with version 4.0 and older
 * this also means they are not listed anymore
 * to solve this please reset date for each of these events
 * new attribute to change no events text: no_events_text
@@ -283,11 +289,6 @@ Please open a topic in plugin forum.
 * updated all shortcode files
 * updated file vsel-style
 * minor textual changes
-
-= Version 6.2 =
-* minor textual changes
-* updated readme file
-* new screenshots on wp.org
 
 For all versions please check file changelog.
 

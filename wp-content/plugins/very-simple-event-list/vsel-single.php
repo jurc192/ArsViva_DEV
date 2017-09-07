@@ -1,5 +1,4 @@
 <?php
-
 // disable direct access
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
@@ -43,18 +42,18 @@ function vsel_single_content( $content ) {
 		}
 		// error in case of wrong date or no start date (no start date in version 4.0 and older)
 		if ( empty($event_start_date) || ($event_start_date > $event_date) ) {
-			$startdate = '<p class="vsel-meta-date">' . esc_attr__( 'Error: please reset date', 'very-simple-event-list' ) . '</p>';
+			$startdate = '<p class="vsel-meta-date vsel-meta-error-date">' . esc_attr__( 'Error: please reset date', 'very-simple-event-list' ) . '</p>';
 		}
 		if ( !empty($event_start_date) && !empty($event_date) ) {
 			if ($event_date_hide != 'yes') {
 				if ($event_date > $event_start_date) {
-					$startdate = '<p class="vsel-meta-date">' . sprintf(esc_attr__( 'Start date: %s', 'very-simple-event-list' ), '<span>'.date_i18n( get_option( 'date_format' ), esc_attr($event_start_date) ).'</span>' ) . '</p>';
+					$startdate = '<p class="vsel-meta-date vsel-meta-start-date">' . sprintf(esc_attr__( 'Start date: %s', 'very-simple-event-list' ), '<span>'.date_i18n( get_option( 'date_format' ), esc_attr($event_start_date) ).'</span>' ) . '</p>';
 				}
 				if ($event_date > $event_start_date) {
-					$enddate = '<p class="vsel-meta-date">' . sprintf(esc_attr__( 'End date: %s', 'very-simple-event-list' ), '<span>'.date_i18n( get_option( 'date_format' ), esc_attr($event_date) ).'</span>' ) . '</p>';
+					$enddate = '<p class="vsel-meta-date vsel-meta-end-date">' . sprintf(esc_attr__( 'End date: %s', 'very-simple-event-list' ), '<span>'.date_i18n( get_option( 'date_format' ), esc_attr($event_date) ).'</span>' ) . '</p>';
 				}
 				if ($event_date == $event_start_date) {
-					$enddate = '<p class="vsel-meta-date">' . sprintf(esc_attr__( 'Date: %s', 'very-simple-event-list' ), '<span>'.date_i18n( get_option( 'date_format' ), esc_attr($event_date) ).'</span>' ) . '</p>';
+					$enddate = '<p class="vsel-meta-date vsel-meta-single-date">' . sprintf(esc_attr__( 'Date: %s', 'very-simple-event-list' ), '<span>'.date_i18n( get_option( 'date_format' ), esc_attr($event_date) ).'</span>' ) . '</p>';
 				}
 			}
 		}
@@ -71,7 +70,5 @@ function vsel_single_content( $content ) {
   	}
 	return $content;
 }
-// Jure Edit
+// Jure edit: disable auto event stuff
 // add_filter( 'the_content', 'vsel_single_content' );
-
-?>

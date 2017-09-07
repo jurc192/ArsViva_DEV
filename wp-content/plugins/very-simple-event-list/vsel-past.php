@@ -1,5 +1,4 @@
 <?php
-
 // disable direct access
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
@@ -112,45 +111,45 @@ function vsel_past_events_shortcode( $vsel_atts ) {
 					if ( !empty($event_start_date) && !empty($event_date) ) {
 						// error in case of wrong date
 						if ($event_start_date > $event_date) {
-								$output .= '<p class="vsel-meta-date">';
+								$output .= '<p class="vsel-meta-date vsel-meta-error-date">';
 								$output .= esc_attr__( 'Error: please reset date', 'very-simple-event-list' ); 
 								$output .= '</p>';
 						}
 						if ($event_date > $event_start_date) {
 							if ( ($event_date_hide == 'yes') && ($widget_date == 'yes') ) {
-								$output .= '<p class="vsel-meta-date vsel-page-hide vsel-widget-hide">';
+								$output .= '<p class="vsel-meta-date vsel-meta-start-date vsel-page-hide vsel-widget-hide">';
 							} elseif ( ($event_date_hide != 'yes') && ($widget_date == 'yes') ) {
-								$output .= '<p class="vsel-meta-link vsel-widget-hide">';
+								$output .= '<p class="vsel-meta-date vsel-meta-start-date vsel-widget-hide">';
 							} elseif ( ($event_date_hide == 'yes') && ($widget_date != 'yes') ) {
-								$output .= '<p class="vsel-meta-date vsel-page-hide">';
+								$output .= '<p class="vsel-meta-date vsel-meta-start-date vsel-page-hide">';
 							} else {
-								$output .= '<p class="vsel-meta-date">';
+								$output .= '<p class="vsel-meta-date vsel-meta-start-date">';
 							}
 							$output .= sprintf(esc_attr($vsel_atts['start_label']), '<span>'.date_i18n( get_option( 'date_format' ), esc_attr($event_start_date) ).'</span>' ); 
 							$output .= '</p>';
 						}
 						if ($event_date > $event_start_date) {
 							if ( ($event_date_hide == 'yes') && ($widget_date == 'yes') ) {
-								$output .= '<p class="vsel-meta-date vsel-page-hide vsel-widget-hide">';
+								$output .= '<p class="vsel-meta-date vsel-meta-end-date vsel-page-hide vsel-widget-hide">';
 							} elseif ( ($event_date_hide != 'yes') && ($widget_date == 'yes') ) {
-								$output .= '<p class="vsel-meta-link vsel-widget-hide">';
+								$output .= '<p class="vsel-meta-date vsel-meta-end-date vsel-widget-hide">';
 							} elseif ( ($event_date_hide == 'yes') && ($widget_date != 'yes') ) {
-								$output .= '<p class="vsel-meta-date vsel-page-hide">';
+								$output .= '<p class="vsel-meta-date vsel-meta-end-date vsel-page-hide">';
 							} else {
-								$output .= '<p class="vsel-meta-date">';
+								$output .= '<p class="vsel-meta-date vsel-meta-end-date">';
 							}
 							$output .= sprintf(esc_attr($vsel_atts['end_label']), '<span>'.date_i18n( get_option( 'date_format' ), esc_attr($event_date) ).'</span>' ); 
 							$output .= '</p>';
 						}
 						if ($event_date == $event_start_date) {
 							if ( ($event_date_hide == 'yes') && ($widget_date == 'yes') ) {
-								$output .= '<p class="vsel-meta-date vsel-page-hide vsel-widget-hide">';
+								$output .= '<p class="vsel-meta-date vsel-meta-single-date vsel-page-hide vsel-widget-hide">';
 							} elseif ( ($event_date_hide != 'yes') && ($widget_date == 'yes') ) {
-								$output .= '<p class="vsel-meta-link vsel-widget-hide">';
+								$output .= '<p class="vsel-meta-date vsel-meta-single-date vsel-widget-hide">';
 							} elseif ( ($event_date_hide == 'yes') && ($widget_date != 'yes') ) {
-								$output .= '<p class="vsel-meta-date vsel-page-hide">';
+								$output .= '<p class="vsel-meta-date vsel-meta-single-date vsel-page-hide">';
 							} else {
-								$output .= '<p class="vsel-meta-date">';
+								$output .= '<p class="vsel-meta-date vsel-meta-single-date">';
 							}
 							$output .= sprintf(esc_attr($vsel_atts['date_label']), '<span>'.date_i18n( get_option( 'date_format' ), esc_attr($event_date) ).'</span>' ); 
 							$output .= '</p>';
@@ -235,5 +234,3 @@ function vsel_past_events_shortcode( $vsel_atts ) {
 	return $output;
 } 
 add_shortcode('vsel-past-events', 'vsel_past_events_shortcode');
-
-?>

@@ -1,5 +1,4 @@
 <?php
-
 // disable direct access
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
@@ -174,5 +173,3 @@ function vsel_options_page() {
 </div>
 <?php
 }
-
-?>

@@ -8,8 +8,7 @@ get_header('nofp'); ?>
 	<main id="main" class="site-main-nofp">
 
 		<h1>Search results</h1>
-
-		<?php echo do_shortcode('[searchandfilter fields="search,category,post_tag"]'); ?>
+		<h2>Tu dodaj še x gumb, nazaj na dogodke</h2>
 
     <?php
 		if ( have_posts() ) :
