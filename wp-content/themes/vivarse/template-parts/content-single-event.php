@@ -15,7 +15,6 @@
     -text_tile
       -header
         -title
-        -metadata (type, time, location)
       -content
 */
 
@@ -38,23 +37,28 @@ else:
   $thumb_url = get_bloginfo('template_url') . "/images/home-fotka1.jpg";
 endif;
 
+
  ?>
 
-<article id="post-<?php echo $post_id; ?>" <?php post_class('section'); ?>>
-  <img class="backgr" src="<?php echo $thumb_url?>" alt="fotka1">
+<article id="post-<?php echo $post_id; ?>" <?php post_class('single'); ?>>
 
-  <div class="text-tile">
+  <div class="text-tile-single">
+
+    <!-- Dodaj IF pogoj, če nima slike -->
+    <!-- Odkomentiraj "Single event s sliko" v css, če hočeš da dela! -->
+    <!-- <img class="single-image" src="<?php echo $thumb_url?>" alt="fotka1"> -->
+
     <header class="entry-header">
 
-      <!-- Event title -->
-      <h2 class="entry-title">
-        <a href=<?php echo esc_url( get_permalink()); ?> rel="bookmark"><?php echo $post_title; ?></a>
-      </h2>
+      <div class="entry-meta-single">
 
-  		<div class="entry-meta">
+        <!-- Event title -->
+        <h2 class="entry-title">
+          <a href=<?php echo esc_url( get_permalink()); ?> rel="bookmark"><?php echo $post_title; ?></a>
+        </h2>
 
         <!-- Type of the event (category) -->
-        <?php //the_terms($post_id, 'event_cat', '<span class="type">', ', ', '</span><br>'); ?>
+        <?php the_terms($post_id, 'event_cat', '<span class="type">', ', ', '</span><br>'); ?>
 
         <!-- Posted on () -->
         <?php vivarse_posted_on(); ?>
@@ -72,26 +76,26 @@ endif;
           <?php echo $event_location; ?>
         </p>
 
-  		</div><!-- .entry-meta -->
+      </div><!-- .entry-meta -->
+
   	</header><!-- .entry-header -->
 
 
   	<div class="entry-content">
       <!-- TO ZAENKRAT PUSTIM TAKO, PREŠTUDIRAJ! -->
   		<?php
-  			// the_content( sprintf(
-  			// 	wp_kses(
-  			// 		/* translators: %s: Name of current post. Only visible to screen readers */
-  			// 		__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'vivarse' ),
-  			// 		array(
-  			// 			'span' => array(
-  			// 				'class' => array(),
-  			// 			),
-  			// 		)
-  			// 	),
-  			// 	get_the_title()
-  			// ) );
-        the_excerpt();
+  			the_content( sprintf(
+  				wp_kses(
+  					/* translators: %s: Name of current post. Only visible to screen readers */
+  					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'vivarse' ),
+  					array(
+  						'span' => array(
+  							'class' => array(),
+  						),
+  					)
+  				),
+  				get_the_title()
+  			) );
 
   			wp_link_pages( array(
   				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'vivarse' ),
@@ -107,4 +111,6 @@ endif;
   	</footer>
 
   </div><!-- .text-tile -->
+
+
 </article><!-- #post-<?php the_ID(); ?> -->

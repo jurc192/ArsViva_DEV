@@ -1,5 +1,4 @@
 <?php
-
 // If uninstall is not called from WordPress, exit 
 if ( !defined( 'WP_UNINSTALL_PLUGIN' ) ) { 
 	exit(); 
@@ -58,5 +57,3 @@ if ( $keep != 'yes' ) {
 	// Delete events
 	$wpdb->query( "DELETE FROM {$wpdb->posts} WHERE post_type = 'event'" ); 
 }
-
-?>

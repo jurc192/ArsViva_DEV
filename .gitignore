@@ -1,3 +1,8 @@
+# Exclude Node & Gulp stuff
+node_modules/*
+package.json
+gulpfile.js
+
 # Don't add the settings (passwords) file to the repository #
 wp-config.php
 

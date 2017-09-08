@@ -9,7 +9,7 @@
  ?>
 
     <footer id="colophon" class="site-footer section fp-auto-height">
-      <img src="<?php bloginfo('template_url'); ?>/images/noga2.png" alt="footer background">
+      <img src="<?php bloginfo('template_url'); ?>/images/noga3.png" alt="footer background">
       <div class="site-info">
 
         <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'vivarse' ) ); ?>"><?php

@@ -1,5 +1,5 @@
 /*
- * Very Simple Event List Datepicker
+ * Very Simple Event List datepicker
  */
 
 jQuery(document).ready(function ($) { 

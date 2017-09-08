@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Very Simple Event List\n"
-"POT-Creation-Date: 2017-09-03 11:53+0200\n"
+"POT-Creation-Date: 2017-09-06 20:06+0200\n"
 "PO-Revision-Date: 2015-09-10 13:41+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -19,224 +19,224 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: vsel-all.php:14 vsel-current.php:14 vsel-past.php:14 vsel-single.php:57
-#: vsel-upcoming.php:14
+#: vsel-all.php:13 vsel-current.php:13 vsel-past.php:13 vsel-single.php:56
+#: vsel-upcoming.php:13
 #, php-format
 msgid "Date: %s"
 msgstr ""
 
-#: vsel-all.php:15 vsel-current.php:15 vsel-past.php:15 vsel-single.php:51
-#: vsel-upcoming.php:15
+#: vsel-all.php:14 vsel-current.php:14 vsel-past.php:14 vsel-single.php:50
+#: vsel-upcoming.php:14
 #, php-format
 msgid "Start date: %s"
 msgstr ""
 
-#: vsel-all.php:16 vsel-current.php:16 vsel-past.php:16 vsel-single.php:54
-#: vsel-upcoming.php:16
+#: vsel-all.php:15 vsel-current.php:15 vsel-past.php:15 vsel-single.php:53
+#: vsel-upcoming.php:15
 #, php-format
 msgid "End date: %s"
 msgstr ""
 
-#: vsel-all.php:17 vsel-current.php:17 vsel-past.php:17 vsel-single.php:62
-#: vsel-upcoming.php:17
+#: vsel-all.php:16 vsel-current.php:16 vsel-past.php:16 vsel-single.php:61
+#: vsel-upcoming.php:16
 #, php-format
 msgid "Time: %s"
 msgstr ""
 
-#: vsel-all.php:18 vsel-current.php:18 vsel-past.php:18 vsel-single.php:65
-#: vsel-upcoming.php:18
+#: vsel-all.php:17 vsel-current.php:17 vsel-past.php:17 vsel-single.php:64
+#: vsel-upcoming.php:17
 #, php-format
 msgid "Location: %s"
 msgstr ""
 
-#: vsel-all.php:19
+#: vsel-all.php:18
 msgid "There are no events."
 msgstr ""
 
-#: vsel-all.php:82 vsel-current.php:109 vsel-past.php:94 vsel-single.php:35
-#: vsel-upcoming.php:94
+#: vsel-all.php:81 vsel-current.php:108 vsel-past.php:93 vsel-single.php:34
+#: vsel-upcoming.php:93
 msgid "More info"
 msgstr ""
 
-#: vsel-all.php:104 vsel-current.php:131 vsel-past.php:116 vsel-single.php:46
-#: vsel-upcoming.php:116
+#: vsel-all.php:103 vsel-current.php:130 vsel-past.php:115 vsel-single.php:45
+#: vsel-upcoming.php:115
 msgid "Error: please reset date"
+msgstr ""
+
+#: vsel-all.php:207 vsel-current.php:234 vsel-past.php:219
+#: vsel-upcoming.php:219
+msgid "Next &raquo;"
 msgstr ""
 
 #: vsel-all.php:208 vsel-current.php:235 vsel-past.php:220
 #: vsel-upcoming.php:220
-msgid "Next &raquo;"
-msgstr ""
-
-#: vsel-all.php:209 vsel-current.php:236 vsel-past.php:221
-#: vsel-upcoming.php:221
 msgid "&laquo; Previous"
 msgstr ""
 
-#: vsel-current.php:19
+#: vsel-current.php:18
 msgid "There are no current events."
 msgstr ""
 
-#: vsel-options.php:11
+#: vsel-options.php:10
 msgid "VSEL"
 msgstr ""
 
-#: vsel-options.php:18
+#: vsel-options.php:17
 msgid "General"
 msgstr ""
 
-#: vsel-options.php:20
+#: vsel-options.php:19
 msgid "Uninstall"
 msgstr ""
 
-#: vsel-options.php:23
+#: vsel-options.php:22
 msgid "Summary"
 msgstr ""
 
-#: vsel-options.php:26 vsel-widget.php:34
+#: vsel-options.php:25 vsel-widget.php:33
 msgid "Title"
 msgstr ""
 
-#: vsel-options.php:29
+#: vsel-options.php:28
 msgid "Page"
 msgstr ""
 
-#: vsel-options.php:31 vsel-options.php:39
+#: vsel-options.php:30 vsel-options.php:38
 msgid "Date"
 msgstr ""
 
-#: vsel-options.php:34 vsel-options.php:54 vsel.php:162
+#: vsel-options.php:33 vsel-options.php:53 vsel.php:162
 msgid "Link to more info"
 msgstr ""
 
-#: vsel-options.php:37
+#: vsel-options.php:36
 msgid "Widget"
 msgstr ""
 
-#: vsel-options.php:42 vsel.php:158 vsel.php:228
+#: vsel-options.php:41 vsel.php:158 vsel.php:228
 msgid "Time"
 msgstr ""
 
-#: vsel-options.php:45 vsel.php:160 vsel.php:229
+#: vsel-options.php:44 vsel.php:160 vsel.php:229
 msgid "Location"
 msgstr ""
 
-#: vsel-options.php:48
+#: vsel-options.php:47
 msgid "Image"
 msgstr ""
 
-#: vsel-options.php:51
+#: vsel-options.php:50
 msgid "Content"
 msgstr ""
 
-#: vsel-options.php:61
+#: vsel-options.php:60
 msgid "General Settings"
 msgstr ""
 
-#: vsel-options.php:65
+#: vsel-options.php:64
 msgid "Page Settings"
 msgstr ""
 
-#: vsel-options.php:69
+#: vsel-options.php:68
 msgid "Widget Settings"
 msgstr ""
 
-#: vsel-options.php:78
+#: vsel-options.php:77
 msgid "Do not delete events and settings."
 msgstr ""
 
-#: vsel-options.php:86
+#: vsel-options.php:85
 msgid "Show a summary instead of all content."
 msgstr ""
 
-#: vsel-options.php:94
+#: vsel-options.php:93
 msgid "Link title to the event page."
 msgstr ""
 
-#: vsel-options.php:102 vsel-options.php:118 vsel-options.php:126
-#: vsel-options.php:134 vsel-options.php:142 vsel-options.php:150
-#: vsel-options.php:158
+#: vsel-options.php:101 vsel-options.php:117 vsel-options.php:125
+#: vsel-options.php:133 vsel-options.php:141 vsel-options.php:149
+#: vsel-options.php:157
 msgid "Hide"
 msgstr ""
 
-#: vsel-options.php:110
+#: vsel-options.php:109
 msgid "Hide on page with all events."
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-#: vsel-options.php:168 vsel-widget.php:12 vsel-widget.php:25
+#: vsel-options.php:167 vsel-widget.php:11 vsel-widget.php:24
 msgid "Very Simple Event List"
 msgstr ""
 
-#: vsel-past.php:19
+#: vsel-past.php:18
 msgid "There are no past events."
 msgstr ""
 
-#: vsel-upcoming.php:19
+#: vsel-upcoming.php:18
 msgid "There are no upcoming events."
 msgstr ""
 
-#: vsel-widget.php:11
+#: vsel-widget.php:10
 msgid "Display your events in a widget."
 msgstr ""
 
-#: vsel-widget.php:38
+#: vsel-widget.php:37
 msgid "Information"
 msgstr ""
 
-#: vsel-widget.php:42
+#: vsel-widget.php:41
 msgid "List"
 msgstr ""
 
-#: vsel-widget.php:44
+#: vsel-widget.php:43
 msgid "Upcoming events"
 msgstr ""
 
-#: vsel-widget.php:45
+#: vsel-widget.php:44
 msgid "Past events"
 msgstr ""
 
-#: vsel-widget.php:46
+#: vsel-widget.php:45
 msgid "Current events"
 msgstr ""
 
-#: vsel-widget.php:47 vsel-widget.php:85
+#: vsel-widget.php:46 vsel-widget.php:84
 msgid "All events"
 msgstr ""
 
-#: vsel-widget.php:51
+#: vsel-widget.php:50
 msgid "Attributes"
 msgstr ""
 
-#: vsel-widget.php:52
+#: vsel-widget.php:51
 msgid "Example: posts_per_page=2"
 msgstr ""
 
-#: vsel-widget.php:55
+#: vsel-widget.php:54
 msgid "Link to all events"
 msgstr ""
 
-#: vsel-widget.php:56
+#: vsel-widget.php:55
 msgid "Example: www.mydomain.com/events"
 msgstr ""
 
-#: vsel-widget.php:59 vsel.php:164
+#: vsel-widget.php:58 vsel.php:164
 msgid "Link label"
 msgstr ""
 
-#: vsel-widget.php:60
+#: vsel-widget.php:59
 msgid "Example: All events"
 msgstr ""
 
-#: vsel-widget.php:62
+#: vsel-widget.php:61
 msgid "Info about attributes"
 msgstr ""
 
-#: vsel-widget.php:62 vsel-widget.php:63
+#: vsel-widget.php:61 vsel-widget.php:62
 msgid "click here"
 msgstr ""
 
-#: vsel-widget.php:63
+#: vsel-widget.php:62
 msgid "Hide elements in widget"
 msgstr ""
 

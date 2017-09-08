@@ -137,7 +137,11 @@ article {
     @include word-wrap();
     background-size: cover;
 
-    font-size: 1rem;
+    // Na velikem monitorju
+    // font-size: 1rem;
+
+    // Na malem monitoru
+    font-size: 0.85rem;
 
     a {
       text-decoration: none;
@@ -186,16 +190,26 @@ img.backgr {
 
   overflow: hidden;
   vertical-align: middle;
-  padding: 5%;
+
+  // Na velikem monitorju
+  padding: 4%;
 
   height: 70%;
+  min-height: 500px;
+
   width: 40%; // TEMP HACK, find proper way to do it
   max-width: 700px;
+
   background-color: $color_arsviva_white;
   box-shadow: 5px 5px 5px rgba(100, 100, 100, .25);
 
   h2 {
-    font-size: 2.3rem;
+
+    // Na velikem monitorju
+    // font-size: 2.15rem;
+
+    // Na malem monitorju
+    font-size: 1.5rem;
     margin-top: 0;
     /* test */
 
@@ -210,12 +224,21 @@ img.backgr {
 .type {
   text-transform: lowercase;
   font-weight: bold;
-  // font-size: 1.5rem;
+  font-size: 0.7rem;
 }
 
 // Kdaj, kje
 .info {
-  font-size: 1.5rem;
+
+  // na velikih monitorjih
+  // font-size: 1.2rem;
+
+  // na malih monitorjih
+  font-size: 1rem;
+
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+
 
   span {
     font-weight: bold;
@@ -223,7 +246,12 @@ img.backgr {
 }
 
 p.info:first-of-type {
-  margin-top: 50px;
+
+  // na velikih monitorjih
+  // margin-top: 50px;
+
+  // na malih monitorjih
+  margin-top: 20px;
 }
 
 
@@ -236,18 +264,24 @@ p.info:first-of-type {
 --------------------------------------------------------------*/
 
 .site-main-nofp {
-  min-height: calc(100vh - 200px);
-  padding-top: $navigation-height + 20px;
   text-align: center;
 
-  h1 {
-    margin-top: 0;
-  }
+  min-height: calc(100vh - 200px);
+
+  padding-top: $navigation-height + 20px;
+
+  // Padding contenta (main) za sidebare
+  padding-left: 60px;
+  padding-right: 60px;
+
 }
+
 
 /*--------------------------------------------------------------
 ### Events Article stuff
 --------------------------------------------------------------*/
+// to bi bilo boljše naredit class "article.tile" namesto nofp
+// zato ker je tudi article v single.php artcile.
 article.nofp {
 
   position: relative;
@@ -314,6 +348,105 @@ $footer-height: 200px;
 
 
 
+/*--------------------------------------------------------------
+# Single post
+--------------------------------------------------------------*/
+article.single {
+  position: relative;
+}
+
+.text-tile-single {
+
+  position: relative;
+  margin: 0 auto 100px auto;
+
+  overflow: hidden;
+  vertical-align: middle;
+  padding: 5%;
+
+  max-width: 1024px;
+  background-color: $color_arsviva_white;
+  box-shadow: 5px 5px 5px rgba(100, 100, 100, .25);
+
+  h2 {
+    font-size: 2.3rem;
+    margin-top: 0;
+
+    font-weight: normal;
+  }
+
+  .entry-content {
+    text-align: left;
+  }
+}
+
+// ## single event/post image
+.single-image {
+
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+
+}
+
+// SINGLE EVENT S SLIKO
+// .entry-meta-single {
+//   position: absolute;
+//   top: 15%;
+//   left: 0;
+//   right: 0;
+//
+//   padding: 5%;
+//
+//   background-color: rgba(255, 255, 255, 0.8);
+// }
+
+
+/*--------------------------------------------------------------
+# Filter sidebar stuff
+--------------------------------------------------------------*/
+aside.filter-sidebar {
+  position: fixed;
+
+  top:$navigation-height;
+  left: 0;
+
+  height: 100%;
+  width: 60px;
+
+  background-color: #cccccc;
+}
+
+// FILTER STUFF
+.toggle-filter {
+  display: block;
+  position: absolute;
+
+  top: 200px;
+  transform: rotate(-90deg);
+
+  text-decoration: none;
+  vertical-align: middle;
+
+  h3 {
+    margin: 0;
+  }
+}
+
+/* Popup sidebar filter */
+.filter-popup {
+  position: fixed;
+  display: none;
+
+  top: $navigation-height;
+  left: 60px; /* filter sidebar width */
+  bottom: 0;
+
+  width: 200px;
+
+  background-color: red;
+
+}
 /*--------------------------------------------------------------
 # Git current branch popup
 --------------------------------------------------------------*/

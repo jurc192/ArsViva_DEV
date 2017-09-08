@@ -1,10 +1,18 @@
 CHANGELOG
 =========
 
+= Version 6.6 =
+* fix: used wrong CSS class for several date fields
+* added extra CSS class to all date fields for better customization
+* updated file vsel-style
+* updated all shortcode files
+* best practice: removed closing PHP tag from most files
+* best practice: added newline at end of most files
+
 = Version 6.5 =
 * events are now listed on start date instead of end date
 * removed support for events without start date
-* these events are posted with version 4.0 or older
+* these events are posted with version 4.0 and older
 * this also means they are not listed anymore
 * to solve this please reset date for each of these events
 * new attribute to change no events text: no_events_text

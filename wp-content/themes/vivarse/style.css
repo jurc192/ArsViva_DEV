@@ -801,7 +801,7 @@ article {
   -webkit-hyphens: auto;
   hyphens: auto;
   background-size: cover;
-  font-size: 1rem; }
+  font-size: 0.85rem; }
   article a {
     text-decoration: none; }
 
@@ -832,14 +832,15 @@ img.backgr {
   margin: 0 auto;
   overflow: hidden;
   vertical-align: middle;
-  padding: 5%;
+  padding: 4%;
   height: 70%;
+  min-height: 500px;
   width: 40%;
   max-width: 700px;
   background-color: #fff;
   box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.25); }
   .text-tile h2 {
-    font-size: 2.3rem;
+    font-size: 1.5rem;
     margin-top: 0;
     /* test */
     font-weight: normal; }
@@ -849,15 +850,18 @@ img.backgr {
 --------------------------------------------------------------*/
 .type {
   text-transform: lowercase;
-  font-weight: bold; }
+  font-weight: bold;
+  font-size: 0.7rem; }
 
 .info {
-  font-size: 1.5rem; }
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; }
   .info span {
     font-weight: bold; }
 
 p.info:first-of-type {
-  margin-top: 50px; }
+  margin-top: 20px; }
 
 /*--------------------------------------------------------------
 
@@ -865,11 +869,11 @@ p.info:first-of-type {
 
 --------------------------------------------------------------*/
 .site-main-nofp {
+  text-align: center;
   min-height: calc(100vh - 200px);
   padding-top: 80px;
-  text-align: center; }
-  .site-main-nofp h1 {
-    margin-top: 0; }
+  padding-left: 60px;
+  padding-right: 60px; }
 
 /*--------------------------------------------------------------
 ### Events Article stuff
@@ -905,6 +909,65 @@ article.nofp {
 
 .site-footer.nofp {
   position: relative; }
+
+/*--------------------------------------------------------------
+# Single post
+--------------------------------------------------------------*/
+article.single {
+  position: relative; }
+
+.text-tile-single {
+  position: relative;
+  margin: 0 auto 100px auto;
+  overflow: hidden;
+  vertical-align: middle;
+  padding: 5%;
+  max-width: 1024px;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.25); }
+  .text-tile-single h2 {
+    font-size: 2.3rem;
+    margin-top: 0;
+    font-weight: normal; }
+  .text-tile-single .entry-content {
+    text-align: left; }
+
+.single-image {
+  display: block;
+  margin: 0 auto;
+  width: 100%; }
+
+/*--------------------------------------------------------------
+# Filter sidebar stuff
+--------------------------------------------------------------*/
+aside.filter-sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  height: 100%;
+  width: 60px;
+  background-color: #cccccc; }
+
+.toggle-filter {
+  display: block;
+  position: absolute;
+  top: 200px;
+  transform: rotate(-90deg);
+  text-decoration: none;
+  vertical-align: middle; }
+  .toggle-filter h3 {
+    margin: 0; }
+
+/* Popup sidebar filter */
+.filter-popup {
+  position: fixed;
+  display: none;
+  top: 60px;
+  left: 60px;
+  /* filter sidebar width */
+  bottom: 0;
+  width: 200px;
+  background-color: red; }
 
 /*--------------------------------------------------------------
 # Git current branch popup
