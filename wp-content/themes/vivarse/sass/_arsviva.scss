@@ -123,9 +123,7 @@ $footer-height: 200px;
 article {
     @include word-wrap();
     background-size: cover;
-
     font-size: 1rem;
-
     a {
       text-decoration: none;
     }
@@ -135,12 +133,12 @@ article {
 // Isto za Text ploščice
 article:nth-of-type(even) {
   & img.backgr {
-    right: 5%;
+    right: 60px;
     object-position: right;
   }
 
   & iframe {
-	right: 6%;
+	right: 60px;
     object-position: right;
   }
   
@@ -160,19 +158,18 @@ article:nth-of-type(odd) {
     object-position: left;
   }
   & iframe {
-    left: 1%;
+    left: 0;
     object-position: left;
   }
 
   & .text-tile {
-    left: 20%;
+    left: 25%;
 	object-position: left;
   }
   & .text-tile-small {
     left: 30%;
 	object-position: left;
   }
-		
 }
 
 // Slika članka
@@ -182,21 +179,23 @@ img.backgr {
   height: 100%;
   top: 0;
   bottom: 0;
-
   object-fit: cover;
 }
 
 //Embedded
 
-iframe{
-	height: 90%;
-	width: 64%;
+iframe.google-maps{
+	height: calc(100vh - 60px);
+	width: 66vw;
 	position: absolute;
-	top: 70px;
+	top: 60px;
 	bottom: 0;
 }
 
-
+.htmlvideo{
+width:calc(100vw - 60px);
+height:100%;
+}
 
 
 // Ploščica za text
@@ -265,7 +264,7 @@ top: 0;
 bottom: 0;
 background-color: #CCC;
 height: 100%;
-width: 5%;
+width: 60px;
 }
 
 
@@ -319,3 +318,125 @@ html, body {
     70% { opacity: 1; }
     100% { opacity: 0; }
 }
+
+
+
+
+/*--------------------------------------------------------------
+# Modal Pictures
+--------------------------------------------------------------*/
+#zemljevid-area{
+	position: relative;
+	width: calc(100vw-60px);
+	height: 100%;
+	right:60px;
+}
+
+#zemljevid{
+	position: absolute;
+	z-index:1;
+	object-fit:cover;
+	width:100%;
+	height:100%;
+}
+
+#myImg1,#myImg2,#myImg3,#myImg4,#myImg5 {
+	height: 7%;
+    cursor: pointer;
+    transition: 0.3s;
+	z-index:2;
+	position: absolute;
+	object-position: right;
+}
+
+#myImg1{	/*Amfiteater*/
+	right:29%;
+	top:44%;
+}
+
+#myImg2{	/*Galerija*/
+	right:35%;
+	top:23%;
+}
+#myImg3{	/*Apartma*/
+	right:33%;
+	top:63%;
+}
+#myImg4{	/*Dvorišče*/
+	right:35%;
+	top:37%;
+}
+#myImg5{	/*Vhod*/
+	right:38%;
+	top:11%;
+}
+
+
+.modal {
+    display: none; 
+    position: absolute; 
+    z-index: 3; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9); 
+}
+
+.modal-content {
+	object-position: 50% 50%;
+    margin: auto;
+    display: block;
+    width: 70%;
+	height: 70%;
+	}
+
+.modal-content, { 
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+#close1,#close2,#close3,#close4,#close5 {
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    color: #CCC;
+    font-size: 60px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#close1:hover,#close1:focus,
+#close2:hover,#close2:focus,
+#close3:hover,#close3:focus,
+#close4:hover,#close4:focus,
+#close5:hover,#close5:focus{
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+

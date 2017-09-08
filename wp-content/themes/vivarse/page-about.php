@@ -3,46 +3,13 @@
 	<main id="main" class="site-main">
 
 	<?php get_sidebar(); ?>
-		
-	
-		<article class="section">
-			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/ozavodu-fotka1.jpg" alt="fotka1">
-
-			<div class="text-tile">
-				<h2>Predstavitev</h2>
-				<p>
-					Domačija Žnidaršič se nahaja v občini Loška dolina, natančneje v vasi Podcerkev. Tu je kot sad pridnega
-					dela, vztrajnosti ter dobre volje nastala domačija, ki se je v dobrem stoletju razvila v pravi kulturni cen-ter
-					na podeželju.
-				</p>
-				<p>
-					Tak kulturni center in inkubator razvojnih in tehnoloških idej, ki bodo spremenile življenje prebivalcev na
-					vasi in jim ponudile rešitve, da bodo lahko v tem okolju preživeli. Kultura in kulturna dediščina nam bo
-					sredstvo in polje izražanja ter možnost za uveljavljanja drugačnosti.
-				</p>
-			</div>
-		</article>
-
-		<article class="section">
-			<iframe class="yt-video" src="https://www.youtube.com/embed/NVHcAEX-O9A" frameborder="0" allowfullscreen></iframe>	
-			<div class="text-tile-small">
-				<h2>Prostori</h2>
-				<p>
-						Obiskovalcem domačije nudimo različne možnosti za druženje in sprostitev. Tako so vam na voljo različni
-						prostori in okolja, kjer boste zagotovo našli nekaj zase.
-				</p>
-		</div>
-		</article>
-
 			
-
-
 		<article class="section">
 			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/ozavodu-fotka3.jpg" alt="fotka2">
-
+			
 			<div class="slide">
 				<div class="text-tile">
-					<h2>Prostori</h2>
+					<h2>Predstavitev</h2>
 					<p>
 						Obiskovalcem domačije nudimo različne možnosti za druženje in sprostitev. Tako so vam na voljo različni
 						prostori in okolja, kjer boste zagotovo našli nekaj zase.
@@ -58,12 +25,59 @@
 						preprosto prepustite tre-nutku in užijete veličino domačnosti.
 					</p>
 				</div>
-
 			</div>
+		</article>	
+		
 
-		</article>
 
 		
+		<article style="background-color: black;" class="section">
+			<video class="htmlvideo" controls>
+			<source src="http://video.webmfiles.org/elephants-dream.webm" type="video/webm">
+			Your browser does not support the video tag.
+			</video>
+		</article>
+
+	
+
+		
+		
+		
+		<article class="section">
+			<div id="zemljevid-area">
+				<img id="zemljevid" src="<?php bloginfo('template_url'); ?>/images/zemljevid.png"> 
+				<img id="myImg1" src="<?php bloginfo('template_url'); ?>/images/sidebar-insta.png">
+				<img id="myImg2" src="<?php bloginfo('template_url'); ?>/images/sidebar-insta.png">
+				<img id="myImg3" src="<?php bloginfo('template_url'); ?>/images/sidebar-insta.png">
+				<img id="myImg4" src="<?php bloginfo('template_url'); ?>/images/sidebar-insta.png">
+				<img id="myImg5" src="<?php bloginfo('template_url'); ?>/images/sidebar-insta.png">
+			</div> 
+			
+			
+			<div id="myModal1" class="modal">
+				<span id="close2" onclick="document.getElementById('myModal1').style.display='none'">&times;</span>
+				<iframe class="modal-content"  src="https://www.google.com/maps/embed?pb=!1m0!3m2!1ssl!2sus!4v1504112212072!6m8!1m7!1sCAoSLEFGMVFpcE5kNFlhLWRWM2JkS2ZLUUZpNHhrMkFZcVRPenBEZDFmZm0yVnNz!2m2!1d45.71218779648877!2d14.45914779806241!3f141.89!4f-3.8299999999999983!5f0.7820865974627469" frameborder="0" style="border:0" allowfullscreen></iframe>	
+			</div> 
+			<div id="myModal2" class="modal">
+				<span id="close2" onclick="document.getElementById('myModal2').style.display='none'">&times;</span>
+				<img class="modal-content" src="<?php bloginfo('template_url'); ?>/images/ozavodu-fotka1.jpg">
+			</div> 
+			<div id="myModal3" class="modal">
+				<span id="close3" onclick="document.getElementById('myModal3').style.display='none'">&times;</span>
+				<img class="modal-content" src="<?php bloginfo('template_url'); ?>/images/ozavodu-fotka1.jpg">
+			</div> 
+			<div id="myModal4" class="modal">
+				<span id="close4" onclick="document.getElementById('myModal4').style.display='none'">&times;</span>
+				<img class="modal-content" src="<?php bloginfo('template_url'); ?>/images/ozavodu-fotka1.jpg">
+			</div> 
+			<div id="myModal5" class="modal">
+				<span id="close5" onclick="document.getElementById('myModal5').style.display='none'">&times;</span>
+				<img class="modal-content" src="<?php bloginfo('template_url'); ?>/images/ozavodu-fotka1.jpg">
+			</div> 
+		</article>
+	
+		
+			
 
 		<article class="section">
 			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/ozavodu-fotka3.jpg" alt="fotka1">
@@ -98,8 +112,6 @@
 
 		</article>
 
-		
-		
 		<article class="section">
 			<iframe class ="google-maps" src="https://www.google.com/maps/embed?pb=!1m0!3m2!1ssl!2sus!4v1504112212072!6m8!1m7!1sCAoSLEFGMVFpcE5kNFlhLWRWM2JkS2ZLUUZpNHhrMkFZcVRPenBEZDFmZm0yVnNz!2m2!1d45.71218779648877!2d14.45914779806241!3f141.89!4f-3.8299999999999983!5f0.7820865974627469" frameborder="0" style="border:0" allowfullscreen></iframe>	
 			<div class="text-tile-small">
@@ -110,10 +122,6 @@
 				</p>
 			</div>
 		</article>	
-		
-		
-		
-		
 		
 		
 		<article class="section">
