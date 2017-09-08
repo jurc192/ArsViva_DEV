@@ -10,9 +10,9 @@
 </aside><!-- #secondary -->
  */
 
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-	return;
-}
+// if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+// 	return;
+// }
 ?>
 
 
