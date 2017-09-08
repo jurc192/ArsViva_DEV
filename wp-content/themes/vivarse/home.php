@@ -26,6 +26,9 @@ get_header('nofp'); ?>
 
 <?php
 
+/* Social sidebar */
+get_sidebar();
+
 /* Filter sidebar */
 get_sidebar('filter');
 

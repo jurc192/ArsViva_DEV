@@ -9,6 +9,7 @@
 
 get_header('nofp'); ?>
 
+
 	<main id="main" class="site-main-nofp">
 
 	<?php
@@ -33,4 +34,5 @@ get_header('nofp'); ?>
 	</main><!-- #main -->
 
 <?php
+get_sidebar();
 get_footer('nofp');

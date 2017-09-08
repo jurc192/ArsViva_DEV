@@ -11,19 +11,14 @@
     <footer id="colophon" class="site-footer section fp-auto-height">
       <img src="<?php bloginfo('template_url'); ?>/images/noga3.png" alt="footer background">
       <div class="site-info">
-
-        <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'vivarse' ) ); ?>"><?php
-          /* translators: %s: CMS name, i.e. WordPress. */
-          printf( esc_html__( 'Proudly powered by %s', 'vivarse' ), 'WordPress' );
-        ?></a>
-        <span class="sep"> | </span>
-        <?php
-          /* translators: 1: Theme name, 2: Theme author. */
-          printf( esc_html__( 'Theme: %1$s by %2$s.', 'vivarse' ), 'vivarse', '<a href="http://underscores.me/">Jure Vidmar, Primoz Prevc</a>' );
-        ?>
+		<p><b> Zavod za kulturno integracijo<br>in socializacijo družbenih skupin</b></p>
+		<p>Podcerkev 24 <br> 1386 Stari trg pri Ložu</p>
+		<p>TRR 03133-1000202343 SKB <br> ID za DDV: SI39453600</p>
+		<p>tel:(386)(0)5 726 47 21 <br> mob:(386)(0)41 741 750</p>
+		
 
       </div><!-- .site-info -->
-    </footer><!-- #colophon .site footer -->
+    </footer><!-- #colophon .site footer 		 -->
 
 
   </main><!-- #main .site-main -->
