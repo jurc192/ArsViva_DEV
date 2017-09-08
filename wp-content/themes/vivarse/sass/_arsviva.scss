@@ -137,7 +137,7 @@ article:nth-of-type(even) {
     object-position: right;
   }
 
-  & iframe {
+  & iframe.google-maps {
 	right: 60px;
     object-position: right;
   }
@@ -157,7 +157,7 @@ article:nth-of-type(odd) {
     left: 0;
     object-position: left;
   }
-  & iframe {
+  & iframe.google-maps {
     left: 0;
     object-position: left;
   }
@@ -376,20 +376,21 @@ html, body {
     display: none; 
     position: absolute; 
     z-index: 3; 
-    left: 0;
-    top: 0;
     width: 100%; 
     height: 100%; 
+	top:0;
+	bottom:0;
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.9); 
 }
 
 .modal-content {
-	object-position: 50% 50%;
-    margin: auto;
+	position:relative;
     display: block;
     width: 70%;
 	height: 70%;
+	top:15%;
+	left:15%;
 	}
 
 .modal-content, { 
