@@ -1,3 +1,8 @@
+# Do not include GULP stuff
+node_modules/
+gulpfile.js
+package.json
+
 #Don't include server settings
 .htaccess
 

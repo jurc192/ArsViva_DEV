@@ -374,3 +374,4 @@ TODO: gitignore package.json
 - Naredim najprej sortiranje glede na post-type (objave, dogodki)
 - post typi ki me zanimajo so "post" in "event"
 - delam ta tutorial [https://premium.wpmudev.org/blog/load-posts-ajax/]
+  - ostal pri "Loading Posts With AJAX"
