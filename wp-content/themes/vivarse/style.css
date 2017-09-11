@@ -1014,6 +1014,8 @@ aside.filter-sidebar {
   height: 100%;
   width: 60px;
   background-color: #cccccc; }
+  aside.filter-sidebar:hover {
+    background-color: #dddddd; }
 
 .toggle-filter {
   display: block;

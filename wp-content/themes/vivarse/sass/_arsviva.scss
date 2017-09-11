@@ -503,6 +503,11 @@ aside.filter-sidebar {
   width: 60px;
 
   background-color: #cccccc;
+
+  // On hover
+  &:hover {
+    background-color: #dddddd;
+  }
 }
 
 // Napis "Filter"

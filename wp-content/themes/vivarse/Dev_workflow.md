@@ -369,3 +369,8 @@ TO DO list:
 
 // spet NASTAVLJAM GULP na svojem repotu
 TODO: gitignore package.json
+
+## Back to filter stuff
+- Naredim najprej sortiranje glede na post-type (objave, dogodki)
+- post typi ki me zanimajo so "post" in "event"
+- delam ta tutorial [https://premium.wpmudev.org/blog/load-posts-ajax/]
