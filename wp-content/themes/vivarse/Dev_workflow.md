@@ -303,15 +303,15 @@ done
 DONE:
 - single post/event page [DONE-ish]
 - paginacija dogodkov [Design?]
+- definirat funkcionalnost prve strani do konca
+- integrirat zemljevide
+- vsebina v nogo
+- sidebar
 
 TO DO list:
 - responsive dizajn text-ploščic
-- definirat funkcionalnost prve strani do konca
-- integrirat zemljevide
 - spremenit horizontalno scrollanje text-ploščic
-- vsebina v nogo
 - filter v dogodkih
-- sidebar
 - 404 page
 - jeziki / prevajanje tekstov
 - indikatorji za scrollanje?
@@ -350,7 +350,6 @@ TO DO list:
 
   - JEBEŠ PLUGIN!
   - Naredim formo sam, toggle ne dela iz prve?
-
 
 
 ## Popravljanje tekst ploščic

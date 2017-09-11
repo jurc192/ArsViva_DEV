@@ -1,7 +1,7 @@
 === Very Simple Event List ===
 Contributors: Guido07111975
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=donation%40guidovanderleest%2enl
-Version: 6.6
+Version: 6.7
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 4.6
@@ -30,7 +30,7 @@ After installation go to Events and start adding your events.
 = Widget =
 You can also list events in your sidebar using the widget.
 
-The pagination is hidden because it's not working properly in a widget.
+Pagination is not available because it's not working properly in a widget.
 
 But you can set a link to a page with all events.
 
@@ -63,6 +63,7 @@ Change labels:
 * Change date label: `[vsel date_label="Event date: %s"]`
 * Change start date label: `[vsel start_label="Event start date: %s"]`
 * Change end date label: `[vsel end_label="Event end date: %s"]`
+* Start date and end date on 1 line: `[vsel combine_dates="true"]`
 * Change time label: `[vsel time_label="Event time: %s"]`
 * Change location label: `[vsel location_label="Event location: %s"]`
 * Change no events text: `[vsel no_events_text="your text here"]`
@@ -74,6 +75,18 @@ Hide labels (only display the variable itself):
 * Hide end date label: `[vsel end_label="%s"]`
 * Hide time label: `[vsel time_label="%s"]`
 * Hide location label: `[vsel location_label="%s"]`
+
+You can change the default image size that is being used to display the featured image.
+
+WordPress creates duplicates in different sizes upon upload. These sizes can be set via Settings > Media.
+
+* Small sized image: `[vsel image_size="small"]`
+* Medium sized image: `[vsel image_size="medium"]`
+* Large sized image: `[vsel image_size="large"]`
+
+Note: I have set the featured image width at max 40% of the total event width. And for widget and mobile screen at max 100% (full width).
+
+Note: The featured image width in a single event is handled by your theme.
 
 You can add multiple attributes.
 
@@ -89,6 +102,7 @@ The widget supports the same attributes. Enter them without shortcode itself and
 * Change date label: `date_label="Event date: %s"`
 * Change start date label: `start_label="Event start date: %s"`
 * Change end date label: `end_label="Event end date: %s"`
+* Start date and end date on 1 line: `combine_dates="true"`
 * Change time label: `time_label="Event time: %s"`
 * Change location label: `location_label="Event location: %s"`
 * Change no events text: `no_events_text="your text here"`
@@ -97,6 +111,9 @@ The widget supports the same attributes. Enter them without shortcode itself and
 * Hide end date label: `end_label="%s"`
 * Hide time label: `time_label="%s"`
 * Hide location label: `location_label="%s"`
+* Small sized image: `image_size="small"`
+* Medium sized image: `image_size="medium"`
+* Large sized image: `image_size="large"`
 * Multiple attributes: `posts_per_page=5 date_label="Event date: %s"`
 
 = Single event =
@@ -138,9 +155,9 @@ Please check Description section for installation info.
 = How can I change date format? =
 You can set date format in WP dashboard via Settings > General.
 
-The datepicker and date input field in backend accept 2 numeric date formats: "day-month-year" (30-01-2016) and "year-month-day" (2016-01-30).
+The datepicker and date input field in dashboard only support 2 numeric date formats: "day-month-year" (30-01-2016) and "year-month-day" (2016-01-30).
 
-If the date format set in WP dashboard is not numeric it will be changed into 1 of these 2 numeric date formats.
+If the date format set in WP dashboard is not the same, it will be changed into 1 of the 2 above.
 
 = How do I set plugin language? =
 Plugin uses the WP Dashboard language, set in Settings > General.
@@ -251,6 +268,22 @@ Please open a topic in plugin forum.
 
 
 == Changelog ==
+= Version 6.7 =
+* major update
+* changed and simplyfied code and file structure regarding the shortcodes
+* widget uses it's own shortcode files now
+* removed files vsel-upcoming, vsel-past, vsel-current and vsel-all
+* added files vsel-shortcodes and vsel-widget-shortcodes
+* added files vsel-list and vsel-widget-list
+* new: added extra settings to hide elements
+* new: added event ID to each event in list
+* new: shortcode attribute to display start date and end date on 1 line
+* new: shortcode attribute to set the image size that is being used
+* for more info please check readme file
+* changed default image width from 40% into max 40% (to avoid blurry image)
+* changed default image width in widget from 100% into max 100% (to avoid blurry image)
+* updated most files
+
 = Version 6.6 =
 * fix: used wrong CSS class for several date fields
 * added extra CSS class to all date fields for better customization
@@ -281,14 +314,6 @@ Please open a topic in plugin forum.
 * updated file vsel-style
 * updated file vsel-datepicker (new jquery version)
 * updated FAQ
-
-= Version 6.3 =
-* file vsel: fixed mistake in user permission check
-* new option: hide date on page or in widget
-* new option: hide link to more info on page with all events
-* updated all shortcode files
-* updated file vsel-style
-* minor textual changes
 
 For all versions please check file changelog.
 

@@ -2,7 +2,7 @@
 /*
  * Plugin Name: Very Simple Event List
  * Description: This is a very simple plugin to display a list of events. Use a shortcode to display events on a page or use the widget. For more info please check readme file.
- * Version: 6.6
+ * Version: 6.7
  * Author: Guido van der Leest
  * Author URI: http://www.guidovanderleest.nl
  * License: GNU General Public License v3 or later
@@ -16,13 +16,11 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-
 // load plugin text domain
 function vsel_init() { 
 	load_plugin_textdomain( 'very-simple-event-list', false, dirname( plugin_basename( __FILE__ ) ) . '/translation' );
 }
 add_action('plugins_loaded', 'vsel_init');
-
 
 // enqueue css script
 function vsel_frontend_scripts() {	
@@ -32,13 +30,11 @@ function vsel_frontend_scripts() {
 }
 add_action('wp_enqueue_scripts', 'vsel_frontend_scripts');
 
-
 // the sidebar widget
 function register_vsel_widget() {
 	register_widget( 'vsel_widget' );
 }
 add_action( 'widgets_init', 'register_vsel_widget' );
-
 
 // set date formats for datepicker
 function vsel_datepicker_dateformat( $dateformat ) { 
@@ -49,7 +45,6 @@ function vsel_datepicker_dateformat( $dateformat ) {
 	}
 	return $dateformat; 
 }
-
 
 // enqueue datepicker script
 function vsel_enqueue_date_picker(){ 
@@ -70,7 +65,6 @@ function vsel_enqueue_date_picker(){
 	wp_localize_script( 'vsel_datepicker_script', 'objectL10n', $vsel_datepicker_args );
 }
 add_action( 'admin_enqueue_scripts', 'vsel_enqueue_date_picker' ); 
-
 
 // create eventspage in dashboard
 function vsel_custom_postype() { 
@@ -101,13 +95,11 @@ function vsel_custom_postype() {
 }
 add_action( 'init', 'vsel_custom_postype' ); 
 
-
 // create event categories
 function vsel_taxonomy() { 
 	register_taxonomy( 'event_cat', 'event', array( 'label' => __( 'Event Categories', 'very-simple-event-list' ), 'hierarchical' => true, ) ); 
 }
 add_action( 'init', 'vsel_taxonomy' ); 
-
 
 // create metabox
 function vsel_metabox() { 
@@ -121,7 +113,6 @@ function vsel_metabox() {
 	); 
 } 
 add_action( 'add_meta_boxes', 'vsel_metabox' );
-
 
 function vsel_metabox_callback( $post ) { 
 	// generate a nonce field 
@@ -169,7 +160,6 @@ function vsel_metabox_callback( $post ) {
 	<textarea id="vsel-summary" name="vsel-summary" class="large-text" rows="6" maxlength="150" placeholder="<?php _e( 'This will replace the default summary', 'very-simple-event-list' ); ?>"><?php echo esc_textarea( $event_summary); ?></textarea></p>
 	<?php 
 }
-
 
 // save event
 function vsel_save_event_info( $post_id ) { 
@@ -219,7 +209,6 @@ function vsel_save_event_info( $post_id ) {
 } 
 add_action( 'save_post', 'vsel_save_event_info' );
 
-
 // dashboard event columns
 function vsel_custom_columns( $defaults ) { 
 	unset( $defaults['date'] );
@@ -255,7 +244,6 @@ function vsel_custom_columns_content( $column_name, $post_id ) {
 } 
 add_action( 'manage_event_posts_custom_column', 'vsel_custom_columns_content', 10, 2 );
 
-
 // make event date column sortable
 function vsel_column_register_sortable( $columns ) {
 	$columns['event_start_date'] = 'event-start-date';
@@ -290,7 +278,6 @@ function vsel_date_column_orderby( $vars ) {
 }
 add_filter( 'request', 'vsel_date_column_orderby' );
 
-
 // add class to pagination
 function vsel_prev_posts() { 
 	return 'class="prev"'; 
@@ -302,7 +289,6 @@ function vsel_next_posts() {
 }
 add_filter('next_posts_link_attributes', 'vsel_next_posts', 10); 
 
-
 // add settings link
 function vsel_action_links ( $links ) { 
 	$settingslink = array( '<a href="'. admin_url( 'options-general.php?page=vsel' ) .'">'. __('Settings', 'very-simple-event-list') .'</a>', ); 
@@ -310,12 +296,9 @@ function vsel_action_links ( $links ) {
 } 
 add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'vsel_action_links' ); 
 
-
 // include files
-include 'vsel-upcoming.php';
-include 'vsel-current.php';
-include 'vsel-past.php';
-include 'vsel-all.php';
+include 'vsel-shortcodes.php';
+include 'vsel-widget-shortcodes.php';
 include 'vsel-widget.php';
 include 'vsel-options.php';
 include 'vsel-single.php';

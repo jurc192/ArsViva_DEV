@@ -1,4 +1,4 @@
-/* Very Simple Event List */
+/* Very Simple Event List stylesheet */
 
 /* Wrapper around all events in list */
 #vsel {clear:both; float:left; width:100%; margin:0 auto 5px;}
@@ -11,7 +11,7 @@
 
 /* Meta section */
 #vsel .vsel-meta {width:36%; float:left;}
-#vsel .vsel-meta-title {margin:0 0 10px;}
+#vsel .vsel-meta-title {margin:0 0 10px; padding:0;}
 #vsel .vsel-meta-date {}
 #vsel .vsel-meta-error-date {}
 #vsel .vsel-meta-single-date
@@ -21,18 +21,15 @@
 #vsel .vsel-meta-location {}
 #vsel .vsel-meta-link {}
 
-/* Content and image section */
+/* Image and info section */
 #vsel .vsel-image-info {width:60%; float:right;}
-#vsel .vsel-image {width:40%; height:auto; float:right; margin:0.3em 0 0.3em 1em; padding:0; border:0;}
+#vsel .vsel-image {max-width:40%; height:auto; float:right; margin:0.3em 0 0.3em 1em; padding:0; border:0;}
 #vsel .vsel-info {}
 
 /* Navigation */
 #vsel .vsel-nav {clear:both;}
 #vsel a.next {float:right;}
 #vsel a.prev {float:left;}
-
-/* Hide elements */
-#vsel .vsel-page-hide {display:none;}
 
 /* No events notification */
 #vsel .no-events {}
@@ -47,14 +44,10 @@
 /* Widget meta section */
 .vsel_widget #vsel .vsel-meta {width:100%; clear:both;}
 
-/* Widget content and image section */
+/* Widget image and info section */
 .vsel_widget #vsel .vsel-image-info {width:100%; clear:both; float:left;}
-.vsel_widget #vsel .vsel-image {width:100%; clear:both; float:left; margin:0 0 0.5em 0;}
+.vsel_widget #vsel .vsel-image {max-width:100%; clear:both; float:left; margin:0 0 0.5em 0;}
 .vsel_widget #vsel .vsel-info {clear:both;}
-
-/* Widget hide elements */
-.vsel_widget #vsel .vsel-page-hide {display:block;}
-.vsel_widget #vsel .vsel-widget-hide {display:none;}
 
 /* Widget link to all events */
 .vsel_widget .vsel-widget-link {clear:both;}
@@ -63,6 +56,6 @@
 @media screen and (max-width:767px) { 
 	#vsel .vsel-meta {width:100%; clear:both;}
 	#vsel .vsel-image-info {width:100%; clear:both; float:left;}
-	#vsel .vsel-image {width:100%; clear:both; float:left; margin:0.3em 0 0.3em 0;}
+	#vsel .vsel-image {max-width:100%; clear:both; float:left; margin:0.3em 0 0.3em 0;}
 	#vsel .vsel-info {clear:both;}
 }

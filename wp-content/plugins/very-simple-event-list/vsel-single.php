@@ -26,9 +26,6 @@ function vsel_single_content( $content ) {
 		$location = '';
 		$link = '';
 
-		// get setting to hide date
-		$event_date_hide = esc_attr(get_option('vsel-setting-8'));
-
 		// link label
 		if (empty($event_link_label)) {
 			$event_link_label = esc_attr__( 'More info', 'very-simple-event-list' );
@@ -45,16 +42,11 @@ function vsel_single_content( $content ) {
 			$startdate = '<p class="vsel-meta-date vsel-meta-error-date">' . esc_attr__( 'Error: please reset date', 'very-simple-event-list' ) . '</p>';
 		}
 		if ( !empty($event_start_date) && !empty($event_date) ) {
-			if ($event_date_hide != 'yes') {
-				if ($event_date > $event_start_date) {
-					$startdate = '<p class="vsel-meta-date vsel-meta-start-date">' . sprintf(esc_attr__( 'Start date: %s', 'very-simple-event-list' ), '<span>'.date_i18n( get_option( 'date_format' ), esc_attr($event_start_date) ).'</span>' ) . '</p>';
-				}
-				if ($event_date > $event_start_date) {
-					$enddate = '<p class="vsel-meta-date vsel-meta-end-date">' . sprintf(esc_attr__( 'End date: %s', 'very-simple-event-list' ), '<span>'.date_i18n( get_option( 'date_format' ), esc_attr($event_date) ).'</span>' ) . '</p>';
-				}
-				if ($event_date == $event_start_date) {
-					$enddate = '<p class="vsel-meta-date vsel-meta-single-date">' . sprintf(esc_attr__( 'Date: %s', 'very-simple-event-list' ), '<span>'.date_i18n( get_option( 'date_format' ), esc_attr($event_date) ).'</span>' ) . '</p>';
-				}
+			if ($event_date > $event_start_date) {
+				$startdate = '<p class="vsel-meta-date vsel-meta-start-date">' . sprintf(esc_attr__( 'Start date: %s', 'very-simple-event-list' ), '<span>'.date_i18n( get_option( 'date_format' ), esc_attr($event_start_date) ).'</span>' ) . '</p>';
+				$enddate = '<p class="vsel-meta-date vsel-meta-end-date">' . sprintf(esc_attr__( 'End date: %s', 'very-simple-event-list' ), '<span>'.date_i18n( get_option( 'date_format' ), esc_attr($event_date) ).'</span>' ) . '</p>';
+			} elseif ($event_date == $event_start_date) {
+				$enddate = '<p class="vsel-meta-date vsel-meta-single-date">' . sprintf(esc_attr__( 'Date: %s', 'very-simple-event-list' ), '<span>'.date_i18n( get_option( 'date_format' ), esc_attr($event_date) ).'</span>' ) . '</p>';
 			}
 		}
 		if(!empty($event_time)){
@@ -70,5 +62,4 @@ function vsel_single_content( $content ) {
   	}
 	return $content;
 }
-// Jure edit: disable auto event stuff
 // add_filter( 'the_content', 'vsel_single_content' );
