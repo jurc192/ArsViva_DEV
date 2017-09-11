@@ -492,6 +492,7 @@ article.single {
 /*--------------------------------------------------------------
 # Filter sidebar stuff
 --------------------------------------------------------------*/
+// Cel sidebar / container
 aside.filter-sidebar {
   position: fixed;
 
@@ -504,7 +505,7 @@ aside.filter-sidebar {
   background-color: #cccccc;
 }
 
-// FILTER STUFF
+// Napis "Filter"
 .toggle-filter {
   display: block;
   position: absolute;
@@ -520,7 +521,7 @@ aside.filter-sidebar {
   }
 }
 
-/* Popup sidebar filter */
+// Okno ki prileze ven - filter form
 .filter-popup {
   position: fixed;
   display: none;

@@ -360,3 +360,12 @@ TO DO list:
   - max višina naslova 100px ?
 - Omeji max velikost text ploščice
 - Vrgu ven tip dogodka
+
+
+## DESIGN UPDATE
+- Manjka scroll indicator pri o_zavodu
+- Bi morali naredit dropdown meni pri O_ZAVODU?
+- Po mojem bi morali dodat event_date pri DOGODKI
+
+// spet NASTAVLJAM GULP na svojem repotu
+TODO: gitignore package.json
