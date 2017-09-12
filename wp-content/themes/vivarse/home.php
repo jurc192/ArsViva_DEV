@@ -6,6 +6,15 @@ get_header('nofp'); ?>
 
 	<main id="main" class="site-main-nofp">
 
+		<?php
+				// PROCESIRANJE FILTRA - NAREDI FUNKCIJO AL LOČEN TEMPLATE!!!
+				if (!empty($_GET)) {
+					echo "<h1>GOT GET DATA!</h1>";
+					echo "<p>Selected post type: {$_GET['vivarse-post-type']}</p>";
+				}
+
+		 ?>
+
     <?php
 		if ( have_posts() ) :
 			while ( have_posts() ) : the_post();

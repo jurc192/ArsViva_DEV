@@ -383,3 +383,12 @@ TODO: gitignore package.json
   ```
 - ZA IZKLOPIT VSEL FILTER uporabi "remove_filter"!!!
 - Ok, ne bom delal z AJAXOM (preveč dela)
+
+- mogoče add_query_arg?()
+- KO KIKNEŠ SUBMIT, se stran automatsko "refresha" (zaradi action=""this"")
+
+- Uporaljam POST method. Dodal svojo funkcijo v functions.php:
+  vivarse_filter_posts() in add_action(pre_get_posts)
+  - TODO: naredi da bo obkljukan tisti post-type ki si ga submital (v GET...)
+  - TODO: naredi da ko klikneš kamorkoli se skrije filter, RESET GUMB
+  - TODO: kaj če submitaš brez označit karkoli? Brez post-typa? Brez kategorije?

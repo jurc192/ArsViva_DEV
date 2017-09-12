@@ -187,3 +187,42 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+
+/**
+ * JURE EDIT - sidebar filtering stuff
+ */
+function vivarse_filter_posts($query) {
+	// The $query object is passed to your function by reference.
+
+	// global $wp_query; //KJE IN ZAKAJ RABIM TO?
+	if (!empty($_GET)) {
+		$vivarse_post_type = $_GET['vivarse-post-type'];
+
+		if (($query->is_main_query()) && ($query->is_home())) {
+			echo "POST TYPE: $vivarse_post_type";
+			$query->set('post_type', $vivarse_post_type);
+		}
+
+		if (!empty($_GET['vivarse-event-category'])) {
+
+			$tax_query = array(
+				array(
+					'taxonomy' => 'event_cat',
+					'terms' => $_GET['vivarse-event-category'],
+					'field' => 'slug',
+				)
+			);
+
+			$query->set('tax_query', $tax_query);
+		}
+		else echo "EVENT CAT EMPTY!";
+	}
+
+	// $query->set('post_type', 'event');
+	// $query->set('tax_query', array(array('taxonomy'=>'event_cat' , 'terms'=>'concert', 'field'=>'slug')));
+
+	return $query;
+
+}
+add_action('pre_get_posts', 'vivarse_filter_posts');
