@@ -150,15 +150,9 @@ function vivarse_scripts() {
 	wp_enqueue_script( 'my-fullPage-settings', get_template_directory_uri() . '/js/myFullPage.js', array('jquery'), '1', true );
 	wp_enqueue_script( 'fullPage', get_template_directory_uri() . '/js/jquery.fullPage.js', array('jquery'), '1', true );
 
-/* Ajax tutorial stuff */
-	wp_enqueue_script( 'ajax-pagination', get_template_directory_uri() . '/js/ajax-pagination.js', array('jquery'), '1', true );
-	wp_localize_script( 'ajax-pagination', 'ajaxpagination', array('ajaxurl' => admin_url( 'admin-ajax.php' )));
-
 	/* Original */
 	wp_enqueue_script( 'vivarse-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'vivarse-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
-
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -193,15 +187,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
-
-/**
- * Jure EDIT - Ajax tutorial stuff
- */
- function my_ajax_pagination() {
-     echo get_bloginfo( 'title' );
-     die();
- }
-
- add_action( 'wp_ajax_nopriv_ajax_pagination', 'my_ajax_pagination' );
- add_action( 'wp_ajax_ajax_pagination', 'my_ajax_pagination' );

@@ -375,3 +375,11 @@ TODO: gitignore package.json
 - post typi ki me zanimajo so "post" in "event"
 - delam ta tutorial [https://premium.wpmudev.org/blog/load-posts-ajax/]
   - ostal pri "Loading Posts With AJAX"
+  - tisto kar me je mučlo pri search-filter.php je "class method"
+  [https://developer.wordpress.org/reference/functions/add_filter/#more-information]
+  ```
+  //add query vars
+  add_filter('query_vars', array($this,'add_queryvars') );
+  ```
+- ZA IZKLOPIT VSEL FILTER uporabi "remove_filter"!!!
+- Ok, ne bom delal z AJAXOM (preveč dela)
