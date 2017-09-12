@@ -392,3 +392,7 @@ TODO: gitignore package.json
   - TODO: naredi da bo obkljukan tisti post-type ki si ga submital (v GET...)
   - TODO: naredi da ko klikneš kamorkoli se skrije filter, RESET GUMB
   - TODO: kaj če submitaš brez označit karkoli? Brez post-typa? Brez kategorije?
+
+- JS dynamic form https://stackoverflow.com/questions/3297143/dynamically-create-a-html-form-with-javascript
+- neznam nrdit click-outside-close (brainfart)
+  -temp fix, close button

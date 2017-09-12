@@ -145,7 +145,7 @@ function vivarse_scripts() {
 	/* Modal Pictures */
 	wp_enqueue_script( 'modal-pictures', get_template_directory_uri() . '/js/modal-pictures.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'filter-sidebar', get_template_directory_uri() . '/js/filter-sidebar.js', array(), '1', true );
+	wp_enqueue_script( 'filter-sidebar', get_template_directory_uri() . '/js/filter-sidebar.js', array('jquery'), '1', true );
 	wp_enqueue_script( 'git-popup', get_template_directory_uri() . '/js/git-popup.js', array(), '1', true );
 	wp_enqueue_script( 'my-fullPage-settings', get_template_directory_uri() . '/js/myFullPage.js', array('jquery'), '1', true );
 	wp_enqueue_script( 'fullPage', get_template_directory_uri() . '/js/jquery.fullPage.js', array('jquery'), '1', true );
@@ -195,7 +195,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 function vivarse_filter_posts($query) {
 	// The $query object is passed to your function by reference.
 
-	// global $wp_query; //KJE IN ZAKAJ RABIM TO?
 	if (!empty($_GET)) {
 		$vivarse_post_type = $_GET['vivarse-post-type'];
 
@@ -219,8 +218,6 @@ function vivarse_filter_posts($query) {
 		else echo "EVENT CAT EMPTY!";
 	}
 
-	// $query->set('post_type', 'event');
-	// $query->set('tax_query', array(array('taxonomy'=>'event_cat' , 'terms'=>'concert', 'field'=>'slug')));
 
 	return $query;
 
