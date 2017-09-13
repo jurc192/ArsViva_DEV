@@ -175,8 +175,8 @@ article:nth-of-type(even) {
   }
 
   & .text-tile {
-    // right: 25%;
-    left: 15%;
+    right: 25%;
+    // left: 15%;
   }
 }
 
@@ -189,8 +189,8 @@ article:nth-of-type(odd) {
   }
 
   & .text-tile {
-    // left: 25%;
-    right: 0;
+    left: 25%;
+    // right: 0;
   }
 }
 
@@ -207,14 +207,14 @@ img.backgr {
 
 // Ploščica za text
 .text-tile {
-  position: absolute;
+  position: relative;
   margin: 0 auto;
 
   overflow: hidden;
   vertical-align: middle;
 
-  top: 100px;
-  bottom: 0;
+  // top: 100px;
+  // bottom: 0;
 
   // Na velikem monitorju
   padding: 4%;

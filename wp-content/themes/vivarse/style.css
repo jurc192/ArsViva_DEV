@@ -993,14 +993,14 @@ article:nth-of-type(even) img.backgr {
   object-position: right; }
 
 article:nth-of-type(even) .text-tile {
-  left: 15%; }
+  right: 25%; }
 
 article:nth-of-type(odd) img.backgr {
   left: 0;
   object-position: left; }
 
 article:nth-of-type(odd) .text-tile {
-  right: 0; }
+  left: 25%; }
 
 img.backgr {
   position: absolute;
@@ -1011,12 +1011,10 @@ img.backgr {
   object-fit: cover; }
 
 .text-tile {
-  position: absolute;
+  position: relative;
   margin: 0 auto;
   overflow: hidden;
   vertical-align: middle;
-  top: 100px;
-  bottom: 0;
   padding: 4%;
   height: 70%;
   min-height: 500px;
