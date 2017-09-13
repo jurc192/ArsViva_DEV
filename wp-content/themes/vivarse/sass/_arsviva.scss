@@ -508,10 +508,6 @@ aside.filter-sidebar {
 
   background-color: #cccccc;
 
-  // On hover
-  &:hover {
-    background-color: #dddddd;
-  }
 }
 
 // Napis "Filter"
@@ -525,13 +521,15 @@ aside.filter-sidebar {
   text-decoration: none;
   vertical-align: middle;
 
-  h3 {
-    margin: 0;
+  &:hover {
+    cursor: pointer;
+    color: #555; // random malo svetlejša
   }
 }
 
 // Okno ki prileze ven - filter form
 .filter-popup {
+
   position: fixed;
   display: none;
 
@@ -539,11 +537,75 @@ aside.filter-sidebar {
   left: 60px; /* filter sidebar width */
   bottom: 0;
 
-  width: 200px;
+  padding: 60px 20px;
 
-  background-color: red;
+  width: 300px;
+
+  background-color: $color_arsviva_grey;
 
 }
+
+
+// filter options (input tags)
+.filter-options {
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: block;
+    text-align: left;
+
+    margin: .5rem 0;
+  }
+}
+
+// Close button
+.close-btn {
+  display: block;
+  position: absolute;
+
+  top: 35px;
+  right: 35px;
+
+  border: 1px solid;
+  border-radius: 3px;
+  border-color: #ccc #ccc #bbb;
+
+  &:hover {
+    cursor: pointer;
+    color: #555; // random malo svetlejša
+  }
+
+}
+
+// Divider line
+.divider {
+  margin: 1.5rem;
+}
+
+// Event options
+.event-options {
+  margin: 2rem 0;
+
+  .filter-category {
+    margin: 0 1rem;
+  }
+}
+
+
+
+// Filter button
+.submit-btn {
+  display: block;
+
+  width: 80%;
+  height: 40px;
+
+  margin: 3rem auto;
+}
+
 /*--------------------------------------------------------------
 # Git current branch popup
 --------------------------------------------------------------*/

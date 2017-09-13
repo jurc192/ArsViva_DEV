@@ -7,6 +7,28 @@
  * @package vivarse
  */
 
+
+/*
+	JURE EDIT
+	Custom template tag, for displaying sidebar-filter options
+*/
+function vivarse_event_options() {
+
+	$event_categories = get_terms(array('taxonomy' => 'event_cat'));
+
+	echo "<ul class='filter-options'>";
+
+	foreach ($event_categories as $ndx => $cat) {
+		$category_name = $cat->name;
+		echo "<li>";
+		echo "<input id='cat-{$ndx}' type='checkbox' name='vivarse-event-category' value='{$category_name}'>";
+		echo "<label for='cat-{$ndx}' class='filter-category'>{$category_name}</label>";
+		echo "</li>";
+	}
+
+}
+
+
 if ( ! function_exists( 'vivarse_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time and author.

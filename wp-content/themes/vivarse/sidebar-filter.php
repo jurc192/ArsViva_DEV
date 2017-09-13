@@ -35,26 +35,45 @@
 <!-- Style mora bit inline zaradi javascripta -->
 <!-- Naredi da bo obkljukan tisti post-type kot si ga izbral (je v $_GET) -->
 <form id="filter-popup" class="filter-popup" style="display: none;" action="" method="get">
-	<h1>TEST FORM</h1>
-	<h3 onclick="toggleFilter()">CLOSE ME</h3>
 
-	<input type="radio" name="vivarse-post-type" value="event"> Dogodki
-	<input type="radio" name="vivarse-post-type" value="post"> Objave
+	<h2>Filter</h2>
+	<hr class="divider">
+	<img onclick="toggleFilter()" class="close-btn" src="<?php bloginfo('template_url'); ?>/images/close_black_27x27.png" alt="close filter">
 
-	<div id="event-options" style="display: none;">
-		<?php /* NAREDI TO V FUNKCIJI / TEMPLATE TAG-u! */
+	<ul class="filter-options">
+		<li>
+			<input type="radio" id="event-type" class="radio-btn" name="vivarse-post-type" value="event">
+			<label class="radio-btn" for="event-type">Dogodki</label>
+		</li>
+		<li>
+			<input type="radio" id="post-type" class="radio-btn" name="vivarse-post-type" value="post">
+			<label class="radio-btn" for="post-type">Objave</label>
+		</li>
+	</ul>
 
-		$event_categories = get_terms(array('taxonomy' => 'event_cat'));
-		foreach ($event_categories as $cat) {
-			$category_name = $cat->name;
-			echo "<input type='checkbox' name='vivarse-event-category' value='{$category_name}'> {$category_name}";
-		}
-		 ?>
+	<!-- Events option box -->
+	<div id="event-options" class="event-options" style="display: none;">
+		<hr class="divider">
 
- 		 <input type="text" name="vivarse-date" id="datepicker">
-		 <input type="text" name="vivarse-fromDate" id="datepicker-from">
-		 <input type="text" name="vivarse-toDate" id="datepicker-to">
+		<h4>Tip dogodka</h4>
+
+		<!-- Definirano v inc/template-tags.php -->
+		<!-- Posts, Events - radio buttons -->
+		<?php vivarse_event_options(); ?>
+
+		<hr class="divider">
+
+		<h4>Datum dogodka</h4>
+		<input type="text" name="vivarse-date" id="datepicker">
 	</div>
 
-	<input type="submit" value="Submit">
+	<!-- Posts option box -->
+	<div id="post-options" class="event-options" style="display: none;">
+		<hr class="divider">
+
+		<h4>Datum objave</h4>
+		<input type="text" name="vivarse-date" id="datepicker">
+	</div>
+
+	<input class="submit-btn" type="submit" value="Submit">
 </form>

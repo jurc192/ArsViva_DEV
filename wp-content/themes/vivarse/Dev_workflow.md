@@ -405,6 +405,11 @@ TODO: gitignore package.json
   - Dodal stuff v functions.php
   - TODO: downloadaj samo potrebno, ne linkat cele knjižnice!!
   - TODO: naredi padding/margin na front-page za sidebar
+  - če ga daš na skrit element (kot jst) je BUG -se prikaže na dnu
+    - solution: dej v css za #datepicker display:none;
 
 OK, ne gre dovolj hitro delo -> grem na izgled / CSS / frontend. Funkcionalnost
 se vrnem kasneje.
+
+- TODO: Če refreshas stran (/events -no GET params), ostane dogodek označen. Why?
+- Definiral funkcijo za filter stuff v inc/template-tags.php

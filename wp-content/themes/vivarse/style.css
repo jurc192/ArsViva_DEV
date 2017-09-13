@@ -711,6 +711,8 @@ object {
 */
 /* Date Picker Default Styles */
 .ui-datepicker {
+  /* JURE EDIT */
+  display: none;
   padding: 0;
   margin: 0;
   -webkit-border-radius: 0;
@@ -861,133 +863,17 @@ object {
   background: #0073aa;
   color: #fff; }
 
-/* WordPress Color Schemes */
-/* Fresh */
-.admin-color-fresh .ui-datepicker .ui-widget-header,
-.admin-color-fresh .ui-datepicker .ui-datepicker-header {
-  background: #00a0d2; }
-
-.admin-color-fresh .ui-datepicker thead {
-  background: #32373c; }
-
-.admin-color-fresh .ui-datepicker td .ui-state-hover {
-  background: #0073aa;
-  color: #fff; }
-
-/* Blue */
-.admin-color-blue .ui-datepicker .ui-widget-header,
-.admin-color-blue .ui-datepicker .ui-datepicker-header {
-  background: #52accc; }
-
-.admin-color-blue .ui-datepicker thead {
-  background: #4796b3; }
-
-.admin-color-blue .ui-datepicker td .ui-state-hover {
-  background: #096484;
-  color: #fff; }
-
-/* Coffee */
-.admin-color-coffee .ui-datepicker .ui-widget-header,
-.admin-color-coffee .ui-datepicker .ui-datepicker-header {
-  background: #59524c; }
-
-.admin-color-coffee .ui-datepicker thead {
-  background: #46403c; }
-
-.admin-color-coffee .ui-datepicker td .ui-state-hover {
-  background: #c7a589;
-  color: #fff; }
-
-/* Ectoplasm */
-.admin-color-ectoplasm .ui-datepicker .ui-widget-header,
-.admin-color-ectoplasm .ui-datepicker .ui-datepicker-header {
-  background: #523f6d; }
-
-.admin-color-ectoplasm .ui-datepicker thead {
-  background: #413256; }
-
-.admin-color-ectoplasm .ui-datepicker td .ui-state-hover {
-  background: #a3b745;
-  color: #fff; }
-
-/* Midnight */
-.admin-color-midnight .ui-datepicker .ui-widget-header,
-.admin-color-midnight .ui-datepicker .ui-datepicker-header {
-  background: #363b3f; }
-
-.admin-color-midnight .ui-datepicker thead {
-  background: #26292c; }
-
-.admin-color-midnight .ui-datepicker td .ui-state-hover {
-  background: #e14d43;
-  color: #fff; }
-
-/* Ocean */
-.admin-color-ocean .ui-datepicker .ui-widget-header,
-.admin-color-ocean .ui-datepicker .ui-datepicker-header {
-  background: #738e96; }
-
-.admin-color-ocean .ui-datepicker thead {
-  background: #627c83; }
-
-.admin-color-ocean .ui-datepicker td .ui-state-hover {
-  background: #9ebaa0;
-  color: #fff; }
-
 /* Sunrise */
-.admin-color-sunrise .ui-datepicker .ui-widget-header,
-.admin-color-sunrise .ui-datepicker .ui-datepicker-header,
-.admin-color-sunrise .ui-datepicker .ui-datepicker-header .ui-state-hover {
+.ui-datepicker .ui-widget-header,
+.ui-datepicker .ui-datepicker-header {
   background: #cf4944; }
 
-.admin-color-sunrise .ui-datepicker th {
+.ui-datepicker thead {
   border-color: #be3631;
   background: #be3631; }
 
-.admin-color-sunrise .ui-datepicker td .ui-state-hover {
+.ui-datepicker td .ui-state-hover {
   background: #dd823b;
-  color: #fff; }
-
-/* Light */
-.admin-color-light .ui-datepicker .ui-widget-header,
-.admin-color-light .ui-datepicker .ui-datepicker-header {
-  background: #e5e5e5; }
-
-.admin-color-light .ui-datepicker thead {
-  background: #888; }
-
-.admin-color-light .ui-datepicker .ui-datepicker-title,
-.admin-color-light .ui-datepicker td .ui-state-default,
-.admin-color-light .ui-datepicker .ui-datepicker-prev:before,
-.admin-color-light .ui-datepicker .ui-datepicker-next:before {
-  color: #555; }
-
-.admin-color-light .ui-datepicker td .ui-state-hover {
-  background: #e5e5e5; }
-
-/* bbPress Color Schemes */
-/* Evergreen */
-.admin-color-bbp-evergreen .ui-datepicker .ui-widget-header,
-.admin-color-bbp-evergreen .ui-datepicker .ui-datepicker-header {
-  background: #56b274; }
-
-.admin-color-bbp-evergreen .ui-datepicker thead {
-  background: #36533f; }
-
-.admin-color-bbp-evergreen .ui-datepicker td .ui-state-hover {
-  background: #446950;
-  color: #fff; }
-
-/* Mint */
-.admin-color-bbp-mint .ui-datepicker .ui-widget-header,
-.admin-color-bbp-mint .ui-datepicker .ui-datepicker-header {
-  background: #4ca26a; }
-
-.admin-color-bbp-mint .ui-datepicker thead {
-  background: #4f6d59; }
-
-.admin-color-bbp-mint .ui-datepicker td .ui-state-hover {
-  background: #5fb37c;
   color: #fff; }
 
 /*--------------------------------------------------------------
@@ -1299,8 +1185,6 @@ aside.filter-sidebar {
   height: 100%;
   width: 60px;
   background-color: #cccccc; }
-  aside.filter-sidebar:hover {
-    background-color: #dddddd; }
 
 .toggle-filter {
   display: block;
@@ -1309,8 +1193,9 @@ aside.filter-sidebar {
   transform: rotate(-90deg);
   text-decoration: none;
   vertical-align: middle; }
-  .toggle-filter h3 {
-    margin: 0; }
+  .toggle-filter:hover {
+    cursor: pointer;
+    color: #555; }
 
 .filter-popup {
   position: fixed;
@@ -1319,8 +1204,44 @@ aside.filter-sidebar {
   left: 60px;
   /* filter sidebar width */
   bottom: 0;
-  width: 200px;
-  background-color: red; }
+  padding: 60px 20px;
+  width: 300px;
+  background-color: #e7e7e7; }
+
+.filter-options {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .filter-options li {
+    display: block;
+    text-align: left;
+    margin: .5rem 0; }
+
+.close-btn {
+  display: block;
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  border: 1px solid;
+  border-radius: 3px;
+  border-color: #ccc #ccc #bbb; }
+  .close-btn:hover {
+    cursor: pointer;
+    color: #555; }
+
+.divider {
+  margin: 1.5rem; }
+
+.event-options {
+  margin: 2rem 0; }
+  .event-options .filter-category {
+    margin: 0 1rem; }
+
+.submit-btn {
+  display: block;
+  width: 80%;
+  height: 40px;
+  margin: 3rem auto; }
 
 /*--------------------------------------------------------------
 # Git current branch popup
