@@ -72,7 +72,7 @@
 		<hr class="divider">
 
 		<h4>Datum objave</h4>
-		<input type="text" name="vivarse-date" id="datepicker">
+		<input type="text" name="vivarse-date" id="datepicker-post">
 	</div>
 
 	<input class="submit-btn" type="submit" value="Submit">

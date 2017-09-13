@@ -32,6 +32,7 @@ function filterOptions() {
   jQuery('input[type=radio]').change(function() {
 
     jQuery("#event-options").hide();
+    jQuery("#post-options").hide();
 
       if (this.value == 'event') {
           console.log("Selected EVENT");
@@ -39,7 +40,7 @@ function filterOptions() {
       }
       else if (this.value == 'post') {
           console.log("Selected POSTS");
-          // show post settings
+          jQuery("#post-options").show();
       }
   });
 }
@@ -91,13 +92,18 @@ function initDatepickers() {
   });
   jQuery("#datepicker").datepicker('setDate', 'today');
 
-  jQuery("#datepicker-from").datepicker({
-    dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-  });
-  jQuery("#datepicker-from").datepicker('setDate', 'today');
+  // jQuery("#datepicker-from").datepicker({
+  //   dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+  // });
+  // jQuery("#datepicker-from").datepicker('setDate', 'today');
+  //
+  // jQuery("#datepicker-to").datepicker({
+  //   dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+  // });
+  // jQuery("#datepicker-to").datepicker('setDate', 'today');
 
-  jQuery("#datepicker-to").datepicker({
+  jQuery("#datepicker-post").datepicker({
     dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
   });
-  jQuery("#datepicker-to").datepicker('setDate', 'today');
+  jQuery("#datepicker-post").datepicker('setDate', 'today');
 }
