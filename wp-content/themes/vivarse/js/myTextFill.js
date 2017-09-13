@@ -1,4 +1,4 @@
-jQuery(".entry-title").textfill({
+jQuery(".tile-title").textfill({
   innerTag: 'a',
   maxFontPixels: 19,
 });

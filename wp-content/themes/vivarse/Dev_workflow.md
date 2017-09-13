@@ -418,4 +418,5 @@ se vrnem kasneje.
 - BTW jQuery UI je že v WPju tkoda samo enque script uno kar rabiš
   [https://stackoverflow.com/questions/27462984/use-jquery-datepicker-in-wordpress]
 
-- Naredi da bojo naslovi v PLOŠČICAH visoki 60px max
+- Naredi da bojo naslovi v PLOŠČICAH visoki 60px max [DONE!]
+  - popravi, ko je naslov v eni vrstici naj gre v sredino!

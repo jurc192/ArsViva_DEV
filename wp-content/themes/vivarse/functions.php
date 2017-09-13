@@ -228,8 +228,8 @@ function vivarse_filter_posts($query) {
 		if (!empty( $_GET['vivarse-date'] )) {
 
 			$vivarse_time = strtotime($vivarse_event_date);
-			echo "Time string: $vivarse_event_date <br>";
-			echo "Time time: $vivarse_time";
+			// echo "Time string: $vivarse_event_date <br>";
+			// echo "Time time: $vivarse_time";
 
 
 			$my_meta_query = array(

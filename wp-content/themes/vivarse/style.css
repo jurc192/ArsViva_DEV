@@ -971,6 +971,9 @@ html, body {
 /*--------------------------------------------------------------
 # Posts stuff @scroll template
 --------------------------------------------------------------*/
+.site-main {
+  padding-right: 60px; }
+
 article {
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -986,36 +989,18 @@ article {
     text-decoration: none; }
 
 article:nth-of-type(even) img.backgr {
-  right: 60px;
-  object-position: right; }
-
-article:nth-of-type(even) iframe.google-maps {
-  right: 60px;
+  right: 0;
   object-position: right; }
 
 article:nth-of-type(even) .text-tile {
-  right: 25%;
-  object-position: right; }
-
-article:nth-of-type(even) .text-tile-small {
-  right: 35%;
-  object-position: right; }
+  left: 15%; }
 
 article:nth-of-type(odd) img.backgr {
   left: 0;
   object-position: left; }
 
-article:nth-of-type(odd) iframe.google-maps {
-  left: 0;
-  object-position: left; }
-
 article:nth-of-type(odd) .text-tile {
-  left: 25%;
-  object-position: left; }
-
-article:nth-of-type(odd) .text-tile-small {
-  left: 30%;
-  object-position: left; }
+  right: 0; }
 
 img.backgr {
   position: absolute;
@@ -1025,27 +1010,17 @@ img.backgr {
   bottom: 0;
   object-fit: cover; }
 
-iframe.google-maps {
-  height: calc(100vh - 60px);
-  width: 66vw;
-  position: absolute;
-  top: 60px;
-  bottom: 0; }
-
-.htmlvideo {
-  width: calc(100vw - 60px);
-  height: 100%; }
-
 .text-tile {
-  position: relative;
+  position: absolute;
   margin: 0 auto;
   overflow: hidden;
   vertical-align: middle;
+  top: 100px;
+  bottom: 0;
   padding: 4%;
   height: 70%;
   min-height: 500px;
-  width: 40%;
-  max-width: 700px;
+  width: 600px;
   background-color: #fff;
   box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.25); }
   .text-tile h2 {
@@ -1074,7 +1049,39 @@ p.info:first-of-type {
 
 /*--------------------------------------------------------------
 
-# Events stuff
+# Embeeded & Maps stuff
+
+--------------------------------------------------------------*/
+iframe.google-maps {
+  height: calc(100vh - 60px);
+  width: 66vw;
+  position: absolute;
+  top: 60px;
+  bottom: 0; }
+
+.htmlvideo {
+  width: calc(100vw - 60px);
+  height: 100%; }
+
+article:nth-of-type(even) iframe.google-maps {
+  right: 60px;
+  object-position: right; }
+
+article:nth-of-type(even) .text-tile-small {
+  right: 35%;
+  object-position: right; }
+
+article:nth-of-type(odd) iframe.google-maps {
+  left: 0;
+  object-position: left; }
+
+article:nth-of-type(odd) .text-tile-small {
+  left: 30%;
+  object-position: left; }
+
+/*--------------------------------------------------------------
+
+# EVENTS PAGE stuff
 
 --------------------------------------------------------------*/
 .site-main-nofp {
@@ -1085,9 +1092,9 @@ p.info:first-of-type {
   padding-right: 60px; }
 
 /*--------------------------------------------------------------
-### Events Article stuff
+### Events Tiles stuff
 --------------------------------------------------------------*/
-article.nofp {
+article.tile {
   position: relative;
   display: inline-block;
   width: 300px;
@@ -1095,25 +1102,24 @@ article.nofp {
   padding: 1.5rem;
   margin: 1rem;
   overflow: hidden;
-  background-color: #fff;
-  /* Trik, da tekst ne uhaja čez padding */ }
-  article.nofp .entry-header h2 {
+  background-color: #fff; }
+  article.tile .tile-title {
     font-size: 1.2rem;
     height: 60px; }
-  article.nofp .entry-meta .tile-info {
+  article.tile .tile-meta .tile-info {
     margin: .5rem 0;
     font-weight: bold; }
-  article.nofp .entry-meta .posted-on {
+  article.tile .tile-meta .posted-on {
     display: block;
     font-size: 0.7rem; }
-  article.nofp .entry-meta .type {
+  article.tile .tile-meta .type {
     display: block; }
-  article.nofp .entry-content {
+  article.tile .tile-content {
     text-align: justify;
     font-size: 0.8rem; }
-  article.nofp .entry-footer {
+  article.tile .entry-footer {
     text-align: right; }
-  article.nofp .thumb {
+  article.tile .thumb {
     width: 300px;
     height: 150px;
     object-fit: cover;

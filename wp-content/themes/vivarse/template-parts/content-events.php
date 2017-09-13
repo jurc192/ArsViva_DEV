@@ -27,18 +27,18 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('nofp'); ?>>
-	<header class="entry-header">
+<article id="post-<?php the_ID(); ?>" <?php post_class('tile'); ?>>
+	<header class="tile-header">
 
 		<!-- Event thumbnail -->
 		<img class="thumb" src="<?php echo $thumb_url?>" alt="fotka1">
 
 		<!-- Event title -->
-		<h2 class="entry-title">
+		<h2 class="tile-title">
 			<a href=<?php echo esc_url( get_permalink()); ?> rel="bookmark"><?php echo $post_title; ?></a>
 		</h2>
 
-		<div class="entry-meta">
+		<div class="tile-meta">
 
       <!-- Time of the event -->
       <p class='tile-info'>
@@ -58,11 +58,11 @@
 
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="tile-content">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+	<footer class="tile-footer">
 		<!-- <a class="readmore" href="<?php echo esc_url( get_permalink()); ?>">Read more</a> -->
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
