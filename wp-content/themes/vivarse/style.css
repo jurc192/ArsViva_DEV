@@ -1098,7 +1098,16 @@ article.nofp {
   background-color: #fff;
   /* Trik, da tekst ne uhaja čez padding */ }
   article.nofp .entry-header h2 {
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    height: 60px; }
+  article.nofp .entry-meta .tile-info {
+    margin: .5rem 0;
+    font-weight: bold; }
+  article.nofp .entry-meta .posted-on {
+    display: block;
+    font-size: 0.7rem; }
+  article.nofp .entry-meta .type {
+    display: block; }
   article.nofp .entry-content {
     text-align: justify;
     font-size: 0.8rem; }
@@ -1170,11 +1179,6 @@ article.single {
   .text-tile-single .entry-content {
     text-align: left; }
 
-.single-image {
-  display: block;
-  margin: 0 auto;
-  width: 100%; }
-
 /*--------------------------------------------------------------
 # Filter sidebar stuff
 --------------------------------------------------------------*/
@@ -1200,6 +1204,7 @@ aside.filter-sidebar {
 .filter-popup {
   position: fixed;
   display: none;
+  overflow-y: scroll;
   top: 60px;
   left: 60px;
   /* filter sidebar width */

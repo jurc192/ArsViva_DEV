@@ -142,13 +142,15 @@ function vivarse_scripts() {
 	wp_enqueue_style( 'vivarse-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'fullPage-style', get_template_directory_uri() . '/sass/jquery.fullPage.css', false, '1', 'all' );
 
-	/* jQuery datepicker stuff */
-	wp_enqueue_script('jquery-ui-datepicker');
+	/* jQuery stuff */
+	wp_enqueue_script( 'jquery-ui-datepicker' );
+	wp_enqueue_script( 'fullPage', get_template_directory_uri() . '/js/jquery.fullPage.js', array('jquery'), '1', true );
+	wp_enqueue_script( 'textFill', get_template_directory_uri() . '/js/jquery.textfill.min.js', array('jquery'), '1', true );
 
 	wp_enqueue_script( 'filter-sidebar', get_template_directory_uri() . '/js/filter-sidebar.js', array('jquery'), '1', true );
 	wp_enqueue_script( 'git-popup', get_template_directory_uri() . '/js/git-popup.js', array(), '1', true );
 	wp_enqueue_script( 'my-fullPage-settings', get_template_directory_uri() . '/js/myFullPage.js', array('jquery'), '1', true );
-	wp_enqueue_script( 'fullPage', get_template_directory_uri() . '/js/jquery.fullPage.js', array('jquery'), '1', true );
+	wp_enqueue_script( 'my-textFill', get_template_directory_uri() . '/js/myTextFill.js', array('jquery'), '1', true );
 
 	/* Modal Pictures */
 	wp_enqueue_script( 'modal-pictures', get_template_directory_uri() . '/js/modal-pictures.js', array(), '20151215', true );

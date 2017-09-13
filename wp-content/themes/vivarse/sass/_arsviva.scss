@@ -346,9 +346,50 @@ article.nofp {
 
   background-color: $color_arsviva_white;
 
+// EVENT / POST TITILE
   .entry-header {
+    // Delujoča varianta v1
     h2 {
       font-size: 1.2rem;
+      height: 60px;
+    }
+  }
+
+    // TEMP TEST
+    // .title-parent {
+    //   display: table;
+    //
+    //   width: 100%;
+    //   height: 60px;
+    //
+    //   font-size: 1.2rem;
+    //   font-weight: 700;
+    //   font-family: 'Playfair Display', serif;
+    //
+    // }
+    //
+    // .entry-title {
+    //   // height: 60px;
+    //   display: table-cell;
+    //   vertical-align: middle;
+    //   text-align: center;
+    // }
+    // END TEMP TEST
+
+  .entry-meta {
+
+    .tile-info {
+      margin: .5rem 0;
+      font-weight: bold;
+    }
+
+    .posted-on {
+      display: block;
+      font-size: 0.7rem;
+    }
+
+    .type {
+      display: block;
     }
   }
 
@@ -471,26 +512,6 @@ article.single {
   }
 }
 
-// ## single event/post image
-.single-image {
-
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-
-}
-
-// SINGLE EVENT S SLIKO
-// .entry-meta-single {
-//   position: absolute;
-//   top: 15%;
-//   left: 0;
-//   right: 0;
-//
-//   padding: 5%;
-//
-//   background-color: rgba(255, 255, 255, 0.8);
-// }
 
 
 /*--------------------------------------------------------------
@@ -532,6 +553,7 @@ aside.filter-sidebar {
 
   position: fixed;
   display: none;
+  overflow-y: scroll;
 
   top: $navigation-height;
   left: 60px; /* filter sidebar width */

@@ -366,7 +366,6 @@ TO DO list:
 - Manjka scroll indicator pri o_zavodu
 - Bi morali naredit dropdown meni pri O_ZAVODU?
 - Po mojem bi morali dodat event_date pri DOGODKI
-
 // spet NASTAVLJAM GULP na svojem repotu
 TODO: gitignore package.json
 
@@ -413,3 +412,10 @@ se vrnem kasneje.
 
 - TODO: Če refreshas stran (/events -no GET params), ostane dogodek označen. Why?
 - Definiral funkcijo za filter stuff v inc/template-tags.php
+
+## Dynamic text stuff
+- Probam z jQuery pluginom textFill
+- BTW jQuery UI je že v WPju tkoda samo enque script uno kar rabiš
+  [https://stackoverflow.com/questions/27462984/use-jquery-datepicker-in-wordpress]
+
+- Naredi da bojo naslovi v PLOŠČICAH visoki 60px max

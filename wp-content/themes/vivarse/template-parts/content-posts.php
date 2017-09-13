@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for EVENTS page, EVENT TILES
+ * Template part for EVENTS page, POST TILES
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -13,7 +13,6 @@
  $post_title = get_the_title();
 
  $dateformat = get_option( 'date_format' );
- $event_time = get_post_meta( $post_id, 'event-start-date', true );
 
  if (has_post_thumbnail()) :
    $thumb_id = get_post_thumbnail_id();
@@ -40,20 +39,11 @@
 
 		<div class="entry-meta">
 
-      <!-- Time of the event -->
-      <p class='tile-info'>
-        <span>
-          <?php echo "Kdaj: ", date_i18n($dateformat, $event_time, false); ?>
-          <!-- i18n transforms time form Unix- to users- time format -->
-        </span>
-      </p>
+			<!-- Type of the event (category) -->
+			<?php the_terms($post_id, 'event_cat', '<span class="type">', ', ', '</span><br>'); ?>
 
 			<!-- Posted on () -->
 			<?php vivarse_posted_on(); ?>
-
-      <!-- Type of the event (category) -->
-      <?php the_terms($post_id, 'event_cat', '<span class="type">', ', ', '</span>'); ?>
-
 		</div><!-- .entry-meta -->
 
 	</header><!-- .entry-header -->
@@ -63,6 +53,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<!-- <a class="readmore" href="<?php echo esc_url( get_permalink()); ?>">Read more</a> -->
+		<a class="readmore" href="<?php echo esc_url( get_permalink()); ?>">Read more</a>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
