@@ -1029,22 +1029,23 @@ img.backgr {
     font-weight: normal; }
   .text-tile .posted-on {
     display: block;
-    margin-top: 2rem; }
-
-.type {
-  text-transform: lowercase;
-  font-weight: bold;
-  font-size: 0.7rem; }
-
-.info {
-  font-size: 1rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem; }
-  .info span {
-    font-weight: bold; }
-
-p.info:first-of-type {
-  margin-top: 30px; }
+    margin-top: 2rem;
+    margin-left: 3rem; }
+  .text-tile .info {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 3rem; }
+    .text-tile .info span {
+      font-weight: bold; }
+  .text-tile p.info:first-of-type {
+    margin-top: 30px; }
+  .text-tile .entry-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 10% 10% 10%; }
 
 @media screen and (min-height: 800px) {
   article {

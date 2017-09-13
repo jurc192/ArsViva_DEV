@@ -238,37 +238,43 @@ img.backgr {
   .posted-on {
     display: block;
     margin-top: 2rem;
+    margin-left: 3rem;
   }
-}
+
+  // Kdaj, kje
+  .info {
+
+    // na malih monitorjih
+    font-size: 1rem;
+
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 3rem;
 
 
-// Tip dogodka
-.type {
-  text-transform: lowercase;
-  font-weight: bold;
-  font-size: 0.7rem;
-}
-
-// Kdaj, kje
-.info {
-
-  // na malih monitorjih
-  font-size: 1rem;
-
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-
-
-  span {
-    font-weight: bold;
+    span {
+      font-weight: bold;
+    }
   }
+
+  p.info:first-of-type {
+
+    // na malih monitorjih
+    margin-top: 30px;
+  }
+
+  .entry-content {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    padding: 0 10% 10% 10%;
+  }
+
 }
 
-p.info:first-of-type {
-
-  // na malih monitorjih
-  margin-top: 30px;
-}
 
 // Velik zaslon
 @media screen and (min-height: 800px) {
