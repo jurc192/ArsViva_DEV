@@ -149,11 +149,8 @@ $footer-height: 200px;
 }
 
 article {
-    @include word-wrap();
-    background-size: cover;
 
-    // Na velikem monitorju
-    // font-size: 1rem;
+    background-size: cover;
 
     // Na malem monitoru
     font-size: 0.85rem;
@@ -161,36 +158,41 @@ article {
     a {
       text-decoration: none;
     }
+
+    p {
+      @include word-wrap();
+    }
 }
+
 
 // Znotraj <main> mora bit vsaka prva slika na levi, vsaka druga na desni.
 // Isto za Text ploščice
-
-// Slika na DESNI
 article:nth-of-type(even) {
 
+  // Slika na DESNI
   & img.backgr {
     right: 0;
     object-position: right;
   }
 
+  // Tekst na LEVI
   & .text-tile {
     right: 25%;
-    // left: 15%;
   }
 }
 
-// Slika na LEVI
+
 article:nth-of-type(odd) {
 
+  // Slika na LEVI
   & img.backgr {
     left: 0;
     object-position: left;
   }
 
+  // Tekst na DESNI
   & .text-tile {
     left: 25%;
-    // right: 0;
   }
 }
 
@@ -207,46 +209,39 @@ img.backgr {
 
 // Ploščica za text
 .text-tile {
+
   position: relative;
   margin: 0 auto;
 
   overflow: hidden;
   vertical-align: middle;
 
-  // top: 100px;
-  // bottom: 0;
-
-  // Na velikem monitorju
   padding: 4%;
 
+  width: 600px;
   height: 70%;
   min-height: 500px;
-
-  // width: 40%; // TEMP HACK, find proper way to do it
-  // min-width: 500px;
-  // max-width: 700px;
-  width: 600px;
 
   background-color: $color_arsviva_white;
   box-shadow: 5px 5px 5px rgba(100, 100, 100, .25);
 
-  h2 {
-
-    // Na velikem monitorju
-    // font-size: 2.15rem;
+  h2.entry-title {
 
     // Na malem monitorju
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     margin-top: 0;
     /* test */
 
     font-weight: normal;
   }
+
+  .posted-on {
+    display: block;
+    margin-top: 2rem;
+  }
 }
 
-/*--------------------------------------------------------------
-# Front page events
---------------------------------------------------------------*/
+
 // Tip dogodka
 .type {
   text-transform: lowercase;
@@ -256,9 +251,6 @@ img.backgr {
 
 // Kdaj, kje
 .info {
-
-  // na velikih monitorjih
-  // font-size: 1.2rem;
 
   // na malih monitorjih
   font-size: 1rem;
@@ -274,13 +266,30 @@ img.backgr {
 
 p.info:first-of-type {
 
-  // na velikih monitorjih
-  // margin-top: 50px;
-
   // na malih monitorjih
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
+// Velik zaslon
+@media screen and (min-height: 800px) {
+
+  article {
+    font-size: 1rem;
+  }
+
+  h2.entry-title {
+    font-size: 2.15rem;
+  }
+
+  p.info {
+    font-size: 1.2rem;
+  }
+
+  p.info:first-of-type {
+    margin-top: 50px;
+  }
+
+}
 
 /*--------------------------------------------------------------
 

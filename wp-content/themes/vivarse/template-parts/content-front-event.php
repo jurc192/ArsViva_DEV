@@ -56,9 +56,6 @@ endif;
         <!-- Type of the event (category) -->
         <?php //the_terms($post_id, 'event_cat', '<span class="type">', ', ', '</span><br>'); ?>
 
-        <!-- Posted on () -->
-        <?php vivarse_posted_on(); ?>
-
         <!-- Time of the event -->
         <p class='info'>
           <span>Kdaj: </span>
@@ -71,6 +68,9 @@ endif;
           <span>Kje: </span>
           <?php echo $event_location; ?>
         </p>
+
+        <!-- Posted on () -->
+        <?php vivarse_posted_on(); ?>
 
   		</div><!-- .entry-meta -->
   	</header><!-- .entry-header -->

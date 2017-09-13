@@ -975,18 +975,19 @@ html, body {
   padding-right: 60px; }
 
 article {
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  -ms-word-break: break-all;
-  word-break: break-word;
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
   background-size: cover;
   font-size: 0.85rem; }
   article a {
     text-decoration: none; }
+  article p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto; }
 
 article:nth-of-type(even) img.backgr {
   right: 0;
@@ -1016,20 +1017,20 @@ img.backgr {
   overflow: hidden;
   vertical-align: middle;
   padding: 4%;
+  width: 600px;
   height: 70%;
   min-height: 500px;
-  width: 600px;
   background-color: #fff;
   box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.25); }
-  .text-tile h2 {
-    font-size: 1.5rem;
+  .text-tile h2.entry-title {
+    font-size: 1.7rem;
     margin-top: 0;
     /* test */
     font-weight: normal; }
+  .text-tile .posted-on {
+    display: block;
+    margin-top: 2rem; }
 
-/*--------------------------------------------------------------
-# Front page events
---------------------------------------------------------------*/
 .type {
   text-transform: lowercase;
   font-weight: bold;
@@ -1043,7 +1044,17 @@ img.backgr {
     font-weight: bold; }
 
 p.info:first-of-type {
-  margin-top: 20px; }
+  margin-top: 30px; }
+
+@media screen and (min-height: 800px) {
+  article {
+    font-size: 1rem; }
+  h2.entry-title {
+    font-size: 2.15rem; }
+  p.info {
+    font-size: 1.2rem; }
+  p.info:first-of-type {
+    margin-top: 50px; } }
 
 /*--------------------------------------------------------------
 
