@@ -50,6 +50,10 @@
 			echo "<input type='checkbox' name='vivarse-event-category' value='{$category_name}'> {$category_name}";
 		}
 		 ?>
+
+ 		 <input type="text" name="vivarse-date" id="datepicker">
+		 <input type="text" name="vivarse-fromDate" id="datepicker-from">
+		 <input type="text" name="vivarse-toDate" id="datepicker-to">
 	</div>
 
 	<input type="submit" value="Submit">

@@ -7,6 +7,7 @@ get_header(); ?>
 
 		/* Custom query za front page - upcoming events */
 		$today = strtotime( 'today' );
+		echo $today;
 
 		/* Poglej če ni event že mimo */
 		$my_meta_query = array(

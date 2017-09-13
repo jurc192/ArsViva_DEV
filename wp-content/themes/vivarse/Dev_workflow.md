@@ -392,7 +392,19 @@ TODO: gitignore package.json
   - TODO: naredi da bo obkljukan tisti post-type ki si ga submital (v GET...)
   - TODO: naredi da ko klikneš kamorkoli se skrije filter, RESET GUMB
   - TODO: kaj če submitaš brez označit karkoli? Brez post-typa? Brez kategorije?
+  - TODO: če si na drugi (ne prvi) strani, ti preklop filtra ne dela
+  - TODO: FIX ERROR @admin page -> filtering stuff naj dela samo na home.php!
 
 - JS dynamic form https://stackoverflow.com/questions/3297143/dynamically-create-a-html-form-with-javascript
 - neznam nrdit click-outside-close (brainfart)
   -temp fix, close button
+  - TODO: Če odpreš filter in imaš že izbran "evnet" radio, ni odprt event-options div!
+
+
+- jQuery datepicker
+  - Dodal stuff v functions.php
+  - TODO: downloadaj samo potrebno, ne linkat cele knjižnice!!
+  - TODO: naredi padding/margin na front-page za sidebar
+
+OK, ne gre dovolj hitro delo -> grem na izgled / CSS / frontend. Funkcionalnost
+se vrnem kasneje.

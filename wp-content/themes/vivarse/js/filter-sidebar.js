@@ -8,6 +8,7 @@ var filter = document.getElementById("filter-popup");
 jQuery(document).ready(function() {
     filterOptions();
     initialSelectedRadio();
+    initDatepickers();
 });
 
 
@@ -78,4 +79,25 @@ function findGetParameter(parameterName) {
         });
 
     return result;
+}
+
+
+/* Nastavi datepickerje */
+function initDatepickers() {
+  /* to je grdo af, ampak jbg- cajt */
+
+  jQuery("#datepicker").datepicker({
+    dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+  });
+  jQuery("#datepicker").datepicker('setDate', 'today');
+
+  jQuery("#datepicker-from").datepicker({
+    dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+  });
+  jQuery("#datepicker-from").datepicker('setDate', 'today');
+
+  jQuery("#datepicker-to").datepicker({
+    dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+  });
+  jQuery("#datepicker-to").datepicker('setDate', 'today');
 }

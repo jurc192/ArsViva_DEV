@@ -142,13 +142,17 @@ function vivarse_scripts() {
 	wp_enqueue_style( 'vivarse-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'fullPage-style', get_template_directory_uri() . '/sass/jquery.fullPage.css', false, '1', 'all' );
 
-	/* Modal Pictures */
-	wp_enqueue_script( 'modal-pictures', get_template_directory_uri() . '/js/modal-pictures.js', array(), '20151215', true );
+	/* jQuery datepicker stuff */
+	wp_enqueue_script('jquery-ui-datepicker');
 
 	wp_enqueue_script( 'filter-sidebar', get_template_directory_uri() . '/js/filter-sidebar.js', array('jquery'), '1', true );
 	wp_enqueue_script( 'git-popup', get_template_directory_uri() . '/js/git-popup.js', array(), '1', true );
 	wp_enqueue_script( 'my-fullPage-settings', get_template_directory_uri() . '/js/myFullPage.js', array('jquery'), '1', true );
 	wp_enqueue_script( 'fullPage', get_template_directory_uri() . '/js/jquery.fullPage.js', array('jquery'), '1', true );
+
+	/* Modal Pictures */
+	wp_enqueue_script( 'modal-pictures', get_template_directory_uri() . '/js/modal-pictures.js', array(), '20151215', true );
+
 
 	/* Original */
 	wp_enqueue_script( 'vivarse-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -195,14 +199,17 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 function vivarse_filter_posts($query) {
 	// The $query object is passed to your function by reference.
 
-	if (!empty($_GET)) {
+	if (!empty($_GET) && $query->is_home() && $query->is_main_query()) {
+
 		$vivarse_post_type = $_GET['vivarse-post-type'];
+		$vivarse_event_date = $_GET['vivarse-date'];
+		$vivarse_from_date = $_GET['vivarse-fromDate'];
+		$vivarse_to_date = $_GET['vivarse-toDate'];
 
-		if (($query->is_main_query()) && ($query->is_home())) {
-			echo "POST TYPE: $vivarse_post_type";
-			$query->set('post_type', $vivarse_post_type);
-		}
+		// Post type (required)
+		$query->set('post_type', $vivarse_post_type);
 
+		// Event -> category (optional)
 		if (!empty($_GET['vivarse-event-category'])) {
 
 			$tax_query = array(
@@ -212,10 +219,30 @@ function vivarse_filter_posts($query) {
 					'field' => 'slug',
 				)
 			);
-
 			$query->set('tax_query', $tax_query);
 		}
-		else echo "EVENT CAT EMPTY!";
+
+		// Event -> date (optional)
+		if (!empty( $_GET['vivarse-date'] )) {
+
+			$vivarse_time = strtotime($vivarse_event_date);
+			echo "Time string: $vivarse_event_date <br>";
+			echo "Time time: $vivarse_time";
+
+
+			$my_meta_query = array(
+				'relation' => 'AND',
+				array(
+					'key' => 'event-start-date',
+					'value' => $vivarse_time,
+					'compare' => '=',
+					'type' => 'NUMERIC'
+				)
+			);
+
+			$query->set('meta_query', $my_meta_query);
+		}
+
 	}
 
 
