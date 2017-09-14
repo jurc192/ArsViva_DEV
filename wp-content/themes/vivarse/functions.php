@@ -203,12 +203,8 @@ function vivarse_filter_posts($query) {
 
 	if (!empty($_GET) && $query->is_home() && $query->is_main_query()) {
 
-		$vivarse_post_type = $_GET['vivarse-post-type'];
-		$vivarse_event_date = $_GET['vivarse-date'];
-		$vivarse_from_date = $_GET['vivarse-fromDate'];
-		$vivarse_to_date = $_GET['vivarse-toDate'];
-
 		// Post type (required)
+		$vivarse_post_type = $_GET['vivarse-post-type'];
 		$query->set('post_type', $vivarse_post_type);
 
 		// Event -> category (optional)
@@ -225,25 +221,23 @@ function vivarse_filter_posts($query) {
 		}
 
 		// Event -> date (optional)
-		if (!empty( $_GET['vivarse-date'] )) {
-
-			$vivarse_time = strtotime($vivarse_event_date);
-			// echo "Time string: $vivarse_event_date <br>";
-			// echo "Time time: $vivarse_time";
-
-
-			$my_meta_query = array(
-				'relation' => 'AND',
-				array(
-					'key' => 'event-start-date',
-					'value' => $vivarse_time,
-					'compare' => '=',
-					'type' => 'NUMERIC'
-				)
-			);
-
-			$query->set('meta_query', $my_meta_query);
-		}
+		// if (!empty( $_GET['vivarse-date'] )) {
+		//
+		// 	$vivarse_event_date = $_GET['vivarse-date'];
+		// 	$vivarse_time = strtotime($vivarse_event_date);
+		//
+		// 	$my_meta_query = array(
+		// 		'relation' => 'AND',
+		// 		array(
+		// 			'key' => 'event-start-date',
+		// 			'value' => $vivarse_time,
+		// 			'compare' => '=',
+		// 			'type' => 'NUMERIC'
+		// 		)
+		// 	);
+		//
+		// 	$query->set('meta_query', $my_meta_query);
+		// }
 
 	}
 
