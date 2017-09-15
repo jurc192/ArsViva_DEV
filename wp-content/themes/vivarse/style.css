@@ -993,14 +993,14 @@ article:nth-of-type(even) img.backgr {
   right: 0;
   object-position: right; }
 
-article:nth-of-type(even) .text-tile {
+article:nth-of-type(even) .text-tile, article:nth-of-type(even) .text-tile-static {
   right: 25%; }
 
 article:nth-of-type(odd) img.backgr {
   left: 0;
   object-position: left; }
 
-article:nth-of-type(odd) .text-tile {
+article:nth-of-type(odd) .text-tile, article:nth-of-type(odd) .text-tile-static {
   left: 25%; }
 
 img.backgr {
@@ -1011,7 +1011,7 @@ img.backgr {
   bottom: 0;
   object-fit: cover; }
 
-.text-tile {
+.text-tile, .text-tile-static {
   position: relative;
   margin: 0 auto;
   overflow: hidden;
@@ -1022,25 +1022,25 @@ img.backgr {
   min-height: 500px;
   background-color: #fff;
   box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.25); }
-  .text-tile h2.entry-title {
+  .text-tile h2.entry-title, .text-tile-static h2.entry-title {
     font-size: 1.7rem;
     margin-top: 0;
     /* test */
     font-weight: normal; }
-  .text-tile .posted-on {
+  .text-tile .posted-on, .text-tile-static .posted-on {
     display: block;
     margin-top: 2rem;
     margin-left: 3rem; }
-  .text-tile .info {
+  .text-tile .info, .text-tile-static .info {
     font-size: 1rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     margin-left: 3rem; }
-    .text-tile .info span {
+    .text-tile .info span, .text-tile-static .info span {
       font-weight: bold; }
-  .text-tile p.info:first-of-type {
+  .text-tile p.info:first-of-type, .text-tile-static p.info:first-of-type {
     margin-top: 30px; }
-  .text-tile .entry-content {
+  .text-tile .entry-content, .text-tile-static .entry-content {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1263,6 +1263,22 @@ aside.filter-sidebar {
   width: 80%;
   height: 40px;
   margin: 3rem auto; }
+
+/*--------------------------------------------------------------
+
+# Static Pages
+
+--------------------------------------------------------------*/
+.text-tile-static h2 {
+  font-size: 2rem; }
+
+.text-tile-static p {
+  position: absolute;
+  font-size: 1.2rem;
+  bottom: 5rem;
+  left: 0;
+  right: 0;
+  padding: 0 10% 10% 10%; }
 
 /*--------------------------------------------------------------
 # Git current branch popup
