@@ -9,13 +9,10 @@ get_header(); ?>
 
 
 		<!-- /* Upcoming events stuff */  -->
-		<section class="section upcoming-events">
-			<div class="window">
-				<div class="front-tile">
-					<h2>Prihajajoči dogodki:</h2>
-				</div>
-		<?php
+		<section class="section">
 
+
+		<?php
 		/* Custom query za front page - upcoming events */
 		$today = strtotime( 'today' );
 		// echo $today;
@@ -47,7 +44,7 @@ get_header(); ?>
 			if ( is_front_page() ):
 
 				while( $my_event_query->have_posts() ) : $my_event_query->the_post();
-					get_template_part( 'template-parts/content', 'front-upcoming' );
+					get_template_part( 'template-parts/content', 'front-event-slide' );
 				endwhile;
 
 			else:
@@ -61,8 +58,8 @@ get_header(); ?>
 		wp_reset_postdata();
 		?>
 
-			</div>
 		</section>
+
 
 		<?php
 		/* Custom query za front page - front page posts */

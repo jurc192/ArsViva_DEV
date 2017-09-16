@@ -149,76 +149,57 @@ $footer-height: 200px;
 }
 
 /*--------------------------------------------------------------
-# Upcoming events tiles
+# Upcoming events slides
 --------------------------------------------------------------*/
-.window {
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
 
-}
+article.slide {
 
-.front-tile {
   position: relative;
-  display: inline-block;
 
-  width: 300px;
-  height: 500px;
+  .backgr {
+    right: 0;
+  }
 
-  padding:  1.5rem;
-  margin:  1rem;
+  .text-tile {
 
-  overflow: hidden;
-  white-space: normal;
+    right: 25%;
 
-  background-color: $color_arsviva_white;
-
-  .tile-title {
-    word-wrap: break-word;
-    font-size: 1rem;
-    // height: 60px;
-
-    a {
-      display: block;
+    .entry-content {
+      top: 250px;
+    }
+    .entry-footer {
+      bottom: 40px;
     }
   }
 
-
-  .tile-meta {
-    .tile-info {
-
-      margin: .5rem 0;
-      font-weight: bold;
-    }
-    // .posted-on {
-    //   display: block;
-    //   font-size: 0.7rem;
-    // }
-    // .type {
-    //   display: block;
-    // }
-  }
-
-  .tile-content {
-
-    text-align: justify;
-    font-size: 0.8rem;
-  }
-
-  .entry-footer {
-    text-align: right;
-  }
-
-  .thumb {
-    width: 300px;
-    height: 150px;
-    object-fit: cover;
-    object-position: center;
-  }
 }
 
+@media screen and (min-height: 900px) {
+  article.slide .text-tile {
 
+    right: 17%;
 
+    .entry-content {
+      top: 350px;
+    }
+  }
+
+}
+
+@media screen and (min-height: 900px) and (min-width: 1500px) {
+  article.slide .text-tile {
+
+    right: 25%;
+
+    .posted-on {
+      margin-top: 2rem;
+    }
+
+    .entry-content {
+      top: 350px;
+    }
+  }
+}
 
 /*--------------------------------------------------------------
 # Posts stuff @scroll template
@@ -257,7 +238,7 @@ article {
 
 // Znotraj <main> mora bit vsaka prva slika na levi, vsaka druga na desni.
 // Isto za Text ploščice
-article:nth-of-type(even) {
+article.section:nth-of-type(even) {
 
   // Slika na DESNI
   & img.backgr {
@@ -272,7 +253,7 @@ article:nth-of-type(even) {
 }
 
 
-article:nth-of-type(odd) {
+article.section:nth-of-type(odd) {
 
   // Slika na LEVI
   & img.backgr {
@@ -326,7 +307,8 @@ img.backgr {
 
   .posted-on {
     display: block;
-    margin-top: 2rem;
+    // na vecjem zaslonu
+    // margin-top: 2rem;
     margin-left: 3rem;
   }
 
@@ -406,7 +388,7 @@ img.backgr {
     font-size: 1rem;
   }
 
-  article:nth-of-type(even) {
+  article.section:nth-of-type(even) {
 
     // Tekst na LEVI
     & .text-tile {
@@ -415,7 +397,7 @@ img.backgr {
     }
   }
 
-  article:nth-of-type(odd) {
+  article.section:nth-of-type(odd) {
 
     // Tekst na DESNI
     & .text-tile {
@@ -461,7 +443,7 @@ img.backgr {
 
 @media screen and (min-height: 900px) and (min-width: 1500px) {
 
-  article:nth-of-type(even) {
+  article.section:nth-of-type(even) {
 
     // Tekst na LEVI
     & .text-tile {
@@ -470,7 +452,7 @@ img.backgr {
     }
   }
 
-  article:nth-of-type(odd) {
+  article.section:nth-of-type(odd) {
 
     // Tekst na DESNI
     & .text-tile {

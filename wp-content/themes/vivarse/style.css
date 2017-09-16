@@ -982,41 +982,32 @@ html, body {
     object-fit: cover; }
 
 /*--------------------------------------------------------------
-# Upcoming events tiles
+# Upcoming events slides
 --------------------------------------------------------------*/
-.window {
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap; }
+article.slide {
+  position: relative; }
+  article.slide .backgr {
+    right: 0; }
+  article.slide .text-tile, article.slide .text-tile-static {
+    right: 25%; }
+    article.slide .text-tile .entry-content, article.slide .text-tile-static .entry-content {
+      top: 250px; }
+    article.slide .text-tile .entry-footer, article.slide .text-tile-static .entry-footer {
+      bottom: 40px; }
 
-.front-tile {
-  position: relative;
-  display: inline-block;
-  width: 300px;
-  height: 500px;
-  padding: 1.5rem;
-  margin: 1rem;
-  overflow: hidden;
-  white-space: normal;
-  background-color: #fff; }
-  .front-tile .tile-title {
-    word-wrap: break-word;
-    font-size: 1rem; }
-    .front-tile .tile-title a {
-      display: block; }
-  .front-tile .tile-meta .tile-info {
-    margin: .5rem 0;
-    font-weight: bold; }
-  .front-tile .tile-content {
-    text-align: justify;
-    font-size: 0.8rem; }
-  .front-tile .entry-footer {
-    text-align: right; }
-  .front-tile .thumb {
-    width: 300px;
-    height: 150px;
-    object-fit: cover;
-    object-position: center; }
+@media screen and (min-height: 900px) {
+  article.slide .text-tile, article.slide .text-tile-static {
+    right: 17%; }
+    article.slide .text-tile .entry-content, article.slide .text-tile-static .entry-content {
+      top: 350px; } }
+
+@media screen and (min-height: 900px) and (min-width: 1500px) {
+  article.slide .text-tile, article.slide .text-tile-static {
+    right: 25%; }
+    article.slide .text-tile .posted-on, article.slide .text-tile-static .posted-on {
+      margin-top: 2rem; }
+    article.slide .text-tile .entry-content, article.slide .text-tile-static .entry-content {
+      top: 350px; } }
 
 /*--------------------------------------------------------------
 # Posts stuff @scroll template
@@ -1039,18 +1030,18 @@ article {
     -webkit-hyphens: auto;
     hyphens: auto; }
 
-article:nth-of-type(even) img.backgr {
+article.section:nth-of-type(even) img.backgr {
   right: 0;
   object-position: right; }
 
-article:nth-of-type(even) .text-tile, article:nth-of-type(even) .text-tile-static {
+article.section:nth-of-type(even) .text-tile, article.section:nth-of-type(even) .text-tile-static {
   right: 25%; }
 
-article:nth-of-type(odd) img.backgr {
+article.section:nth-of-type(odd) img.backgr {
   left: 0;
   object-position: left; }
 
-article:nth-of-type(odd) .text-tile, article:nth-of-type(odd) .text-tile-static {
+article.section:nth-of-type(odd) .text-tile, article.section:nth-of-type(odd) .text-tile-static {
   left: 25%; }
 
 img.backgr {
@@ -1077,7 +1068,6 @@ img.backgr {
     font-weight: normal; }
   .text-tile .posted-on, .text-tile-static .posted-on {
     display: block;
-    margin-top: 2rem;
     margin-left: 3rem; }
   .text-tile .info, .text-tile-static .info {
     font-size: 1rem;
@@ -1106,9 +1096,9 @@ img.backgr {
 @media screen and (min-height: 900px) {
   article {
     font-size: 1rem; }
-  article:nth-of-type(even) .text-tile, article:nth-of-type(even) .text-tile-static {
+  article.section:nth-of-type(even) .text-tile, article.section:nth-of-type(even) .text-tile-static {
     right: 20%; }
-  article:nth-of-type(odd) .text-tile, article:nth-of-type(odd) .text-tile-static {
+  article.section:nth-of-type(odd) .text-tile, article.section:nth-of-type(odd) .text-tile-static {
     left: 20%; }
   .text-tile, .text-tile-static {
     padding: 70px 53px 70px 53px;
@@ -1124,9 +1114,9 @@ img.backgr {
       right: 80px; } }
 
 @media screen and (min-height: 900px) and (min-width: 1500px) {
-  article:nth-of-type(even) .text-tile, article:nth-of-type(even) .text-tile-static {
+  article.section:nth-of-type(even) .text-tile, article.section:nth-of-type(even) .text-tile-static {
     right: 25%; }
-  article:nth-of-type(odd) .text-tile, article:nth-of-type(odd) .text-tile-static {
+  article.section:nth-of-type(odd) .text-tile, article.section:nth-of-type(odd) .text-tile-static {
     left: 25%; }
   .text-tile, .text-tile-static {
     padding: 100px 70px 100px 70px;
