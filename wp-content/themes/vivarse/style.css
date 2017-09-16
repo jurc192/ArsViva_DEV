@@ -1020,15 +1020,6 @@ article {
   font-size: 0.85rem; }
   article a {
     text-decoration: none; }
-  article p {
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    -ms-word-break: break-all;
-    word-break: break-word;
-    -ms-hyphens: auto;
-    -moz-hyphens: auto;
-    -webkit-hyphens: auto;
-    hyphens: auto; }
 
 article.section:nth-of-type(even) img.backgr {
   right: 0;
@@ -1188,19 +1179,27 @@ article.tile {
   overflow: hidden;
   background-color: #fff; }
   article.tile .tile-title {
-    font-size: 1.2rem;
-    height: 60px; }
+    font-size: 1rem; }
   article.tile .tile-meta .tile-info {
     margin: .5rem 0;
-    font-weight: bold; }
+    font-weight: bold;
+    font-size: 0.8rem; }
   article.tile .tile-meta .posted-on {
     display: block;
     font-size: 0.7rem; }
   article.tile .tile-meta .type {
-    display: block; }
+    display: block;
+    font-size: 0.8rem; }
   article.tile .tile-content {
+    padding-right: 24px;
     text-align: justify;
     font-size: 0.8rem; }
+    article.tile .tile-content.event {
+      position: absolute;
+      top: 320px; }
+    article.tile .tile-content.post {
+      position: absolute;
+      top: 320px; }
   article.tile .entry-footer {
     text-align: right; }
   article.tile .thumb {
@@ -1208,6 +1207,9 @@ article.tile {
     height: 150px;
     object-fit: cover;
     object-position: center; }
+
+.nav-links {
+  margin: 30px auto; }
 
 .text-tile-small {
   position: relative;

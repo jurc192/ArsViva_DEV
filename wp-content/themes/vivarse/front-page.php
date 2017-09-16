@@ -10,6 +10,16 @@ get_header(); ?>
 
 		<!-- /* Upcoming events stuff */  -->
 		<section class="section">
+			<article class="slide">
+				<div class="text-tile">
+					<h2>Tukaj bo seznam upcoming dogodkov:</h2>
+					<ul>
+						<li>Dogodek 1</li>
+						<li>Dogodek 2</li>
+						<li>Dogodek 3</li>
+					</ul>
+				</div>
+			</article>
 
 
 		<?php

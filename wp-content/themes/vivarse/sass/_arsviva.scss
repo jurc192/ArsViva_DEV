@@ -231,7 +231,7 @@ article {
     }
 
     p {
-      @include word-wrap();
+      // @include word-wrap();
     }
 }
 
@@ -579,8 +579,7 @@ article.tile {
 
   // EVENT / POST TITILE
   .tile-title {
-    font-size: 1.2rem;
-    height: 60px;
+    font-size: 1rem;
   }
 
 
@@ -588,6 +587,7 @@ article.tile {
     .tile-info {
       margin: .5rem 0;
       font-weight: bold;
+      font-size: 0.8rem;
     }
     .posted-on {
       display: block;
@@ -595,13 +595,28 @@ article.tile {
     }
     .type {
       display: block;
+      font-size: 0.8rem;
     }
   }
 
   .tile-content {
 
+    // Hack zarad čudnega uhajanja texta
+    padding-right: 24px;
+
     text-align: justify;
     font-size: 0.8rem;
+
+    &.event {
+      position: absolute;
+      top: 320px;
+    }
+
+    &.post {
+      position: absolute;
+      top: 320px;
+    }
+
   }
 
   .entry-footer {
@@ -615,6 +630,10 @@ article.tile {
     object-position: center;
   }
 
+}
+
+.nav-links {
+  margin: 30px auto;
 }
 
 

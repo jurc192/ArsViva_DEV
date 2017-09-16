@@ -431,3 +431,4 @@ se vrnem kasneje.
 
 
 TODO: spremeni class name contenta v template-content-post
+TODO: Justify text (paragraphi) na front-page-u

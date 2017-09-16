@@ -48,7 +48,7 @@
 
 	</header><!-- .entry-header -->
 
-	<div class="tile-content">
+	<div class="tile-content post">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
 

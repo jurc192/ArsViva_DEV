@@ -58,7 +58,7 @@
 
 	</header><!-- .entry-header -->
 
-	<div class="tile-content">
+	<div class="tile-content event">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
 
