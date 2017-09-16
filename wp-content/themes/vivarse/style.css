@@ -982,6 +982,48 @@ html, body {
     object-fit: cover; }
 
 /*--------------------------------------------------------------
+# Upcoming events tiles
+--------------------------------------------------------------*/
+.window {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap; }
+
+.front-tile {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  height: 500px;
+  padding: 1.5rem;
+  margin: 1rem;
+  overflow: hidden;
+  white-space: normal;
+  background-color: #fff; }
+  .front-tile .tile-title {
+    word-wrap: break-word;
+    font-size: 1rem; }
+    .front-tile .tile-title a {
+      display: block; }
+  .front-tile .tile-meta .tile-info {
+    margin: .5rem 0;
+    font-weight: bold; }
+  .front-tile .tile-meta .posted-on {
+    display: block;
+    font-size: 0.7rem; }
+  .front-tile .tile-meta .type {
+    display: block; }
+  .front-tile .tile-content {
+    text-align: justify;
+    font-size: 0.8rem; }
+  .front-tile .entry-footer {
+    text-align: right; }
+  .front-tile .thumb {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center; }
+
+/*--------------------------------------------------------------
 # Posts stuff @scroll template
 --------------------------------------------------------------*/
 .site-main {

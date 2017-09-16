@@ -147,6 +147,78 @@ $footer-height: 200px;
     object-fit: cover;
   }
 }
+
+/*--------------------------------------------------------------
+# Upcoming events tiles
+--------------------------------------------------------------*/
+.window {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+}
+
+.front-tile {
+  position: relative;
+  display: inline-block;
+
+  width: 300px;
+  height: 500px;
+
+  padding:  1.5rem;
+  margin:  1rem;
+
+  overflow: hidden;
+  white-space: normal;
+
+  background-color: $color_arsviva_white;
+
+  .tile-title {
+    word-wrap: break-word;
+    font-size: 1rem;
+    // height: 60px;
+
+    a {
+      display: block;
+    }
+  }
+
+
+  .tile-meta {
+    .tile-info {
+      margin: .5rem 0;
+      font-weight: bold;
+    }
+    .posted-on {
+      display: block;
+      font-size: 0.7rem;
+    }
+    .type {
+      display: block;
+    }
+  }
+
+  .tile-content {
+
+    text-align: justify;
+    font-size: 0.8rem;
+  }
+
+  .entry-footer {
+    text-align: right;
+  }
+
+  .thumb {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+
+
+
 /*--------------------------------------------------------------
 # Posts stuff @scroll template
 --------------------------------------------------------------*/
