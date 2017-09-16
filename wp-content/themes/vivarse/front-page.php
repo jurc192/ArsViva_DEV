@@ -2,7 +2,11 @@
 get_header(); ?>
 
 	<main id="main" class="site-main">
-	<?php get_sidebar(); ?>
+
+		<section class="section landing-art">
+			<img src="<?php echo get_bloginfo('template_url') . '/images/home-fotka2.jpg' ?>" alt="">
+		</section>
+
 		<?php
 
 		// /* Custom query za front page - upcoming events */
@@ -77,5 +81,5 @@ get_header(); ?>
 
 		wp_reset_postdata();
 
-
+get_sidebar();
 get_footer();
