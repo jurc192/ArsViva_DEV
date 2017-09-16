@@ -420,3 +420,10 @@ se vrnem kasneje.
 
 - Naredi da bojo naslovi v PLOŠČICAH visoki 60px max [DONE!]
   - popravi, ko je naslov v eni vrstici naj gre v sredino!
+
+  - ploščica ni nikoli manjša kot 600 x 500
+  - Naslovi na malih zaslonih so od 40 - 80px višine
+  - Naredi da bo imela metadata fixen spodnji rob!
+  - Če je ekrat ožji od 1300px naredi breakpoint -> odreže ploščico!
+
+  - PREVEČ JEBANJA -> Naredi fixno velikost ploščice po breakpointih!

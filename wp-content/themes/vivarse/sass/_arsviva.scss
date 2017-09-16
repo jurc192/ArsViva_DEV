@@ -219,18 +219,17 @@ img.backgr {
   padding: 4%;
 
   width: 600px;
-  height: 70%;
-  min-height: 500px;
+  height: 500px;
 
   background-color: $color_arsviva_white;
   box-shadow: 5px 5px 5px rgba(100, 100, 100, .25);
 
   h2.entry-title {
 
+
     // Na malem monitorju
     font-size: 1.7rem;
     margin-top: 0;
-    /* test */
 
     font-weight: normal;
   }
@@ -264,35 +263,48 @@ img.backgr {
   }
 
   .entry-content {
-    position: absolute;
 
-    bottom: 0;
+    position: absolute;
+    top: 260px;
     left: 0;
-    right: 0;
+    bottom: 0;
 
     padding: 0 10% 10% 10%;
+
+    // Prva verzija
+    // position: absolute;
+    //
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
+    //
+    // padding: 0 10% 10% 10%;
   }
 
 }
 
 
 // Velik zaslon
-@media screen and (min-height: 800px) {
+@media screen and (min-height: 900px) {
 
   article {
     font-size: 1rem;
   }
 
-  h2.entry-title {
-    font-size: 2.15rem;
-  }
+  .text-tile {
 
-  p.info {
-    font-size: 1.2rem;
-  }
+    h2.entry-title {
+      font-size: 2.15rem;
+    }
 
-  p.info:first-of-type {
-    margin-top: 50px;
+    p.info {
+      font-size: 1.2rem;
+    }
+
+    p.info:first-of-type {
+      margin-top: 50px;
+    }
+
   }
 
 }
@@ -637,7 +649,7 @@ aside.filter-sidebar {
   @extend .text-tile;
 
   h2 {
-    
+
     font-size: 2rem;
   }
 

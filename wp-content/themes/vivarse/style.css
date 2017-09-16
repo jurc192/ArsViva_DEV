@@ -1018,14 +1018,12 @@ img.backgr {
   vertical-align: middle;
   padding: 4%;
   width: 600px;
-  height: 70%;
-  min-height: 500px;
+  height: 500px;
   background-color: #fff;
   box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.25); }
   .text-tile h2.entry-title, .text-tile-static h2.entry-title {
     font-size: 1.7rem;
     margin-top: 0;
-    /* test */
     font-weight: normal; }
   .text-tile .posted-on, .text-tile-static .posted-on {
     display: block;
@@ -1042,19 +1040,19 @@ img.backgr {
     margin-top: 30px; }
   .text-tile .entry-content, .text-tile-static .entry-content {
     position: absolute;
-    bottom: 0;
+    top: 260px;
     left: 0;
-    right: 0;
+    bottom: 0;
     padding: 0 10% 10% 10%; }
 
-@media screen and (min-height: 800px) {
+@media screen and (min-height: 900px) {
   article {
     font-size: 1rem; }
-  h2.entry-title {
+  .text-tile h2.entry-title, .text-tile-static h2.entry-title {
     font-size: 2.15rem; }
-  p.info {
+  .text-tile p.info, .text-tile-static p.info {
     font-size: 1.2rem; }
-  p.info:first-of-type {
+  .text-tile p.info:first-of-type, .text-tile-static p.info:first-of-type {
     margin-top: 50px; } }
 
 /*--------------------------------------------------------------
