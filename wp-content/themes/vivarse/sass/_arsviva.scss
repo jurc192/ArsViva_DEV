@@ -216,7 +216,8 @@ img.backgr {
   overflow: hidden;
   vertical-align: middle;
 
-  padding: 4%;
+  // padding: 4%;
+  padding: 53px;
 
   width: 600px;
   height: 500px;
@@ -308,27 +309,116 @@ img.backgr {
 }
 
 
-// Velik zaslon
+// Velik zaslon (in relativno kvadratast)
 @media screen and (min-height: 900px) {
 
   article {
     font-size: 1rem;
   }
 
+  article:nth-of-type(even) {
+
+    // Tekst na LEVI
+    & .text-tile {
+      // right: 25%;
+      right: 20%;
+    }
+  }
+
+  article:nth-of-type(odd) {
+
+    // Tekst na DESNI
+    & .text-tile {
+      // left: 25%;
+      left: 20%;
+    }
+  }
+
   .text-tile {
+
+    // padding: 4%;
+    padding: 70px 53px 70px 53px;
+
+    width: 650px;
+    height: 700px;
 
     h2.entry-title {
       font-size: 2.15rem;
     }
 
-    p.info {
-      font-size: 1.2rem;
+    // p.info {
+    //   font-size: 1.2rem;
+    // }
+    //
+    // p.info:first-of-type {
+    //   margin-top: 50px;
+    // }
+
+    .entry-content {
+      top: 250px;
     }
 
-    p.info:first-of-type {
-      margin-top: 50px;
+    .entry-footer {
+
+      position: absolute;
+      bottom: 80px;
+      right: 80px;
+
+    }
+  }
+
+}
+
+@media screen and (min-height: 900px) and (min-width: 1500px) {
+
+  article:nth-of-type(even) {
+
+    // Tekst na LEVI
+    & .text-tile {
+      right: 25%;
+
+    }
+  }
+
+  article:nth-of-type(odd) {
+
+    // Tekst na DESNI
+    & .text-tile {
+      left: 25%;
+    }
+  }
+
+  .text-tile {
+
+    // padding: 4%;
+    padding: 100px 70px 100px 70px;
+
+    width: 700px;
+    height: 700px;
+
+    h2.entry-title {
+      font-size: 2.15rem;
     }
 
+    // p.info {
+    //   font-size: 1.2rem;
+    // }
+    //
+    // p.info:first-of-type {
+    //   margin-top: 50px;
+    // }
+
+    .entry-content {
+      top: 275px;
+    }
+
+    .entry-footer {
+
+      position: absolute;
+      bottom: 80px;
+      right: 80px;
+
+    }
   }
 
 }
