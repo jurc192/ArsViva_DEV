@@ -186,16 +186,17 @@ $footer-height: 200px;
 
   .tile-meta {
     .tile-info {
+
       margin: .5rem 0;
       font-weight: bold;
     }
-    .posted-on {
-      display: block;
-      font-size: 0.7rem;
-    }
-    .type {
-      display: block;
-    }
+    // .posted-on {
+    //   display: block;
+    //   font-size: 0.7rem;
+    // }
+    // .type {
+    //   display: block;
+    // }
   }
 
   .tile-content {

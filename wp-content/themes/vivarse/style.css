@@ -1007,11 +1007,6 @@ html, body {
   .front-tile .tile-meta .tile-info {
     margin: .5rem 0;
     font-weight: bold; }
-  .front-tile .tile-meta .posted-on {
-    display: block;
-    font-size: 0.7rem; }
-  .front-tile .tile-meta .type {
-    display: block; }
   .front-tile .tile-content {
     text-align: justify;
     font-size: 0.8rem; }
