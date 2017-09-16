@@ -427,3 +427,7 @@ se vrnem kasneje.
   - Če je ekrat ožji od 1300px naredi breakpoint -> odreže ploščico!
 
   - PREVEČ JEBANJA -> Naredi fixno velikost ploščice po breakpointih!
+  - Modified inc/template-tags/posted-on() -> removed hyperlink
+
+
+TODO: spremeni class name contenta v template-content-post

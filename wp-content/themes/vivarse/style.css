@@ -1040,10 +1040,18 @@ img.backgr {
     margin-top: 30px; }
   .text-tile .entry-content, .text-tile-static .entry-content {
     position: absolute;
-    top: 260px;
+    top: 200px;
     left: 0;
     bottom: 0;
     padding: 0 10% 10% 10%; }
+  .text-tile .entry-footer, .text-tile-static .entry-footer {
+    position: absolute;
+    bottom: 60px;
+    right: 80px; }
+    .text-tile .entry-footer a, .text-tile-static .entry-footer a {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: #0b5b8b; }
 
 @media screen and (min-height: 900px) {
   article {

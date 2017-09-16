@@ -226,7 +226,6 @@ img.backgr {
 
   h2.entry-title {
 
-
     // Na malem monitorju
     font-size: 1.7rem;
     margin-top: 0;
@@ -265,11 +264,19 @@ img.backgr {
   .entry-content {
 
     position: absolute;
-    top: 260px;
+    top: 200px;
     left: 0;
     bottom: 0;
 
     padding: 0 10% 10% 10%;
+
+    // Druga verzija, za evente
+    // position: absolute;
+    // top: 260px;
+    // left: 0;
+    // bottom: 0;
+    //
+    // padding: 0 10% 10% 10%;
 
     // Prva verzija
     // position: absolute;
@@ -279,6 +286,23 @@ img.backgr {
     // right: 0;
     //
     // padding: 0 10% 10% 10%;
+  }
+
+  .entry-footer {
+
+    position: absolute;
+    bottom: 60px;
+    right: 80px;
+
+    // Za evente
+    // bottom: 25px;
+    // right: 80px;
+
+    a {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: #0b5b8b;
+    }
   }
 
 }

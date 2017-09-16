@@ -92,6 +92,7 @@ endif;
 
   	<footer class="entry-footer">
       <!-- EMTPY FOR NOW -->
+      <h4><a href=<?php echo esc_url( get_permalink()); ?> rel="bookmark">preberi več</a></h4>
   	</footer>
 
   </div><!-- .text-tile -->

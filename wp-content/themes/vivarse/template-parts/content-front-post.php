@@ -19,7 +19,7 @@
 
   		if ( 'post' === get_post_type() ) : ?>
   		<div class="entry-meta">
-        <p class="type">tip OBJAVE</p>
+        <!-- <p class="type">tip OBJAVE</p> -->
   			<?php vivarse_posted_on(); ?>
   		</div><!-- .entry-meta -->
   		<?php
@@ -27,19 +27,8 @@
   	</header><!-- .entry-header -->
 
   	<div class="entry-content">
-  		<?php
-  			the_content( sprintf(
-  				wp_kses(
-  					/* translators: %s: Name of current post. Only visible to screen readers */
-  					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'vivarse' ),
-  					array(
-  						'span' => array(
-  							'class' => array(),
-  						),
-  					)
-  				),
-  				get_the_title()
-  			) );
+      <?php
+        the_excerpt();
 
   			wp_link_pages( array(
   				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'vivarse' ),
@@ -49,8 +38,8 @@
   	</div><!-- .entry-content -->
 
   	<footer class="entry-footer">
-  		<?php //vivarse_entry_footer(); ?>
       <!-- READ MORE -->
+      <h4><a href=<?php echo esc_url( get_permalink()); ?> rel="bookmark">preberi več</a></h4>
   	</footer><!-- .entry-footer -->
 
   </div><!-- .text-tile -->
