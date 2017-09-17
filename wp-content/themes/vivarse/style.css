@@ -1371,6 +1371,14 @@ aside.filter-sidebar {
     .text-tile-static p.dosti-teksta {
       top: 0; }
 
+@media screen and (min-height: 900px) {
+  .text-tile-static h2 {
+    margin-top: 1.8rem; }
+  .text-tile-static p {
+    top: 65px; }
+    .text-tile-static p.dosti-teksta {
+      top: 20px; } }
+
 /*--------------------------------------------------------------
 # Git current branch popup
 --------------------------------------------------------------*/

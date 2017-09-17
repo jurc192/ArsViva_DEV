@@ -894,6 +894,21 @@ aside.filter-sidebar {
   }
 }
 
+@media screen and (min-height: 900px) {
+  .text-tile-static {
+    h2 {
+      margin-top: 1.8rem;
+    }
+    p {
+      top: 65px;
+
+      &.dosti-teksta {
+        top: 20px;
+      }
+    }
+  }
+}
+
 /*--------------------------------------------------------------
 # Git current branch popup
 --------------------------------------------------------------*/
