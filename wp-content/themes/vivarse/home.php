@@ -6,18 +6,22 @@ get_header('nofp'); ?>
 
 	<main id="main" class="site-main-nofp">
 
+
     <?php
 		if ( have_posts() ) :
 			while ( have_posts() ) : the_post();
 
-				get_template_part('template-parts/content-events');
+				if(get_post_type() === 'event'):
+					get_template_part('template-parts/content-events');
+				elseif(get_post_type() === 'post'):
+					get_template_part('template-parts/content-posts');
+				endif;
 
 			endwhile;
-
 			the_posts_pagination( array('mid_size' => 5));
 
-		else :
 
+		else :
 			echo "I DONT HAVE POSTS \n";
 			// get_template_part( 'template-parts/content', 'none' );
 

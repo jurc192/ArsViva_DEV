@@ -96,13 +96,13 @@ class vsel_widget extends WP_Widget {
 			echo '</div>';
 		}
 		if ( $instance['vsel_shortcode'] == 'past' ) { 
-			$content = '[vsel-past-events ';
+			$content = '[vsel-widget-past-events ';
 		} else if ( $instance['vsel_shortcode'] == 'current' ) { 
-			$content = '[vsel-current-events ';
+			$content = '[vsel-widget-current-events ';
 		} else if ( $instance['vsel_shortcode'] == 'all' ) { 
-			$content = '[vsel-all-events ';
+			$content = '[vsel-widget-all-events ';
 		} else {
-			$content = '[vsel ';
+			$content = '[vsel-widget ';
 		}
 		if ( !empty( $instance['vsel_attributes'] ) ) { 
 			$content .= $instance['vsel_attributes'];

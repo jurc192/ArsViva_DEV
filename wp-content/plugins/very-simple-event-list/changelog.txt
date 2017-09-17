@@ -1,6 +1,22 @@
 CHANGELOG
 =========
 
+= Version 6.7 =
+* major update
+* changed and simplyfied code and file structure regarding the shortcodes
+* widget uses it's own shortcode files now
+* removed files vsel-upcoming, vsel-past, vsel-current and vsel-all
+* added files vsel-shortcodes and vsel-widget-shortcodes
+* added files vsel-list and vsel-widget-list
+* new: added extra settings to hide elements
+* new: added event ID to each event in list
+* new: shortcode attribute to display start date and end date on 1 line
+* new: shortcode attribute to set the image size that is being used
+* for more info please check readme file
+* changed default image width from 40% into max 40% (to avoid blurry image)
+* changed default image width in widget from 100% into max 100% (to avoid blurry image)
+* updated most files
+
 = Version 6.6 =
 * fix: used wrong CSS class for several date fields
 * added extra CSS class to all date fields for better customization

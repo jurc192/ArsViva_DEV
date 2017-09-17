@@ -141,21 +141,25 @@ function vivarse_scripts() {
 	/* Jure edit */
 	wp_enqueue_style( 'vivarse-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'fullPage-style', get_template_directory_uri() . '/sass/jquery.fullPage.css', false, '1', 'all' );
-	
+
+	/* jQuery stuff */
+	wp_enqueue_script( 'jquery-ui-datepicker' );
+	wp_enqueue_script( 'fullPage', get_template_directory_uri() . '/js/jquery.fullPage.js', array('jquery'), '1', true );
+	wp_enqueue_script( 'textFill', get_template_directory_uri() . '/js/jquery.textfill.min.js', array('jquery'), '1', true );
+
+	wp_enqueue_script( 'filter-sidebar', get_template_directory_uri() . '/js/filter-sidebar.js', array('jquery'), '1', true );
+	wp_enqueue_script( 'git-popup', get_template_directory_uri() . '/js/git-popup.js', array(), '1', true );
+	wp_enqueue_script( 'my-fullPage-settings', get_template_directory_uri() . '/js/myFullPage.js', array('jquery'), '1', true );
+	wp_enqueue_script( 'my-textFill', get_template_directory_uri() . '/js/myTextFill.js', array('jquery'), '1', true );
+
 	/* Modal Pictures */
 	wp_enqueue_script( 'modal-pictures', get_template_directory_uri() . '/js/modal-pictures.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'filter-sidebar', get_template_directory_uri() . '/js/filter-sidebar.js', array(), '1', true );
-	wp_enqueue_script( 'git-popup', get_template_directory_uri() . '/js/git-popup.js', array(), '1', true );
-	wp_enqueue_script( 'my-fullPage-settings', get_template_directory_uri() . '/js/myFullPage.js', array('jquery'), '1', true );
-	wp_enqueue_script( 'fullPage', get_template_directory_uri() . '/js/jquery.fullPage.js', array('jquery'), '1', true );
 
 	/* Original */
 	wp_enqueue_script( 'vivarse-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'vivarse-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-
-	
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -189,3 +193,56 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+
+/**
+ * JURE EDIT - sidebar filtering stuff
+ */
+function vivarse_filter_posts($query) {
+	// The $query object is passed to your function by reference.
+
+	if (!empty($_GET) && $query->is_home() && $query->is_main_query()) {
+
+		// Post type (required)
+		$vivarse_post_type = $_GET['vivarse-post-type'];
+		$query->set('post_type', $vivarse_post_type);
+
+		// Event -> category (optional)
+		if (!empty($_GET['vivarse-event-category'])) {
+
+			$tax_query = array(
+				array(
+					'taxonomy' => 'event_cat',
+					'terms' => $_GET['vivarse-event-category'],
+					'field' => 'slug',
+				)
+			);
+			$query->set('tax_query', $tax_query);
+		}
+
+		// Event -> date (optional)
+		// if (!empty( $_GET['vivarse-date'] )) {
+		//
+		// 	$vivarse_event_date = $_GET['vivarse-date'];
+		// 	$vivarse_time = strtotime($vivarse_event_date);
+		//
+		// 	$my_meta_query = array(
+		// 		'relation' => 'AND',
+		// 		array(
+		// 			'key' => 'event-start-date',
+		// 			'value' => $vivarse_time,
+		// 			'compare' => '=',
+		// 			'type' => 'NUMERIC'
+		// 		)
+		// 	);
+		//
+		// 	$query->set('meta_query', $my_meta_query);
+		// }
+
+	}
+
+
+	return $query;
+
+}
+add_action('pre_get_posts', 'vivarse_filter_posts');

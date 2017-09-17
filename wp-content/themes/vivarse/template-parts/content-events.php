@@ -13,6 +13,7 @@
  $post_title = get_the_title();
 
  $dateformat = get_option( 'date_format' );
+ $event_time = get_post_meta( $post_id, 'event-start-date', true );
 
  if (has_post_thumbnail()) :
    $thumb_id = get_post_thumbnail_id();
@@ -26,33 +27,42 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('nofp'); ?>>
-	<header class="entry-header">
+<article id="post-<?php the_ID(); ?>" <?php post_class('tile'); ?>>
+	<header class="tile-header">
 
 		<!-- Event thumbnail -->
 		<img class="thumb" src="<?php echo $thumb_url?>" alt="fotka1">
 
 		<!-- Event title -->
-		<h2 class="entry-title">
+		<h2 class="tile-title">
 			<a href=<?php echo esc_url( get_permalink()); ?> rel="bookmark"><?php echo $post_title; ?></a>
 		</h2>
 
-		<div class="entry-meta">
+		<div class="tile-meta">
 
-			<!-- Type of the event (category) -->
-			<?php the_terms($post_id, 'event_cat', '<span class="type">', ', ', '</span><br>'); ?>
+      <!-- Time of the event -->
+      <p class='tile-info'>
+        <span>
+          <?php echo "Kdaj: ", date_i18n($dateformat, $event_time, false); ?>
+          <!-- i18n transforms time form Unix- to users- time format -->
+        </span>
+      </p>
 
 			<!-- Posted on () -->
 			<?php vivarse_posted_on(); ?>
+
+      <!-- Type of the event (category) -->
+      <?php the_terms($post_id, 'event_cat', '<span class="type">', ', ', '</span>'); ?>
+
 		</div><!-- .entry-meta -->
 
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="tile-content event">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<a class="readmore" href="<?php echo esc_url( get_permalink()); ?>">Read more</a>
+	<footer class="tile-footer">
+		<!-- <a class="readmore" href="<?php echo esc_url( get_permalink()); ?>">Read more</a> -->
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
