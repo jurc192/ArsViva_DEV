@@ -1,5 +1,39 @@
 <?php
+/*************************************************
+	Front page
+	Displaying upcoming events and front-page posts
+*************************************************/
+
+/*
+Custom query za front page - upcoming EVENTS
+*/
+$today = strtotime( 'today' );
+
+// Poglej če ni event že mimo
+$my_meta_query = array(
+	'relation' => 'AND',
+	array(
+		'key' => 'event-date',
+		'value' => $today,
+		'compare' => '>=',
+		'type' => 'NUMERIC'
+	)
+);
+
+$myquery_args = array(
+	'post_type' => 'event',
+	'post_status' => 'publish',
+	'meta_key' => 'event-date',
+	'orderby' => 'meta_value_num',
+	'order' => 'ASC',
+	'posts_per_page' => 5,
+	'meta_query' => $my_meta_query,
+);
+
+$my_event_query = new WP_Query($myquery_args);
+
 get_header(); ?>
+
 
 	<main id="main" class="site-main">
 
@@ -7,48 +41,22 @@ get_header(); ?>
 			<img src="<?php echo get_bloginfo('template_url') . '/images/home-fotka2.jpg' ?>" alt="">
 		</section>
 
-
-		<!-- /* Upcoming events stuff */  -->
+		<!-- Upcoming events -->
 		<section class="section">
+
 			<article class="slide">
+				<img class="backgr" src="<?php echo get_bloginfo('template_url') . '/images/dogodki-dogodek1.jpg' ?>" alt="">
 				<div class="text-tile">
-					<h2>Tukaj bo seznam upcoming dogodkov:</h2>
-					<ul>
-						<li>Dogodek 1</li>
-						<li>Dogodek 2</li>
-						<li>Dogodek 3</li>
+					<h2>Prihajajoči dogodki:</h2>
+					<ul class="upcoming-events">
+						<?php vivarse_upcoming_titles($my_event_query); ?>
 					</ul>
 				</div>
+
 			</article>
 
 
 		<?php
-		/* Custom query za front page - upcoming events */
-		$today = strtotime( 'today' );
-		// echo $today;
-
-		/* Poglej če ni event že mimo */
-		$my_meta_query = array(
-			'relation' => 'AND',
-			array(
-				'key' => 'event-date',
-				'value' => $today,
-				'compare' => '>=',
-				'type' => 'NUMERIC'
-			)
-		);
-
-		$myquery_args = array(
-			'post_type' => 'event',
-			'post_status' => 'publish',
-			'meta_key' => 'event-date',
-			'orderby' => 'meta_value_num',
-			'order' => 'ASC',
-			'posts_per_page' => 5,
-			'meta_query' => $my_meta_query,
-		);
-
-		$my_event_query = new WP_Query($myquery_args);
 
 		if ( $my_event_query->have_posts() ) :
 			if ( is_front_page() ):
@@ -72,7 +80,7 @@ get_header(); ?>
 
 
 		<?php
-		/* Custom query za front page - front page posts */
+		/* Custom query za front page - front page POSTS */
 		$my_post_query_args = array(
 			'post_type' => 'post',
 			'post_status' => 'publish',

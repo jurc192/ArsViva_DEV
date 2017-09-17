@@ -29,6 +29,38 @@ function vivarse_event_options() {
 }
 
 
+/*
+	JURE EDIT
+	Listing upcoming event titles
+*/
+function vivarse_upcoming_titles($my_event_query) {
+
+	if ( $my_event_query->have_posts() ) :
+		if ( is_front_page() ):
+
+			while( $my_event_query->have_posts() ) : $my_event_query->the_post();
+
+				echo "<li>";
+				echo "<h2 class='upcoming-title'>";
+				echo "<a href=' " , esc_url( get_permalink()) , " ' rel='bookmark'>" , get_the_title() , "</a>";
+				echo "</h2>";
+				echo "</li>";
+
+			endwhile;
+
+		else:
+			// then what? Is this even possible?
+		endif;
+
+	else:
+		echo "<h3>Ni prihajajočih dogodkov</h3>";
+	endif;
+
+	rewind_posts();
+
+}
+
+
 if ( ! function_exists( 'vivarse_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time and author.

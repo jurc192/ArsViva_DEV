@@ -4,7 +4,7 @@
 
 		<!-- PREDSTAVITEV -->
 		<article class="section">
-			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/ozavodu-fotka3.jpg" alt="fotka2">
+			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/ozavodu-fotka1.jpg" alt="fotka2">
 
 			<div class="text-tile-static">
 				<h2>Predstavitev</h2>
