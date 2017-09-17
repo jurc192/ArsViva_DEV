@@ -430,5 +430,5 @@ se vrnem kasneje.
   - Modified inc/template-tags/posted-on() -> removed hyperlink
 
 
-TODO: spremeni class name contenta v template-content-post
+TODO: spremeni class name contenta v template-content-post [DONE]
 TODO: Justify text (paragraphi) na front-page-u

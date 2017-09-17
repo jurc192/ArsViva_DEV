@@ -1028,11 +1028,17 @@ article.section:nth-of-type(even) img.backgr {
 article.section:nth-of-type(even) .text-tile, article.section:nth-of-type(even) .text-tile-static {
   right: 25%; }
 
+article.section:nth-of-type(even) .text-tile-static {
+  right: 25%; }
+
 article.section:nth-of-type(odd) img.backgr {
   left: 0;
   object-position: left; }
 
 article.section:nth-of-type(odd) .text-tile, article.section:nth-of-type(odd) .text-tile-static {
+  left: 25%; }
+
+article.section:nth-of-type(odd) .text-tile-static {
   left: 25%; }
 
 img.backgr {
@@ -1089,7 +1095,11 @@ img.backgr {
     font-size: 1rem; }
   article.section:nth-of-type(even) .text-tile, article.section:nth-of-type(even) .text-tile-static {
     right: 20%; }
+  article.section:nth-of-type(even) .text-tile-static {
+    right: 20%; }
   article.section:nth-of-type(odd) .text-tile, article.section:nth-of-type(odd) .text-tile-static {
+    left: 20%; }
+  article.section:nth-of-type(odd) .text-tile-static {
     left: 20%; }
   .text-tile, .text-tile-static {
     padding: 70px 53px 70px 53px;
@@ -1107,7 +1117,11 @@ img.backgr {
 @media screen and (min-height: 900px) and (min-width: 1500px) {
   article.section:nth-of-type(even) .text-tile, article.section:nth-of-type(even) .text-tile-static {
     right: 25%; }
+  article.section:nth-of-type(even) .text-tile-static {
+    right: 25%; }
   article.section:nth-of-type(odd) .text-tile, article.section:nth-of-type(odd) .text-tile-static {
+    left: 25%; }
+  article.section:nth-of-type(odd) .text-tile-static {
     left: 25%; }
   .text-tile, .text-tile-static {
     padding: 100px 70px 100px 70px;
@@ -1345,16 +1359,17 @@ aside.filter-sidebar {
 # Static Pages
 
 --------------------------------------------------------------*/
-.text-tile-static h2 {
-  font-size: 2rem; }
-
-.text-tile-static p {
-  position: absolute;
-  font-size: 1.2rem;
-  bottom: 5rem;
-  left: 0;
-  right: 0;
-  padding: 0 10% 10% 10%; }
+.text-tile-static {
+  text-align: justify; }
+  .text-tile-static h2 {
+    font-size: 1.8rem;
+    margin-top: 0; }
+  .text-tile-static p {
+    position: relative;
+    top: 45px;
+    font-size: 1.1rem; }
+    .text-tile-static p.dosti-teksta {
+      top: 0; }
 
 /*--------------------------------------------------------------
 # Git current branch popup

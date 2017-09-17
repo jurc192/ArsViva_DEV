@@ -250,6 +250,10 @@ article.section:nth-of-type(even) {
   & .text-tile {
     right: 25%;
   }
+
+  & .text-tile-static {
+    right: 25%;
+  }
 }
 
 
@@ -263,6 +267,10 @@ article.section:nth-of-type(odd) {
 
   // Tekst na DESNI
   & .text-tile {
+    left: 25%;
+  }
+
+  & .text-tile-static {
     left: 25%;
   }
 }
@@ -395,6 +403,10 @@ img.backgr {
       // right: 25%;
       right: 20%;
     }
+
+    & .text-tile-static {
+      right: 20%;
+    }
   }
 
   article.section:nth-of-type(odd) {
@@ -402,6 +414,10 @@ img.backgr {
     // Tekst na DESNI
     & .text-tile {
       // left: 25%;
+      left: 20%;
+    }
+
+    & .text-tile-static {
       left: 20%;
     }
   }
@@ -448,7 +464,10 @@ img.backgr {
     // Tekst na LEVI
     & .text-tile {
       right: 25%;
+    }
 
+    & .text-tile-static {
+      right: 25%;
     }
   }
 
@@ -456,6 +475,10 @@ img.backgr {
 
     // Tekst na DESNI
     & .text-tile {
+      left: 25%;
+    }
+
+    & .text-tile-static {
       left: 25%;
     }
   }
@@ -849,25 +872,25 @@ aside.filter-sidebar {
 # Static Pages
 
 --------------------------------------------------------------*/
+// Na straneh: O_zavodu, Kontakt, Nastanitev
 .text-tile-static {
-  // O_zavodu, Kontakt, Nastanitev
   @extend .text-tile;
 
-  h2 {
+  text-align: justify;
 
-    font-size: 2rem;
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 0;
   }
 
   p {
-    position: absolute;
+    position:relative;
+    top: 45px;
+    font-size: 1.1rem;
 
-    font-size: 1.2rem;
-
-    bottom: 5rem;
-    left: 0;
-    right: 0;
-
-    padding: 0 10% 10% 10%;
+    &.dosti-teksta {
+      top: 0;
+    }
   }
 }
 
