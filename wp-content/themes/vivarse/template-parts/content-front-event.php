@@ -56,9 +56,6 @@ endif;
         <!-- Type of the event (category) -->
         <?php //the_terms($post_id, 'event_cat', '<span class="type">', ', ', '</span><br>'); ?>
 
-        <!-- Posted on () -->
-        <?php vivarse_posted_on(); ?>
-
         <!-- Time of the event -->
         <p class='info'>
           <span>Kdaj: </span>
@@ -72,25 +69,16 @@ endif;
           <?php echo $event_location; ?>
         </p>
 
+        <!-- Posted on () -->
+        <?php vivarse_posted_on(); ?>
+
   		</div><!-- .entry-meta -->
   	</header><!-- .entry-header -->
 
 
   	<div class="entry-content">
-      <!-- TO ZAENKRAT PUSTIM TAKO, PREŠTUDIRAJ! -->
+
   		<?php
-  			// the_content( sprintf(
-  			// 	wp_kses(
-  			// 		/* translators: %s: Name of current post. Only visible to screen readers */
-  			// 		__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'vivarse' ),
-  			// 		array(
-  			// 			'span' => array(
-  			// 				'class' => array(),
-  			// 			),
-  			// 		)
-  			// 	),
-  			// 	get_the_title()
-  			// ) );
         the_excerpt();
 
   			wp_link_pages( array(
@@ -103,7 +91,7 @@ endif;
 
 
   	<footer class="entry-footer">
-      <!-- EMTPY FOR NOW -->
+      <h4><a href=<?php echo esc_url( get_permalink()); ?> rel="bookmark">preberi več</a></h4>
   	</footer>
 
   </div><!-- .text-tile -->

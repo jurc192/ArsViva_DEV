@@ -4,13 +4,11 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-
 // add admin options page
 function vsel_menu_page() {
     add_options_page( __( 'VSEL', 'very-simple-event-list' ), __( 'VSEL', 'very-simple-event-list' ), 'manage_options', 'vsel', 'vsel_options_page' );
 }
 add_action( 'admin_menu', 'vsel_menu_page' );
-
 
 // add admin settings and such 
 function vsel_admin_init() {
@@ -29,6 +27,12 @@ function vsel_admin_init() {
 
 	add_settings_field( 'vsel-field-8', __( 'Date', 'very-simple-event-list' ), 'vsel_field_callback_8', 'vsel', 'vsel-section-3' );
 	register_setting( 'vsel-options', 'vsel-setting-8', 'sanitize_text_field' );
+
+	add_settings_field( 'vsel-field-11', __( 'Time', 'very-simple-event-list' ), 'vsel_field_callback_11', 'vsel', 'vsel-section-3' );
+	register_setting( 'vsel-options', 'vsel-setting-11', 'sanitize_text_field' );
+
+	add_settings_field( 'vsel-field-12', __( 'Location', 'very-simple-event-list' ), 'vsel_field_callback_12', 'vsel', 'vsel-section-3' );
+	register_setting( 'vsel-options', 'vsel-setting-12', 'sanitize_text_field' );
 
 	add_settings_field( 'vsel-field-10', __( 'Link to more info', 'very-simple-event-list' ), 'vsel_field_callback_10', 'vsel', 'vsel-section-3' );
 	register_setting( 'vsel-options', 'vsel-setting-10', 'sanitize_text_field' );
@@ -55,7 +59,6 @@ function vsel_admin_init() {
 }
 add_action( 'admin_init', 'vsel_admin_init' );
 
-
 function vsel_section_callback() {
     echo __( 'General Settings', 'very-simple-event-list' );
 }
@@ -67,7 +70,6 @@ function vsel_section_callback_3() {
 function vsel_section_callback_2() {
     echo __( 'Widget Settings', 'very-simple-event-list' );
 }
-
 
 // the checkbox fields
 function vsel_field_callback() {
@@ -98,7 +100,23 @@ function vsel_field_callback_8() {
 	$value = esc_attr( get_option( 'vsel-setting-8' ) );
 	?>
 	<input type='hidden' name='vsel-setting-8' value='no'>
-	<label><input type='checkbox' name='vsel-setting-8' <?php checked( $value, 'yes' ); ?> value='yes'> <?php _e( 'Hide', 'very-simple-event-list' ); ?></label>
+	<label><input type='checkbox' name='vsel-setting-8' <?php checked( $value, 'yes' ); ?> value='yes'> <?php _e( 'Hide on page with all events.', 'very-simple-event-list' ); ?></label>
+	<?php
+}
+
+function vsel_field_callback_11() {
+	$value = esc_attr( get_option( 'vsel-setting-11' ) );
+	?>
+	<input type='hidden' name='vsel-setting-11' value='no'>
+	<label><input type='checkbox' name='vsel-setting-11' <?php checked( $value, 'yes' ); ?> value='yes'> <?php _e( 'Hide on page with all events.', 'very-simple-event-list' ); ?></label>
+	<?php
+}
+
+function vsel_field_callback_12() {
+	$value = esc_attr( get_option( 'vsel-setting-12' ) );
+	?>
+	<input type='hidden' name='vsel-setting-12' value='no'>
+	<label><input type='checkbox' name='vsel-setting-12' <?php checked( $value, 'yes' ); ?> value='yes'> <?php _e( 'Hide on page with all events.', 'very-simple-event-list' ); ?></label>
 	<?php
 }
 
@@ -157,7 +175,6 @@ function vsel_field_callback_6() {
 	<label><input type='checkbox' name='vsel-setting-6' <?php checked( $value, 'yes' ); ?> value='yes'> <?php _e( 'Hide', 'very-simple-event-list' ); ?></label>
 	<?php
 }
-
 
 // display admin options page
 function vsel_options_page() {

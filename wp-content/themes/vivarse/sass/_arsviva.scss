@@ -1,3 +1,7 @@
+
+@import "datepicker_style";
+
+
 /*--------------------------------------------------------------
 # Site width and general layout
 --------------------------------------------------------------*/
@@ -76,10 +80,6 @@ $navigation-height: 60px;
   }
 }
 
-.site-content {
-  // margin-top: $navigation-height;
-}
-
 /* Hamburger menu */
 .menu-toggle {
   float: right;
@@ -130,6 +130,88 @@ $footer-height: 200px;
 # Full page scroll stuff
 
 --------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Landing image / video
+--------------------------------------------------------------*/
+.landing-art {
+
+  position: relative;
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    object-fit: cover;
+  }
+}
+
+/*--------------------------------------------------------------
+# Upcoming events slides
+--------------------------------------------------------------*/
+
+article.slide {
+
+  position: relative;
+
+  .backgr {
+    right: 0;
+  }
+
+  .text-tile {
+
+    right: 25%;
+
+    .entry-content {
+      top: 250px;
+    }
+    .entry-footer {
+      bottom: 40px;
+    }
+  }
+
+}
+
+.upcoming-events {
+  list-style: none;
+
+  margin: 50px auto 0 auto;
+  padding-left: 2.2rem;
+}
+
+.upcoming-title {
+  font-weight: normal;
+}
+
+@media screen and (min-height: 900px) {
+  article.slide .text-tile {
+
+    right: 17%;
+
+    .entry-content {
+      top: 350px;
+    }
+  }
+
+}
+
+@media screen and (min-height: 900px) and (min-width: 1500px) {
+  article.slide .text-tile {
+
+    right: 25%;
+
+    .posted-on {
+      margin-top: 2rem;
+    }
+
+    .entry-content {
+      top: 350px;
+    }
+  }
+}
+
 /*--------------------------------------------------------------
 # Posts stuff @scroll template
 --------------------------------------------------------------*/
@@ -144,12 +226,13 @@ $footer-height: 200px;
   hyphens: auto;
 }
 
-article {
-    @include word-wrap();
-    background-size: cover;
+.site-main {
+  padding-right: 60px;
+}
 
-    // Na velikem monitorju
-    // font-size: 1rem;
+article {
+
+    background-size: cover;
 
     // Na malem monitoru
     font-size: 0.85rem;
@@ -157,48 +240,49 @@ article {
     a {
       text-decoration: none;
     }
+
+    p {
+      // @include word-wrap();
+    }
 }
+
 
 // Znotraj <main> mora bit vsaka prva slika na levi, vsaka druga na desni.
 // Isto za Text ploščice
-article:nth-of-type(even) {
+article.section:nth-of-type(even) {
+
+  // Slika na DESNI
   & img.backgr {
-    right: 60px;
+    right: 0;
     object-position: right;
   }
 
-  & iframe.google-maps {
-	right: 60px;
-    object-position: right;
-  }
-
+  // Tekst na LEVI
   & .text-tile {
     right: 25%;
-	object-position: right;
   }
-    & .text-tile-small{
-    right: 35%;
-	object-position: right;
+
+  & .text-tile-static {
+    right: 25%;
   }
 }
 
-article:nth-of-type(odd) {
+
+article.section:nth-of-type(odd) {
+
+  // Slika na LEVI
   & img.backgr {
     left: 0;
     object-position: left;
   }
-  & iframe.google-maps {
-    left: 0;
-    object-position: left;
-  }
 
+  // Tekst na DESNI
   & .text-tile {
     left: 25%;
-	object-position: left;
   }
-  & .text-tile-small {
-    left: 30%;
-	object-position: left;
+
+  & .text-tile-static {
+    left: 25%;
   }
 }
 
@@ -212,8 +296,245 @@ img.backgr {
   object-fit: cover;
 }
 
-//Embedded
 
+// Ploščica za text
+.text-tile {
+
+  position: relative;
+  margin: 0 auto;
+
+  overflow: hidden;
+  vertical-align: middle;
+
+  // padding: 4%;
+  padding: 53px;
+
+  width: 600px;
+  height: 500px;
+
+  background-color: $color_arsviva_white;
+  box-shadow: 5px 5px 5px rgba(100, 100, 100, .25);
+
+  h2.entry-title {
+
+    // Na malem monitorju
+    font-size: 1.7rem;
+    margin-top: 0;
+
+    font-weight: normal;
+  }
+
+  .posted-on {
+    display: block;
+    // na vecjem zaslonu
+    // margin-top: 2rem;
+    margin-left: 3rem;
+  }
+
+  // Kdaj, kje
+  .info {
+
+    // na malih monitorjih
+    font-size: 1rem;
+
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 3rem;
+
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  p.info:first-of-type {
+
+    // na malih monitorjih
+    margin-top: 30px;
+  }
+
+  .entry-content {
+
+    position: absolute;
+    top: 200px;
+    left: 0;
+    bottom: 0;
+
+    padding: 0 10% 10% 10%;
+
+    // Druga verzija, za evente
+    // position: absolute;
+    // top: 260px;
+    // left: 0;
+    // bottom: 0;
+    //
+    // padding: 0 10% 10% 10%;
+
+    // Prva verzija
+    // position: absolute;
+    //
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
+    //
+    // padding: 0 10% 10% 10%;
+  }
+
+  .entry-footer {
+
+    position: absolute;
+    bottom: 60px;
+    right: 80px;
+
+    // Za evente
+    // bottom: 25px;
+    // right: 80px;
+
+    a {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: #0b5b8b;
+    }
+  }
+
+}
+
+
+// Velik zaslon (in relativno kvadratast)
+@media screen and (min-height: 900px) {
+
+  article {
+    font-size: 1rem;
+  }
+
+  article.section:nth-of-type(even) {
+
+    // Tekst na LEVI
+    & .text-tile {
+      // right: 25%;
+      right: 20%;
+    }
+
+    & .text-tile-static {
+      right: 20%;
+    }
+  }
+
+  article.section:nth-of-type(odd) {
+
+    // Tekst na DESNI
+    & .text-tile {
+      // left: 25%;
+      left: 20%;
+    }
+
+    & .text-tile-static {
+      left: 20%;
+    }
+  }
+
+  .text-tile {
+
+    // padding: 4%;
+    padding: 70px 53px 70px 53px;
+
+    width: 650px;
+    height: 700px;
+
+    h2.entry-title {
+      font-size: 2.15rem;
+    }
+
+    // p.info {
+    //   font-size: 1.2rem;
+    // }
+    //
+    // p.info:first-of-type {
+    //   margin-top: 50px;
+    // }
+
+    .entry-content {
+      top: 250px;
+    }
+
+    .entry-footer {
+
+      position: absolute;
+      bottom: 80px;
+      right: 80px;
+
+    }
+  }
+
+}
+
+@media screen and (min-height: 900px) and (min-width: 1500px) {
+
+  article.section:nth-of-type(even) {
+
+    // Tekst na LEVI
+    & .text-tile {
+      right: 25%;
+    }
+
+    & .text-tile-static {
+      right: 25%;
+    }
+  }
+
+  article.section:nth-of-type(odd) {
+
+    // Tekst na DESNI
+    & .text-tile {
+      left: 25%;
+    }
+
+    & .text-tile-static {
+      left: 25%;
+    }
+  }
+
+  .text-tile {
+
+    // padding: 4%;
+    padding: 100px 70px 100px 70px;
+
+    width: 700px;
+    height: 700px;
+
+    h2.entry-title {
+      font-size: 2.15rem;
+    }
+
+    // p.info {
+    //   font-size: 1.2rem;
+    // }
+    //
+    // p.info:first-of-type {
+    //   margin-top: 50px;
+    // }
+
+    .entry-content {
+      top: 275px;
+    }
+
+    .entry-footer {
+
+      position: absolute;
+      bottom: 80px;
+      right: 80px;
+
+    }
+  }
+
+}
+
+/*--------------------------------------------------------------
+
+# Embeeded & Maps stuff
+
+--------------------------------------------------------------*/
+//Embedded
 iframe.google-maps{
 	height: calc(100vh - 60px);
 	width: 66vw;
@@ -227,84 +548,33 @@ width:calc(100vw - 60px);
 height:100%;
 }
 
+article:nth-of-type(even) {
 
-// Ploščica za text
-.text-tile {
-  position: relative;
-  margin: 0 auto;
+  & iframe.google-maps {
+  right: 60px;
+    object-position: right;
+  }
+  & .text-tile-small {
+    right: 35%;
+    object-position: right;
+  }
+}
 
-  overflow: hidden;
-  vertical-align: middle;
+article:nth-of-type(odd) {
 
-  // Na velikem monitorju
-  padding: 4%;
-
-  height: 70%;
-  min-height: 500px;
-
-  width: 40%; // TEMP HACK, find proper way to do it
-  max-width: 700px;
-
-  background-color: $color_arsviva_white;
-  box-shadow: 5px 5px 5px rgba(100, 100, 100, .25);
-
-  h2 {
-
-    // Na velikem monitorju
-    // font-size: 2.15rem;
-
-    // Na malem monitorju
-    font-size: 1.5rem;
-    margin-top: 0;
-    /* test */
-
-    font-weight: normal;
+  & iframe.google-maps {
+    left: 0;
+    object-position: left;
+  }
+  & .text-tile-small {
+    left: 30%;
+	object-position: left;
   }
 }
 
 /*--------------------------------------------------------------
-# Front page events
---------------------------------------------------------------*/
-// Tip dogodka
-.type {
-  text-transform: lowercase;
-  font-weight: bold;
-  font-size: 0.7rem;
-}
 
-// Kdaj, kje
-.info {
-
-  // na velikih monitorjih
-  // font-size: 1.2rem;
-
-  // na malih monitorjih
-  font-size: 1rem;
-
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-
-
-  span {
-    font-weight: bold;
-  }
-}
-
-p.info:first-of-type {
-
-  // na velikih monitorjih
-  // margin-top: 50px;
-
-  // na malih monitorjih
-  margin-top: 20px;
-}
-
-
-
-
-/*--------------------------------------------------------------
-
-# Events stuff
+# EVENTS PAGE stuff
 
 --------------------------------------------------------------*/
 
@@ -323,11 +593,10 @@ p.info:first-of-type {
 
 
 /*--------------------------------------------------------------
-### Events Article stuff
+### Events Tiles stuff
 --------------------------------------------------------------*/
-// to bi bilo boljše naredit class "article.tile" namesto nofp
-// zato ker je tudi article v single.php artcile.
-article.nofp {
+
+article.tile {
 
   position: relative;
   display: inline-block;
@@ -342,28 +611,47 @@ article.nofp {
 
   background-color: $color_arsviva_white;
 
-  .entry-header {
-    h2 {
-      font-size: 1.2rem;
+  // EVENT / POST TITILE
+  .tile-title {
+    font-size: 1rem;
+  }
+
+
+  .tile-meta {
+    .tile-info {
+      margin: .5rem 0;
+      font-weight: bold;
+      font-size: 0.8rem;
+    }
+    .posted-on {
+      display: block;
+      font-size: 0.7rem;
+    }
+    .type {
+      display: block;
+      font-size: 0.8rem;
     }
   }
 
-  .entry-content {
+  .tile-content {
+
+    // Hack zarad čudnega uhajanja texta
+    padding-right: 24px;
+
     text-align: justify;
-
     font-size: 0.8rem;
-  }
 
-  /* Trik, da tekst ne uhaja čez padding */
-  // &::after{
-  //   content: ' ';
-  //   display: block;
-  //   height: 60px;
-  //   width: 100%;
-  //   position: absolute;
-  //   bottom: 0;
-  //   background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-  // }
+    &.event {
+      position: absolute;
+      top: 320px;
+    }
+
+    &.post {
+      position: absolute;
+      top: 320px;
+    }
+
+  }
 
   .entry-footer {
     text-align: right;
@@ -377,6 +665,12 @@ article.nofp {
   }
 
 }
+
+.nav-links {
+  margin: 30px auto;
+}
+
+
 // ožje ploščice
 .text-tile-small {
   position: relative;
@@ -467,31 +761,12 @@ article.single {
   }
 }
 
-// ## single event/post image
-.single-image {
-
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-
-}
-
-// SINGLE EVENT S SLIKO
-// .entry-meta-single {
-//   position: absolute;
-//   top: 15%;
-//   left: 0;
-//   right: 0;
-//
-//   padding: 5%;
-//
-//   background-color: rgba(255, 255, 255, 0.8);
-// }
 
 
 /*--------------------------------------------------------------
 # Filter sidebar stuff
 --------------------------------------------------------------*/
+// Cel sidebar / container
 aside.filter-sidebar {
   position: fixed;
 
@@ -502,9 +777,10 @@ aside.filter-sidebar {
   width: 60px;
 
   background-color: #cccccc;
+
 }
 
-// FILTER STUFF
+// Napis "Filter"
 .toggle-filter {
   display: block;
   position: absolute;
@@ -515,25 +791,135 @@ aside.filter-sidebar {
   text-decoration: none;
   vertical-align: middle;
 
-  h3 {
-    margin: 0;
+  &:hover {
+    cursor: pointer;
+    color: #555; // random malo svetlejša
   }
 }
 
-/* Popup sidebar filter */
+// Okno ki prileze ven - filter form
 .filter-popup {
+
   position: fixed;
   display: none;
+  overflow-y: scroll;
 
   top: $navigation-height;
   left: 60px; /* filter sidebar width */
   bottom: 0;
 
-  width: 200px;
+  padding: 60px 20px;
 
-  background-color: red;
+  width: 300px;
+
+  background-color: $color_arsviva_grey;
 
 }
+
+
+// filter options (input tags)
+.filter-options {
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: block;
+    text-align: left;
+
+    margin: .5rem 0;
+  }
+}
+
+// Close button
+.close-btn {
+  display: block;
+  position: absolute;
+
+  top: 35px;
+  right: 35px;
+
+  border: 1px solid;
+  border-radius: 3px;
+  border-color: #ccc #ccc #bbb;
+
+  &:hover {
+    cursor: pointer;
+    color: #555; // random malo svetlejša
+  }
+
+}
+
+// Divider line
+.divider {
+  margin: 1.5rem;
+}
+
+// Event options
+.event-options {
+  margin: 2rem 0;
+
+  .filter-category {
+    margin: 0 1rem;
+  }
+}
+
+
+// Filter button
+.submit-btn {
+  display: block;
+
+  width: 80%;
+  height: 40px;
+
+  margin: 3rem auto;
+}
+
+
+
+/*--------------------------------------------------------------
+
+# Static Pages
+
+--------------------------------------------------------------*/
+// Na straneh: O_zavodu, Kontakt, Nastanitev
+.text-tile-static {
+  @extend .text-tile;
+
+  text-align: justify;
+
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 0;
+  }
+
+  p {
+    position:relative;
+    top: 45px;
+    font-size: 1.1rem;
+
+    &.dosti-teksta {
+      top: 0;
+    }
+  }
+}
+
+@media screen and (min-height: 900px) {
+  .text-tile-static {
+    h2 {
+      margin-top: 1.8rem;
+    }
+    p {
+      top: 65px;
+
+      &.dosti-teksta {
+        top: 20px;
+      }
+    }
+  }
+}
+
 /*--------------------------------------------------------------
 # Git current branch popup
 --------------------------------------------------------------*/

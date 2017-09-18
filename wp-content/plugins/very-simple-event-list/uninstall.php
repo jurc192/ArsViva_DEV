@@ -1,12 +1,12 @@
 <?php
-// If uninstall is not called from WordPress, exit 
-if ( !defined( 'WP_UNINSTALL_PLUGIN' ) ) { 
-	exit(); 
-} 
+// If uninstall is not called from WordPress, exit
+if ( !defined( 'WP_UNINSTALL_PLUGIN' ) ) {
+	exit();
+}
 
 $keep = get_option( 'vsel-setting' );
 if ( $keep != 'yes' ) {
-	// Delete custom post meta 
+	// Delete custom post meta
 	delete_post_meta_by_key( 'event-start-date' );
 	delete_post_meta_by_key( 'event-date' );
 	delete_post_meta_by_key( 'event-time' );
@@ -19,19 +19,21 @@ if ( $keep != 'yes' ) {
 	// Deprecated custom post meta
 	delete_post_meta_by_key( 'event-date-hide' );
 
-	// Delete option 
-	delete_option( 'widget_vsel_widget' ); 
-	delete_option( 'vsel-setting' ); 
-	delete_option( 'vsel-setting-1' ); 
-	delete_option( 'vsel-setting-2' ); 
-	delete_option( 'vsel-setting-3' ); 
-	delete_option( 'vsel-setting-4' ); 
-	delete_option( 'vsel-setting-5' ); 
-	delete_option( 'vsel-setting-6' ); 
-	delete_option( 'vsel-setting-7' ); 
-	delete_option( 'vsel-setting-8' ); 
-	delete_option( 'vsel-setting-9' ); 
-	delete_option( 'vsel-setting-10' ); 
+	// Delete option
+	delete_option( 'widget_vsel_widget' );
+	delete_option( 'vsel-setting' );
+	delete_option( 'vsel-setting-1' );
+	delete_option( 'vsel-setting-2' );
+	delete_option( 'vsel-setting-3' );
+	delete_option( 'vsel-setting-4' );
+	delete_option( 'vsel-setting-5' );
+	delete_option( 'vsel-setting-6' );
+	delete_option( 'vsel-setting-7' );
+	delete_option( 'vsel-setting-8' );
+	delete_option( 'vsel-setting-9' );
+	delete_option( 'vsel-setting-10' );
+	delete_option( 'vsel-setting-11' );
+	delete_option( 'vsel-setting-12' );
 
 	// Set global
 	global $wpdb;

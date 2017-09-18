@@ -9,13 +9,13 @@
  ?>
 
     <footer id="colophon" class="site-footer section fp-auto-height">
-      <img src="<?php bloginfo('template_url'); ?>/images/noga3.png" alt="footer background">
+      <img src="<?php bloginfo('template_url'); ?>/images/noga4.png" alt="footer background">
       <div class="site-info">
 		<p><b> Zavod za kulturno integracijo<br>in socializacijo družbenih skupin</b></p>
 		<p>Podcerkev 24 <br> 1386 Stari trg pri Ložu</p>
 		<p>TRR 03133-1000202343 SKB <br> ID za DDV: SI39453600</p>
 		<p>tel:(386)(0)5 726 47 21 <br> mob:(386)(0)41 741 750</p>
-		
+
 
       </div><!-- .site-info -->
     </footer><!-- #colophon .site footer 		 -->

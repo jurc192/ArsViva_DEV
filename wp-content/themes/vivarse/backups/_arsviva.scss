@@ -1,0 +1,747 @@
+
+@import "datepicker_style";
+
+
+/*--------------------------------------------------------------
+# Site width and general layout
+--------------------------------------------------------------*/
+html, body {
+  height: 100%;
+}
+
+.site, .site-header, .site-content, .site-footer {
+  clear: both;  // a to res rabim?
+  margin: 0 auto;
+}
+
+/*--------------------------------------------------------------
+# Fonts
+--------------------------------------------------------------*/
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+/*--------------------------------------------------------------
+# Colors
+--------------------------------------------------------------*/
+html, body {
+  background-color: $color_arsviva_grey;
+}
+
+
+/*--------------------------------------------------------------
+# Header and navigation stuff
+--------------------------------------------------------------*/
+$navigation-height: 60px;
+
+
+.site-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+
+  z-index: 10;
+
+  box-shadow: 5px 5px 5px rgba(100, 100, 100, .25);
+}
+
+.main-navigation {
+
+  // Nebi blo logično imet position: absolute;?
+  height: $navigation-height;
+  width: 100%;
+  padding: 0 35px;
+  background-color: $color_arsviva_white;
+
+  ul {float: right;}
+
+  a {
+    height: $navigation-height;
+    line-height: $navigation-height;
+    margin-left: 10px;
+    padding: 0 10px;
+  }
+}
+
+.site-logo {
+  display: inline-block;
+  position: absolute;
+  max-height: 100%;
+
+  img {
+    display: block; // za se znebit gapa spodaj, po defoltu je img inline elemnent
+    height: $navigation-height;
+    padding: 15px;
+  }
+}
+
+.site-content {
+  // margin-top: $navigation-height;
+}
+
+/* Hamburger menu */
+.menu-toggle {
+  float: right;
+}
+
+
+/*--------------------------------------------------------------
+# Footer stuff
+--------------------------------------------------------------*/
+$footer-height: 200px;
+
+.site-info {
+
+  display: inline-block;
+  bottom: 20px;
+  position: relative;
+  left: 70%;
+  z-index: 2;
+  text-align: center;
+  line-height: 1.1;
+  font-size: medium;
+
+  p{
+    margin:10px;
+    }
+}
+.site-footer {
+
+  background-color: #FAAF42;  // oranzna
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+
+    object-fit: contain;  // popravi za scroll template
+    object-position: 0 0; // ce kej ne stima, dej na pos: left
+
+  }
+}
+
+
+
+/*--------------------------------------------------------------
+
+# Full page scroll stuff
+
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Posts stuff @scroll template
+--------------------------------------------------------------*/
+@mixin word-wrap() {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+article {
+    @include word-wrap();
+    background-size: cover;
+
+    // Na velikem monitorju
+    // font-size: 1rem;
+
+    // Na malem monitoru
+    font-size: 0.85rem;
+
+    a {
+      text-decoration: none;
+    }
+}
+
+// Znotraj <main> mora bit vsaka prva slika na levi, vsaka druga na desni.
+// Isto za Text ploščice
+article:nth-of-type(even) {
+
+  & img.backgr {
+    right: 60px;
+    object-position: right;
+  }
+
+  & .text-tile {
+    right: 25%;
+	  object-position: right;
+  }
+}
+
+article:nth-of-type(odd) {
+
+  & img.backgr {
+    left: 0;
+    object-position: left;
+  }
+
+  & .text-tile {
+    left: 25%;
+	  object-position: left;
+  }
+}
+
+// Slika članka
+img.backgr {
+  position: absolute;
+  width: 65%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  object-fit: cover;
+}
+
+
+// Ploščica za text
+.text-tile {
+  position: relative;
+  margin: 0 auto;
+
+  overflow: hidden;
+  vertical-align: middle;
+
+  // Na velikem monitorju
+  padding: 4%;
+
+  height: 70%;
+  min-height: 500px;
+
+  width: 40%; // TEMP HACK, find proper way to do it
+  max-width: 700px;
+
+  background-color: $color_arsviva_white;
+  box-shadow: 5px 5px 5px rgba(100, 100, 100, .25);
+
+  h2 {
+
+    // Na velikem monitorju
+    // font-size: 2.15rem;
+
+    // Na malem monitorju
+    font-size: 1.5rem;
+    margin-top: 0;
+    /* test */
+
+    font-weight: normal;
+  }
+}
+
+/*--------------------------------------------------------------
+# Front page events
+--------------------------------------------------------------*/
+// Tip dogodka
+.type {
+  text-transform: lowercase;
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+// Kdaj, kje
+.info {
+
+  // na velikih monitorjih
+  // font-size: 1.2rem;
+
+  // na malih monitorjih
+  font-size: 1rem;
+
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+
+
+  span {
+    font-weight: bold;
+  }
+}
+
+p.info:first-of-type {
+
+  // na velikih monitorjih
+  // margin-top: 50px;
+
+  // na malih monitorjih
+  margin-top: 20px;
+}
+
+
+/*--------------------------------------------------------------
+
+# Embeeded & Maps stuff
+
+--------------------------------------------------------------*/
+//Embedded
+iframe.google-maps{
+	height: calc(100vh - 60px);
+	width: 66vw;
+	position: absolute;
+	top: 60px;
+	bottom: 0;
+}
+
+.htmlvideo{
+width:calc(100vw - 60px);
+height:100%;
+}
+
+article:nth-of-type(even) {
+
+  & iframe.google-maps {
+  right: 60px;
+    object-position: right;
+  }
+  & .text-tile-small {
+    right: 35%;
+    object-position: right;
+  }
+}
+
+article:nth-of-type(odd) {
+
+  & iframe.google-maps {
+    left: 0;
+    object-position: left;
+  }
+  & .text-tile-small {
+    left: 30%;
+	object-position: left;
+  }
+}
+
+/*--------------------------------------------------------------
+
+# EVENTS PAGE stuff
+
+--------------------------------------------------------------*/
+
+.site-main-nofp {
+  text-align: center;
+
+  min-height: calc(100vh - 200px);
+
+  padding-top: $navigation-height + 20px;
+
+  // Padding contenta (main) za sidebare
+  padding-left: 60px;
+  padding-right: 60px;
+
+}
+
+
+/*--------------------------------------------------------------
+### Events Tiles stuff
+--------------------------------------------------------------*/
+
+article.tile {
+
+  position: relative;
+  display: inline-block;
+
+  width: 300px;
+  height: 600px;
+
+  padding:  1.5rem;
+  margin:  1rem;
+
+  overflow: hidden;
+
+  background-color: $color_arsviva_white;
+
+  // EVENT / POST TITILE
+  .tile-title {
+    font-size: 1.2rem;
+    height: 60px;
+  }
+
+
+  .tile-meta {
+    .tile-info {
+      margin: .5rem 0;
+      font-weight: bold;
+    }
+    .posted-on {
+      display: block;
+      font-size: 0.7rem;
+    }
+    .type {
+      display: block;
+    }
+  }
+
+  .tile-content {
+
+    text-align: justify;
+    font-size: 0.8rem;
+  }
+
+  .entry-footer {
+    text-align: right;
+  }
+
+  .thumb {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+}
+
+
+// ožje ploščice
+.text-tile-small {
+  position: relative;
+  margin: 0 auto;
+
+  overflow: hidden;
+  padding: 5%;
+
+  height: 80%;
+  width: 25%; // TEMP HACK, find proper way to do it
+  background-color: $color_arsviva_white;
+  box-shadow: 5px 5px 5px rgba(100, 100, 100, .25);
+
+  h2 {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+
+  // Tip dogodka
+  p.type {
+    font-weight: bold;
+    font-size: 1.5rem;
+
+    margin: 0.3rem;
+  }
+
+}
+
+
+/*--------------------------------------------------------------
+# Sidebar
+--------------------------------------------------------------*/
+.sajdbar{
+position: fixed;
+right: 0;
+top: 0;
+bottom: 0;
+background-color: #CCC;
+height: 100%;
+width: 60px;
+}
+
+
+/*--------------------------------------------------------------
+### Events Footer stuff
+--------------------------------------------------------------*/
+$footer-height: 200px;
+
+.site-info {
+  height: $footer-height;
+}
+
+.site-footer.nofp {
+  position: relative;
+}
+
+
+
+/*--------------------------------------------------------------
+# Single post
+--------------------------------------------------------------*/
+article.single {
+  position: relative;
+}
+
+.text-tile-single {
+
+  position: relative;
+  margin: 0 auto 100px auto;
+
+  overflow: hidden;
+  vertical-align: middle;
+  padding: 5%;
+
+  max-width: 1024px;
+  background-color: $color_arsviva_white;
+  box-shadow: 5px 5px 5px rgba(100, 100, 100, .25);
+
+  h2 {
+    font-size: 2.3rem;
+    margin-top: 0;
+
+    font-weight: normal;
+  }
+
+  .entry-content {
+    text-align: left;
+  }
+}
+
+
+
+/*--------------------------------------------------------------
+# Filter sidebar stuff
+--------------------------------------------------------------*/
+// Cel sidebar / container
+aside.filter-sidebar {
+  position: fixed;
+
+  top:$navigation-height;
+  left: 0;
+
+  height: 100%;
+  width: 60px;
+
+  background-color: #cccccc;
+
+}
+
+// Napis "Filter"
+.toggle-filter {
+  display: block;
+  position: absolute;
+
+  top: 200px;
+  transform: rotate(-90deg);
+
+  text-decoration: none;
+  vertical-align: middle;
+
+  &:hover {
+    cursor: pointer;
+    color: #555; // random malo svetlejša
+  }
+}
+
+// Okno ki prileze ven - filter form
+.filter-popup {
+
+  position: fixed;
+  display: none;
+  overflow-y: scroll;
+
+  top: $navigation-height;
+  left: 60px; /* filter sidebar width */
+  bottom: 0;
+
+  padding: 60px 20px;
+
+  width: 300px;
+
+  background-color: $color_arsviva_grey;
+
+}
+
+
+// filter options (input tags)
+.filter-options {
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: block;
+    text-align: left;
+
+    margin: .5rem 0;
+  }
+}
+
+// Close button
+.close-btn {
+  display: block;
+  position: absolute;
+
+  top: 35px;
+  right: 35px;
+
+  border: 1px solid;
+  border-radius: 3px;
+  border-color: #ccc #ccc #bbb;
+
+  &:hover {
+    cursor: pointer;
+    color: #555; // random malo svetlejša
+  }
+
+}
+
+// Divider line
+.divider {
+  margin: 1.5rem;
+}
+
+// Event options
+.event-options {
+  margin: 2rem 0;
+
+  .filter-category {
+    margin: 0 1rem;
+  }
+}
+
+
+// Filter button
+.submit-btn {
+  display: block;
+
+  width: 80%;
+  height: 40px;
+
+  margin: 3rem auto;
+}
+
+/*--------------------------------------------------------------
+# Git current branch popup
+--------------------------------------------------------------*/
+.git-popup {
+  position: fixed;
+  top: 100px;
+  right: 100px;
+  z-index: 50;
+
+  animation: fadeinout 3s forwards;
+
+
+  .git-text {
+    background-color: $color_background-popup;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    padding: 30px;
+
+    &:hover {
+      background-color: #888;
+    }
+  }
+
+}
+
+@keyframes fadeinout {
+    0% { opacity: 0; }
+    30%   { opacity: 1; }
+    70% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
+
+
+/*--------------------------------------------------------------
+# Modal Pictures
+--------------------------------------------------------------*/
+#zemljevid-area{
+	position: relative;
+	width: calc(100vw-60px);
+	height: 100%;
+	right:60px;
+}
+
+#zemljevid{
+	position: absolute;
+	z-index:1;
+	object-fit:cover;
+	width:100%;
+	height:100%;
+}
+
+#myImg1,#myImg2,#myImg3,#myImg4,#myImg5 {
+	height: 7%;
+    cursor: pointer;
+    transition: 0.3s;
+	z-index:2;
+	position: absolute;
+	object-position: right;
+}
+
+#myImg1{	/*Amfiteater*/
+	right:29%;
+	top:44%;
+}
+
+#myImg2{	/*Galerija*/
+	right:35%;
+	top:23%;
+}
+#myImg3{	/*Apartma*/
+	right:33%;
+	top:63%;
+}
+#myImg4{	/*Dvorišče*/
+	right:35%;
+	top:37%;
+}
+#myImg5{	/*Vhod*/
+	right:38%;
+	top:11%;
+}
+
+
+.modal {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+	top:0;
+	bottom:0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+	position:relative;
+    display: block;
+    width: 70%;
+	height: 70%;
+	top:15%;
+	left:15%;
+	}
+
+.modal-content, {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+#close1,#close2,#close3,#close4,#close5 {
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    color: #CCC;
+    font-size: 60px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#close1:hover,#close1:focus,
+#close2:hover,#close2:focus,
+#close3:hover,#close3:focus,
+#close4:hover,#close4:focus,
+#close5:hover,#close5:focus{
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}

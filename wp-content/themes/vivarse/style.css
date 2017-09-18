@@ -705,6 +705,177 @@ object {
 /*--------------------------------------------------------------
 # Ars Viva edits
 --------------------------------------------------------------*/
+/*
+  Using stuttter's datepicker styling
+  https://github.com/stuttter/wp-datepicker-styling
+*/
+/* Date Picker Default Styles */
+.ui-datepicker {
+  /* JURE EDIT */
+  display: none;
+  padding: 0;
+  margin: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background-color: #fff;
+  border: 1px solid #dfdfdf;
+  border-top: none;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.075);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.075);
+  min-width: 17em;
+  width: auto; }
+
+.ui-datepicker * {
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0; }
+
+.ui-datepicker table {
+  font-size: 13px;
+  margin: 0;
+  border: none;
+  border-collapse: collapse; }
+
+.ui-datepicker .ui-widget-header,
+.ui-datepicker .ui-datepicker-header {
+  background-image: none;
+  border: none;
+  color: #fff;
+  font-weight: normal; }
+
+.ui-datepicker .ui-datepicker-header .ui-state-hover {
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer; }
+
+.ui-datepicker .ui-datepicker-title {
+  margin: 0;
+  padding: 10px 0;
+  color: #fff;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center; }
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+  position: relative;
+  top: 0;
+  height: 34px;
+  width: 34px; }
+
+.ui-datepicker .ui-state-hover.ui-datepicker-prev,
+.ui-datepicker .ui-state-hover.ui-datepicker-next {
+  border: none; }
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-prev-hover {
+  left: 0; }
+
+.ui-datepicker .ui-datepicker-next,
+.ui-datepicker .ui-datepicker-next-hover {
+  right: 0; }
+
+.ui-datepicker .ui-datepicker-next span,
+.ui-datepicker .ui-datepicker-prev span {
+  display: none; }
+
+.ui-datepicker .ui-datepicker-prev {
+  float: left; }
+
+.ui-datepicker .ui-datepicker-next {
+  float: right; }
+
+.ui-datepicker .ui-datepicker-prev:before,
+.ui-datepicker .ui-datepicker-next:before {
+  font: normal 20px/34px 'dashicons';
+  padding-left: 7px;
+  color: #fff;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 34px;
+  height: 34px; }
+
+.ui-datepicker .ui-datepicker-prev:before {
+  content: '\f341'; }
+
+.ui-datepicker .ui-datepicker-next:before {
+  content: '\f345'; }
+
+.ui-datepicker .ui-datepicker-prev-hover:before,
+.ui-datepicker .ui-datepicker-next-hover:before {
+  opacity: 0.7; }
+
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+  width: 33%; }
+
+.ui-datepicker thead {
+  color: #fff;
+  font-weight: 600; }
+
+.ui-datepicker th {
+  padding: 10px; }
+
+.ui-datepicker td {
+  padding: 0;
+  border: 1px solid #f4f4f4; }
+
+.ui-datepicker td.ui-datepicker-other-month {
+  border: transparent; }
+
+.ui-datepicker td.ui-datepicker-week-end {
+  background-color: #f4f4f4;
+  border: 1px solid #f4f4f4; }
+
+.ui-datepicker td.ui-datepicker-today {
+  background-color: #f0f0c0; }
+
+.ui-datepicker td.ui-datepicker-current-day {
+  background: #bbdd88; }
+
+.ui-datepicker td .ui-state-default {
+  background: transparent;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+  display: block;
+  padding: 5px 10px;
+  font-weight: normal;
+  color: #444; }
+
+.ui-datepicker td.ui-state-disabled .ui-state-default {
+  opacity: 0.5; }
+
+/* Default Color Scheme */
+.ui-datepicker .ui-widget-header,
+.ui-datepicker .ui-datepicker-header {
+  background: #00a0d2; }
+
+.ui-datepicker thead {
+  background: #32373c; }
+
+.ui-datepicker td .ui-state-hover {
+  background: #0073aa;
+  color: #fff; }
+
+/* Sunrise */
+.ui-datepicker .ui-widget-header,
+.ui-datepicker .ui-datepicker-header {
+  background: #cf4944; }
+
+.ui-datepicker thead {
+  border-color: #be3631;
+  background: #be3631; }
+
+.ui-datepicker td .ui-state-hover {
+  background: #dd823b;
+  color: #fff; }
+
 /*--------------------------------------------------------------
 # Site width and general layout
 --------------------------------------------------------------*/
@@ -798,53 +969,85 @@ html, body {
 
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
+# Landing image / video
+--------------------------------------------------------------*/
+.landing-art {
+  position: relative; }
+  .landing-art img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    object-fit: cover; }
+
+/*--------------------------------------------------------------
+# Upcoming events slides
+--------------------------------------------------------------*/
+article.slide {
+  position: relative; }
+  article.slide .backgr {
+    right: 0; }
+  article.slide .text-tile, article.slide .text-tile-static {
+    right: 25%; }
+    article.slide .text-tile .entry-content, article.slide .text-tile-static .entry-content {
+      top: 250px; }
+    article.slide .text-tile .entry-footer, article.slide .text-tile-static .entry-footer {
+      bottom: 40px; }
+
+.upcoming-events {
+  list-style: none;
+  margin: 50px auto 0 auto;
+  padding-left: 2.2rem; }
+
+.upcoming-title {
+  font-weight: normal; }
+
+@media screen and (min-height: 900px) {
+  article.slide .text-tile, article.slide .text-tile-static {
+    right: 17%; }
+    article.slide .text-tile .entry-content, article.slide .text-tile-static .entry-content {
+      top: 350px; } }
+
+@media screen and (min-height: 900px) and (min-width: 1500px) {
+  article.slide .text-tile, article.slide .text-tile-static {
+    right: 25%; }
+    article.slide .text-tile .posted-on, article.slide .text-tile-static .posted-on {
+      margin-top: 2rem; }
+    article.slide .text-tile .entry-content, article.slide .text-tile-static .entry-content {
+      top: 350px; } }
+
+/*--------------------------------------------------------------
 # Posts stuff @scroll template
 --------------------------------------------------------------*/
+.site-main {
+  padding-right: 60px; }
+
 article {
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  -ms-word-break: break-all;
-  word-break: break-word;
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
   background-size: cover;
   font-size: 0.85rem; }
   article a {
     text-decoration: none; }
 
-article:nth-of-type(even) img.backgr {
-  right: 60px;
+article.section:nth-of-type(even) img.backgr {
+  right: 0;
   object-position: right; }
 
-article:nth-of-type(even) iframe.google-maps {
-  right: 60px;
-  object-position: right; }
+article.section:nth-of-type(even) .text-tile, article.section:nth-of-type(even) .text-tile-static {
+  right: 25%; }
 
-article:nth-of-type(even) .text-tile {
-  right: 25%;
-  object-position: right; }
+article.section:nth-of-type(even) .text-tile-static {
+  right: 25%; }
 
-article:nth-of-type(even) .text-tile-small {
-  right: 35%;
-  object-position: right; }
-
-article:nth-of-type(odd) img.backgr {
+article.section:nth-of-type(odd) img.backgr {
   left: 0;
   object-position: left; }
 
-article:nth-of-type(odd) iframe.google-maps {
-  left: 0;
-  object-position: left; }
+article.section:nth-of-type(odd) .text-tile, article.section:nth-of-type(odd) .text-tile-static {
+  left: 25%; }
 
-article:nth-of-type(odd) .text-tile {
-  left: 25%;
-  object-position: left; }
-
-article:nth-of-type(odd) .text-tile-small {
-  left: 30%;
-  object-position: left; }
+article.section:nth-of-type(odd) .text-tile-static {
+  left: 25%; }
 
 img.backgr {
   position: absolute;
@@ -854,6 +1057,98 @@ img.backgr {
   bottom: 0;
   object-fit: cover; }
 
+.text-tile, .text-tile-static {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  vertical-align: middle;
+  padding: 53px;
+  width: 600px;
+  height: 500px;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.25); }
+  .text-tile h2.entry-title, .text-tile-static h2.entry-title {
+    font-size: 1.7rem;
+    margin-top: 0;
+    font-weight: normal; }
+  .text-tile .posted-on, .text-tile-static .posted-on {
+    display: block;
+    margin-left: 3rem; }
+  .text-tile .info, .text-tile-static .info {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 3rem; }
+    .text-tile .info span, .text-tile-static .info span {
+      font-weight: bold; }
+  .text-tile p.info:first-of-type, .text-tile-static p.info:first-of-type {
+    margin-top: 30px; }
+  .text-tile .entry-content, .text-tile-static .entry-content {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    bottom: 0;
+    padding: 0 10% 10% 10%; }
+  .text-tile .entry-footer, .text-tile-static .entry-footer {
+    position: absolute;
+    bottom: 60px;
+    right: 80px; }
+    .text-tile .entry-footer a, .text-tile-static .entry-footer a {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: #0b5b8b; }
+
+@media screen and (min-height: 900px) {
+  article {
+    font-size: 1rem; }
+  article.section:nth-of-type(even) .text-tile, article.section:nth-of-type(even) .text-tile-static {
+    right: 20%; }
+  article.section:nth-of-type(even) .text-tile-static {
+    right: 20%; }
+  article.section:nth-of-type(odd) .text-tile, article.section:nth-of-type(odd) .text-tile-static {
+    left: 20%; }
+  article.section:nth-of-type(odd) .text-tile-static {
+    left: 20%; }
+  .text-tile, .text-tile-static {
+    padding: 70px 53px 70px 53px;
+    width: 650px;
+    height: 700px; }
+    .text-tile h2.entry-title, .text-tile-static h2.entry-title {
+      font-size: 2.15rem; }
+    .text-tile .entry-content, .text-tile-static .entry-content {
+      top: 250px; }
+    .text-tile .entry-footer, .text-tile-static .entry-footer {
+      position: absolute;
+      bottom: 80px;
+      right: 80px; } }
+
+@media screen and (min-height: 900px) and (min-width: 1500px) {
+  article.section:nth-of-type(even) .text-tile, article.section:nth-of-type(even) .text-tile-static {
+    right: 25%; }
+  article.section:nth-of-type(even) .text-tile-static {
+    right: 25%; }
+  article.section:nth-of-type(odd) .text-tile, article.section:nth-of-type(odd) .text-tile-static {
+    left: 25%; }
+  article.section:nth-of-type(odd) .text-tile-static {
+    left: 25%; }
+  .text-tile, .text-tile-static {
+    padding: 100px 70px 100px 70px;
+    width: 700px;
+    height: 700px; }
+    .text-tile h2.entry-title, .text-tile-static h2.entry-title {
+      font-size: 2.15rem; }
+    .text-tile .entry-content, .text-tile-static .entry-content {
+      top: 275px; }
+    .text-tile .entry-footer, .text-tile-static .entry-footer {
+      position: absolute;
+      bottom: 80px;
+      right: 80px; } }
+
+/*--------------------------------------------------------------
+
+# Embeeded & Maps stuff
+
+--------------------------------------------------------------*/
 iframe.google-maps {
   height: calc(100vh - 60px);
   width: 66vw;
@@ -865,45 +1160,25 @@ iframe.google-maps {
   width: calc(100vw - 60px);
   height: 100%; }
 
-.text-tile {
-  position: relative;
-  margin: 0 auto;
-  overflow: hidden;
-  vertical-align: middle;
-  padding: 4%;
-  height: 70%;
-  min-height: 500px;
-  width: 40%;
-  max-width: 700px;
-  background-color: #fff;
-  box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.25); }
-  .text-tile h2 {
-    font-size: 1.5rem;
-    margin-top: 0;
-    /* test */
-    font-weight: normal; }
+article:nth-of-type(even) iframe.google-maps {
+  right: 60px;
+  object-position: right; }
 
-/*--------------------------------------------------------------
-# Front page events
---------------------------------------------------------------*/
-.type {
-  text-transform: lowercase;
-  font-weight: bold;
-  font-size: 0.7rem; }
+article:nth-of-type(even) .text-tile-small {
+  right: 35%;
+  object-position: right; }
 
-.info {
-  font-size: 1rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem; }
-  .info span {
-    font-weight: bold; }
+article:nth-of-type(odd) iframe.google-maps {
+  left: 0;
+  object-position: left; }
 
-p.info:first-of-type {
-  margin-top: 20px; }
+article:nth-of-type(odd) .text-tile-small {
+  left: 30%;
+  object-position: left; }
 
 /*--------------------------------------------------------------
 
-# Events stuff
+# EVENTS PAGE stuff
 
 --------------------------------------------------------------*/
 .site-main-nofp {
@@ -914,9 +1189,9 @@ p.info:first-of-type {
   padding-right: 60px; }
 
 /*--------------------------------------------------------------
-### Events Article stuff
+### Events Tiles stuff
 --------------------------------------------------------------*/
-article.nofp {
+article.tile {
   position: relative;
   display: inline-block;
   width: 300px;
@@ -924,20 +1199,39 @@ article.nofp {
   padding: 1.5rem;
   margin: 1rem;
   overflow: hidden;
-  background-color: #fff;
-  /* Trik, da tekst ne uhaja čez padding */ }
-  article.nofp .entry-header h2 {
-    font-size: 1.2rem; }
-  article.nofp .entry-content {
+  background-color: #fff; }
+  article.tile .tile-title {
+    font-size: 1rem; }
+  article.tile .tile-meta .tile-info {
+    margin: .5rem 0;
+    font-weight: bold;
+    font-size: 0.8rem; }
+  article.tile .tile-meta .posted-on {
+    display: block;
+    font-size: 0.7rem; }
+  article.tile .tile-meta .type {
+    display: block;
+    font-size: 0.8rem; }
+  article.tile .tile-content {
+    padding-right: 24px;
     text-align: justify;
     font-size: 0.8rem; }
-  article.nofp .entry-footer {
+    article.tile .tile-content.event {
+      position: absolute;
+      top: 320px; }
+    article.tile .tile-content.post {
+      position: absolute;
+      top: 320px; }
+  article.tile .entry-footer {
     text-align: right; }
-  article.nofp .thumb {
+  article.tile .thumb {
     width: 300px;
     height: 150px;
     object-fit: cover;
     object-position: center; }
+
+.nav-links {
+  margin: 30px auto; }
 
 .text-tile-small {
   position: relative;
@@ -999,11 +1293,6 @@ article.single {
   .text-tile-single .entry-content {
     text-align: left; }
 
-.single-image {
-  display: block;
-  margin: 0 auto;
-  width: 100%; }
-
 /*--------------------------------------------------------------
 # Filter sidebar stuff
 --------------------------------------------------------------*/
@@ -1022,19 +1311,81 @@ aside.filter-sidebar {
   transform: rotate(-90deg);
   text-decoration: none;
   vertical-align: middle; }
-  .toggle-filter h3 {
-    margin: 0; }
+  .toggle-filter:hover {
+    cursor: pointer;
+    color: #555; }
 
-/* Popup sidebar filter */
 .filter-popup {
   position: fixed;
   display: none;
+  overflow-y: scroll;
   top: 60px;
   left: 60px;
   /* filter sidebar width */
   bottom: 0;
-  width: 200px;
-  background-color: red; }
+  padding: 60px 20px;
+  width: 300px;
+  background-color: #e7e7e7; }
+
+.filter-options {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .filter-options li {
+    display: block;
+    text-align: left;
+    margin: .5rem 0; }
+
+.close-btn {
+  display: block;
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  border: 1px solid;
+  border-radius: 3px;
+  border-color: #ccc #ccc #bbb; }
+  .close-btn:hover {
+    cursor: pointer;
+    color: #555; }
+
+.divider {
+  margin: 1.5rem; }
+
+.event-options {
+  margin: 2rem 0; }
+  .event-options .filter-category {
+    margin: 0 1rem; }
+
+.submit-btn {
+  display: block;
+  width: 80%;
+  height: 40px;
+  margin: 3rem auto; }
+
+/*--------------------------------------------------------------
+
+# Static Pages
+
+--------------------------------------------------------------*/
+.text-tile-static {
+  text-align: justify; }
+  .text-tile-static h2 {
+    font-size: 1.8rem;
+    margin-top: 0; }
+  .text-tile-static p {
+    position: relative;
+    top: 45px;
+    font-size: 1.1rem; }
+    .text-tile-static p.dosti-teksta {
+      top: 0; }
+
+@media screen and (min-height: 900px) {
+  .text-tile-static h2 {
+    margin-top: 1.8rem; }
+  .text-tile-static p {
+    top: 65px; }
+    .text-tile-static p.dosti-teksta {
+      top: 20px; } }
 
 /*--------------------------------------------------------------
 # Git current branch popup

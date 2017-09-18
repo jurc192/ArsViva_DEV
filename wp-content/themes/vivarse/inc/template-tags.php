@@ -7,6 +7,60 @@
  * @package vivarse
  */
 
+
+/*
+	JURE EDIT
+	Custom template tag, for displaying sidebar-filter options
+*/
+function vivarse_event_options() {
+
+	$event_categories = get_terms(array('taxonomy' => 'event_cat'));
+
+	echo "<ul class='filter-options'>";
+
+	foreach ($event_categories as $ndx => $cat) {
+		$category_name = $cat->name;
+		echo "<li>";
+		echo "<input id='cat-{$ndx}' type='checkbox' name='vivarse-event-category' value='{$category_name}'>";
+		echo "<label for='cat-{$ndx}' class='filter-category'>{$category_name}</label>";
+		echo "</li>";
+	}
+
+}
+
+
+/*
+	JURE EDIT
+	Listing upcoming event titles
+*/
+function vivarse_upcoming_titles($my_event_query) {
+
+	if ( $my_event_query->have_posts() ) :
+		if ( is_front_page() ):
+
+			while( $my_event_query->have_posts() ) : $my_event_query->the_post();
+
+				echo "<li>";
+				echo "<h2 class='upcoming-title'>";
+				echo "<a href=' " , esc_url( get_permalink()) , " ' rel='bookmark'>" , get_the_title() , "</a>";
+				echo "</h2>";
+				echo "</li>";
+
+			endwhile;
+
+		else:
+			// then what? Is this even possible?
+		endif;
+
+	else:
+		echo "<h3>Ni prihajajočih dogodkov</h3>";
+	endif;
+
+	rewind_posts();
+
+}
+
+
 if ( ! function_exists( 'vivarse_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time and author.
@@ -27,7 +81,8 @@ if ( ! function_exists( 'vivarse_posted_on' ) ) :
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
 			esc_html_x( 'Posted on %s', 'post date', 'vivarse' ),
-			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+			// '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+			$time_string
 		);
 
 		$byline = sprintf(

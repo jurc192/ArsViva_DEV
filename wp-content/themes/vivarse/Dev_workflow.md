@@ -303,15 +303,15 @@ done
 DONE:
 - single post/event page [DONE-ish]
 - paginacija dogodkov [Design?]
+- definirat funkcionalnost prve strani do konca
+- integrirat zemljevide
+- vsebina v nogo
+- sidebar
 
 TO DO list:
 - responsive dizajn text-ploščic
-- definirat funkcionalnost prve strani do konca
-- integrirat zemljevide
 - spremenit horizontalno scrollanje text-ploščic
-- vsebina v nogo
 - filter v dogodkih
-- sidebar
 - 404 page
 - jeziki / prevajanje tekstov
 - indikatorji za scrollanje?
@@ -352,7 +352,6 @@ TO DO list:
   - Naredim formo sam, toggle ne dela iz prve?
 
 
-
 ## Popravljanje tekst ploščic
 - Na laptopu sploh ni placa za text
 - Naslove omejimo na 60 znakov (s presledki)
@@ -361,3 +360,75 @@ TO DO list:
   - max višina naslova 100px ?
 - Omeji max velikost text ploščice
 - Vrgu ven tip dogodka
+
+
+## DESIGN UPDATE
+- Manjka scroll indicator pri o_zavodu
+- Bi morali naredit dropdown meni pri O_ZAVODU?
+- Po mojem bi morali dodat event_date pri DOGODKI
+// spet NASTAVLJAM GULP na svojem repotu
+TODO: gitignore package.json
+
+## Back to filter stuff
+- Naredim najprej sortiranje glede na post-type (objave, dogodki)
+- post typi ki me zanimajo so "post" in "event"
+- delam ta tutorial [https://premium.wpmudev.org/blog/load-posts-ajax/]
+  - ostal pri "Loading Posts With AJAX"
+  - tisto kar me je mučlo pri search-filter.php je "class method"
+  [https://developer.wordpress.org/reference/functions/add_filter/#more-information]
+  ```
+  //add query vars
+  add_filter('query_vars', array($this,'add_queryvars') );
+  ```
+- ZA IZKLOPIT VSEL FILTER uporabi "remove_filter"!!!
+- Ok, ne bom delal z AJAXOM (preveč dela)
+
+- mogoče add_query_arg?()
+- KO KIKNEŠ SUBMIT, se stran automatsko "refresha" (zaradi action=""this"")
+
+- Uporaljam POST method. Dodal svojo funkcijo v functions.php:
+  vivarse_filter_posts() in add_action(pre_get_posts)
+  - TODO: naredi da bo obkljukan tisti post-type ki si ga submital (v GET...)
+  - TODO: naredi da ko klikneš kamorkoli se skrije filter, RESET GUMB
+  - TODO: kaj če submitaš brez označit karkoli? Brez post-typa? Brez kategorije?
+  - TODO: če si na drugi (ne prvi) strani, ti preklop filtra ne dela
+  - TODO: FIX ERROR @admin page -> filtering stuff naj dela samo na home.php!
+
+- JS dynamic form https://stackoverflow.com/questions/3297143/dynamically-create-a-html-form-with-javascript
+- neznam nrdit click-outside-close (brainfart)
+  -temp fix, close button
+  - TODO: Če odpreš filter in imaš že izbran "evnet" radio, ni odprt event-options div!
+
+
+- jQuery datepicker
+  - Dodal stuff v functions.php
+  - TODO: downloadaj samo potrebno, ne linkat cele knjižnice!!
+  - TODO: naredi padding/margin na front-page za sidebar
+  - če ga daš na skrit element (kot jst) je BUG -se prikaže na dnu
+    - solution: dej v css za #datepicker display:none;
+
+OK, ne gre dovolj hitro delo -> grem na izgled / CSS / frontend. Funkcionalnost
+se vrnem kasneje.
+
+- TODO: Če refreshas stran (/events -no GET params), ostane dogodek označen. Why?
+- Definiral funkcijo za filter stuff v inc/template-tags.php
+
+## Dynamic text stuff
+- Probam z jQuery pluginom textFill
+- BTW jQuery UI je že v WPju tkoda samo enque script uno kar rabiš
+  [https://stackoverflow.com/questions/27462984/use-jquery-datepicker-in-wordpress]
+
+- Naredi da bojo naslovi v PLOŠČICAH visoki 60px max [DONE!]
+  - popravi, ko je naslov v eni vrstici naj gre v sredino!
+
+  - ploščica ni nikoli manjša kot 600 x 500
+  - Naslovi na malih zaslonih so od 40 - 80px višine
+  - Naredi da bo imela metadata fixen spodnji rob!
+  - Če je ekrat ožji od 1300px naredi breakpoint -> odreže ploščico!
+
+  - PREVEČ JEBANJA -> Naredi fixno velikost ploščice po breakpointih!
+  - Modified inc/template-tags/posted-on() -> removed hyperlink
+
+
+TODO: spremeni class name contenta v template-content-post [DONE]
+TODO: Justify text (paragraphi) na front-page-u
