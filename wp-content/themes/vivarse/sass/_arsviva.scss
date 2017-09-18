@@ -776,7 +776,7 @@ aside.filter-sidebar {
   height: 100%;
   width: 60px;
 
-  background-color: #cccccc;
+  background-color: $color_arsviva_white;
 
 }
 
@@ -811,12 +811,16 @@ aside.filter-sidebar {
 
   padding: 60px 20px;
 
-  width: 300px;
+  width: 250px;
 
-  background-color: $color_arsviva_grey;
+  background-color: $color_arsviva_white;
 
 }
 
+// filter headings
+.filter-headings {
+  font-weight: normal;
+}
 
 // filter options (input tags)
 .filter-options {
@@ -864,6 +868,11 @@ aside.filter-sidebar {
   .filter-category {
     margin: 0 1rem;
   }
+}
+
+// Date input
+.hasDatepicker {
+  width: 180px;
 }
 
 

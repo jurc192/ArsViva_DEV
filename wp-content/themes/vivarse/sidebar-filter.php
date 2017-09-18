@@ -36,8 +36,6 @@
 <!-- Naredi da bo obkljukan tisti post-type kot si ga izbral (je v $_GET) -->
 <form id="filter-popup" class="filter-popup" style="display: none;" action="" method="get">
 
-	<h2>Filter</h2>
-	<hr class="divider">
 	<img onclick="toggleFilter()" class="close-btn" src="<?php bloginfo('template_url'); ?>/images/close_black_27x27.png" alt="close filter">
 
 	<ul class="filter-options">
@@ -55,7 +53,7 @@
 	<div id="event-options" class="event-options" style="display: none;">
 		<hr class="divider">
 
-		<h4>Tip dogodka</h4>
+		<h3 class="filter-headings">Tip dogodka</h3>
 
 		<!-- Definirano v inc/template-tags.php -->
 		<!-- Posts, Events - radio buttons -->
@@ -63,7 +61,7 @@
 
 		<hr class="divider">
 
-		<h4>Datum dogodka</h4>
+		<h3 class="filter-headings">Datum dogodka</h3>
 		<input type="text" name="vivarse-date" id="datepicker">
 	</div>
 
@@ -71,9 +69,10 @@
 	<div id="post-options" class="event-options" style="display: none;">
 		<hr class="divider">
 
-		<h4>Datum objave</h4>
+		<h3 class="filter-headings">Datum objave</h3>
 		<input type="text" name="vivarse-date" id="datepicker-post">
 	</div>
 
-	<input class="submit-btn" type="submit" value="Submit">
+
+	<input class="submit-btn" type="submit" value="potrdi">
 </form>

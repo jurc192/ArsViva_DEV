@@ -21,7 +21,7 @@ function vivarse_event_options() {
 	foreach ($event_categories as $ndx => $cat) {
 		$category_name = $cat->name;
 		echo "<li>";
-		echo "<input id='cat-{$ndx}' type='checkbox' name='vivarse-event-category' value='{$category_name}'>";
+		echo "<input id='cat-{$ndx}' type='checkbox' name='vivarse-event-category[]' value='{$category_name}'>";
 		echo "<label for='cat-{$ndx}' class='filter-category'>{$category_name}</label>";
 		echo "</li>";
 	}
@@ -38,13 +38,17 @@ function vivarse_upcoming_titles($my_event_query) {
 	if ( $my_event_query->have_posts() ) :
 		if ( is_front_page() ):
 
+			$count = 1;
 			while( $my_event_query->have_posts() ) : $my_event_query->the_post();
 
 				echo "<li>";
 				echo "<h2 class='upcoming-title'>";
-				echo "<a href=' " , esc_url( get_permalink()) , " ' rel='bookmark'>" , get_the_title() , "</a>";
+				// echo "<a href=' " , esc_url( get_permalink()) , "$count ' rel='bookmark'>" , get_the_title() , "</a>";
+				echo "<a href='" , get_site_url() , "#upcoming/$count' rel='link to article'>" , get_the_title() , "</a>";
 				echo "</h2>";
 				echo "</li>";
+
+				$count++;
 
 			endwhile;
 

@@ -38,7 +38,7 @@ get_header(); ?>
 	<main id="main" class="site-main">
 
 		<section class="section landing-art">
-			<img src="<?php echo get_bloginfo('template_url') . '/images/home-fotka2.jpg' ?>" alt="">
+			<img id="test" src="<?php echo get_bloginfo('template_url') . '/images/home-fotka2.jpg' ?>" alt="">
 		</section>
 
 		<!-- Upcoming events -->
@@ -48,7 +48,7 @@ get_header(); ?>
 				<img class="backgr" src="<?php echo get_bloginfo('template_url') . '/images/dogodki-dogodek1.jpg' ?>" alt="">
 				<div class="text-tile">
 					<h2>Prihajajoči dogodki:</h2>
-					<ul class="upcoming-events">
+					<ul id="upcoming-list" class="upcoming-events">
 						<?php vivarse_upcoming_titles($my_event_query); ?>
 					</ul>
 				</div>

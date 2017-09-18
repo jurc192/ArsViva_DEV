@@ -1302,7 +1302,7 @@ aside.filter-sidebar {
   left: 0;
   height: 100%;
   width: 60px;
-  background-color: #cccccc; }
+  background-color: #fff; }
 
 .toggle-filter {
   display: block;
@@ -1324,8 +1324,11 @@ aside.filter-sidebar {
   /* filter sidebar width */
   bottom: 0;
   padding: 60px 20px;
-  width: 300px;
-  background-color: #e7e7e7; }
+  width: 250px;
+  background-color: #fff; }
+
+.filter-headings {
+  font-weight: normal; }
 
 .filter-options {
   list-style: none;
@@ -1355,6 +1358,9 @@ aside.filter-sidebar {
   margin: 2rem 0; }
   .event-options .filter-category {
     margin: 0 1rem; }
+
+.hasDatepicker {
+  width: 180px; }
 
 .submit-btn {
   display: block;

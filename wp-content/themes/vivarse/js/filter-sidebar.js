@@ -12,6 +12,7 @@ jQuery(document).ready(function() {
 });
 
 
+
 /* Odpri/zapri filter okno */
 function toggleFilter() {
 
@@ -50,6 +51,9 @@ function filterOptions() {
 function initialSelectedRadio() {
 
   var vivarse_post_type = findGetParameter('vivarse-post-type');
+  var vivarse_event_category = findGetParameter('vivarse-event-category');
+
+  console.log("Checked categories: ", typeof(vivarse_event_category));
 
   if (vivarse_post_type === 'event') {
     jQuery('input[type=radio][value=event]').prop('checked', true);
@@ -58,6 +62,7 @@ function initialSelectedRadio() {
 
   else if (vivarse_post_type === 'post') {
     jQuery('input[type=radio][value=post]').prop('checked', true);
+    jQuery("#post-options").show();
   }
 }
 
@@ -90,20 +95,8 @@ function initDatepickers() {
   jQuery("#datepicker").datepicker({
     dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
   });
-  jQuery("#datepicker").datepicker('setDate', 'today');
-
-  // jQuery("#datepicker-from").datepicker({
-  //   dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-  // });
-  // jQuery("#datepicker-from").datepicker('setDate', 'today');
-  //
-  // jQuery("#datepicker-to").datepicker({
-  //   dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-  // });
-  // jQuery("#datepicker-to").datepicker('setDate', 'today');
 
   jQuery("#datepicker-post").datepicker({
     dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
   });
-  jQuery("#datepicker-post").datepicker('setDate', 'today');
 }

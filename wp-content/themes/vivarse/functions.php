@@ -149,7 +149,7 @@ function vivarse_scripts() {
 
 	wp_enqueue_script( 'filter-sidebar', get_template_directory_uri() . '/js/filter-sidebar.js', array('jquery'), '1', true );
 	wp_enqueue_script( 'git-popup', get_template_directory_uri() . '/js/git-popup.js', array(), '1', true );
-	wp_enqueue_script( 'my-fullPage-settings', get_template_directory_uri() . '/js/myFullPage.js', array('jquery'), '1', true );
+	wp_enqueue_script( 'my-fullPage-settings', get_template_directory_uri() . '/js/myFullPage.js', array('jquery', 'fullPage'), '1', true );
 	wp_enqueue_script( 'my-textFill', get_template_directory_uri() . '/js/myTextFill.js', array('jquery'), '1', true );
 
 	/* Modal Pictures */
@@ -207,13 +207,19 @@ function vivarse_filter_posts($query) {
 		$vivarse_post_type = $_GET['vivarse-post-type'];
 		$query->set('post_type', $vivarse_post_type);
 
+		$checked_categories = array();
+
 		// Event -> category (optional)
 		if (!empty($_GET['vivarse-event-category'])) {
+
+			foreach($_GET['vivarse-event-category'] as $check) {
+				$checked_categories[] = $check;
+			}
 
 			$tax_query = array(
 				array(
 					'taxonomy' => 'event_cat',
-					'terms' => $_GET['vivarse-event-category'],
+					'terms' => $checked_categories,
 					'field' => 'slug',
 				)
 			);
