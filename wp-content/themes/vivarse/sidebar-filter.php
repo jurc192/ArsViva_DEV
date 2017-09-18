@@ -28,7 +28,7 @@
 <aside id="filter-sidebar" class="filter-sidebar">
 	<?php dynamic_sidebar( 'sidebar-filter' ); ?>
 
-	<h3 class="toggle-filter" onclick="toggleFilter()">FILTER</h3>
+	<img class="toggle-filter" onclick="toggleFilter()" src="<?php bloginfo('template_url'); ?>/images/search2.png" alt="search icon">
 </aside><!-- #filter-sidebar -->
 
 <!-- Naredi formo sam -->

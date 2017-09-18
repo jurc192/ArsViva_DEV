@@ -432,3 +432,12 @@ se vrnem kasneje.
 
 TODO: spremeni class name contenta v template-content-post [DONE]
 TODO: Justify text (paragraphi) na front-page-u
+
+
+## LAST DAYS
+TODO:
+- Filter design + functionality
+- Dodajanje galerije / videa v objave
+
+### Filter design
+- Uporabim search2 ikono, ker mi je lepša? XD
