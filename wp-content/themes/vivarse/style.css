@@ -1165,6 +1165,10 @@ img.backgr {
       bottom: 80px;
       right: 80px; } }
 
+@media screen and (max-height: 890px) and (max-width: 585px) {
+  .filter-sidebar {
+    display: none; } }
+
 /*--------------------------------------------------------------
 
 # Embeeded & Maps stuff

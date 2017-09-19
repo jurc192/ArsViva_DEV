@@ -399,22 +399,6 @@ img.backgr {
 
     padding: 0 10% 10% 10%;
 
-    // Druga verzija, za evente
-    // position: absolute;
-    // top: 260px;
-    // left: 0;
-    // bottom: 0;
-    //
-    // padding: 0 10% 10% 10%;
-
-    // Prva verzija
-    // position: absolute;
-    //
-    // bottom: 0;
-    // left: 0;
-    // right: 0;
-    //
-    // padding: 0 10% 10% 10%;
   }
 
   .entry-footer {
@@ -472,7 +456,6 @@ img.backgr {
 
   .text-tile {
 
-    // padding: 4%;
     padding: 70px 53px 70px 53px;
 
     width: 650px;
@@ -481,14 +464,6 @@ img.backgr {
     h2.entry-title {
       font-size: 2.15rem;
     }
-
-    // p.info {
-    //   font-size: 1.2rem;
-    // }
-    //
-    // p.info:first-of-type {
-    //   margin-top: 50px;
-    // }
 
     .entry-content {
       top: 250px;
@@ -533,7 +508,6 @@ img.backgr {
 
   .text-tile {
 
-    // padding: 4%;
     padding: 100px 70px 100px 70px;
 
     width: 700px;
@@ -542,14 +516,6 @@ img.backgr {
     h2.entry-title {
       font-size: 2.15rem;
     }
-
-    // p.info {
-    //   font-size: 1.2rem;
-    // }
-    //
-    // p.info:first-of-type {
-    //   margin-top: 50px;
-    // }
 
     .entry-content {
       top: 275px;
@@ -566,6 +532,14 @@ img.backgr {
 
 }
 
+// Mobile
+@media screen and (max-height: 890px) and (max-width: 585px) {
+
+  .filter-sidebar {
+    display: none;
+  }
+
+}
 /*--------------------------------------------------------------
 
 # Embeeded & Maps stuff
