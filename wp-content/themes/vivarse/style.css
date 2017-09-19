@@ -935,7 +935,28 @@ html, body {
 
 /* Hamburger menu */
 .menu-toggle {
-  float: right; }
+  background-position: center;
+  float: right;
+  width: 30px;
+  height: 30px;
+  margin-top: 15px;
+  border: none;
+  background-color: #fff; }
+  .menu-toggle:hover {
+    background-color: #e7e7e7; }
+
+@media screen and (max-height: 890px) and (max-width: 585px) {
+  .nav-menu {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #fff; }
+    .nav-menu li {
+      text-align: center;
+      display: block;
+      float: none; } }
 
 /*--------------------------------------------------------------
 # Footer stuff
@@ -1261,6 +1282,12 @@ article.tile {
   background-color: #CCC;
   height: 100%;
   width: 60px; }
+
+@media screen and (max-height: 890px) and (max-width: 585px) {
+  .sajdbar {
+    display: none; }
+  .site-main, .site-main-nofp {
+    padding: 0; } }
 
 /*--------------------------------------------------------------
 ### Events Footer stuff

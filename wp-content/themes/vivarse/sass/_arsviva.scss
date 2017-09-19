@@ -82,8 +82,45 @@ $navigation-height: 60px;
 
 /* Hamburger menu */
 .menu-toggle {
+  background-position: center;
+
   float: right;
+  width: 30px;
+  height: 30px;
+
+  margin-top: 15px;
+
+  border: none;
+  background-color: $color_arsviva_white;
+
+  &:hover {
+    background-color: $color_arsviva_grey;
+  }
 }
+
+@media screen and (max-height: 890px) and (max-width: 585px) {
+  .nav-menu {
+
+    position: fixed;
+
+    top: $navigation-height;
+    right: 0;
+
+    width: 100%;
+
+    padding: 20px 0;
+
+    background-color: $color_arsviva_white;
+
+    li {
+      text-align: center;
+      display: block;
+      float: none;
+    }
+
+  }
+}
+
 
 
 /*--------------------------------------------------------------
@@ -713,6 +750,15 @@ height: 100%;
 width: 60px;
 }
 
+// Mobile
+@media screen and (max-height: 890px) and (max-width: 585px) {
+  .sajdbar {
+    display: none;
+  }
+  .site-main, .site-main-nofp {
+    padding: 0;
+  }
+}
 
 /*--------------------------------------------------------------
 ### Events Footer stuff
