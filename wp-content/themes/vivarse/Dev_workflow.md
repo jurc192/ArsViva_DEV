@@ -141,8 +141,8 @@ https://codex.wordpress.org/Moving_WordPress poglavje "If you forget to change l
 
   select * from wp_options;
 
-  update wp_options set option_value='https://194.249.1.139/arsviva' where option_name='siteurl';
-  update wp_options set option_value='https://194.249.1.139/' where option_name='home';
+  update wp_options set option_value='https://194.249.1.139/' where option_name='siteurl';
+  update wp_options set option_value='https://194.249.1.139/arsviva' where option_name='home';
 
 
 ```
@@ -441,3 +441,7 @@ TODO:
 
 ### Filter design
 - Uporabim search2 ikono, ker mi je lepša? XD
+- Rihtanje datuma: kako deluje VSEL meta_query
+  - CUSTOM POST META = keyword, v tabeli wp_postmeta vidim vse meta fielde :)
+  - event_start_date je shranjeno v unixTimestampu fix (int)
+  - JEBIGA, ne znam še tega zaenkrat

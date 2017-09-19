@@ -61,8 +61,8 @@
 
 		<hr class="divider">
 
-		<h3 class="filter-headings">Datum dogodka</h3>
-		<input type="text" name="vivarse-date" id="datepicker">
+		<!-- <h3 class="filter-headings">Datum dogodka</h3>
+		<input type="text" name="vivarse-event-date" id="datepicker"> -->
 	</div>
 
 	<!-- Posts option box -->
@@ -70,7 +70,7 @@
 		<hr class="divider">
 
 		<h3 class="filter-headings">Datum objave</h3>
-		<input type="text" name="vivarse-date" id="datepicker-post">
+		<input type="text" name="vivarse-post-date" id="datepicker-post">
 	</div>
 
 

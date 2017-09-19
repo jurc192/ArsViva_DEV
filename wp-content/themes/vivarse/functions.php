@@ -207,9 +207,9 @@ function vivarse_filter_posts($query) {
 		$vivarse_post_type = $_GET['vivarse-post-type'];
 		$query->set('post_type', $vivarse_post_type);
 
-		$checked_categories = array();
 
 		// Event -> category (optional)
+		$checked_categories = array();
 		if (!empty($_GET['vivarse-event-category'])) {
 
 			foreach($_GET['vivarse-event-category'] as $check) {
@@ -227,16 +227,24 @@ function vivarse_filter_posts($query) {
 		}
 
 		// Event -> date (optional)
-		// if (!empty( $_GET['vivarse-date'] )) {
+		// if (!empty( $_GET['vivarse-event-date'] )) {
 		//
-		// 	$vivarse_event_date = $_GET['vivarse-date'];
-		// 	$vivarse_time = strtotime($vivarse_event_date);
+		// 	$vivarse_event_date = strtotime($_GET['vivarse-event-date']);
+		//
+		// 	$year = date('Y', $vivarse_event_date);
+		// 	$month = date('n', $vivarse_event_date);
+		// 	$day = date('j', $vivarse_event_date);
+		//
+		// 	echo "Post date unix: {$vivarse_event_date}<br>";
+		// 	echo "Year: {$year}<br>";
+		// 	echo "Month: {$month}<br>";
+		// 	echo "Day: {$day}<br>";
 		//
 		// 	$my_meta_query = array(
 		// 		'relation' => 'AND',
 		// 		array(
-		// 			'key' => 'event-start-date',
-		// 			'value' => $vivarse_time,
+		// 			'key' => 'event-date',
+		// 			'value' => $vivarse_event_date,
 		// 			'compare' => '=',
 		// 			'type' => 'NUMERIC'
 		// 		)
@@ -244,6 +252,22 @@ function vivarse_filter_posts($query) {
 		//
 		// 	$query->set('meta_query', $my_meta_query);
 		// }
+
+		// Post -> date (optional)
+		if (!empty($_GET['vivarse-post-date'])) {
+
+			$vivarse_post_date = strtotime($_GET['vivarse-post-date']);
+
+			$date_query = array(
+				array(
+					'year' => $year,
+					'month' => $month,
+					'day' => $day,
+				)
+			);
+
+			$query->set('date_query', $date_query);
+		}
 
 	}
 
