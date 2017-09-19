@@ -215,10 +215,9 @@ img.backgr {
 //Embedded
 
 iframe.google-maps{
-	height: calc(100vh - 60px);
-	width: 66vw;
+	height: calc(100% - 60px);
+	width: 55.5%;
 	position: absolute;
-	top: 60px;
 	bottom: 0;
 }
 
@@ -240,7 +239,7 @@ height:100%;
   padding: 4%;
 
   height: 70%;
-  min-height: 500px;
+  min-height: 600px;
 
   width: 40%; // TEMP HACK, find proper way to do it
   max-width: 700px;
@@ -677,3 +676,59 @@ aside.filter-sidebar {
     text-decoration: none;
     cursor: pointer;
 }
+
+/*--------------------------------------------------------------
+# Contact form
+--------------------------------------------------------------*/
+
+input[type="email"],
+input[type="text"],
+textarea{
+    width: 100%;
+	background-color: #CEDEE8;
+	border: none;
+	margin: 3px;
+	border-radius: 0px;
+  }
+  
+ input[type="submit"]{
+ width: 60px;
+ font-family: 'Open Sans', sans-serif; 
+ font-style: oblique;
+ background-color: white;
+ color: gray;
+ border-radius:0;
+ margin: 3px;
+}
+
+#formdiv{
+height: 50%;
+bottom:0;
+position: relative;
+}
+
+#contact-info-div{
+right:0;
+height: 50%;
+width: 45%;
+position: absolute;
+top:10%;
+right:10%;
+text-align: right;
+
+}
+
+#contact-logo-div{
+text-align: center;
+position: relative;
+left:0;
+top:0;
+width: 50%;
+height: 50%;
+font-size:150%;
+}
+
+
+
+
+

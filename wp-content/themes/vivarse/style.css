@@ -855,10 +855,9 @@ img.backgr {
   object-fit: cover; }
 
 iframe.google-maps {
-  height: calc(100vh - 60px);
-  width: 66vw;
+  height: calc(100% - 60px);
+  width: 55.5%;
   position: absolute;
-  top: 60px;
   bottom: 0; }
 
 .htmlvideo {
@@ -872,7 +871,7 @@ iframe.google-maps {
   vertical-align: middle;
   padding: 4%;
   height: 70%;
-  min-height: 500px;
+  min-height: 600px;
   width: 40%;
   max-width: 700px;
   background-color: #fff;
@@ -882,35 +881,6 @@ iframe.google-maps {
     margin-top: 0;
     /* test */
     font-weight: normal; }
-
-.text-tile-small {
-  position: relative;
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 5%;
-  height: 80%;
-  width: 25%;
-  background-color: #fff;
-  box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.25); }
-  .text-tile-small h2 {
-    font-size: 2rem;
-    margin-top: 0; }
-  .text-tile-small p.type {
-    font-weight: bold;
-    font-size: 1.5rem;
-    margin: 0.3rem; }
-
-/*--------------------------------------------------------------
-# Sidebar
---------------------------------------------------------------*/
-.sajdbar {
-  position: fixed;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: #CCC;
-  height: 100%;
-  width: 60px; }
 
 /*--------------------------------------------------------------
 # Front page events
@@ -967,6 +937,35 @@ article.nofp {
     height: 150px;
     object-fit: cover;
     object-position: center; }
+
+.text-tile-small {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 5%;
+  height: 80%;
+  width: 25%;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.25); }
+  .text-tile-small h2 {
+    font-size: 2rem;
+    margin-top: 0; }
+  .text-tile-small p.type {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 0.3rem; }
+
+/*--------------------------------------------------------------
+# Sidebar
+--------------------------------------------------------------*/
+.sajdbar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #CCC;
+  height: 100%;
+  width: 60px; }
 
 /*--------------------------------------------------------------
 ### Events Footer stuff
@@ -1167,3 +1166,47 @@ aside.filter-sidebar {
   color: #bbb;
   text-decoration: none;
   cursor: pointer; }
+
+/*--------------------------------------------------------------
+# Contact form
+--------------------------------------------------------------*/
+input[type="email"],
+input[type="text"],
+textarea {
+  width: 100%;
+  background-color: #CEDEE8;
+  border: none;
+  margin: 3px;
+  border-radius: 0px; }
+
+input[type="submit"] {
+  width: 60px;
+  font-family: 'Open Sans', sans-serif;
+  font-style: oblique;
+  background-color: white;
+  color: gray;
+  border-radius: 0;
+  margin: 3px; }
+
+#formdiv {
+  height: 50%;
+  bottom: 0;
+  position: relative; }
+
+#contact-info-div {
+  right: 0;
+  height: 50%;
+  width: 45%;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  text-align: right; }
+
+#contact-logo-div {
+  text-align: center;
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 50%;
+  font-size: 150%; }
