@@ -40,7 +40,7 @@ endif;
 
  ?>
 
-<article id="post-<?php echo $post_id; ?>" <?php post_class('slide'); ?>>
+<article id="post-<?php echo $post_id; ?>" <?php post_class('slide event-slide'); ?>>
   <img class="backgr" src="<?php echo $thumb_url?>" alt="fotka1">
 
   <div class="text-tile">

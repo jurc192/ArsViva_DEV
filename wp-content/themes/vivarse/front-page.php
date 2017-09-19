@@ -44,7 +44,7 @@ get_header(); ?>
 		<!-- Upcoming events -->
 		<section class="section">
 
-			<article class="slide">
+			<article class="slide event-slide">
 				<img class="backgr" src="<?php echo get_bloginfo('template_url') . '/images/dogodki-dogodek1.jpg' ?>" alt="">
 				<div class="text-tile">
 					<h2>Prihajajoči dogodki:</h2>
@@ -52,9 +52,17 @@ get_header(); ?>
 						<?php vivarse_upcoming_titles($my_event_query); ?>
 					</ul>
 				</div>
-
 			</article>
 
+			<article class="upcoming-mobile slide">
+				<img class="backgr" src="<?php echo get_bloginfo('template_url') . '/images/dogodki-dogodek1.jpg' ?>" alt="">
+				<div class="text-tile">
+					<h2>Prihajajoči dogodki:</h2>
+					<ul id="upcoming-list" class="upcoming-events">
+						<?php vivarse_upcoming_titles($my_event_query); ?>
+					</ul>
+				</div>
+			</article>
 
 		<?php
 
@@ -77,6 +85,20 @@ get_header(); ?>
 		?>
 
 		</section>
+
+		<!-- Upcoming events on mobile screens -->
+		<!-- <section id="upcoming-section-mobile" class="section">
+
+			<img class="backgr" src="<?php echo get_bloginfo('template_url') . '/images/dogodki-dogodek1.jpg' ?>" alt="">
+			<div class="text-tile">
+				<h2>Prihajajoči dogodki:</h2>
+				<ul id="upcoming-list" class="upcoming-events">
+					<?php vivarse_upcoming_titles($my_event_query); ?>
+				</ul>
+			</div>
+
+		</section> -->
+
 
 
 		<?php

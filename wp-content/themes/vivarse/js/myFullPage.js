@@ -1,9 +1,8 @@
 jQuery(document).ready(function() {
 	jQuery('#page').fullpage({
 
-		// menu: '#upcoming-list',
-		anchors: ['intro', 'upcoming', 'test'],
-		animateAnchor: false,
+		responsiveWidth: 585,
+		fitToSection: false,
 
 		loopHorizontal: false,
 		// controlArrows: false,

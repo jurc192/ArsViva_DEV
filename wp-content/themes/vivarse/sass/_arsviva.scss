@@ -222,6 +222,11 @@ article.slide {
   font-weight: normal;
 }
 
+
+.upcoming-mobile {
+  display: none;
+}
+
 @media screen and (min-height: 900px) {
   article.slide .text-tile {
 
@@ -539,6 +544,41 @@ img.backgr {
     display: none;
   }
 
+  // Hide upcoming events slides
+  article.event-slide.slide {
+    display: none;
+  }
+  // Hide control arrows
+  .fp-controlArrow.fp-next {
+    display: none;
+  }
+  // Show mobile version of upcoming events
+  .slide.upcoming-mobile {
+    display: block;
+
+    .text-tile {
+      right: 0;
+    }
+  }
+
+  .backgr {
+    // TEMP disable images
+    display: none;
+  }
+
+  .text-tile {
+    width: 90%;
+  }
+
+  article.section:nth-of-type(even) .text-tile,
+  article.section:nth-of-type(even) .text-tile-static {
+    right: 0;
+  }
+  article.section:nth-of-type(odd) .text-tile,
+  article.section:nth-of-type(even) .text-tile-static {
+    left: 0;
+  }
+
 }
 /*--------------------------------------------------------------
 
@@ -730,7 +770,8 @@ width: 60px;
     display: none;
   }
   .site-main, .site-main-nofp {
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
