@@ -21,7 +21,7 @@
 				</p>
 			</div>
 			<div id="formdiv">
-			<?php echo do_shortcode('[contact-form-7 id="51" title="Kontakt" html_class="use-floating-validation-tip"]');  ?>
+			<?php echo do_shortcode('[contact-form-7 id="81" title="Kontakt" html_class="use-floating-validation-tip"]');  ?>
 			</div>
 		</div>
 	</article>
