@@ -66,7 +66,6 @@
 <!-- JURE BACKP -->
 	<!-- <main id="main" class="site-main">
 
-		<!-- PREDSTAVITEV -->
 		<article class="section">
 			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/fotke_2/ars_viva.jpg" alt="Zavod Ars Viva">
 
@@ -86,7 +85,7 @@
 		</article>
 
 
-		<!-- VIDEO -->
+
 		<article style="background-color: black;" class="section">
 			<video class="htmlvideo" controls>
 			<source src="http://video.webmfiles.org/elephants-dream.webm" type="video/webm">
@@ -95,7 +94,6 @@
 		</article>
 
 
-		<!-- PROSTORI -->
 		<article class="section">
 			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/fotke_2/knjiznica.jpg" alt="Knjiznica">
 
@@ -188,7 +186,6 @@
 		</article>
 
 
-		<!-- ZEMLJEVID -->
 		<article class="section">
 
 			<div id="zemljevid-area">
@@ -224,7 +221,6 @@
 		</article>
 
 
-		<!-- POSLANSTVO -->
 		<article class="section">
 			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/fotke_2/otroci_na_delavnici.jpg" alt="Otroci na delavnici">
 
@@ -259,22 +255,6 @@
 		</article>
 
 
-		<!-- 3D OGLED PROSTORI -tukaj, sigurno?? -->
-		<!-- <article class="section">
-
-			<iframe class ="google-maps" src="https://www.google.com/maps/embed?pb=!1m0!3m2!1ssl!2sus!4v1504112212072!6m8!1m7!1sCAoSLEFGMVFpcE5kNFlhLWRWM2JkS2ZLUUZpNHhrMkFZcVRPenBEZDFmZm0yVnNz!2m2!1d45.71218779648877!2d14.45914779806241!3f141.89!4f-3.8299999999999983!5f0.7820865974627469" frameborder="0" style="border:0" allowfullscreen></iframe>
-			 <div class="text-tile-static-small">
-				<h2>Prostori</h2>
-				<p>
-						Obiskovalcem domačije nudimo različne možnosti za druženje in sprostitev. Tako so vam na voljo različni
-						prostori in okolja, kjer boste zagotovo našli nekaj zase.
-				</p>
-			</div>
-
-		</article> -->
-
-
-		<!-- ZGODOVINA -->
 		<article class="section">
 			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/fotke_2/stara_hisa.jpg" alt="Stara hisa">
 

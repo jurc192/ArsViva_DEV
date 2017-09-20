@@ -7,7 +7,7 @@ jQuery(document).ready(function() {
 		loopHorizontal: false,
 		// controlArrows: false,
 
-    fixedElements: '#site-header, .screen-reader-text, .sajdbar',
+    fixedElements: '#site-header, .screen-reader-text, .social-media-sidebar',
 
 		paddingTop: 60,
 
