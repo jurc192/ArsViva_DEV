@@ -54,7 +54,7 @@ get_header(); ?>
 				</div>
 			</article>
 
-			<article class="upcoming-mobile slide">
+			<article class="slide upcoming-mobile">
 				<img class="backgr" src="<?php echo get_bloginfo('template_url') . '/images/dogodki-dogodek1.jpg' ?>" alt="">
 				<div class="text-tile">
 					<h2>Prihajajoči dogodki:</h2>

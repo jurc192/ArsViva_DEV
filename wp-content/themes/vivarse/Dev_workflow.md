@@ -448,4 +448,7 @@ TODO:
 
 ### Mobile design
 - Viewport size: 360 x 524px (z browser headerjem) in 360 x 580px (brez)
-- Pejdi v mobile, ko je ožje od 1300 in nižje od 580 
+- Pejdi v mobile, ko je ožje od 1300 in nižje od 580
+
+
+## MERGING STUFF

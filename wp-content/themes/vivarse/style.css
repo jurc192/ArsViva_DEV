@@ -1024,7 +1024,7 @@ article.slide {
 .upcoming-title {
   font-weight: normal; }
 
-.upcoming-mobile {
+article.slide.upcoming-mobile {
   display: none; }
 
 @media screen and (min-height: 900px) {

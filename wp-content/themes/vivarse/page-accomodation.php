@@ -3,7 +3,7 @@
 	<main id="main" class="site-main">
 			<?php get_sidebar(); ?>
 		<article class="section">
-			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/home-fotka1.jpg" alt="fotka1">
+			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/fotke_2/1soba.jpg" alt="soba">
 
 			<div class="text-tile-static">
 				<h2>Predstavitev</h2>
@@ -21,7 +21,7 @@
 		</article>
 
 		<article class="section">
-			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/home-fotka1.jpg" alt="fotka1">
+			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/fotke_2/2dormi.jpg" alt="dormitorij">
 
 			<div class="text-tile-static">
 				<h2>Predstavitev</h2>
@@ -39,7 +39,7 @@
 		</article>
 
 		<article class="section">
-			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/home-fotka1.jpg" alt="fotka1">
+			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/fotke_2/3zaga.jpg" alt="zaga">
 
 			<div class="text-tile-static">
 				<h2>Predstavitev</h2>

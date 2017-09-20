@@ -4,7 +4,7 @@
 
 		<!-- PREDSTAVITEV -->
 		<article class="section">
-			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/ozavodu-fotka1.jpg" alt="fotka2">
+			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/fotke_2/ars_viva.jpg" alt="Zavod Ars Viva">
 
 			<div class="text-tile-static">
 				<h2>Predstavitev</h2>
@@ -33,7 +33,7 @@
 
 		<!-- PROSTORI -->
 		<article class="section">
-			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/ozavodu-fotka3.jpg" alt="fotka1">
+			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/fotke_2/knjiznica.jpg" alt="Knjiznica">
 
 			<div class="slide">
 				<div class="text-tile-static">
@@ -162,7 +162,7 @@
 
 		<!-- POSLANSTVO -->
 		<article class="section">
-			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/ozavodu-fotka3.jpg" alt="fotka1">
+			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/fotke_2/otroci_na_delavnici.jpg" alt="Otroci na delavnici">
 
 			<div class="slide">
 				<div class="text-tile-static">
@@ -212,7 +212,7 @@
 
 		<!-- ZGODOVINA -->
 		<article class="section">
-			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/ozavodu-fotka4.jpg" alt="fotka1">
+			<img class="backgr" src="<?php bloginfo('template_url'); ?>/images/fotke_2/stara_hisa.jpg" alt="Stara hisa">
 
 			<div class="slide">
 				<div class="text-tile-static">
