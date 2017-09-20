@@ -1081,16 +1081,6 @@ img.backgr {
   bottom: 0;
   object-fit: cover; }
 
-iframe.google-maps {
-  height: calc(100% - 60px);
-  width: 55.5%;
-  position: absolute;
-  bottom: 0; }
-
-.htmlvideo {
-  width: calc(100vw - 60px);
-  height: 100%; }
-
 .text-tile, .text-tile-static {
   position: relative;
   margin: 0 auto;
@@ -1209,7 +1199,7 @@ iframe.google-maps {
 --------------------------------------------------------------*/
 iframe.google-maps {
   height: calc(100vh - 60px);
-  width: 66vw;
+  width: 56%;
   position: absolute;
   top: 60px;
   bottom: 0; }
@@ -1217,22 +1207,6 @@ iframe.google-maps {
 .htmlvideo {
   width: calc(100vw - 60px);
   height: 100%; }
-
-article:nth-of-type(even) iframe.google-maps {
-  right: 60px;
-  object-position: right; }
-
-article:nth-of-type(even) .text-tile-small {
-  right: 35%;
-  object-position: right; }
-
-article:nth-of-type(odd) iframe.google-maps {
-  left: 0;
-  object-position: left; }
-
-article:nth-of-type(odd) .text-tile-small {
-  left: 30%;
-  object-position: left; }
 
 /*--------------------------------------------------------------
 

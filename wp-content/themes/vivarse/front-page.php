@@ -38,7 +38,10 @@ get_header(); ?>
 	<main id="main" class="site-main">
 
 		<section class="section landing-art">
-			<img id="test" src="<?php echo get_bloginfo('template_url') . '/images/home-fotka2.jpg' ?>" alt="">
+			<video class="front-page-gif" muted loop autoplay data-keepplaying>
+			<source src="<?php echo get_bloginfo('template_url') . '/images/Intro_exp.mp4' ?>" type="video/mp4">
+		Your browser does not support the video tag.
+		</video>
 		</section>
 
 		<!-- Upcoming events -->
