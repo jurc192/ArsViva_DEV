@@ -1081,9 +1081,6 @@ img.backgr {
   bottom: 0;
   object-fit: cover; }
 
-<<<<<<< HEAD
-.text-tile, .text-tile-static {
-=======
 iframe.google-maps {
   height: calc(100% - 60px);
   width: 55.5%;
@@ -1094,23 +1091,16 @@ iframe.google-maps {
   width: calc(100vw - 60px);
   height: 100%; }
 
-.text-tile {
->>>>>>> primozDev2
+.text-tile, .text-tile-static {
   position: relative;
   margin: 0 auto;
   overflow: hidden;
   vertical-align: middle;
-<<<<<<< HEAD
   padding: 53px;
-  width: 600px;
-  height: 500px;
-=======
-  padding: 4%;
   height: 70%;
   min-height: 600px;
-  width: 40%;
-  max-width: 700px;
->>>>>>> primozDev2
+  width: 600px;
+  height: 500px;
   background-color: #fff;
   box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.25); }
   .text-tile h2.entry-title, .text-tile-static h2.entry-title {
@@ -1190,7 +1180,6 @@ iframe.google-maps {
       bottom: 80px;
       right: 80px; } }
 
-<<<<<<< HEAD
 @media screen and (max-height: 890px) and (max-width: 585px) {
   .filter-sidebar {
     display: none; }
@@ -1217,10 +1206,6 @@ iframe.google-maps {
 
 # Embeeded & Maps stuff
 
-=======
-/*--------------------------------------------------------------
-# Front page events
->>>>>>> primozDev2
 --------------------------------------------------------------*/
 iframe.google-maps {
   height: calc(100vh - 60px);
@@ -1303,12 +1288,9 @@ article.tile {
     object-fit: cover;
     object-position: center; }
 
-<<<<<<< HEAD
 .nav-links {
   margin: 30px auto; }
 
-=======
->>>>>>> primozDev2
 .text-tile-small {
   position: relative;
   margin: 0 auto;
@@ -1329,11 +1311,7 @@ article.tile {
 /*--------------------------------------------------------------
 # Sidebar
 --------------------------------------------------------------*/
-<<<<<<< HEAD
-.sajdbar {
-=======
 .social-media-sidebar {
->>>>>>> primozDev2
   position: fixed;
   right: 0;
   top: 0;
@@ -1342,7 +1320,6 @@ article.tile {
   height: 100%;
   width: 60px; }
 
-<<<<<<< HEAD
 @media screen and (max-height: 890px) and (max-width: 585px) {
   .sajdbar {
     display: none; }
@@ -1350,8 +1327,6 @@ article.tile {
     padding-left: 0;
     padding-right: 0; } }
 
-=======
->>>>>>> primozDev2
 /*--------------------------------------------------------------
 ### Events Footer stuff
 --------------------------------------------------------------*/
