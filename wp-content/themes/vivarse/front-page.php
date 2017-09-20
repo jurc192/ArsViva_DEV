@@ -43,62 +43,33 @@ get_header(); ?>
 
 		<!-- Upcoming events -->
 		<section class="section">
+			<div class="tile-wrapper">
 
-			<article class="slide event-slide">
-				<img class="backgr" src="<?php echo get_bloginfo('template_url') . '/images/dogodki-dogodek1.jpg' ?>" alt="">
-				<div class="text-tile">
+				<!-- <div class="front-tile">
 					<h2>Prihajajoči dogodki:</h2>
-					<ul id="upcoming-list" class="upcoming-events">
-						<?php vivarse_upcoming_titles($my_event_query); ?>
-					</ul>
-				</div>
-			</article>
+				</div> -->
 
-			<article class="slide upcoming-mobile">
-				<img class="backgr" src="<?php echo get_bloginfo('template_url') . '/images/dogodki-dogodek1.jpg' ?>" alt="">
-				<div class="text-tile">
-					<h2>Prihajajoči dogodki:</h2>
-					<ul id="upcoming-list" class="upcoming-events">
-						<?php vivarse_upcoming_titles($my_event_query); ?>
-					</ul>
-				</div>
-			</article>
+				<?php
+				if ( $my_event_query->have_posts() ) :
+					if ( is_front_page() ):
 
-		<?php
+						while( $my_event_query->have_posts() ) : $my_event_query->the_post();
+							get_template_part( 'template-parts/content', 'front-event-tile' );
+						endwhile;
 
-		if ( $my_event_query->have_posts() ) :
-			if ( is_front_page() ):
+					else:
+						// echo "<h1 style='z-index: 15; position: absolute; top: 100px; left: 100px;'>NOT FIRST PAGE!</h1>";
+					endif;
 
-				while( $my_event_query->have_posts() ) : $my_event_query->the_post();
-					get_template_part( 'template-parts/content', 'front-event-slide' );
-				endwhile;
+				else:
+					// echo "<h1 style='z-index: 15; position: absolute; top: 200px; left: 100px;'>I DON'T HAVE ANY EVENTS</h1>";
+				endif;
 
-			else:
-				// echo "<h1 style='z-index: 15; position: absolute; top: 100px; left: 100px;'>NOT FIRST PAGE!</h1>";
-			endif;
+				wp_reset_postdata();
+				?>
 
-		else:
-			// echo "<h1 style='z-index: 15; position: absolute; top: 200px; left: 100px;'>I DON'T HAVE ANY EVENTS</h1>";
-		endif;
-
-		wp_reset_postdata();
-		?>
-
-		</section>
-
-		<!-- Upcoming events on mobile screens -->
-		<!-- <section id="upcoming-section-mobile" class="section">
-
-			<img class="backgr" src="<?php echo get_bloginfo('template_url') . '/images/dogodki-dogodek1.jpg' ?>" alt="">
-			<div class="text-tile">
-				<h2>Prihajajoči dogodki:</h2>
-				<ul id="upcoming-list" class="upcoming-events">
-					<?php vivarse_upcoming_titles($my_event_query); ?>
-				</ul>
 			</div>
-
-		</section> -->
-
+		</section>
 
 
 		<?php

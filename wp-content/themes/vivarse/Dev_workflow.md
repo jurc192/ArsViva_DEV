@@ -454,3 +454,5 @@ TODO:
 ## MERGING STUFF
 - WHAT A MESS D:
 - delam v nov branch
+
+- v EVENT dashboardu, se ne vidi KDO je naredil event!!!

@@ -167,7 +167,6 @@ $footer-height: 200px;
 # Full page scroll stuff
 
 --------------------------------------------------------------*/
-
 /*--------------------------------------------------------------
 # Landing image / video
 --------------------------------------------------------------*/
@@ -186,71 +185,84 @@ $footer-height: 200px;
 }
 
 /*--------------------------------------------------------------
-# Upcoming events slides
+# FRONT Upcoming event tiles
 --------------------------------------------------------------*/
 
-article.slide {
+.tile-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+  width: 80%;
+  margin: 0 auto;
+
+}
+
+article.front-tile {
 
   position: relative;
+  display: inline-block;
 
-  .backgr {
-    right: 0;
+  width: 300px;
+  height: 600px;
+
+  padding:  1.5rem;
+  margin:  1rem;
+
+  overflow: hidden;
+
+  background-color: $color_arsviva_white;
+
+  // Front unique
+  white-space: normal;
+
+  .tile-title {
+    font-size: 1rem;
   }
 
-  .text-tile {
-
-    right: 25%;
-
-    .entry-content {
-      top: 250px;
+  .tile-meta {
+    .tile-info {
+      margin: .5rem 0;
+      font-weight: bold;
+      font-size: 0.8rem;
     }
-    .entry-footer {
-      bottom: 40px;
-    }
-  }
-
-}
-
-.upcoming-events {
-  list-style: none;
-
-  margin: 50px auto 0 auto;
-  padding-left: 2.2rem;
-}
-
-.upcoming-title {
-  font-weight: normal;
-}
-
-
-article.slide.upcoming-mobile {
-  display: none;
-}
-
-@media screen and (min-height: 900px) {
-  article.slide .text-tile {
-
-    right: 17%;
-
-    .entry-content {
-      top: 350px;
-    }
-  }
-
-}
-
-@media screen and (min-height: 900px) and (min-width: 1500px) {
-  article.slide .text-tile {
-
-    right: 25%;
-
     .posted-on {
-      margin-top: 2rem;
+      display: block;
+      font-size: 0.7rem;
+    }
+    .type {
+      display: block;
+      font-size: 0.8rem;
+    }
+  }
+
+  .tile-content {
+    // Front unique
+    padding-right: 0;
+
+    text-align: justify;
+    font-size: 0.8rem;
+
+    &.event {
+      position: absolute;
+      top: 320px;
     }
 
-    .entry-content {
-      top: 350px;
+    &.post {
+      position: absolute;
+      top: 320px;
     }
+  }
+
+  .entry-footer {
+    text-align: right;
+  }
+
+  .thumb {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
   }
 }
 

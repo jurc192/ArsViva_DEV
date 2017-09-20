@@ -1003,43 +1003,54 @@ html, body {
     object-fit: cover; }
 
 /*--------------------------------------------------------------
-# Upcoming events slides
+# FRONT Upcoming event tiles
 --------------------------------------------------------------*/
-article.slide {
-  position: relative; }
-  article.slide .backgr {
-    right: 0; }
-  article.slide .text-tile, article.slide .text-tile-static {
-    right: 25%; }
-    article.slide .text-tile .entry-content, article.slide .text-tile-static .entry-content {
-      top: 250px; }
-    article.slide .text-tile .entry-footer, article.slide .text-tile-static .entry-footer {
-      bottom: 40px; }
+.tile-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  width: 80%;
+  margin: 0 auto; }
 
-.upcoming-events {
-  list-style: none;
-  margin: 50px auto 0 auto;
-  padding-left: 2.2rem; }
-
-.upcoming-title {
-  font-weight: normal; }
-
-article.slide.upcoming-mobile {
-  display: none; }
-
-@media screen and (min-height: 900px) {
-  article.slide .text-tile, article.slide .text-tile-static {
-    right: 17%; }
-    article.slide .text-tile .entry-content, article.slide .text-tile-static .entry-content {
-      top: 350px; } }
-
-@media screen and (min-height: 900px) and (min-width: 1500px) {
-  article.slide .text-tile, article.slide .text-tile-static {
-    right: 25%; }
-    article.slide .text-tile .posted-on, article.slide .text-tile-static .posted-on {
-      margin-top: 2rem; }
-    article.slide .text-tile .entry-content, article.slide .text-tile-static .entry-content {
-      top: 350px; } }
+article.front-tile {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  height: 600px;
+  padding: 1.5rem;
+  margin: 1rem;
+  overflow: hidden;
+  background-color: #fff;
+  white-space: normal; }
+  article.front-tile .tile-title {
+    font-size: 1rem; }
+  article.front-tile .tile-meta .tile-info {
+    margin: .5rem 0;
+    font-weight: bold;
+    font-size: 0.8rem; }
+  article.front-tile .tile-meta .posted-on {
+    display: block;
+    font-size: 0.7rem; }
+  article.front-tile .tile-meta .type {
+    display: block;
+    font-size: 0.8rem; }
+  article.front-tile .tile-content {
+    padding-right: 0;
+    text-align: justify;
+    font-size: 0.8rem; }
+    article.front-tile .tile-content.event {
+      position: absolute;
+      top: 320px; }
+    article.front-tile .tile-content.post {
+      position: absolute;
+      top: 320px; }
+  article.front-tile .entry-footer {
+    text-align: right; }
+  article.front-tile .thumb {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center; }
 
 /*--------------------------------------------------------------
 # Posts stuff @scroll template

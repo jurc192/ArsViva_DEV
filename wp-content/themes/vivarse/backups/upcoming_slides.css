@@ -1,0 +1,68 @@
+/*--------------------------------------------------------------
+# Upcoming events slides
+--------------------------------------------------------------*/
+
+article.slide {
+
+  position: relative;
+
+  .backgr {
+    right: 0;
+  }
+
+  .text-tile {
+
+    right: 25%;
+
+    .entry-content {
+      top: 250px;
+    }
+    .entry-footer {
+      bottom: 40px;
+    }
+  }
+
+}
+
+.upcoming-events {
+  list-style: none;
+
+  margin: 50px auto 0 auto;
+  padding-left: 2.2rem;
+}
+
+.upcoming-title {
+  font-weight: normal;
+}
+
+
+article.slide.upcoming-mobile {
+  display: none;
+}
+
+@media screen and (min-height: 900px) {
+  article.slide .text-tile {
+
+    right: 17%;
+
+    .entry-content {
+      top: 350px;
+    }
+  }
+
+}
+
+@media screen and (min-height: 900px) and (min-width: 1500px) {
+  article.slide .text-tile {
+
+    right: 25%;
+
+    .posted-on {
+      margin-top: 2rem;
+    }
+
+    .entry-content {
+      top: 350px;
+    }
+  }
+}
