@@ -338,6 +338,20 @@ img.backgr {
   object-fit: cover;
 }
 
+//Embedded
+
+iframe.google-maps{
+	height: calc(100% - 60px);
+	width: 55.5%;
+	position: absolute;
+	bottom: 0;
+}
+
+.htmlvideo{
+width:calc(100vw - 60px);
+height:100%;
+}
+
 
 // Ploščica za text
 .text-tile {
@@ -348,8 +362,11 @@ img.backgr {
   overflow: hidden;
   vertical-align: middle;
 
-  // padding: 4%;
+  // Na velikem monitorju
   padding: 53px;
+
+  height: 70%;
+  min-height: 600px;
 
   width: 600px;
   height: 500px;
@@ -599,6 +616,7 @@ width:calc(100vw - 60px);
 height:100%;
 }
 
+
 article:nth-of-type(even) {
 
   & iframe.google-maps {
@@ -754,7 +772,7 @@ article.tile {
 /*--------------------------------------------------------------
 # Sidebar
 --------------------------------------------------------------*/
-.sajdbar{
+.social-media-sidebar{
 position: fixed;
 right: 0;
 top: 0;
@@ -1157,4 +1175,55 @@ aside.filter-sidebar {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+
+/*--------------------------------------------------------------
+# Contact form
+--------------------------------------------------------------*/
+
+input[type="email"],
+input[type="text"],
+textarea{
+    width: 100%;
+	background-color: #CEDEE8;
+	border: none;
+	margin: 3px;
+	border-radius: 0px;
+  }
+
+ input[type="submit"]{
+ width: 60px;
+ font-family: 'Open Sans', sans-serif;
+ font-style: oblique;
+ background-color: white;
+ color: gray;
+ border-radius:0;
+ margin: 3px;
+}
+
+#formdiv{
+height: 50%;
+bottom:0;
+position: relative;
+}
+
+#contact-info-div{
+right:0;
+height: 50%;
+width: 45%;
+position: absolute;
+top:10%;
+right:10%;
+text-align: right;
+
+}
+
+#contact-logo-div{
+text-align: center;
+position: relative;
+left:0;
+top:0;
+width: 50%;
+height: 50%;
+font-size:150%;
 }

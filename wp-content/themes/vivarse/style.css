@@ -1081,14 +1081,36 @@ img.backgr {
   bottom: 0;
   object-fit: cover; }
 
+<<<<<<< HEAD
 .text-tile, .text-tile-static {
+=======
+iframe.google-maps {
+  height: calc(100% - 60px);
+  width: 55.5%;
+  position: absolute;
+  bottom: 0; }
+
+.htmlvideo {
+  width: calc(100vw - 60px);
+  height: 100%; }
+
+.text-tile {
+>>>>>>> primozDev2
   position: relative;
   margin: 0 auto;
   overflow: hidden;
   vertical-align: middle;
+<<<<<<< HEAD
   padding: 53px;
   width: 600px;
   height: 500px;
+=======
+  padding: 4%;
+  height: 70%;
+  min-height: 600px;
+  width: 40%;
+  max-width: 700px;
+>>>>>>> primozDev2
   background-color: #fff;
   box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.25); }
   .text-tile h2.entry-title, .text-tile-static h2.entry-title {
@@ -1168,6 +1190,7 @@ img.backgr {
       bottom: 80px;
       right: 80px; } }
 
+<<<<<<< HEAD
 @media screen and (max-height: 890px) and (max-width: 585px) {
   .filter-sidebar {
     display: none; }
@@ -1194,6 +1217,10 @@ img.backgr {
 
 # Embeeded & Maps stuff
 
+=======
+/*--------------------------------------------------------------
+# Front page events
+>>>>>>> primozDev2
 --------------------------------------------------------------*/
 iframe.google-maps {
   height: calc(100vh - 60px);
@@ -1276,9 +1303,12 @@ article.tile {
     object-fit: cover;
     object-position: center; }
 
+<<<<<<< HEAD
 .nav-links {
   margin: 30px auto; }
 
+=======
+>>>>>>> primozDev2
 .text-tile-small {
   position: relative;
   margin: 0 auto;
@@ -1299,7 +1329,11 @@ article.tile {
 /*--------------------------------------------------------------
 # Sidebar
 --------------------------------------------------------------*/
+<<<<<<< HEAD
 .sajdbar {
+=======
+.social-media-sidebar {
+>>>>>>> primozDev2
   position: fixed;
   right: 0;
   top: 0;
@@ -1308,6 +1342,7 @@ article.tile {
   height: 100%;
   width: 60px; }
 
+<<<<<<< HEAD
 @media screen and (max-height: 890px) and (max-width: 585px) {
   .sajdbar {
     display: none; }
@@ -1315,6 +1350,8 @@ article.tile {
     padding-left: 0;
     padding-right: 0; } }
 
+=======
+>>>>>>> primozDev2
 /*--------------------------------------------------------------
 ### Events Footer stuff
 --------------------------------------------------------------*/
@@ -1589,3 +1626,47 @@ aside.filter-sidebar {
   color: #bbb;
   text-decoration: none;
   cursor: pointer; }
+
+/*--------------------------------------------------------------
+# Contact form
+--------------------------------------------------------------*/
+input[type="email"],
+input[type="text"],
+textarea {
+  width: 100%;
+  background-color: #CEDEE8;
+  border: none;
+  margin: 3px;
+  border-radius: 0px; }
+
+input[type="submit"] {
+  width: 60px;
+  font-family: 'Open Sans', sans-serif;
+  font-style: oblique;
+  background-color: white;
+  color: gray;
+  border-radius: 0;
+  margin: 3px; }
+
+#formdiv {
+  height: 50%;
+  bottom: 0;
+  position: relative; }
+
+#contact-info-div {
+  right: 0;
+  height: 50%;
+  width: 45%;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  text-align: right; }
+
+#contact-logo-div {
+  text-align: center;
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 50%;
+  font-size: 150%; }
