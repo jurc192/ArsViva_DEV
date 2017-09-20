@@ -45,10 +45,6 @@ get_header(); ?>
 		<section class="section">
 			<div class="tile-wrapper">
 
-				<!-- <div class="front-tile">
-					<h2>Prihajajoči dogodki:</h2>
-				</div> -->
-
 				<?php
 				if ( $my_event_query->have_posts() ) :
 					if ( is_front_page() ):

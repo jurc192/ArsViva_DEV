@@ -1009,31 +1009,34 @@ html, body {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
-  width: 80%;
+  width: 90%;
   margin: 0 auto; }
 
 article.front-tile {
   position: relative;
   display: inline-block;
-  width: 300px;
-  height: 600px;
+  width: 400px;
+  height: 500px;
   padding: 1.5rem;
   margin: 1rem;
   overflow: hidden;
   background-color: #fff;
   white-space: normal; }
   article.front-tile .tile-title {
+    text-align: center;
     font-size: 1rem; }
-  article.front-tile .tile-meta .tile-info {
-    margin: .5rem 0;
-    font-weight: bold;
-    font-size: 0.8rem; }
-  article.front-tile .tile-meta .posted-on {
-    display: block;
-    font-size: 0.7rem; }
-  article.front-tile .tile-meta .type {
-    display: block;
-    font-size: 0.8rem; }
+  article.front-tile .tile-meta {
+    text-align: center; }
+    article.front-tile .tile-meta .tile-info {
+      margin: .5rem 0;
+      font-weight: bold;
+      font-size: 0.8rem; }
+    article.front-tile .tile-meta .posted-on {
+      display: block;
+      font-size: 0.7rem; }
+    article.front-tile .tile-meta .type {
+      display: block;
+      font-size: 0.8rem; }
   article.front-tile .tile-content {
     padding-right: 0;
     text-align: justify;
@@ -1047,10 +1050,39 @@ article.front-tile {
   article.front-tile .entry-footer {
     text-align: right; }
   article.front-tile .thumb {
-    width: 300px;
+    display: block;
+    margin: 0 auto;
+    width: 400px;
     height: 150px;
     object-fit: cover;
     object-position: center; }
+
+@media screen and (min-height: 750px) {
+  article.front-tile {
+    height: 600px; }
+    article.front-tile .tile-title {
+      margin-top: 30px; }
+    article.front-tile .tile-content {
+      margin-top: 30px; }
+    article.front-tile .thumb {
+      height: 200px; } }
+
+@media screen and (min-height: 900px) and (min-width: 1400px) {
+  article.front-tile {
+    height: 800px; }
+    article.front-tile .tile-title {
+      margin-top: 30px;
+      font-size: 1.2rem; }
+    article.front-tile .tile-meta {
+      margin-top: 40px; }
+      article.front-tile .tile-meta .tile-info {
+        font-size: 1rem; }
+    article.front-tile .tile-content {
+      margin-top: 50px;
+      font-size: 1rem; }
+    article.front-tile .thumb {
+      height: 200px;
+      margin-top: 20px; } }
 
 /*--------------------------------------------------------------
 # Posts stuff @scroll template

@@ -193,7 +193,7 @@ $footer-height: 200px;
   overflow-y: hidden;
   white-space: nowrap;
 
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 
 }
@@ -203,8 +203,8 @@ article.front-tile {
   position: relative;
   display: inline-block;
 
-  width: 300px;
-  height: 600px;
+  width: 400px;
+  height: 500px;
 
   padding:  1.5rem;
   margin:  1rem;
@@ -217,10 +217,14 @@ article.front-tile {
   white-space: normal;
 
   .tile-title {
+    text-align: center;
     font-size: 1rem;
   }
 
   .tile-meta {
+
+    text-align: center;
+
     .tile-info {
       margin: .5rem 0;
       font-weight: bold;
@@ -259,12 +263,63 @@ article.front-tile {
   }
 
   .thumb {
-    width: 300px;
+    display: block;
+    margin: 0 auto;
+
+    width: 400px;
     height: 150px;
     object-fit: cover;
     object-position: center;
   }
 }
+
+@media screen and (min-height: 750px) {
+  article.front-tile {
+    height: 600px;
+
+    .tile-title {
+      margin-top: 30px;
+    }
+
+    .tile-content {
+      margin-top: 30px;
+    }
+
+    .thumb {
+      height: 200px;
+    }
+  }
+}
+
+@media screen and (min-height: 900px) and (min-width: 1400px) {
+  article.front-tile {
+    height: 800px;
+
+    .tile-title {
+      margin-top: 30px;
+      font-size: 1.2rem;
+    }
+
+    .tile-meta {
+      margin-top: 40px;
+      .tile-info {
+        font-size: 1rem;
+      }
+    }
+
+
+    .tile-content {
+      margin-top: 50px;
+      font-size: 1rem;
+    }
+
+    .thumb {
+      height: 200px;
+      margin-top: 20px;
+    }
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Posts stuff @scroll template
