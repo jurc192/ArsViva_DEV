@@ -84,7 +84,8 @@ if ( ! function_exists( 'vivarse_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'vivarse' ),
+			esc_html_x( 'Objavljeno %s', 'post date', 'vivarse' ),
+			// esc_html_x( 'Posted on %s', 'post date', 'vivarse' ),
 			// '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 			$time_string
 		);
