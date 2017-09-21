@@ -1158,8 +1158,7 @@ img.backgr {
     margin-top: 0;
     font-weight: normal; }
   .text-tile .posted-on, .text-tile-static .posted-on {
-    display: block;
-    margin-left: 3rem; }
+    display: block; }
   .text-tile .info, .text-tile-static .info {
     font-size: 1rem;
     margin-top: 0.5rem;
@@ -1387,8 +1386,7 @@ article.single {
     margin-top: 0;
     font-weight: normal; }
   .text-tile-single .posted-on {
-    display: block;
-    margin-left: 3rem; }
+    display: block; }
   .text-tile-single p.info:first-of-type {
     margin-top: 30px; }
   .text-tile-single .info {

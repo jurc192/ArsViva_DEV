@@ -461,7 +461,7 @@ TODO:
 - Stran namestitev- POČAKAJ NA PRENOVLJEN TEKST
 - Mobilno - NI URGENTNO
 
-- Stran PROJEKTI - lahko naredim zdej[DONE]
-- NOGA stuff 
+- [DONE] Stran PROJEKTI - lahko naredim zdej
+- [DONE] NOGA stuff
 - Preberi več (zamenjaj znak)
-- Objavljeno dne -> poravnava
+- [DONE] Objavljeno dne -> poravnava

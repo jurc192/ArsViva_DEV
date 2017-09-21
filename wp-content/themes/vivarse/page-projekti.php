@@ -27,7 +27,7 @@ get_header(); ?>
 		endwhile;
 
 	else:
-		// echo "<h1 style='z-index: 15; position: absolute; top: 200px; left: 100px;'>I DON'T HAVE ANY POSTS</h1>";
+		echo "<article class='section'><h1 style='z-index: 15; position: absolute; top: 200px; left: 100px;'>Trenutno ni aktivnih projektov</h1></article>";
 	endif;
 
 	wp_reset_postdata();
