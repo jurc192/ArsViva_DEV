@@ -456,3 +456,12 @@ TODO:
 - delam v nov branch
 
 - v EVENT dashboardu, se ne vidi KDO je naredil event!!!
+
+### BEFORE SHUTTING DOWN SERVER
+- Stran namestitev- POČAKAJ NA PRENOVLJEN TEKST
+- Mobilno - NI URGENTNO
+
+- Stran PROJEKTI - lahko naredim zdej
+- NOGA stuff
+- Preberi več (zamenjaj znak)
+- Objavljeno dne -> poravnava
