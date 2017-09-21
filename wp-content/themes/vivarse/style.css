@@ -966,9 +966,8 @@ html, body {
   display: inline-block;
   float: right;
   right: 40px;
-  bottom: 20px;
-  line-height: 1.1;
-  font-size: medium; }
+  bottom: 40px;
+  line-height: 1.1; }
   .site-info p {
     text-align: left;
     margin: 10px;
@@ -984,6 +983,18 @@ html, body {
     bottom: 0;
     object-fit: contain;
     object-position: 0 0; }
+
+/*--------------------------------------------------------------
+### Events Footer stuff
+--------------------------------------------------------------*/
+.site-footer.nofp {
+  position: relative;
+  bottom: 0;
+  height: 274px; }
+  .site-footer.nofp .site-info {
+    position: absolute;
+    display: block;
+    bottom: 30px; }
 
 /*--------------------------------------------------------------
 
@@ -1355,15 +1366,6 @@ article.tile {
   .site-main, .site-main-nofp {
     padding-left: 0;
     padding-right: 0; } }
-
-/*--------------------------------------------------------------
-### Events Footer stuff
---------------------------------------------------------------*/
-.site-info {
-  height: 200px; }
-
-.site-footer.nofp {
-  position: relative; }
 
 /*--------------------------------------------------------------
 # Single post
