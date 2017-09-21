@@ -962,16 +962,17 @@ html, body {
 # Footer stuff
 --------------------------------------------------------------*/
 .site-info {
-  display: inline-block;
-  bottom: 20px;
   position: relative;
-  left: 70%;
-  z-index: 2;
-  text-align: center;
+  display: inline-block;
+  float: right;
+  right: 40px;
+  bottom: 20px;
   line-height: 1.1;
   font-size: medium; }
   .site-info p {
-    margin: 10px; }
+    text-align: left;
+    margin: 10px;
+    padding-left: 15px; }
 
 .site-footer {
   background-color: #FAAF42; }

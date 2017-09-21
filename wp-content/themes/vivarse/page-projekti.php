@@ -12,18 +12,19 @@
 		'posts_per_page' => 5,
 	);
 
-	$my_post_query = new WP_Query($my_post_query_args);
+	$my_project_query = new WP_Query($my_project_query_args);
 
-	if ( $my_post_query->have_posts() ) :
-		if ( is_front_page() ):
+get_header(); ?>
 
-			while( $my_post_query->have_posts() ) : $my_post_query->the_post();
-				get_template_part( 'template-parts/content', 'front-post' );
-			endwhile;
+	<main id="main" class="site-main">
 
-		else:
-			// echo "<h1 style='z-index: 15; position: absolute; top: 100px; left: 100px;'>NOT FIRST PAGE!</h1>";
-		endif;
+<?php
+
+	if ( $my_project_query->have_posts() ) :
+
+		while( $my_project_query->have_posts() ) : $my_project_query->the_post();
+			get_template_part( 'template-parts/content', 'front-post' );
+		endwhile;
 
 	else:
 		// echo "<h1 style='z-index: 15; position: absolute; top: 200px; left: 100px;'>I DON'T HAVE ANY POSTS</h1>";
