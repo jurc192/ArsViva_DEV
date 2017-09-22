@@ -38,13 +38,15 @@ get_header(); ?>
 	<main id="main" class="site-main">
 
 		<section class="section landing-art">
-			<video class="front-page-gif" muted loop autoplay data-keepplaying>
-			<source src="<?php echo get_bloginfo('template_url') . '/images/Intro_exp.mp4' ?>" type="video/mp4">
-		Your browser does not support the video tag.
+			<video id="intro-video" muted loop autoplay data-keepplaying data-autoplay>
+			<source src="<?php echo get_bloginfo('template_url').'/images/Intro_exp.mp4' ?>" type="video/mp4">
+			<img src="<?php echo get_bloginfo('template_url').'/images/home-fotka2.jpg' ?>" title="Your browser does not support the <video> tag">
 		</video>
-		</section>
+		<img id="intro-napis" src="<?php echo get_bloginfo('template_url').'/images/intro-napis.png' ?>" alt="Ars viva: Na krilih priložnosti za prihodnost">
+		<img id="intro-scroll" src="<?php echo get_bloginfo('template_url').'/images/scroll-white.png' ?>" alt="Puščica navzdol">
 
-		<!-- Upcoming events -->
+	</section>
+
 		<section class="section">
 			<div class="tile-wrapper">
 
