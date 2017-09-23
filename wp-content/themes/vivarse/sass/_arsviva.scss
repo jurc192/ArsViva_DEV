@@ -186,7 +186,11 @@ $footer-height: 200px;
 
 /*--------------------------------------------------------------
 # FRONT Upcoming event tiles
+
+
 --------------------------------------------------------------*/
+
+
 
 .tile-wrapper {
   overflow-x: scroll;
@@ -919,6 +923,25 @@ article.single {
   .entry-content {
     text-align: left;
   }
+}
+
+/*----event gallery--------*/
+.event-gallery-wrapper{
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
+	background-color: $color_arsviva_grey;
+	height: 500px;
+
+}
+.event-gallery{
+	display: inline-block;
+
+}
+.event-gallery-image{
+height:500px;
+object-fit:cover;
+
 }
 
 

@@ -102,8 +102,12 @@ endif;
   				'after'  => '</div>',
   			) );
   		?>
-
-  	</div><!-- .entry-content -->
+		<div>
+		<?php event_gallery_get_images($post_id);?>
+		</div>
+		
+	<!-- .entry-content
+	-->
 
 
   	<footer class="entry-footer">
