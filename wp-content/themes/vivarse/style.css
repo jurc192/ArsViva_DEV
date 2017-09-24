@@ -1518,6 +1518,11 @@ article.single {
 /*
   Social "side"bar share icons stuff
 */
+.widget-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: #0b5b8b; }
+
 .norm_row.sfsi_wDiv {
   left: 50%;
   margin-left: -112px; }
