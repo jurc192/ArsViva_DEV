@@ -1618,6 +1618,8 @@ aside.filter-sidebar {
     position: relative;
     top: 0;
     font-size: 0.9rem; }
+  .static.little-text.text-tile p {
+    top: 40px; }
   .static.huge-text.text-tile {
     padding-top: 35px; }
   .static.huge-text.text-tile p {

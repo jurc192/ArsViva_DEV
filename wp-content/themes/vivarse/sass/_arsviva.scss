@@ -1264,6 +1264,10 @@ aside.filter-sidebar {
     font-size: 0.9rem;
   }
 
+  &.little-text p {
+    top: 40px;
+  }
+
   &.huge-text {
     padding-top: 35px;
   }
