@@ -11,7 +11,7 @@
 			</div>
 			<div id="contact-info-div">
 				<p>
-				Podcerkev <br> 24 1386 Stari trg pri Ložu <br> Slovenija </p><p>
+				Podcerkev 24 <br> 1386 Stari trg pri Ložu <br> Slovenija </p><p>
 				TRR 03133-1000202343 SKB <br>
 				ID za DDV: SI39453600  </p><p>
 				tel: (386) (0)5 726 47 21 <br>
