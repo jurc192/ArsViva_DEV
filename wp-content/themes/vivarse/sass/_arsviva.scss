@@ -595,7 +595,7 @@ img.backgr {
 
   padding: 53px;
 
-  height: 70%;
+  // height: 70%;
   min-height: 500px;
 
   width: 600px;
@@ -1238,9 +1238,10 @@ aside.filter-sidebar {
   text-align: justify;
 
   h2 {
-    font-size: 1.8rem;
     font-weight: normal;
+    font-size: 1.5rem;
     margin-top: 0;
+    margin-bottom: 1rem;
   }
 
   p {
@@ -1249,57 +1250,56 @@ aside.filter-sidebar {
     font-size: 0.9rem;
   }
 
-}
+  &.huge-text {
+    padding-top: 35px;
+  }
 
+  &.huge-text p {
 
-@media screen and (max-height: 700px) {
-
-  .text-tile.static {
-
-    &.little-text p {
-      top: 40px;
-    }
-
-    &.huge-text {
-      padding-top: 30px;
-      p {
-        font-size: 0.8rem;
-        margin-bottom: 0.5rem;
-      }
-      h2 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-      }
-    }
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
 
   }
 
 }
 
+
+// big laptop
 @media screen and (min-height: 700px) and (max-height: 900px) {
 
   .text-tile.static {
 
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
     &.little-text p {
       top: 40px;
+      font-size: 1rem;
     }
 
     &.huge-text {
-      padding-top: 30px;
-      p {
-        font-size: 0.84rem;
-        margin-bottom: 0.5rem;
-      }
+      padding-top: 35px;
+    }
 
+    &.huge-text p {
+      font-size: 0.86rem;
     }
 
   }
 
 }
 
+// large
 @media screen and (min-height: 900px) {
 
   .text-tile.static {
+
+    padding-top: 53px;
 
     h2 {
       margin-top: 0;
@@ -1311,11 +1311,28 @@ aside.filter-sidebar {
       font-size: 1.1rem;
     }
 
+    &.little-text {
+      padding-top: 70px;
+    }
+
     &.little-text p {
       top: 60px;
     }
 
+    &.huge-text {
+
+      padding-top: 53px;
+
+      h2 {
+        font-size: 2.2rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+    }
+
   }
+
 
 }
 

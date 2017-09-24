@@ -1237,7 +1237,6 @@ img.backgr {
   overflow: hidden;
   vertical-align: middle;
   padding: 53px;
-  height: 70%;
   min-height: 500px;
   width: 600px;
   height: 500px;
@@ -1599,44 +1598,52 @@ aside.filter-sidebar {
 .static.text-tile {
   text-align: justify; }
   .static.text-tile h2 {
-    font-size: 1.8rem;
     font-weight: normal;
-    margin-top: 0; }
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem; }
   .static.text-tile p {
     position: relative;
     top: 0;
     font-size: 0.9rem; }
-
-@media screen and (max-height: 700px) {
-  .static.little-text.text-tile p {
-    top: 40px; }
   .static.huge-text.text-tile {
-    padding-top: 30px; }
-    .static.huge-text.text-tile p {
-      font-size: 0.8rem;
-      margin-bottom: 0.5rem; }
-    .static.huge-text.text-tile h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem; } }
+    padding-top: 35px; }
+  .static.huge-text.text-tile p {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem; }
 
 @media screen and (min-height: 700px) and (max-height: 900px) {
+  .static.text-tile h2 {
+    font-size: 2rem; }
+  .static.text-tile p {
+    font-size: 1rem; }
   .static.little-text.text-tile p {
-    top: 40px; }
+    top: 40px;
+    font-size: 1rem; }
   .static.huge-text.text-tile {
-    padding-top: 30px; }
-    .static.huge-text.text-tile p {
-      font-size: 0.84rem;
-      margin-bottom: 0.5rem; } }
+    padding-top: 35px; }
+  .static.huge-text.text-tile p {
+    font-size: 0.86rem; } }
 
 @media screen and (min-height: 900px) {
-  .static.text-tile h2 {
-    margin-top: 0;
-    font-size: 2.2rem; }
-  .static.text-tile p {
-    top: 0;
-    font-size: 1.1rem; }
-  .static.little-text.text-tile p {
-    top: 60px; } }
+  .static.text-tile {
+    padding-top: 53px; }
+    .static.text-tile h2 {
+      margin-top: 0;
+      font-size: 2.2rem; }
+    .static.text-tile p {
+      top: 0;
+      font-size: 1.1rem; }
+    .static.little-text.text-tile {
+      padding-top: 70px; }
+    .static.little-text.text-tile p {
+      top: 60px; }
+    .static.huge-text.text-tile {
+      padding-top: 53px; }
+      .static.huge-text.text-tile h2 {
+        font-size: 2.2rem; }
+      .static.huge-text.text-tile p {
+        font-size: 0.9rem; } }
 
 /*--------------------------------------------------------------
 # Git current branch popup
