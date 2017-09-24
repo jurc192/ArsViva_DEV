@@ -397,8 +397,18 @@ article.front-tile {
     }
   }
 
-  .entry-footer {
-    text-align: right;
+  .tile-footer {
+
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+
+    a {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: #006666;
+    }
+
   }
 
   .thumb {
@@ -945,8 +955,18 @@ article.tile {
 
   }
 
-  .entry-footer {
-    text-align: right;
+  .tile-footer {
+
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+
+    a {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: #006666;
+    }
+
   }
 
   .thumb {

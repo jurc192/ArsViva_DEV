@@ -1131,8 +1131,14 @@ article.front-tile {
     article.front-tile .tile-content.post {
       position: absolute;
       top: 320px; }
-  article.front-tile .entry-footer {
-    text-align: right; }
+  article.front-tile .tile-footer {
+    position: absolute;
+    bottom: 30px;
+    right: 30px; }
+    article.front-tile .tile-footer a {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: #006666; }
   article.front-tile .thumb {
     display: block;
     margin: 0 auto;
@@ -1415,8 +1421,14 @@ article.tile {
     article.tile .tile-content.post {
       position: absolute;
       top: 320px; }
-  article.tile .entry-footer {
-    text-align: right; }
+  article.tile .tile-footer {
+    position: absolute;
+    bottom: 30px;
+    right: 30px; }
+    article.tile .tile-footer a {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: #006666; }
   article.tile .thumb {
     width: 300px;
     height: 150px;

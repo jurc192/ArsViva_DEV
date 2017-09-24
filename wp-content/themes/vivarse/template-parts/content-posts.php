@@ -53,6 +53,7 @@
 	</div><!-- .entry-content -->
 
 	<footer class="tile-footer">
+    <a href=<?php echo esc_url( get_permalink()); ?> rel="bookmark">preberi več</a>
 		<!-- <a class="readmore" href="<?php echo esc_url( get_permalink()); ?>">Read more</a> -->
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
