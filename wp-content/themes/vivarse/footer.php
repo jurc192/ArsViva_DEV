@@ -8,7 +8,7 @@
  */
  ?>
 
-    <footer id="colophon" class="site-footer section fp-auto-height" data-anchor="noga">
+    <footer id="colophon" class="site-footer section fp-auto-height">
       <img src="<?php bloginfo('template_url'); ?>/images/noga_z_logotipi.png" alt="footer background">
       <div class="site-info">
     		<h3>Zavod za kulturno integracijo<br>in socializacijo družbenih skupin</h3>
