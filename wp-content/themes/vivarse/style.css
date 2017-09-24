@@ -1455,6 +1455,15 @@ article.tile {
   height: 100%;
   width: 60px; }
 
+.sidebar-icon {
+  transition: all 0.1s ease-in-out; }
+  .sidebar-icon:hover {
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    transform: scale(1.3); }
+
 @media screen and (max-height: 890px) and (max-width: 585px) {
   .social-media-sidebar {
     display: none; }
