@@ -336,6 +336,18 @@ margin-left: -30px; // half of img width
   padding: 1.5rem;
 }
 
+// Mobile size
+@media screen and (max-height: 890px) and (max-width: 585px) {
+  .label-wrapper {
+    height: auto;
+  }
+
+  .tile-wrapper::before,
+  .tile-wrapper::after {
+    display: none;
+  }
+}
+
 // Upcoming event ploščice
 article.front-tile {
 
@@ -842,10 +854,15 @@ img.backgr {
     }
 
     .entry-content {
+      top: 180px;
       text-align: justify;
     }
-  }
 
+    .entry-footer {
+      bottom: 20px;
+      right: 20px;
+    }
+  }
 
 }
 /*--------------------------------------------------------------

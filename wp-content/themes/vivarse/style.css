@@ -1096,6 +1096,13 @@ html, body {
   margin: 1rem 2rem;
   padding: 1.5rem; }
 
+@media screen and (max-height: 890px) and (max-width: 585px) {
+  .label-wrapper {
+    height: auto; }
+  .tile-wrapper::before,
+  .tile-wrapper::after {
+    display: none; } }
+
 article.front-tile {
   position: relative;
   display: inline-block;
@@ -1354,7 +1361,11 @@ img.backgr {
     .text-tile .posted-on {
       text-align: center; }
     .text-tile .entry-content {
-      text-align: justify; } }
+      top: 180px;
+      text-align: justify; }
+    .text-tile .entry-footer {
+      bottom: 20px;
+      right: 20px; } }
 
 /*--------------------------------------------------------------
 
@@ -1646,7 +1657,7 @@ aside.filter-sidebar {
       margin-top: 0;
       font-size: 2.2rem; }
     .static.text-tile p {
-      top: 0;
+      top: 30px;
       font-size: 1.1rem; }
     .static.little-text.text-tile {
       padding-top: 70px; }
