@@ -984,35 +984,6 @@ article.tile {
 }
 
 
-// ožje ploščice
-.text-tile-small {
-  position: relative;
-  margin: 0 auto;
-
-  overflow: hidden;
-  padding: 5%;
-
-  height: 80%;
-  width: 25%; // TEMP HACK, find proper way to do it
-  background-color: $color_arsviva_white;
-  box-shadow: 5px 5px 5px rgba(100, 100, 100, .25);
-
-  h2 {
-    font-size: 2rem;
-    margin-top: 0;
-  }
-
-  // Tip dogodka
-  p.type {
-    font-weight: bold;
-    font-size: 1.5rem;
-
-    margin: 0.3rem;
-  }
-
-}
-
-
 /*--------------------------------------------------------------
 # Sidebar
 --------------------------------------------------------------*/
@@ -1327,18 +1298,25 @@ aside.filter-sidebar {
 }
 
 @media screen and (min-height: 900px) {
-  .text-tile-static {
-    h2 {
-      margin-top: 1.8rem;
-    }
-    p {
-      top: 65px;
 
-      &.dosti-teksta {
-        top: 20px;
-      }
+  .text-tile.static {
+
+    h2 {
+      margin-top: 0;
+      font-size: 2.2rem;
     }
+
+    p {
+      top: 0;
+      font-size: 1.1rem;
+    }
+
+    &.little-text p {
+      top: 60px;
+    }
+
   }
+
 }
 
 /*--------------------------------------------------------------

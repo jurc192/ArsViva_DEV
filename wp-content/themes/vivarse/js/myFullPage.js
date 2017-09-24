@@ -16,5 +16,7 @@ jQuery(document).ready(function() {
 		scrollingSpeed: 700,
 		easingcss3: 'ease',
 
+		animateAnchor: false,
+
   });
 });

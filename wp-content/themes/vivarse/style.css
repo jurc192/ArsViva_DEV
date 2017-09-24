@@ -1440,23 +1440,6 @@ article.tile {
 .nav-links {
   margin: 30px auto; }
 
-.text-tile-small {
-  position: relative;
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 5%;
-  height: 80%;
-  width: 25%;
-  background-color: #fff;
-  box-shadow: 5px 5px 5px rgba(100, 100, 100, 0.25); }
-  .text-tile-small h2 {
-    font-size: 2rem;
-    margin-top: 0; }
-  .text-tile-small p.type {
-    font-weight: bold;
-    font-size: 1.5rem;
-    margin: 0.3rem; }
-
 /*--------------------------------------------------------------
 # Sidebar
 --------------------------------------------------------------*/
@@ -1646,12 +1629,14 @@ aside.filter-sidebar {
       margin-bottom: 0.5rem; } }
 
 @media screen and (min-height: 900px) {
-  .text-tile-static h2 {
-    margin-top: 1.8rem; }
-  .text-tile-static p {
-    top: 65px; }
-    .text-tile-static p.dosti-teksta {
-      top: 20px; } }
+  .static.text-tile h2 {
+    margin-top: 0;
+    font-size: 2.2rem; }
+  .static.text-tile p {
+    top: 0;
+    font-size: 1.1rem; }
+  .static.little-text.text-tile p {
+    top: 60px; } }
 
 /*--------------------------------------------------------------
 # Git current branch popup
