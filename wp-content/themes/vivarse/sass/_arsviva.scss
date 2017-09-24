@@ -219,7 +219,11 @@ $footer-height: 274px;
 
 /*--------------------------------------------------------------
 # FRONT Upcoming event tiles
+
+
 --------------------------------------------------------------*/
+
+
 
 .tile-wrapper {
   overflow-x: scroll;
@@ -702,14 +706,39 @@ width:calc(100vw - 60px);
 height:100%;
 }
 
-.front-page-gif{
+#intro-video{
 object-fit:cover;
+z-index: 1;
+position:absolute;
+top:60px;
+height:calc(100vh - 60px);
+width:calc(100vw - 60px);
+display:block;
 
 // Jure edit
-position: relative;
-width: 100%;
-height: 100%;
+// object-fit:cover;
+// position: relative;
+// width: 100%;
+// height: 100%;
 }
+
+#intro-napis{
+z-index:2;
+position:absolute;
+top:60px;
+right:0;
+height:calc(100vh - 60px);
+width:calc(100vw - 60px);
+}
+#intro-scroll{
+z-index: 2;
+position: absolute;
+height: 60px;
+width: 60px;
+top: 90%;
+left:50%;
+}
+
 
 /*--------------------------------------------------------------
 
@@ -919,6 +948,25 @@ article.single {
   .entry-content {
     text-align: left;
   }
+}
+
+/*----event gallery--------*/
+.event-gallery-wrapper{
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
+	background-color: $color_arsviva_grey;
+	height: 500px;
+
+}
+.event-gallery{
+	display: inline-block;
+
+}
+.event-gallery-image{
+height:500px;
+object-fit:cover;
+
 }
 
 
