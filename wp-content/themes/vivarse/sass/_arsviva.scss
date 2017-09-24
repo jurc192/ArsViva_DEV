@@ -746,9 +746,17 @@ img.backgr {
     position: relative;
 
     width: 100%;
+
     margin: 0 auto 20px auto;
 
     padding: 1.75rem;
+
+
+    &.static {
+      height: auto;
+      min-height: auto;
+      text-align: justify;
+    }
 
     .entry-title {
       text-align: center;
@@ -784,6 +792,13 @@ width:calc(100vw - 60px);
 height:100%;
 }
 
+// Mobile
+@media screen and (max-height: 890px) and (max-width: 585px) {
+
+  .htmlvideo {
+    width: 100%;
+  }
+}
 
 /*--------------------------------------------------------------
 
@@ -1326,6 +1341,14 @@ aside.filter-sidebar {
     cursor: pointer;
 }
 
+// Mobile
+@media screen and (max-height: 890px) and (max-width: 585px) {
+  #zemljevid-area {
+    width: 100%;
+    right: 0;
+  }
+}
+
 /*--------------------------------------------------------------
 # Contact form
 --------------------------------------------------------------*/
@@ -1357,7 +1380,7 @@ position: relative;
 }
 
 #contact-info-div{
-right:0;
+
 height: 50%;
 width: 45%;
 position: absolute;
@@ -1375,4 +1398,24 @@ top:0;
 width: 50%;
 height: 50%;
 font-size:150%;
+}
+
+// Mobile
+@media screen and (max-height: 890px) and (max-width: 585px) {
+
+  #contact-info-div {
+    width: 100%;
+    position: relative;
+    text-align: left;
+    right: 0;
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+  }
+
+  #contact-logo-div {
+    width: 100%;
+  }
 }

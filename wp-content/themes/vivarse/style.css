@@ -1299,6 +1299,10 @@ img.backgr {
     width: 100%;
     margin: 0 auto 20px auto;
     padding: 1.75rem; }
+    .text-tile.static, .static.text-tile-static {
+      height: auto;
+      min-height: auto;
+      text-align: justify; }
     .text-tile .entry-title, .text-tile-static .entry-title {
       text-align: center; }
     .text-tile .posted-on, .text-tile-static .posted-on {
@@ -1321,6 +1325,10 @@ iframe.google-maps {
 .htmlvideo {
   width: calc(100vw - 60px);
   height: 100%; }
+
+@media screen and (max-height: 890px) and (max-width: 585px) {
+  .htmlvideo {
+    width: 100%; } }
 
 /*--------------------------------------------------------------
 
@@ -1695,6 +1703,11 @@ aside.filter-sidebar {
   text-decoration: none;
   cursor: pointer; }
 
+@media screen and (max-height: 890px) and (max-width: 585px) {
+  #zemljevid-area {
+    width: 100%;
+    right: 0; } }
+
 /*--------------------------------------------------------------
 # Contact form
 --------------------------------------------------------------*/
@@ -1722,7 +1735,6 @@ input[type="submit"] {
   position: relative; }
 
 #contact-info-div {
-  right: 0;
   height: 50%;
   width: 45%;
   position: absolute;
@@ -1738,3 +1750,14 @@ input[type="submit"] {
   width: 50%;
   height: 50%;
   font-size: 150%; }
+
+@media screen and (max-height: 890px) and (max-width: 585px) {
+  #contact-info-div {
+    width: 100%;
+    position: relative;
+    text-align: left;
+    right: 0; }
+    #contact-info-div p {
+      margin-bottom: 1rem; }
+  #contact-logo-div {
+    width: 100%; } }

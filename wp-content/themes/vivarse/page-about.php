@@ -5,7 +5,7 @@
 	<?php get_sidebar(); ?>
 	<article class="section">
 		<img class="backgr" src="<?php the_field('ozavodu-slika1'); ?>" alt="Fotografija predstavitev">
-		<div class="text-tile">
+		<div class="text-tile static">
 			<?php the_field('ozavodu-predstavitev'); ?>
 		</div>
 	</article>
@@ -50,14 +50,14 @@
 
 	<article class="section">
 		<img class="backgr" src="<?php the_field('ozavodu-slika2'); ?>" alt="Fotografija poslanstvo">
-		<div class="text-tile">
+		<div class="text-tile static">
 			<?php the_field('ozavodu-poslanstvo'); ?>
 		</div>
 	</article>
 
 	<article class="section">
 		<img class="backgr" src="<?php the_field('ozavodu-slika3'); ?>" alt="Fotografija zgodovina">
-		<div class="text-tile">
+		<div class="text-tile static">
 			<?php the_field('ozavodu-zgodovina'); ?>
 		</div>
 	</article>

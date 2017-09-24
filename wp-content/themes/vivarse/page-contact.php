@@ -4,7 +4,7 @@
 	<?php get_sidebar(); ?>
 	<article class="section">
 		<iframe class ="google-maps"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125287.85042863067!2d14.320511176443311!3d45.70596760145985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4764cfaa2633ea05%3A0xbd1161b05b7f93b7!2sArs+Viva%2C+zavod+za+kulturno+integracijo+in+Socializacijo+dru%C5%BEbenih+skupin!5e1!3m2!1ssl!2ssi!4v1503920112206" allowfullscreen></iframe>
-		<div class="text-tile">
+		<div class="text-tile static">
 			<div id="contact-logo-div">
 				<img id="contact-logo" src="<?php bloginfo('template_url'); ?>/images/logo.png">
 				<p> Zavod za kulturno <br> integracijo in socializacijo <br> kulturnih skupin </p>
