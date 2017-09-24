@@ -1254,8 +1254,8 @@ iframe.google-maps {
 #intro-video {
   object-fit: cover;
   z-index: 1;
-  position: absolute;
   top: 60px;
+  position: absolute;
   height: calc(100vh - 60px);
   width: calc(100vw - 60px);
   display: block; }
@@ -1557,12 +1557,14 @@ aside.filter-sidebar {
   height: 100%; }
 
 #myImg1, #myImg2, #myImg3, #myImg4, #myImg5 {
-  height: 7%;
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
   cursor: pointer;
   transition: 0.3s;
   z-index: 2;
   position: absolute;
-  object-position: right; }
+  border-radius: 50%; }
 
 #myImg1 {
   /*Amfiteater*/
@@ -1581,13 +1583,13 @@ aside.filter-sidebar {
 
 #myImg4 {
   /*Dvorišče*/
-  right: 35%;
-  top: 37%; }
+  right: 39%;
+  top: 39%; }
 
 #myImg5 {
   /*Vhod*/
-  right: 38%;
-  top: 11%; }
+  right: 37%;
+  top: 8%; }
 
 .modal {
   display: none;
@@ -1603,10 +1605,12 @@ aside.filter-sidebar {
 .modal-content {
   position: relative;
   display: block;
-  width: 70%;
   height: 70%;
   top: 15%;
   left: 15%; }
+
+#modal-map {
+  width: 70%; }
 
 .modal-content {
   -webkit-animation-name: zoom;

@@ -12,39 +12,41 @@
 
 	<article style="background-color: black;" class="section">
 		<video class="htmlvideo" controls>
-		<source src="http://video.webmfiles.org/elephants-dream.webm" type="video/webm">
+		<source src="<?php bloginfo('template_url'); ?>/images/video-ozavodu.mp4" type="video/mp4">
 		Your browser does not support the video tag.
 		</video>
+	</article>
+	
+	<article class="section">
+		<img class="backgr" src="<?php the_field('ozavodu-slika4'); ?>" alt="Fotografija prostori">
+		<div class="text-tile">
+			<?php the_field('ozavodu-prostori'); ?>
+		</div>
 	</article>
 
 	<article class="section">
 		<div id="zemljevid-area">
 			<img id="zemljevid" src="<?php bloginfo('template_url'); ?>/images/zemljevid.png">
-			<img id="myImg1" src="<?php bloginfo('template_url'); ?>/images/sidebar-insta.png">
-			<img id="myImg2" src="<?php bloginfo('template_url'); ?>/images/sidebar-insta.png">
-			<img id="myImg3" src="<?php bloginfo('template_url'); ?>/images/sidebar-insta.png">
-			<img id="myImg4" src="<?php bloginfo('template_url'); ?>/images/sidebar-insta.png">
-			<img id="myImg5" src="<?php bloginfo('template_url'); ?>/images/sidebar-insta.png">
+			<img id="myImg1" src="<?php bloginfo('template_url'); ?>/images/zemljevid-amfiteater.jpg">
+			<img id="myImg3" src="<?php bloginfo('template_url'); ?>/images/zemljevid-apartma.jpg">
+			<img id="myImg4" src="<?php bloginfo('template_url'); ?>/images/zemljevid-dvorisce.jpg">
+			<img id="myImg5" src="<?php bloginfo('template_url'); ?>/images/zemljevid-vhod.jpg">
 		</div>
 		<div id="myModal1" class="modal">
 			<span id="close2" onclick="document.getElementById('myModal1').style.display='none'">&times;</span>
-			<iframe class="modal-content"  src="https://www.google.com/maps/embed?pb=!1m0!3m2!1ssl!2sus!4v1504112212072!6m8!1m7!1sCAoSLEFGMVFpcE5kNFlhLWRWM2JkS2ZLUUZpNHhrMkFZcVRPenBEZDFmZm0yVnNz!2m2!1d45.71218779648877!2d14.45914779806241!3f141.89!4f-3.8299999999999983!5f0.7820865974627469" frameborder="0" style="border:0" allowfullscreen></iframe>
-		</div>
-		<div id="myModal2" class="modal">
-			<span id="close2" onclick="document.getElementById('myModal2').style.display='none'">&times;</span>
-			<img class="modal-content" src="<?php bloginfo('template_url'); ?>/images/ozavodu-fotka1.jpg">
+			<img class="modal-content" src="<?php bloginfo('template_url'); ?>/images/zemljevid-amfiteater.jpg">
 		</div>
 		<div id="myModal3" class="modal">
 			<span id="close3" onclick="document.getElementById('myModal3').style.display='none'">&times;</span>
-			<img class="modal-content" src="<?php bloginfo('template_url'); ?>/images/ozavodu-fotka1.jpg">
+			<img class="modal-content" src="<?php bloginfo('template_url'); ?>/images/zemljevid-apartma.jpg">
 		</div>
 		<div id="myModal4" class="modal">
 			<span id="close4" onclick="document.getElementById('myModal4').style.display='none'">&times;</span>
-			<img class="modal-content" src="<?php bloginfo('template_url'); ?>/images/ozavodu-fotka1.jpg">
+			<img class="modal-content" src="<?php bloginfo('template_url'); ?>/images/zemljevid-dvorisce.jpg">
 		</div>
 		<div id="myModal5" class="modal">
 			<span id="close5" onclick="document.getElementById('myModal5').style.display='none'">&times;</span>
-			<img class="modal-content" src="<?php bloginfo('template_url'); ?>/images/ozavodu-fotka1.jpg">
+			<iframe class="modal-content" id="modal-map"src="https://www.google.com/maps/embed?pb=!1m0!3m2!1ssl!2sus!4v1504112212072!6m8!1m7!1sCAoSLEFGMVFpcE5kNFlhLWRWM2JkS2ZLUUZpNHhrMkFZcVRPenBEZDFmZm0yVnNz!2m2!1d45.71218779648877!2d14.45914779806241!3f141.89!4f-3.8299999999999983!5f0.7820865974627469" frameborder="0" style="border:0" allowfullscreen></iframe>
 		</div>
 	</article>
 
