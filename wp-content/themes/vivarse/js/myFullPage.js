@@ -5,7 +5,6 @@ jQuery(document).ready(function() {
 		fitToSection: false,
 
 		loopHorizontal: false,
-		// controlArrows: false,
 
     fixedElements: '#site-header, .screen-reader-text, .social-media-sidebar',
 

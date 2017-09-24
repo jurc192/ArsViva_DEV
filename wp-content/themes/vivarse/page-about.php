@@ -3,21 +3,21 @@
 <main id="main" class="site-main">
 
 	<?php get_sidebar(); ?>
-	<article class="section">
+	<article class="section" data-anchor="zgodovina">
 		<img class="backgr" src="<?php the_field('ozavodu-slika1'); ?>" alt="Fotografija predstavitev">
-		<div class="text-tile static">
+		<div class="text-tile static little-text">
 			<?php the_field('ozavodu-predstavitev'); ?>
 		</div>
 	</article>
 
-	<article style="background-color: black;" class="section">
+	<article style="background-color: black;" class="section" data-anchor="about_video">
 		<video class="htmlvideo" controls>
 		<source src="http://video.webmfiles.org/elephants-dream.webm" type="video/webm">
 		Your browser does not support the video tag.
 		</video>
 	</article>
 
-	<article class="section">
+	<article class="section" data-anchor="map">
 		<div id="zemljevid-area">
 			<img id="zemljevid" src="<?php bloginfo('template_url'); ?>/images/zemljevid.png">
 			<img id="myImg1" src="<?php bloginfo('template_url'); ?>/images/sidebar-insta.png">
@@ -48,14 +48,14 @@
 		</div>
 	</article>
 
-	<article class="section">
+	<article class="section" data-anchor="poslanstvo">
 		<img class="backgr" src="<?php the_field('ozavodu-slika2'); ?>" alt="Fotografija poslanstvo">
 		<div class="text-tile static">
 			<?php the_field('ozavodu-poslanstvo'); ?>
 		</div>
 	</article>
 
-	<article class="section">
+	<article class="section" data-anchor="zgodovina">
 		<img class="backgr" src="<?php the_field('ozavodu-slika3'); ?>" alt="Fotografija zgodovina">
 		<div class="text-tile static">
 			<?php the_field('ozavodu-zgodovina'); ?>
