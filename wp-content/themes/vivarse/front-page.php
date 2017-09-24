@@ -38,7 +38,7 @@ get_header(); ?>
 	<main id="main" class="site-main">
 
 		<section class="section landing-art">
-			<!-- class="front-page-gif" -> če se ga ne rabi več zbriši! -->
+
 			<video id="intro-video" muted loop autoplay data-keepplaying data-autoplay>
 			<source src="<?php echo get_bloginfo('template_url').'/images/Intro_exp.mp4' ?>" type="video/mp4">
 			<img src="<?php echo get_bloginfo('template_url').'/images/home-fotka2.jpg' ?>" title="Your browser does not support the <video> tag">

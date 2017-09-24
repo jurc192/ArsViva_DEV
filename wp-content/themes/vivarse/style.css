@@ -984,6 +984,15 @@ html, body {
     object-fit: contain;
     object-position: 0 0; }
 
+@media screen and (max-height: 890px) and (max-width: 585px) {
+  .site-info {
+    right: 10px;
+    bottom: 10px; }
+    .site-info h3 {
+      font-size: 0.8rem; }
+    .site-info p {
+      font-size: 0.8rem; } }
+
 /*--------------------------------------------------------------
 ### Events Footer stuff
 --------------------------------------------------------------*/
@@ -1004,24 +1013,47 @@ html, body {
 /*--------------------------------------------------------------
 # Landing image / video
 --------------------------------------------------------------*/
-.landing-art {
-  position: relative; }
-
-/*--------------------------------------------------------------
-# SCROLL arrow
---------------------------------------------------------------*/
-.scroll-arrow {
-  display: block;
+#intro-video {
+  object-fit: cover;
+  z-index: 1;
   position: absolute;
-  width: 40px;
-  height: 40px;
+  top: 60px;
+  height: calc(100vh - 60px);
+  width: calc(100vw - 60px);
+  display: block; }
+
+#intro-napis {
+  z-index: 2;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  height: calc(100vh - 60px);
+  width: calc(100vw - 60px);
+  object-fit: contain;
+  object-position: center; }
+
+#intro-scroll {
+  position: absolute;
+  z-index: 2;
+  width: 60px;
+  height: 60px;
   bottom: 30px;
   left: 50%;
-  margin-left: -20px; }
+  margin-left: -30px; }
+
+@media screen and (max-height: 890px) and (max-width: 585px) {
+  #intro-video {
+    width: 100%;
+    height: 100%; }
+  #intro-napis {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center; } }
 
 /*--------------------------------------------------------------
-# FRONT Upcoming event tiles
 
+# FRONT Upcoming event tiles
 
 --------------------------------------------------------------*/
 .tile-wrapper {
@@ -1102,6 +1134,17 @@ article.front-tile {
     article.front-tile .thumb {
       height: 200px;
       margin-top: 20px; } }
+
+@media screen and (max-height: 890px) and (max-width: 585px) {
+  .tile-wrapper {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space: normal;
+    width: 100%; }
+  article.front-tile {
+    display: block;
+    width: 100%;
+    margin: 1rem 0; } }
 
 /*--------------------------------------------------------------
 # Posts stuff @scroll template
@@ -1232,26 +1275,36 @@ img.backgr {
       right: 80px; } }
 
 @media screen and (max-height: 890px) and (max-width: 585px) {
+  article.section:nth-of-type(even) img.backgr,
+  article.section:nth-of-type(even) .text-tile,
+  article.section:nth-of-type(even) .text-tile-static,
+  article.section:nth-of-type(even) .text-tile-static {
+    right: 0;
+    object-position: center; }
+  article.section:nth-of-type(odd) img.backgr,
+  article.section:nth-of-type(odd) .text-tile,
+  article.section:nth-of-type(odd) .text-tile-static,
+  article.section:nth-of-type(odd) .text-tile-static {
+    left: 0;
+    object-position: center; }
   .filter-sidebar {
     display: none; }
-  article.event-slide.slide {
-    display: none; }
-  .fp-controlArrow.fp-next {
-    display: none; }
-  .slide.upcoming-mobile {
-    display: block; }
-    .slide.upcoming-mobile .text-tile, .slide.upcoming-mobile .text-tile-static {
-      right: 0; }
-  .backgr {
-    display: none; }
+  img.backgr {
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 300px; }
   .text-tile, .text-tile-static {
-    width: 90%; }
-  article.section:nth-of-type(even) .text-tile, article.section:nth-of-type(even) .text-tile-static,
-  article.section:nth-of-type(even) .text-tile-static {
-    right: 0; }
-  article.section:nth-of-type(odd) .text-tile, article.section:nth-of-type(odd) .text-tile-static,
-  article.section:nth-of-type(even) .text-tile-static {
-    left: 0; } }
+    position: relative;
+    width: 100%;
+    margin: 0 auto 20px auto;
+    padding: 1.75rem; }
+    .text-tile .entry-title, .text-tile-static .entry-title {
+      text-align: center; }
+    .text-tile .posted-on, .text-tile-static .posted-on {
+      text-align: center; }
+    .text-tile .entry-content, .text-tile-static .entry-content {
+      text-align: justify; } }
 
 /*--------------------------------------------------------------
 
@@ -1268,31 +1321,6 @@ iframe.google-maps {
 .htmlvideo {
   width: calc(100vw - 60px);
   height: 100%; }
-
-#intro-video {
-  object-fit: cover;
-  z-index: 1;
-  position: absolute;
-  top: 60px;
-  height: calc(100vh - 60px);
-  width: calc(100vw - 60px);
-  display: block; }
-
-#intro-napis {
-  z-index: 2;
-  position: absolute;
-  top: 60px;
-  right: 0;
-  height: calc(100vh - 60px);
-  width: calc(100vw - 60px); }
-
-#intro-scroll {
-  z-index: 2;
-  position: absolute;
-  height: 60px;
-  width: 60px;
-  top: 90%;
-  left: 50%; }
 
 /*--------------------------------------------------------------
 
