@@ -7,7 +7,7 @@
  * @package vivarse
  */
 
- 
+
 if ( ! function_exists( 'vivarse_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -130,6 +130,16 @@ function vivarse_widgets_init() {
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
+
+  register_sidebar( array(
+    'name'          => esc_html__( 'SocialShare bar', 'vivarse' ),
+    'id'            => 'sidebar-social',
+    'description'   => esc_html__( 'Add widgets here.', 'vivarse' ),
+    'before_widget' => '<section id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3 class="widget-title">',
+    'after_title'   => '</h3>',
+  ) );
 
 }
 add_action( 'widgets_init', 'vivarse_widgets_init' );
@@ -281,22 +291,22 @@ add_action('pre_get_posts', 'vivarse_filter_posts');
 
 
 /* Primoz - If there are images attached to the post, make a horizontal gallery.
-	img title used as alt text 
+	img title used as alt text
 	*/
 function event_gallery_get_images($post_id) {
 	global $post;
-	
+
 	$thumbnail_ID = get_post_thumbnail_id();
-	$images = get_children( array('post_parent' => $post_id, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => 'ASC', 'orderby' => 'menu_order ID') );	
-	
+	$images = get_children( array('post_parent' => $post_id, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => 'ASC', 'orderby' => 'menu_order ID') );
+
 
 	if ($images) :
 		echo '<br><br> <div class="event-gallery-wrapper">';
-		
+
 		foreach ($images as $attachment_id => $image) :
-		
-			if ( $image->ID != $thumbnail_ID ) : 
-			
+
+			if ( $image->ID != $thumbnail_ID ) :
+
 				$img_alt = $image->post_title;
 				$src_array = image_downsize( $image->ID, 'large' );
 				$img_url = $src_array[0];
@@ -310,8 +320,3 @@ function event_gallery_get_images($post_id) {
 		echo '</div><!-- End gallery -->';
 	endif;
 }
- 
-
-
-
-

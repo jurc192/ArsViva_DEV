@@ -31,6 +31,11 @@ get_header('nofp'); ?>
 	endwhile;
 	?>
 
+
+	<?php if ( is_active_sidebar( 'sidebar-social' ) ) : ?>
+		<?php dynamic_sidebar( 'sidebar-social' ); ?>
+	<?php endif; ?>
+	
 	</main><!-- #main -->
 
 <?php

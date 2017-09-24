@@ -1515,6 +1515,13 @@ article.single {
   height: 500px;
   object-fit: cover; }
 
+/*
+  Social "side"bar share icons stuff
+*/
+.norm_row.sfsi_wDiv {
+  left: 50%;
+  margin-left: -112px; }
+
 /*--------------------------------------------------------------
 # Filter sidebar stuff
 --------------------------------------------------------------*/
