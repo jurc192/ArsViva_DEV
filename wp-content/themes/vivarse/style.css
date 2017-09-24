@@ -1004,7 +1004,25 @@ html, body {
 
 /*--------------------------------------------------------------
 # FRONT Upcoming event tiles
+
+width: 100%;
+	float: left;
+
 --------------------------------------------------------------*/
+.event-gallery-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  background-color: #e7e7e7;
+  height: 500px; }
+
+.event-gallery {
+  display: inline-block; }
+
+.event-gallery-image {
+  height: 500px;
+  object-fit: cover; }
+
 .tile-wrapper {
   overflow-x: scroll;
   overflow-y: hidden;

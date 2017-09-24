@@ -7,6 +7,7 @@
  * @package vivarse
  */
 
+ 
 if ( ! function_exists( 'vivarse_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -276,3 +277,41 @@ function vivarse_filter_posts($query) {
 
 }
 add_action('pre_get_posts', 'vivarse_filter_posts');
+
+
+
+/* Primoz - If there are images attached to the post, make a horizontal gallery.
+	img title used as alt text 
+	*/
+function event_gallery_get_images($post_id) {
+	global $post;
+	
+	$thumbnail_ID = get_post_thumbnail_id();
+	$images = get_children( array('post_parent' => $post_id, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => 'ASC', 'orderby' => 'menu_order ID') );	
+	
+
+	if ($images) :
+		echo '<br><br> <div class="event-gallery-wrapper">';
+		
+		foreach ($images as $attachment_id => $image) :
+		
+			if ( $image->ID != $thumbnail_ID ) : 
+			
+				$img_alt = $image->post_title;
+				$src_array = image_downsize( $image->ID, 'large' );
+				$img_url = $src_array[0];
+				?>
+					<div class="event-gallery">
+						<img class="event-gallery-image" src="<?php echo $img_url; ?>" alt="<?php echo $img_alt; ?>">
+					</div>
+				<?php
+		endif;
+		endforeach;
+		echo '</div><!-- End gallery -->';
+	endif;
+}
+ 
+
+
+
+
