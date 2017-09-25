@@ -19,7 +19,7 @@
 
 	<article class="section">
 		<img class="backgr" src="<?php the_field('ozavodu-slika4'); ?>" alt="Fotografija prostori">
-		<div class="text-tile">
+		<div class="text-tile static">
 			<?php the_field('ozavodu-prostori'); ?>
 		</div>
 	</article>
