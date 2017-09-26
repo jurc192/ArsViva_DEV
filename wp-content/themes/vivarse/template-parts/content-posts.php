@@ -18,19 +18,19 @@
    $thumb_id = get_post_thumbnail_id();
    $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail', false);
    $thumb_url = $thumb_url_array[0];
+   $thumb_alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
  else:
    $thumb_url = get_bloginfo('template_url') . "/images/home-fotka1.jpg";
+   $thumb_alt = "Post / Event image";
  endif;
-
-
 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('tile'); ?>>
 	<header class="tile-header">
 
-		<!-- Event thumbnail -->
-		<img class="thumb" src="<?php echo $thumb_url?>" alt="fotka1">
+    <!-- Event thumbnail -->
+    <?php the_post_thumbnail('medium', array('class' => 'thumb', 'alt' => $thumb_alt)); ?>
 
 		<!-- Event title -->
 		<h2 class="tile-title">
