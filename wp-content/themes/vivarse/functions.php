@@ -131,6 +131,7 @@ function vivarse_widgets_init() {
 		'after_title'   => '</h3>',
 	) );
 
+	/* JURE EDIT: Social share bar */
   register_sidebar( array(
     'name'          => esc_html__( 'SocialShare bar', 'vivarse' ),
     'id'            => 'sidebar-social',
