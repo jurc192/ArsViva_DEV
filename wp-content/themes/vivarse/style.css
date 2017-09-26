@@ -1462,6 +1462,12 @@ article.tile {
   height: 100%;
   width: 60px; }
 
+.sidebar-icon-wrapper {
+  position: relative;
+  height: 200px;
+  top: 50%;
+  margin-top: -100px; }
+
 .sidebar-icon {
   transition: all 0.1s ease-in-out; }
   .sidebar-icon:hover {

@@ -1004,16 +1004,24 @@ article.tile {
 /*--------------------------------------------------------------
 # Sidebar
 --------------------------------------------------------------*/
-.social-media-sidebar{
-position: fixed;
-right: 0;
-top: 0;
-bottom: 0;
-background-color: #CCC;
-height: 100%;
-width: 60px;
+.social-media-sidebar {
+
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #CCC;
+  height: 100%;
+  width: 60px;
 }
 
+.sidebar-icon-wrapper {
+  position: relative;
+  height: 200px;
+
+  top: 50%;
+  margin-top: -100px;
+}
 
 .sidebar-icon {
 
