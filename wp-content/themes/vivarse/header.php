@@ -26,7 +26,7 @@
 	<nav id="site-navigation" class="main-navigation">
 
 		<a class="site-logo" href="<?php echo get_site_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="ArsViva logo"></a>
-		<button class="menu-toggle" style="background-image: url(<?php bloginfo('template_url'); ?>/images/ic_menu_black_24px.svg);" aria-controls="primary-menu" aria-expanded="false"></button>
+		<button class="menu-toggle" style="background-image: url(<?php bloginfo('template_url'); ?>/images/ic_menu_black_24px.svg);" aria-controls="primary-menu" aria-expanded="false" alt="menu toggle"></button>
 		<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
