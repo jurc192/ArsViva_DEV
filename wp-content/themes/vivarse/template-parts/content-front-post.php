@@ -6,10 +6,20 @@
  *
  * @package vivarse
  */
+
+ if (has_post_thumbnail()) :
+   $thumb_id = get_post_thumbnail_id();
+   $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'large', false);
+   $thumb_url = $thumb_url_array[0];
+ else:
+   $thumb_url = get_bloginfo('template_url') . "/images/home-fotka1.jpg";
+ endif;
+
  ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('section'); ?>>
-  <img class="backgr" src="<?php bloginfo('template_url'); ?>/images/home-fotka1.jpg" alt="fotka1">
+  <!-- <img class="backgr" src="<?php bloginfo('template_url'); ?>/images/home-fotka1.jpg" alt="fotka1"> -->
+  <img class="backgr" src="<?php echo $thumb_url?>" alt="article image">
 
   <div class="text-tile">
 
