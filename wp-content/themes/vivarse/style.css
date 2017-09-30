@@ -1453,6 +1453,9 @@ article.tile {
 /*--------------------------------------------------------------
 # Sidebar
 --------------------------------------------------------------*/
+.access-icon {
+  padding: 10px; }
+
 .social-media-sidebar {
   position: fixed;
   right: 0;

@@ -24,5 +24,5 @@
 			</a>
 		</div>
 
-		<!-- <img onclick="toggleMode()" class="sidebar-icon" src="<?php bloginfo('template_url'); ?>/images/sidebar-google.png" alt="toggle accessibility mode"> -->
+		<img onclick="toggleMode()" class="access-icon sidebar-icon" src="<?php bloginfo('template_url'); ?>/images/accessibility3.png" alt="toggle accessibility mode">
 	</aside>
