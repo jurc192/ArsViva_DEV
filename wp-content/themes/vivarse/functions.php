@@ -160,6 +160,7 @@ function vivarse_scripts() {
 	wp_enqueue_script( 'textFill', get_template_directory_uri() . '/js/jquery.textfill.min.js', array('jquery'), '1', true );
 
 	wp_enqueue_script( 'filter-sidebar', get_template_directory_uri() . '/js/filter-sidebar.js', array('jquery'), '1', true );
+	wp_enqueue_script( 'accessibility', get_template_directory_uri() . '/js/accessibility.js', array('jquery'), '1', true );
 	wp_enqueue_script( 'git-popup', get_template_directory_uri() . '/js/git-popup.js', array(), '1', true );
 	wp_enqueue_script( 'my-fullPage-settings', get_template_directory_uri() . '/js/myFullPage.js', array('jquery', 'fullPage'), '1', true );
 	wp_enqueue_script( 'my-textFill', get_template_directory_uri() . '/js/myTextFill.js', array('jquery'), '1', true );

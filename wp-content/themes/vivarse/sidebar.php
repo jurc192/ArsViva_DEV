@@ -24,5 +24,9 @@
 			</a>
 		</div>
 
-		<img onclick="toggleMode()" class="access-icon sidebar-icon" src="<?php bloginfo('template_url'); ?>/images/accessibility3.png" alt="toggle accessibility mode">
+		<img id="accToggle" onclick="toggleMode()" class="access-icon sidebar-icon" src="<?php bloginfo('template_url'); ?>/images/accessibility3.png" alt="toggle accessibility mode">
 	</aside>
+
+	<!-- <div class="accessibility-menu">
+		<img onclick="toggleMode()" class="access-icon sidebar-icon" src="<?php bloginfo('template_url'); ?>/images/ic_mouse_black_24dp_2x.png" alt="toggle accessibility mode">
+	</div> -->
