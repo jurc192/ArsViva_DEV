@@ -1456,9 +1456,21 @@ article.tile {
 .access-icon {
   padding: 10px; }
 
-.accessibility-menu {
+.contrast-icon {
+  display: block;
+  padding: 10px;
+  margin: 0 auto; }
+
+.accessibility-popup {
   position: fixed;
-  right: 100px; }
+  display: none;
+  z-index: 999;
+  top: 60px;
+  right: 60px;
+  /* sidebar width */
+  padding: 60px 20px;
+  width: 100px;
+  background-color: #e7e7e7; }
 
 .social-media-sidebar {
   position: fixed;

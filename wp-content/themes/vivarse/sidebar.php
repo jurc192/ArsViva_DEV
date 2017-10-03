@@ -24,9 +24,10 @@
 			</a>
 		</div>
 
-		<img id="accToggle" onclick="toggleMode()" class="access-icon sidebar-icon" src="<?php bloginfo('template_url'); ?>/images/accessibility3.png" alt="toggle accessibility mode">
+		<img onclick="toggleAcc()" class="access-icon sidebar-icon" src="<?php bloginfo('template_url'); ?>/images/accessibility3.png" alt="toggle accessibility mode">
 	</aside>
 
-	<!-- <div class="accessibility-menu">
+	<div id="accPopup" class="accessibility-popup" style="display: none;">
 		<img onclick="toggleMode()" class="access-icon sidebar-icon" src="<?php bloginfo('template_url'); ?>/images/ic_mouse_black_24dp_2x.png" alt="toggle accessibility mode">
-	</div> -->
+		<img id="is_normal_contrast" class="contrast-icon toggle-contrast sidebar-icon" src="<?php bloginfo('template_url'); ?>/images/contrast.png" aria-pressed="false" alt="toggle accessibility mode">
+	</div>

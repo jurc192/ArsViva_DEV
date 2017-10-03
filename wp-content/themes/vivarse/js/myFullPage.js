@@ -14,7 +14,7 @@ function initFullpage() {
 		responsiveWidth: 585,
 		fitToSection: false,
 		loopHorizontal: false,
-		fixedElements: '#site-header, .screen-reader-text, .social-media-sidebar',
+		fixedElements: '#site-header, .screen-reader-text, .social-media-sidebar, #accPopup',
 		paddingTop: 60,
 		fitToSection: false,
 		fitToSectionDelay: 10000,
