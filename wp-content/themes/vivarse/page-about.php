@@ -12,7 +12,7 @@
 
 	<article style="background-color: black;" class="section">
 		<video class="htmlvideo" controls>
-		<source src="<?php bloginfo('template_url'); ?>/images/video-ozavodu.mp4" type="video/mp4">
+		<source src="<?php bloginfo('template_url'); ?>/images/finalka_1.mp4" type="video/mp4">
 		Your browser does not support the video tag.
 		</video>
 	</article>
