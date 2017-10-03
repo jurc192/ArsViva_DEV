@@ -1,6 +1,31 @@
 CHANGELOG
 =========
 
+= Version 7.0 =
+* minor textual change
+* minor change in file vsel-single
+
+= Version 6.9 =
+* major update
+* new: change labels via the settingspage
+* new: display start date and end date on the same line via the settingspage
+* removed label attributes
+* removed attribute to display start date and end date on the same line
+* attributes mentioned above where not supported on the single event page
+* updated most files
+* updated readme file
+* new screenshots on wp.org
+
+= Version 6.8 =
+* reduce space in widget and mobile screen: the featured image is not full width anymore
+* but you can still undo this, using some custom CSS
+* new: activate link to single event for page or widget separately
+* new: activate excerpt for page or widget separately
+* you might have to reset both settings on the settingspage
+* new: added CSS class to start date and end date on the same line: vsel-meta-combined-date
+* increased the custom excerpt lenght from 150 to 250 characters
+* updated most files
+
 = Version 6.7 =
 * major update
 * changed and simplyfied code and file structure regarding the shortcodes
@@ -10,7 +35,7 @@ CHANGELOG
 * added files vsel-list and vsel-widget-list
 * new: added extra settings to hide elements
 * new: added event ID to each event in list
-* new: shortcode attribute to display start date and end date on 1 line
+* new: shortcode attribute to display start date and end date on the same line
 * new: shortcode attribute to set the image size that is being used
 * for more info please check readme file
 * changed default image width from 40% into max 40% (to avoid blurry image)

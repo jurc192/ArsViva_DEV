@@ -34,6 +34,20 @@ if ( $keep != 'yes' ) {
 	delete_option( 'vsel-setting-10' );
 	delete_option( 'vsel-setting-11' );
 	delete_option( 'vsel-setting-12' );
+	delete_option( 'vsel-setting-13' );
+	delete_option( 'vsel-setting-14' );
+	delete_option( 'vsel-setting-15' );
+	delete_option( 'vsel-setting-16' );
+	delete_option( 'vsel-setting-17' );
+	delete_option( 'vsel-setting-18' );
+	delete_option( 'vsel-setting-19' );
+	delete_option( 'vsel-setting-20' );
+	delete_option( 'vsel-setting-21' );
+	delete_option( 'vsel-setting-22' );
+	delete_option( 'vsel-setting-23' );
+	delete_option( 'vsel-setting-24' );
+	delete_option( 'vsel-setting-25' );
+	delete_option( 'vsel-setting-26' );
 
 	// Set global
 	global $wpdb;

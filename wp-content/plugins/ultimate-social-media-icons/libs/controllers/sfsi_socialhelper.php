@@ -47,8 +47,12 @@ class sfsi_SocialHelper
 	function sfsi_getlinkedin_follower($ln_company,$APIsettings)
 	{      
 	   require_once(SFSI_DOCROOT.'/helpers/linkedin-api/linkedin-api.php');
-	   $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https" : "http";
-	   $url=$scheme.'://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+
+	   // $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https" : "http";
+	   // $url=$scheme.'://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+
+	   $url= sfsi_get_current_page_url();
+
 	   $linkedin = new LinkedIn(
 			$APIsettings['ln_api_key'],
 			$APIsettings['ln_secret_key'],
@@ -178,8 +182,11 @@ class sfsi_SocialHelper
 	/* get addthis counts  */
 	function sfsi_get_atthis()
 	{
-		$scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https" :"http";
-		$url=$scheme.'://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+		// $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https" :"http";
+		// $url=$scheme.'://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+
+		$url= sfsi_get_current_page_url();
+
 		$json_string = $this->file_get_contents_curl('http://api-public.addthis.com/url/shares.json?url='.$url);
 		$json = json_decode($json_string, true);
 		return isset($json['shares'])? $this->format_num((int) $json['shares']):0;   
@@ -216,9 +223,11 @@ class sfsi_SocialHelper
 	/* send curl request   */
 	private function file_get_contents_curl($url)
 	{
+		$user_Agent = (isset($_SERVER['HTTP_USER_AGENT'])) ? $_SERVER['HTTP_USER_AGENT'] :'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.1.4322)';
+		
 		$ch=curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url);
-		curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+		curl_setopt($ch, CURLOPT_USERAGENT, $user_Agent);
 		curl_setopt($ch, CURLOPT_FAILONERROR, 1);
 		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, false);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);

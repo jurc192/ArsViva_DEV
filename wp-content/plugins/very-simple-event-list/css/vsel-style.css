@@ -46,8 +46,6 @@
 
 /* Widget image and info section */
 .vsel_widget #vsel .vsel-image-info {width:100%; clear:both; float:left;}
-.vsel_widget #vsel .vsel-image {max-width:100%; clear:both; float:left; margin:0 0 0.5em 0;}
-.vsel_widget #vsel .vsel-info {clear:both;}
 
 /* Widget link to all events */
 .vsel_widget .vsel-widget-link {clear:both;}
@@ -56,6 +54,4 @@
 @media screen and (max-width:767px) { 
 	#vsel .vsel-meta {width:100%; clear:both;}
 	#vsel .vsel-image-info {width:100%; clear:both; float:left;}
-	#vsel .vsel-image {max-width:100%; clear:both; float:left; margin:0.3em 0 0.3em 0;}
-	#vsel .vsel-info {clear:both;}
 }

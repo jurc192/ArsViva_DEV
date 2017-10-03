@@ -59,7 +59,7 @@ class vsel_widget extends WP_Widget {
 		<input class="widefat" id="<?php echo $this->get_field_id( 'vsel_all_events_label' ); ?>" name="<?php echo $this->get_field_name( 'vsel_all_events_label' ); ?>" type="text" maxlength='100' placeholder="<?php _e( 'Example: All events', 'very-simple-event-list' ); ?>" value="<?php echo esc_attr( $vsel_all_events_label ); ?>">
  		</p> 
 		<p><?php _e( 'Info about attributes', 'very-simple-event-list' ); ?>: <a href="https://wordpress.org/plugins/very-simple-event-list" target="_blank"><?php _e( 'click here', 'very-simple-event-list' ); ?></a></p>
-		<p><?php _e( 'Hide elements in widget', 'very-simple-event-list' ); ?>: <a href="<?php echo admin_url( 'options-general.php?page=vsel' ); ?>"><?php _e( 'click here', 'very-simple-event-list' ); ?></a></p>
+		<p><?php _e( 'Settings', 'very-simple-event-list' ); ?>: <a href="<?php echo admin_url( 'options-general.php?page=vsel' ); ?>"><?php _e( 'click here', 'very-simple-event-list' ); ?></a></p>
 		<?php 
 	}
 

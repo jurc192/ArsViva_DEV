@@ -1,7 +1,7 @@
 === Very Simple Event List ===
 Contributors: Guido07111975
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=donation%40guidovanderleest%2enl
-Version: 6.7
+Version: 7.0
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Requires at least: 4.6
@@ -40,7 +40,7 @@ Via Settings > VSEL you can:
 * Keep events and settings when uninstalling plugin
 * Show a summary instead of all content
 * Link title to the event page
-* Hide elements in event list
+* Change or hide event labels
 
 = Shortcode attributes =
 You can display events from certain categories. You should enter the category slug. The slug is not always the same as the name of the category. 
@@ -56,25 +56,9 @@ The default order of the upcoming and current events list is ascending. The defa
 * Change order from ascending to descending: `[vsel order=desc]`
 * Change order from descending to ascending: `[vsel order=asc]`
 
-You can change or hide labels using an attribute.
+You can change the text that is being displayed in case of no events.
 
-Change labels:
-
-* Change date label: `[vsel date_label="Event date: %s"]`
-* Change start date label: `[vsel start_label="Event start date: %s"]`
-* Change end date label: `[vsel end_label="Event end date: %s"]`
-* Start date and end date on 1 line: `[vsel combine_dates="true"]`
-* Change time label: `[vsel time_label="Event time: %s"]`
-* Change location label: `[vsel location_label="Event location: %s"]`
-* Change no events text: `[vsel no_events_text="your text here"]`
-
-Hide labels (only display the variable itself):
-
-* Hide date label: `[vsel date_label="%s"]`
-* Hide start date label: `[vsel start_label="%s"]`
-* Hide end date label: `[vsel end_label="%s"]`
-* Hide time label: `[vsel time_label="%s"]`
-* Hide location label: `[vsel location_label="%s"]`
+* Example: `[vsel no_events_text="your text here"]`
 
 You can change the default image size that is being used to display the featured image.
 
@@ -84,13 +68,13 @@ WordPress creates duplicates in different sizes upon upload. These sizes can be 
 * Medium sized image: `[vsel image_size="medium"]`
 * Large sized image: `[vsel image_size="large"]`
 
-Note: I have set the featured image width at max 40% of the total event width. And for widget and mobile screen at max 100% (full width).
+Note: I have set the featured image width at max 40% of the event content area.
 
-Note: The featured image width in a single event is handled by your theme.
+Note: The featured image size in a single event is handled by your theme.
 
 You can add multiple attributes.
 
-* Example: `[vsel posts_per_page=5 date_label="Event date: %s"]`
+* Example: `[vsel posts_per_page=5 image_size="medium"]`
 
 = Widget attributes =
 The widget supports the same attributes. Enter them without shortcode itself and without brackets.
@@ -99,22 +83,11 @@ The widget supports the same attributes. Enter them without shortcode itself and
 * Set amount of events per page: `posts_per_page=5`
 * Change order from ascending to descending: `order=desc`
 * Change order from descending to ascending: `order=asc`
-* Change date label: `date_label="Event date: %s"`
-* Change start date label: `start_label="Event start date: %s"`
-* Change end date label: `end_label="Event end date: %s"`
-* Start date and end date on 1 line: `combine_dates="true"`
-* Change time label: `time_label="Event time: %s"`
-* Change location label: `location_label="Event location: %s"`
 * Change no events text: `no_events_text="your text here"`
-* Hide date label: `date_label="%s"`
-* Hide start date label: `start_label="%s"`
-* Hide end date label: `end_label="%s"`
-* Hide time label: `time_label="%s"`
-* Hide location label: `location_label="%s"`
 * Small sized image: `image_size="small"`
 * Medium sized image: `image_size="medium"`
 * Large sized image: `image_size="large"`
-* Multiple attributes: `posts_per_page=5 date_label="Event date: %s"`
+* Multiple attributes: `posts_per_page=5 image_size="medium"`
 
 = Single event =
 Template file single.php (and in some cases single-event.php) is being used to display a single event. This file is located in your theme folder.
@@ -155,7 +128,7 @@ Please check Description section for installation info.
 = How can I change date format? =
 You can set date format in WP dashboard via Settings > General.
 
-The datepicker and date input field in dashboard only support 2 numeric date formats: "day-month-year" (30-01-2016) and "year-month-day" (2016-01-30).
+The datepicker and date input field in WP dashboard only support 2 numeric date formats: "day-month-year" (30-01-2016) and "year-month-day" (2016-01-30).
 
 If the date format set in WP dashboard is not the same, it will be changed into 1 of the 2 above.
 
@@ -163,13 +136,6 @@ If the date format set in WP dashboard is not the same, it will be changed into 
 Plugin uses the WP Dashboard language, set in Settings > General.
 
 If plugin language pack is not available, language fallback will be English.
-
-= How do I style the event list? =
-It mostly depends on the stylesheet of your theme.
-
-You can change style (CSS) using for example the [Very Simple Custom Style](https://wordpress.org/plugins/very-simple-custom-style) plugin.
-
-For non CSS related customizations of the single event display you can add a file called single-event.php in your theme folder and customize this file to your needs.
 
 = What do you mean with current events? =
 Current events are events I can visit today. So this can be an one-day or multi-day event.
@@ -218,12 +184,12 @@ This might be caused because the slug of your page ends with "event". This cause
 You should change this slug into something else. The slug is not always the same as the name of the page.
 
 = Why a 404 (nothing found) when I click the title link? =
-This is mostly caused by a wrong permalink setting. Please reset it via Settings > Permalinks.
+This is mostly caused by the permalink settings. Please reset the permalink via Settings > Permalinks.
 
 = Can I change or hide event labels? =
 Yes, this is possible.
 
-You can find more info about this at the Description section.
+You can change or hide event labels via Settings > VSEL.
 
 = What does "Link to more info" mean? =
 While adding an event you can add a link (an URL) to a post, page or website.
@@ -268,6 +234,31 @@ Please open a topic in plugin forum.
 
 
 == Changelog ==
+= Version 7.0 =
+* minor textual change
+* minor change in file vsel-single
+
+= Version 6.9 =
+* major update
+* new: change labels via the settingspage
+* new: display start date and end date on the same line via the settingspage
+* removed label attributes
+* removed attribute to display start date and end date on the same line
+* attributes mentioned above where not supported on the single event page
+* updated most files
+* updated readme file
+* new screenshots on wp.org
+
+= Version 6.8 =
+* reduce space in widget and mobile screen: the featured image is not full width anymore
+* but you can still undo this, using some custom CSS
+* new: activate link to single event for page or widget separately
+* new: activate excerpt for page or widget separately
+* you might have to reset both settings on the settingspage
+* new: added CSS class to start date and end date on the same line: vsel-meta-combined-date
+* increased the custom excerpt lenght from 150 to 250 characters
+* updated most files
+
 = Version 6.7 =
 * major update
 * changed and simplyfied code and file structure regarding the shortcodes
@@ -277,43 +268,12 @@ Please open a topic in plugin forum.
 * added files vsel-list and vsel-widget-list
 * new: added extra settings to hide elements
 * new: added event ID to each event in list
-* new: shortcode attribute to display start date and end date on 1 line
+* new: shortcode attribute to display start date and end date on the same line
 * new: shortcode attribute to set the image size that is being used
 * for more info please check readme file
 * changed default image width from 40% into max 40% (to avoid blurry image)
 * changed default image width in widget from 100% into max 100% (to avoid blurry image)
 * updated most files
-
-= Version 6.6 =
-* fix: used wrong CSS class for several date fields
-* added extra CSS class to all date fields for better customization
-* updated file vsel-style
-* updated all shortcode files
-* best practice: removed closing PHP tag from most files
-* best practice: added newline at end of most files
-
-= Version 6.5 =
-* events are now listed on start date instead of end date
-* removed support for events without start date
-* these events are posted with version 4.0 and older
-* this also means they are not listed anymore
-* to solve this please reset date for each of these events
-* new attribute to change no events text: no_events_text
-* for more info please check readme file
-* updated all shortcode files
-* updated readme file
-* updated pot file
-
-= Version 6.4 =
-* fixed pagination when event list is on static front page (thanks BC and Alan)
-* changed custom query names into unique ones to avoid conflict
-* wrapped meta variables date, time and location in span tags
-* now you can apply custom css to the variable itself instead to whole label
-* added css class to no events text: no-events
-* updated all shortcode files
-* updated file vsel-style
-* updated file vsel-datepicker (new jquery version)
-* updated FAQ
 
 For all versions please check file changelog.
 
@@ -326,3 +286,4 @@ For all versions please check file changelog.
 5. Very Simple Event List single event (dashboard).
 6. Very Simple Event List widget (dashboard).
 7. Very Simple Event List settingspage (dashboard).
+8. Very Simple Event List settingspage (dashboard).

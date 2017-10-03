@@ -10,13 +10,7 @@ function vsel_widget_shortcode( $vsel_atts ) {
 		'event_cat' => '',
 		'posts_per_page' => '',
 		'order' => 'asc',
-		'date_label' => __('Date: %s', 'very-simple-event-list'),
-		'start_label' => __('Start date: %s', 'very-simple-event-list'),
-		'end_label' => __('End date: %s', 'very-simple-event-list'),
-		'time_label' => __('Time: %s', 'very-simple-event-list'),
-		'location_label' => __('Location: %s', 'very-simple-event-list'),
 		'no_events_text' => __('There are no upcoming events.', 'very-simple-event-list'),
-		'combine_dates' => '',
 		'image_size' => ''
 	), $vsel_atts );
 
@@ -80,13 +74,7 @@ function vsel_widget_past_events_shortcode( $vsel_atts ) {
 		'event_cat' => '',
 		'posts_per_page' => '',
 		'order' => 'asc',
-		'date_label' => __('Date: %s', 'very-simple-event-list'),
-		'start_label' => __('Start date: %s', 'very-simple-event-list'),
-		'end_label' => __('End date: %s', 'very-simple-event-list'),
-		'time_label' => __('Time: %s', 'very-simple-event-list'),
-		'location_label' => __('Location: %s', 'very-simple-event-list'),
 		'no_events_text' => __('There are no past events.', 'very-simple-event-list'),
-		'combine_dates' => '',
 		'image_size' => ''
 	), $vsel_atts );
 
@@ -150,13 +138,7 @@ function vsel_widget_current_events_shortcode( $vsel_atts ) {
 		'event_cat' => '',
 		'posts_per_page' => '',
 		'order' => 'asc',
-		'date_label' => __('Date: %s', 'very-simple-event-list'),
-		'start_label' => __('Start date: %s', 'very-simple-event-list'),
-		'end_label' => __('End date: %s', 'very-simple-event-list'),
-		'time_label' => __('Time: %s', 'very-simple-event-list'),
-		'location_label' => __('Location: %s', 'very-simple-event-list'),
 		'no_events_text' => __('There are no current events.', 'very-simple-event-list'),
-		'combine_dates' => '',
 		'image_size' => ''
 	), $vsel_atts );
 
@@ -235,13 +217,7 @@ function vsel_widget_all_events_shortcode( $vsel_atts ) {
 		'event_cat' => '',
 		'posts_per_page' => '',
 		'order' => 'asc',
-		'date_label' => __('Date: %s', 'very-simple-event-list'),
-		'start_label' => __('Start date: %s', 'very-simple-event-list'),
-		'end_label' => __('End date: %s', 'very-simple-event-list'),
-		'time_label' => __('Time: %s', 'very-simple-event-list'),
-		'location_label' => __('Location: %s', 'very-simple-event-list'),
 		'no_events_text' => __('There are no events.', 'very-simple-event-list'),
-		'combine_dates' => '',
 		'image_size' => ''
 	), $vsel_atts );
 
