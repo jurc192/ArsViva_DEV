@@ -321,3 +321,8 @@ function event_gallery_get_images($post_id) {
 		echo '</div><!-- End gallery -->';
 	endif;
 }
+
+
+
+/* Jure -remove VSEL single post filter */
+remove_filter( 'the_content', 'vsel_single_content' );
