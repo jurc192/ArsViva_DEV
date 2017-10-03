@@ -323,6 +323,23 @@ function event_gallery_get_images($post_id) {
 }
 
 
-
 /* Jure -remove VSEL single post filter */
 remove_filter( 'the_content', 'vsel_single_content' );
+
+
+/* Jure title character count - copy/paste */
+// http://passwordincorrect.com/add-character-count-to-title-and-excerpt-in-wordpress-post-editor/
+
+function my_title_count(){ ?>
+<script>jQuery(document).ready(function(){
+jQuery("#titlediv .inside").after("<div style=\"position:absolute;top:40px;right:-5px;\"><span>Max 60 znakov:</span> <input type=\"text\" value=\"0\" maxlength=\"3\" size=\"3\" id=\"title_counter\" readonly=\"\" style=\"background:none;border:none;box-shadow:none;font-weight:bold; text-align:right;\"></div>");
+jQuery("#title_counter").val(jQuery("#title").val().length);
+jQuery("#title").keyup( function() {
+jQuery("#title_counter").val(jQuery("#title").val().length);
+});
+});
+</script>
+<?php }
+add_action( 'admin_head-post.php', 'my_title_count');
+add_action( 'admin_head-post-new.php', 'my_title_count');
+?>
