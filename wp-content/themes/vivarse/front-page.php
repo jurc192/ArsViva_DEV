@@ -40,7 +40,7 @@ get_header(); ?>
 		<section class="section landing-art">
 
 			<video id="intro-video" muted loop autoplay data-keepplaying data-autoplay>
-			<source src="<?php echo get_bloginfo('template_url').'/images/Intro_exp.mp4' ?>" type="video/mp4">
+			<source src="<?php echo get_bloginfo('template_url').'/images/finalka_1.mp4' ?>" type="video/mp4">
 			<img src="<?php echo get_bloginfo('template_url').'/images/home-fotka2.jpg' ?>" title="Your browser does not support the <video> tag">
 		</video>
 		<img id="intro-napis" src="<?php echo get_bloginfo('template_url').'/images/intro-napis.png' ?>" alt="Ars viva: Na krilih priložnosti za prihodnost">
