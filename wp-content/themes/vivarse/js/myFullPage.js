@@ -24,7 +24,10 @@ function initFullpage() {
 	});
 
 	// Če je accessibilityMode vklopljen naloži ManualScroll
-	if(accMode == 'true') {
+	// Ali če je mobile device screen size
+	var mediaQuery = window.matchMedia("(max-width: 600px)");
+
+	if((accMode == 'true') || (mediaQuery.matches)) {
 		console.log("accessibilityMode in sessionStorage is: ", accMode);
 		jQuery.fn.fullpage.setAutoScrolling(false);
 	}
