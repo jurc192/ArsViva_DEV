@@ -28,6 +28,6 @@
 	</aside>
 
 	<div id="accPopup" class="accessibility-popup" style="display: none;">
-		<img onclick="toggleMode()" class="access-icon sidebar-icon" src="<?php bloginfo('template_url'); ?>/images/miska.png" alt="toggle accessibility mode">
+		<!-- <img onclick="toggleMode()" class="access-icon sidebar-icon" src="<?php bloginfo('template_url'); ?>/images/miska.png" alt="toggle accessibility mode"> -->
 		<img id="is_normal_contrast" class="contrast-icon toggle-contrast sidebar-icon" src="<?php bloginfo('template_url'); ?>/images/kontrast.png" aria-pressed="false" alt="toggle accessibility mode">
 	</div>
