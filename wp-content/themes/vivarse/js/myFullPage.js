@@ -23,20 +23,26 @@ function initFullpage() {
 
 	});
 
-	// Če je accessibilityMode vklopljen naloži ManualScroll
-	// Ali če je mobile device screen size
-	var mediaQuery = window.matchMedia("(max-width: 600px)");
+	// Zakomentiral, ker smo odstranili funkcionalnost preklapljanja in nastavili
+	// ročno scrollanje + scrollbar kot default.
 
-	if((accMode == 'true') || (mediaQuery.matches)) {
-		console.log("accessibilityMode in sessionStorage is: ", accMode);
-		jQuery.fn.fullpage.setAutoScrolling(false);
-	}
+	// // Če je accessibilityMode vklopljen naloži ManualScroll
+	// // Ali če je mobile device screen size
+	// var mediaQuery = window.matchMedia("(max-width: 600px)");
+	//
+	// if((accMode == 'true') || (mediaQuery.matches)) {
+	// 	console.log("accessibilityMode in sessionStorage is: ", accMode);
+	// 	jQuery.fn.fullpage.setAutoScrolling(false);
+	// }
+	//
+	// // Če ne naloži autoScroll
+	// else {
+	// 	console.log("accessibilityMode in sessionStorage is: ", accMode);
+	// 	jQuery.fn.fullpage.setAutoScrolling(true);
+	// }
 
-	// Če ne naloži autoScroll
-	else {
-		console.log("accessibilityMode in sessionStorage is: ", accMode);
-		jQuery.fn.fullpage.setAutoScrolling(true);
-	}
+	// enable scrollbar & manual scroll
+	jQuery.fn.fullpage.setAutoScrolling(false);
 
 }
 
