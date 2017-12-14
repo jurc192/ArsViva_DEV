@@ -11,9 +11,9 @@ get_header('nofp'); ?>
 		if ( have_posts() ) :
 			while ( have_posts() ) : the_post();
 
-				if(get_post_type() === 'event'):
+				if(get_post_type() === 'event' && get_post_status() === 'publish'):
 					get_template_part('template-parts/content-events');
-				elseif(get_post_type() === 'post'):
+				elseif(get_post_type() === 'post' && get_post_status() === 'publish'):
 					get_template_part('template-parts/content-posts');
 				endif;
 

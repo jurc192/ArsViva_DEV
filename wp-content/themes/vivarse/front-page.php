@@ -32,14 +32,14 @@ $myquery_args = array(
 
 $my_event_query = new WP_Query($myquery_args);
 
-get_header(); ?>
+get_header('nofp'); ?>
 
 
-	<main id="main" class="site-main">
+	<main id="main" class="site-main-nofp front">
 
-		<section class="section landing-art">
+	<section class="landing-art">
 
-			<video id="intro-video" muted loop autoplay data-keepplaying data-autoplay>
+		<video id="intro-video" muted loop autoplay data-keepplaying data-autoplay>
 			<source src="<?php echo get_bloginfo('template_url').'/images/Intro_exp.mp4' ?>" type="video/mp4">
 			<img src="<?php echo get_bloginfo('template_url').'/images/home-fotka2.jpg' ?>" title="Your browser does not support the <video> tag">
 		</video>
@@ -48,35 +48,8 @@ get_header(); ?>
 
 	</section>
 
-		<!-- <section class="section">
 
-			<div class="tile-wrapper">
-
-				<div class="label-wrapper">
-					<h1>Prihajajoči<br>dogodki:</h1>
-				</div>
-				<?php
-				if ( $my_event_query->have_posts() ) :
-					if ( is_front_page() ):
-
-						while( $my_event_query->have_posts() ) : $my_event_query->the_post();
-							get_template_part( 'template-parts/content', 'front-event-tile' );
-						endwhile;
-
-					else:
-						// echo "<h1 style='z-index: 15; position: absolute; top: 100px; left: 100px;'>NOT FIRST PAGE!</h1>";
-					endif;
-
-				else:
-					// echo "<h1 style='z-index: 15; position: absolute; top: 200px; left: 100px;'>I DON'T HAVE ANY EVENTS</h1>";
-				endif;
-
-				wp_reset_postdata();
-				?>
-
-			</div>
-		</section> -->
-
+	<section class="post-container">
 
 		<?php
 		/* Custom query za front page - front page POSTS */
@@ -93,7 +66,7 @@ get_header(); ?>
 			if ( is_front_page() ):
 
 				while( $my_post_query->have_posts() ) : $my_post_query->the_post();
-					get_template_part( 'template-parts/content', 'front-post' );
+					get_template_part( 'template-parts/content', 'posts' );
 				endwhile;
 
 			else:
@@ -105,6 +78,10 @@ get_header(); ?>
 		endif;
 
 		wp_reset_postdata();
+		?>
 
+	</section>
+
+<?php
 get_sidebar();
-get_footer();
+get_footer('nofp');

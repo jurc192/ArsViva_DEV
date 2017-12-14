@@ -1013,22 +1013,26 @@ html, body {
 /*--------------------------------------------------------------
 # Landing image / video
 --------------------------------------------------------------*/
+.landing-art {
+  position: relative; }
+
+.post-container {
+  position: relative; }
+
 #intro-video {
-  object-fit: cover;
-  z-index: 1;
+  display: block;
   position: absolute;
-  top: 60px;
+  z-index: 1;
   height: 300px;
-  width: calc(100vw - 60px);
-  display: block; }
+  width: 100%;
+  object-fit: cover; }
 
 #intro-napis {
-  z-index: 2;
   position: absolute;
-  top: 60px;
-  right: 0;
+  z-index: 2;
   height: 300px;
-  width: calc(100vw - 60px);
+  width: 100%;
+  left: 0;
   object-fit: contain;
   object-position: center; }
 
@@ -1389,6 +1393,9 @@ iframe.google-maps {
   padding-top: 80px;
   padding-left: 60px;
   padding-right: 60px; }
+  .site-main-nofp.front {
+    padding-top: 60px;
+    padding-left: 0; }
 
 /*--------------------------------------------------------------
 ### Events Tiles stuff

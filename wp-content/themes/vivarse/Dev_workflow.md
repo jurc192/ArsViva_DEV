@@ -512,3 +512,8 @@ Deleted remote branches, only keeping master branch!
 - Najprej probam zožat video [works okay]
 - Kako to shranit, da pokažem?
   - mogoče delaj v novem branchu, pa boš pol se sekiral kako in kaj
+
+## 2. Adding events/posts
+- Nima več smisla uporabljat fullpage plugin, naredi isto kot events- nofp
+- Kako naredit da bo layout uredu brez nofp? Kopiraj stvari iz home.php
+- Added site-main-nofp FRONT class
