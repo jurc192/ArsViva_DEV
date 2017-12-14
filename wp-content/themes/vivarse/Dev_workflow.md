@@ -506,5 +506,9 @@ Usage: $ contentdl
 ### Git cleaning up
 Deleted remote branches, only keeping master branch!
 
+
 ## 1. Replacing video stuff
-- Najprej probam zožat video
+- Working @branch WIP
+- Najprej probam zožat video [works okay]
+- Kako to shranit, da pokažem?
+  - mogoče delaj v novem branchu, pa boš pol se sekiral kako in kaj

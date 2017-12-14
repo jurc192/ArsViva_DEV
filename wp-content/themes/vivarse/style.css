@@ -1018,7 +1018,7 @@ html, body {
   z-index: 1;
   position: absolute;
   top: 60px;
-  height: calc(100vh - 60px);
+  height: 300px;
   width: calc(100vw - 60px);
   display: block; }
 
@@ -1027,19 +1027,10 @@ html, body {
   position: absolute;
   top: 60px;
   right: 0;
-  height: calc(100vh - 60px);
+  height: 300px;
   width: calc(100vw - 60px);
   object-fit: contain;
   object-position: center; }
-
-#intro-scroll {
-  position: absolute;
-  z-index: 2;
-  width: 60px;
-  height: 60px;
-  bottom: 30px;
-  left: 50%;
-  margin-left: -30px; }
 
 @media screen and (max-height: 890px) and (max-width: 585px) {
   #intro-video {
