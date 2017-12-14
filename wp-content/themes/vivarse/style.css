@@ -1015,11 +1015,34 @@ html, body {
 --------------------------------------------------------------*/
 .landing-art {
   position: relative;
-  height: 300px; }
+  height: 300px;
+  overflow: hidden;
+  white-space: nowrap; }
+  .landing-art img {
+    display: inline-block;
+    height: 100%;
+    width: 500px;
+    margin: 10px;
+    opacity: 0.7;
+    object-fit: cover;
+    object-position: center; }
+
+.photostrip {
+  height: 100%; }
 
 .post-container {
   position: relative;
   padding: 30px 0; }
+
+/* Animation stuff for photo slider */
+.first {
+  animation: photostrip 10s linear infinite; }
+
+@keyframes photostrip {
+  0% {
+    margin-left: 0px; }
+  100% {
+    margin-left: -1500px; } }
 
 #intro-video {
   display: block;
