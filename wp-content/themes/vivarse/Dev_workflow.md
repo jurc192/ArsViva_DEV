@@ -465,3 +465,46 @@ TODO:
 - [DONE] NOGA stuff
 - Preberi več (zamenjaj znak)
 - [DONE] Objavljeno dne -> poravnava
+
+
+
+
+# AFTERPARTY
+
+So me kontaktirali dva meseca po projektu, če bi lahko popravil še par stvari za
+plačilo. Sure! :)
+
+## GENERAL TODO:
+0. Cleanup stuff a little
+1. Na vstopni strani zamenjaj video za galerijo slik
+2. Namesto objav, prikaži zadnjih 10 dogodkov
+3. Uredi galerijo slik za posamezne dogodke
+4. Naredi da lahko oni dodajajo nove produkte
+
+
+## 0. Cleaning and setting up stuff
+- Uredil projektne dokumente, linkal Dev_workflow.md
+- Zrihtaj trenutno sliko serverja na localhostu:
+  - git pull [DONE]
+  - db migracija [DONE]
+  - non-git content (uploads etc) [DONE]
+
+### Automating database migration process
+Kako lahko naredim skripto, ki mi bo sama: importala downloadano databazo (db.sql),
+spremenila potrebne vrednosti v določenih tabelah in shranila spremembe.
+Optional- kako to naredit za obe smeri (development - production, production - dev)
+
+Done. v ArsViva_stuff/Scripts/dbimport2.sh
+Usage: $ dbimport <database file>
+
+### Automating content migration process
+Slik in ostalega user-uploaded contenta nimam v git-u. Avtomatiziraj ta copy/paste.
+
+Done. V ArsViva_stuff/Scripts/contentdl.sh
+Usage: $ contentdl
+
+### Git cleaning up
+Deleted remote branches, only keeping master branch!
+
+## 1. Replacing video stuff
+- Najprej probam zožat video
