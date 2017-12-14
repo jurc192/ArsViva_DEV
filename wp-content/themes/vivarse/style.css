@@ -1014,23 +1014,25 @@ html, body {
 # Landing image / video
 --------------------------------------------------------------*/
 .landing-art {
-  position: relative; }
+  position: relative;
+  height: 300px; }
 
 .post-container {
-  position: relative; }
+  position: relative;
+  padding: 30px 0; }
 
 #intro-video {
   display: block;
   position: absolute;
   z-index: 1;
-  height: 300px;
+  height: 100%;
   width: 100%;
   object-fit: cover; }
 
 #intro-napis {
   position: absolute;
   z-index: 2;
-  height: 300px;
+  height: 100%;
   width: 100%;
   left: 0;
   object-fit: contain;

@@ -38,14 +38,12 @@ get_header('nofp'); ?>
 	<main id="main" class="site-main-nofp front">
 
 	<section class="landing-art">
-
 		<video id="intro-video" muted loop autoplay data-keepplaying data-autoplay>
 			<source src="<?php echo get_bloginfo('template_url').'/images/Intro_exp.mp4' ?>" type="video/mp4">
 			<img src="<?php echo get_bloginfo('template_url').'/images/home-fotka2.jpg' ?>" title="Your browser does not support the <video> tag">
 		</video>
 		<img id="intro-napis" src="<?php echo get_bloginfo('template_url').'/images/intro-napis.png' ?>" alt="Ars viva: Na krilih priložnosti za prihodnost">
 		<!-- <img id="intro-scroll" src="<?php echo get_bloginfo('template_url').'/images/scroll-white.png' ?>" alt="Puščica navzdol"> -->
-
 	</section>
 
 
@@ -57,7 +55,7 @@ get_header('nofp'); ?>
 			'post_type' => 'post',
 			'post_status' => 'publish',
 			'category_name' => 'front-page',
-			'posts_per_page' => 5,
+			'posts_per_page' => 10,
 		);
 
 		$my_post_query = new WP_Query($my_post_query_args);

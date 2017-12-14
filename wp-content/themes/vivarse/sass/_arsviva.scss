@@ -207,10 +207,12 @@ $footer-height: 274px;
 
 .landing-art {
   position: relative;
+  height: 300px;
 }
 
 .post-container {
   position: relative;
+  padding: 30px 0;
 }
 
 
@@ -219,7 +221,7 @@ $footer-height: 274px;
   position: absolute;
   z-index: 1;
 
-  height:300px;
+  height:100%;
   width: 100%;
 
   object-fit: cover;
@@ -229,7 +231,7 @@ $footer-height: 274px;
   position:absolute;
   z-index:2;
 
-  height: 300px;
+  height: 100%;
   width: 100%;
   // top: 60px;
   // right: 0;

@@ -475,11 +475,13 @@ So me kontaktirali dva meseca po projektu, če bi lahko popravil še par stvari 
 plačilo. Sure! :)
 
 ## GENERAL TODO:
-0. Cleanup stuff a little
+0. ~~Cleanup stuff a little~~
 1. Na vstopni strani zamenjaj video za galerijo slik
-2. Namesto objav, prikaži zadnjih 10 dogodkov
+2. ~~Namesto objav, prikaži zadnjih 10 dogodkov~~
 3. Uredi galerijo slik za posamezne dogodke
 4. Naredi da lahko oni dodajajo nove produkte
+
+5. POPRAVI FONT (naslovi v ploščicah imajo falš šumnike)
 
 
 ## 0. Cleaning and setting up stuff
