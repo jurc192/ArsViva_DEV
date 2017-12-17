@@ -11,6 +11,7 @@
 
 /* Meta section */
 #vsel .vsel-meta {width:36%; float:left;}
+#vsel .vsel-meta-full {width:100%; clear:both;}
 #vsel .vsel-meta-title {margin:0 0 10px; padding:0;}
 #vsel .vsel-meta-date {}
 #vsel .vsel-meta-error-date {}
@@ -35,20 +36,20 @@
 #vsel .no-events {}
 
 /* Widget wrapper */
-.vsel_widget {}
-.vsel_widget:after {content:''; display:block; height:0; clear:both;}
+.vsel-widget {}
+.vsel-widget:after {content:''; display:block; height:0; clear:both;}
 
 /* Widget text above list */
-.vsel_widget .vsel-widget-text {clear:both; margin:0 0 10px; padding:0 0 5px; border-bottom: 1px solid #ccc;}
+.vsel-widget .vsel-widget-text {clear:both; margin:0 0 10px; padding:0 0 5px; border-bottom: 1px solid #ccc;}
 
 /* Widget meta section */
-.vsel_widget #vsel .vsel-meta {width:100%; clear:both;}
+.vsel-widget #vsel .vsel-meta {width:100%; clear:both;}
 
 /* Widget image and info section */
-.vsel_widget #vsel .vsel-image-info {width:100%; clear:both; float:left;}
+.vsel-widget #vsel .vsel-image-info {width:100%; clear:both; float:left;}
 
 /* Widget link to all events */
-.vsel_widget .vsel-widget-link {clear:both;}
+.vsel-widget .vsel-widget-link {clear:both;}
 
 /* Mobile */
 @media screen and (max-width:767px) { 

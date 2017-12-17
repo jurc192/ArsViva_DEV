@@ -2,7 +2,7 @@
 /*
  * Plugin Name: Very Simple Event List
  * Description: This is a very simple plugin to display a list of events. Use a shortcode to display events on a page or use the widget. For more info please check readme file.
- * Version: 7.0
+ * Version: 7.4
  * Author: Guido van der Leest
  * Author URI: http://www.guidovanderleest.nl
  * License: GNU General Public License v3 or later
@@ -13,7 +13,7 @@
 
 // disable direct access
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
 
 // load plugin text domain
@@ -157,7 +157,7 @@ function vsel_metabox_callback( $post ) {
 	<p><input class="checkbox" id="vsel-link-target" type="checkbox" name="vsel-link-target" value="yes" <?php checked( $event_link_target, 'yes' ); ?> /> 
 	<label for="vsel-link-target"><?php _e('Open link in new window', 'very-simple-event-list'); ?></label></p>
 	<p><label for="vsel-summary"><?php _e( 'Custom summary', 'very-simple-event-list' ); ?></label> 
-	<textarea id="vsel-summary" name="vsel-summary" class="large-text" rows="6" maxlength="250" placeholder="<?php _e( 'This will replace the default summary', 'very-simple-event-list' ); ?>"><?php echo esc_textarea( $event_summary); ?></textarea></p>
+	<textarea id="vsel-summary" name="vsel-summary" class="large-text" rows="6" maxlength="250" placeholder="<?php _e( 'This will replace the default summary', 'very-simple-event-list' ); ?>"><?php echo wp_kses_post( $event_summary); ?></textarea></p>
 	<?php 
 }
 
@@ -204,7 +204,7 @@ function vsel_save_event_info( $post_id ) {
 		update_post_meta( $post_id, 'event-link-target', 'no' ); 
 	} 
 	if ( isset( $_POST['vsel-summary'] ) ) { 
-		update_post_meta( $post_id, 'event-summary', esc_textarea( $_POST['vsel-summary'] ) ); 
+		update_post_meta( $post_id, 'event-summary', wp_kses_post( $_POST['vsel-summary'] ) ); 
 	} 
 } 
 add_action( 'save_post', 'vsel_save_event_info' );
@@ -277,6 +277,22 @@ function vsel_date_column_orderby( $vars ) {
 	return $vars;
 }
 add_filter( 'request', 'vsel_date_column_orderby' );
+
+// get event categories and create event class
+function vsel_event_class() { 
+	global $post; 
+	$terms = get_the_terms( $post->ID, 'event_cat' );
+	if ( $terms && ! is_wp_error( $terms ) ) {
+		$cats = array();
+		foreach ( $terms as $term ) {
+			$cats[] = $term->slug;
+		}
+		$vsel_cats = join( " ", $cats );
+		return 'vsel-content '.$vsel_cats.'';
+	} else {
+		return 'vsel-content';
+	}
+}
 
 // add class to pagination
 function vsel_prev_posts() { 

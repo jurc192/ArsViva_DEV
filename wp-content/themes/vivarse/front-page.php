@@ -37,11 +37,12 @@ get_header('nofp'); ?>
 
 	<main id="main" class="site-main-nofp front">
 
-	<section class="landing-art">
+	<!-- <section class="landing-art">
 		<div class="photostrip">
 			<img class="first" src="<?php echo get_bloginfo('template_url').'/images/home-fotka2.jpg' ?>" alt=""><img src="<?php echo get_bloginfo('template_url').'/images/home-fotka2.jpg' ?>" alt=""><img src="<?php echo get_bloginfo('template_url').'/images/home-fotka2.jpg' ?>" alt="">
 		</div>
-	</section>
+	</section> -->
+	<?php echo do_shortcode('[carousel_slide id="535"]'); ?>
 
 	<section class="post-container">
 

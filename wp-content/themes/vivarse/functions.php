@@ -328,6 +328,13 @@ function event_gallery_get_images($post_id) {
 remove_filter( 'the_content', 'vsel_single_content' );
 
 
+/* Jure - Carousel-slider plugin script loading */
+function carousel_slider_load_scripts($load_scripts) {
+	if (is_front_page()) return true;
+	return $load_scripts;
+}
+add_filter('carousel_slider_load_scripts', 'carousel_slider_load_scripts');
+
 /* Jure title character count - copy/paste */
 // http://passwordincorrect.com/add-character-count-to-title-and-excerpt-in-wordpress-post-editor/
 

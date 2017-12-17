@@ -1,6 +1,37 @@
 CHANGELOG
 =========
 
+= Version 7.4 =
+* new: event class also contains the event category (if set)
+* new: setting to link image to single event page
+* new: setting to set the image size that is being used
+* removed shortcode attribute to set the image size
+* updated shortcode files
+* updated files vsel, vsel-options and uninstall
+
+= Version 7.3 =
+* fix: custom excerpt supports punctuation now (thanks rbnetit)
+* new: hide featured image and/or text in event list via the settingspage
+* you can now display the event meta only and in full width
+* updated files vsel, vsel-list, vsel-options, vsel-style and uninstall
+* updated readme file
+
+= Version 7.2 =
+* fix: custom more info label did not display properly
+* changed prefix of even more elements to make code structure more clear
+* updated files vsel-shortcodes and vsel-list
+* updated files vsel-widget-shortcodes and vsel-widget-list
+* file vsel-single: added escaping to empty variables
+
+= Version 7.1 =
+* changed CSS class vsel_widget into vsel-widget
+* files vsel-shortcodes and vsel-list: changed prefix of most elements
+* files vsel-widget-shortcodes and vsel-widget-list: changed prefix of most elements
+* file vsel-single: changed prefix of most elements
+* changed prefix of most elements in above files to make code structure more clear
+* several minor changes
+* removed all faqs from readme file which refer back to the description section
+
 = Version 7.0 =
 * minor textual change
 * minor change in file vsel-single
@@ -11,7 +42,7 @@ CHANGELOG
 * new: display start date and end date on the same line via the settingspage
 * removed label attributes
 * removed attribute to display start date and end date on the same line
-* attributes mentioned above where not supported on the single event page
+* attributes mentioned above were not supported on the single event page
 * updated most files
 * updated readme file
 * new screenshots on wp.org

@@ -515,6 +515,13 @@ Deleted remote branches, only keeping master branch!
 - Kako to shranit, da pokažem?
   - mogoče delaj v novem branchu, pa boš pol se sekiral kako in kaj
 
+- Probam ta Carousel Slider plugin [https://en-gb.wordpress.org/plugins/carousel-slider/]
+- Add a hook to the functions.php
+
+- TODO: preštudiraj kaj je z višinami slik, naj bo felksible!
+https://stackoverflow.com/questions/21574698/image-slider-maintaining-equal-height-for-all-images-while-keeping-slider-respo
+- TODO: če slučajno plugin kej faila, fallback na video?
+
 ## 2. Adding events/posts
 - Nima več smisla uporabljat fullpage plugin, naredi isto kot events- nofp
 - Kako naredit da bo layout uredu brez nofp? Kopiraj stvari iz home.php

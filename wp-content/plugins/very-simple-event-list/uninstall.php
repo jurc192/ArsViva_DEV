@@ -48,6 +48,12 @@ if ( $keep != 'yes' ) {
 	delete_option( 'vsel-setting-24' );
 	delete_option( 'vsel-setting-25' );
 	delete_option( 'vsel-setting-26' );
+	delete_option( 'vsel-setting-27' );
+	delete_option( 'vsel-setting-28' );
+	delete_option( 'vsel-setting-29' );
+	delete_option( 'vsel-setting-30' );
+	delete_option( 'vsel-setting-31' );
+	delete_option( 'vsel-setting-32' );
 
 	// Set global
 	global $wpdb;

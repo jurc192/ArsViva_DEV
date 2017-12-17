@@ -1,7 +1,7 @@
 <?php
 // disable direct access
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
 
 // Upcoming events shortcode
@@ -10,8 +10,7 @@ function vsel_widget_shortcode( $vsel_atts ) {
 		'event_cat' => '',
 		'posts_per_page' => '',
 		'order' => 'asc',
-		'no_events_text' => __('There are no upcoming events.', 'very-simple-event-list'),
-		'image_size' => ''
+		'no_events_text' => __('There are no upcoming events.', 'very-simple-event-list')
 	), $vsel_atts );
 
 	$output = ""; 
@@ -42,14 +41,14 @@ function vsel_widget_shortcode( $vsel_atts ) {
 		if ( $vsel_widget_query->have_posts() ) : 
 			while( $vsel_widget_query->have_posts() ): $vsel_widget_query->the_post();
 				// get event meta
-				$event_start_date = get_post_meta( get_the_ID(), 'event-start-date', true );
-				$event_date = get_post_meta( get_the_ID(), 'event-date', true );
-				$event_time = get_post_meta( get_the_ID(), 'event-time', true ); 
-				$event_location = get_post_meta( get_the_ID(), 'event-location', true ); 
-				$event_link = get_post_meta( get_the_ID(), 'event-link', true ); 
-				$event_link_label = get_post_meta( get_the_ID(), 'event-link-label', true ); 
-				$event_link_target = get_post_meta( get_the_ID(), 'event-link-target', true ); 
-				$event_summary = get_post_meta( get_the_ID(), 'event-summary', true ); 
+				$widget_start_date = get_post_meta( get_the_ID(), 'event-start-date', true );
+				$widget_end_date = get_post_meta( get_the_ID(), 'event-date', true );
+				$widget_time = get_post_meta( get_the_ID(), 'event-time', true ); 
+				$widget_location = get_post_meta( get_the_ID(), 'event-location', true ); 
+				$widget_link = get_post_meta( get_the_ID(), 'event-link', true ); 
+				$widget_link_label = get_post_meta( get_the_ID(), 'event-link-label', true ); 
+				$widget_link_target = get_post_meta( get_the_ID(), 'event-link-target', true ); 
+				$widget_summary = get_post_meta( get_the_ID(), 'event-summary', true ); 
 
 				// include the event list
 				include 'vsel-widget-list.php';
@@ -74,8 +73,7 @@ function vsel_widget_past_events_shortcode( $vsel_atts ) {
 		'event_cat' => '',
 		'posts_per_page' => '',
 		'order' => 'asc',
-		'no_events_text' => __('There are no past events.', 'very-simple-event-list'),
-		'image_size' => ''
+		'no_events_text' => __('There are no past events.', 'very-simple-event-list')
 	), $vsel_atts );
 
 	$output = ""; 
@@ -106,14 +104,14 @@ function vsel_widget_past_events_shortcode( $vsel_atts ) {
 		if ( $vsel_widget_past_query->have_posts() ) : 
 			while( $vsel_widget_past_query->have_posts() ): $vsel_widget_past_query->the_post(); 
 				// get event meta
-				$event_start_date = get_post_meta( get_the_ID(), 'event-start-date', true );
-				$event_date = get_post_meta( get_the_ID(), 'event-date', true );
-				$event_time = get_post_meta( get_the_ID(), 'event-time', true ); 
-				$event_location = get_post_meta( get_the_ID(), 'event-location', true ); 
-				$event_link = get_post_meta( get_the_ID(), 'event-link', true ); 
-				$event_link_label = get_post_meta( get_the_ID(), 'event-link-label', true ); 
-				$event_link_target = get_post_meta( get_the_ID(), 'event-link-target', true ); 
-				$event_summary = get_post_meta( get_the_ID(), 'event-summary', true ); 
+				$widget_start_date = get_post_meta( get_the_ID(), 'event-start-date', true );
+				$widget_end_date = get_post_meta( get_the_ID(), 'event-date', true );
+				$widget_time = get_post_meta( get_the_ID(), 'event-time', true ); 
+				$widget_location = get_post_meta( get_the_ID(), 'event-location', true ); 
+				$widget_link = get_post_meta( get_the_ID(), 'event-link', true ); 
+				$widget_link_label = get_post_meta( get_the_ID(), 'event-link-label', true ); 
+				$widget_link_target = get_post_meta( get_the_ID(), 'event-link-target', true ); 
+				$widget_summary = get_post_meta( get_the_ID(), 'event-summary', true ); 
 
 				// include the event list
 				include 'vsel-widget-list.php';
@@ -138,8 +136,7 @@ function vsel_widget_current_events_shortcode( $vsel_atts ) {
 		'event_cat' => '',
 		'posts_per_page' => '',
 		'order' => 'asc',
-		'no_events_text' => __('There are no current events.', 'very-simple-event-list'),
-		'image_size' => ''
+		'no_events_text' => __('There are no current events.', 'very-simple-event-list')
 	), $vsel_atts );
 
 	$output = ""; 
@@ -185,14 +182,14 @@ function vsel_widget_current_events_shortcode( $vsel_atts ) {
 		if ( $vsel_widget_current_query->have_posts() ) : 
 			while( $vsel_widget_current_query->have_posts() ): $vsel_widget_current_query->the_post(); 
 				// get event meta
-				$event_start_date = get_post_meta( get_the_ID(), 'event-start-date', true );
-				$event_date = get_post_meta( get_the_ID(), 'event-date', true );
-				$event_time = get_post_meta( get_the_ID(), 'event-time', true ); 
-				$event_location = get_post_meta( get_the_ID(), 'event-location', true ); 
-				$event_link = get_post_meta( get_the_ID(), 'event-link', true ); 
-				$event_link_label = get_post_meta( get_the_ID(), 'event-link-label', true ); 
-				$event_link_target = get_post_meta( get_the_ID(), 'event-link-target', true ); 
-				$event_summary = get_post_meta( get_the_ID(), 'event-summary', true ); 
+				$widget_start_date = get_post_meta( get_the_ID(), 'event-start-date', true );
+				$widget_end_date = get_post_meta( get_the_ID(), 'event-date', true );
+				$widget_time = get_post_meta( get_the_ID(), 'event-time', true ); 
+				$widget_location = get_post_meta( get_the_ID(), 'event-location', true ); 
+				$widget_link = get_post_meta( get_the_ID(), 'event-link', true ); 
+				$widget_link_label = get_post_meta( get_the_ID(), 'event-link-label', true ); 
+				$widget_link_target = get_post_meta( get_the_ID(), 'event-link-target', true ); 
+				$widget_summary = get_post_meta( get_the_ID(), 'event-summary', true ); 
 
 				// include the event list
 				include 'vsel-widget-list.php';
@@ -217,8 +214,7 @@ function vsel_widget_all_events_shortcode( $vsel_atts ) {
 		'event_cat' => '',
 		'posts_per_page' => '',
 		'order' => 'asc',
-		'no_events_text' => __('There are no events.', 'very-simple-event-list'),
-		'image_size' => ''
+		'no_events_text' => __('There are no events.', 'very-simple-event-list')
 	), $vsel_atts );
 
 	$output = ""; 
@@ -238,14 +234,14 @@ function vsel_widget_all_events_shortcode( $vsel_atts ) {
 		if ( $vsel_widget_all_query->have_posts() ) : 
 			while( $vsel_widget_all_query->have_posts() ): $vsel_widget_all_query->the_post(); 
 				// get event meta
-				$event_start_date = get_post_meta( get_the_ID(), 'event-start-date', true );
-				$event_date = get_post_meta( get_the_ID(), 'event-date', true );
-				$event_time = get_post_meta( get_the_ID(), 'event-time', true ); 
-				$event_location = get_post_meta( get_the_ID(), 'event-location', true ); 
-				$event_link = get_post_meta( get_the_ID(), 'event-link', true ); 
-				$event_link_label = get_post_meta( get_the_ID(), 'event-link-label', true ); 
-				$event_link_target = get_post_meta( get_the_ID(), 'event-link-target', true ); 
-				$event_summary = get_post_meta( get_the_ID(), 'event-summary', true ); 
+				$widget_start_date = get_post_meta( get_the_ID(), 'event-start-date', true );
+				$widget_end_date = get_post_meta( get_the_ID(), 'event-date', true );
+				$widget_time = get_post_meta( get_the_ID(), 'event-time', true ); 
+				$widget_location = get_post_meta( get_the_ID(), 'event-location', true ); 
+				$widget_link = get_post_meta( get_the_ID(), 'event-link', true ); 
+				$widget_link_label = get_post_meta( get_the_ID(), 'event-link-label', true ); 
+				$widget_link_target = get_post_meta( get_the_ID(), 'event-link-target', true ); 
+				$widget_summary = get_post_meta( get_the_ID(), 'event-summary', true ); 
 
 				// include the event list
 				include 'vsel-widget-list.php';
