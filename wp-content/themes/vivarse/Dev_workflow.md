@@ -534,3 +534,11 @@ https://stackoverflow.com/questions/21574698/image-slider-maintaining-equal-heig
 - Ok,ne seri z plugini itak je simpl stvar:
   - uploadaj slike in jih linkaj z postom
   - prikaži slike
+
+### Writing my plugin
+- Naredi custom meta box [DONE]
+- Naredi gumb za dodajanje slik
+- Ok jebeš to- najdu plugin ki dela točno to kar sm hotu nardit!
+[https://wordpress.org/plugins/navz-photo-gallery/]
+
+- pogruntaj kako prikazat slike na lep način
