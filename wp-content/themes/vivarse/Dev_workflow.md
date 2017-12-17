@@ -476,7 +476,7 @@ plačilo. Sure! :)
 
 ## GENERAL TODO:
 0. ~~Cleanup stuff a little~~
-1. Na vstopni strani zamenjaj video za galerijo slik
+1. ~~Na vstopni strani zamenjaj video za galerijo slik~~
 2. ~~Namesto objav, prikaži zadnjih 10 dogodkov~~
 3. Uredi galerijo slik za posamezne dogodke
 4. Naredi da lahko oni dodajajo nove produkte
@@ -526,3 +526,11 @@ https://stackoverflow.com/questions/21574698/image-slider-maintaining-equal-heig
 - Nima več smisla uporabljat fullpage plugin, naredi isto kot events- nofp
 - Kako naredit da bo layout uredu brez nofp? Kopiraj stvari iz home.php
 - Added site-main-nofp FRONT class
+
+
+## 3. Adding gallery to single posts
+- Kaj imam zdej?
+- Probaj ACF dol potegnit
+- Ok,ne seri z plugini itak je simpl stvar:
+  - uploadaj slike in jih linkaj z postom
+  - prikaži slike
