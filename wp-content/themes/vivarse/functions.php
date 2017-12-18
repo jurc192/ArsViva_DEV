@@ -167,6 +167,7 @@ function vivarse_scripts() {
 
 	/* Modal Pictures */
 	wp_enqueue_script( 'modal-pictures', get_template_directory_uri() . '/js/modal-pictures.js', array(), '20151215', true );
+	wp_enqueue_script( 'pg-modal', get_template_directory_uri() . '/js/pg-modal.js', array(), '20151215', true );
 
 
 	/* Original */

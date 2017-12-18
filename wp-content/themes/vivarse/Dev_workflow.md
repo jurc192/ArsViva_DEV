@@ -478,7 +478,7 @@ plačilo. Sure! :)
 0. ~~Cleanup stuff a little~~
 1. ~~Na vstopni strani zamenjaj video za galerijo slik~~
 2. ~~Namesto objav, prikaži zadnjih 10 dogodkov~~
-3. Uredi galerijo slik za posamezne dogodke
+3. ~~Uredi galerijo slik za posamezne dogodke~~
 4. Naredi da lahko oni dodajajo nove produkte
 
 5. POPRAVI FONT (naslovi v ploščicah imajo falš šumnike)
@@ -549,6 +549,7 @@ https://stackoverflow.com/questions/21574698/image-slider-maintaining-equal-heig
   - get_post_meta(post_id=post_id, field='gallery_images', )
   - zajebal sem - un field je ubistvu naslov "ADF fielda"
 
-- Kaj če bi dodal "masonry" v to?
-- z Flexboxom, simple in dela.
-- Dodam še modal/image view?
+- Kaj če bi dodal "masonry" v to? Nah
+- z Flexboxom, simple in dela. [DONE]
+- Dodam še modal/image view? [DONE]
+- Naredi še za telefone/responsive [DONE]

@@ -94,11 +94,21 @@ $post_gallery = acf_photo_gallery('galerija_prispevka', $post_id);
     // preveri, če je kaj slik v galeriji
     if (count($post_gallery)) :
       foreach($post_gallery as $image): ?>
-        <img class="pg-img" src="<?php echo $image['full_image_url']; ?>" alt="test">
+
+        <!-- thumbnail -->
+        <img class="pg-img" src="<?php echo $image['full_image_url']; ?>" onclick="open_modal(this.src)" alt="test">
+
         <?php
       endforeach;
     endif;
    ?>
 
   </div>
+
+  <!-- modal box container -->
+  <div id="pg-modal" class="pg-modal">
+    <img id="pg-modal-image" class="pg-modal-image" src="" alt="">
+    <!-- <img class="pg-modal-close-btn" src="<?php bloginfo('template_url'); ?>/images/close_white_24dp.png" alt="close filter"> -->
+  </div>
+
 </article><!-- #post-ID -->
