@@ -24,21 +24,28 @@
 $post_id = get_the_ID();
 $post_title = get_the_title();
 
+// Article "featuring photo"
 if (has_post_thumbnail()) :
   $thumb_id = get_post_thumbnail_id();
   $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'full', false);
   $thumb_url = $thumb_url_array[0];
 else:
+  // neka generic fotka. Zamenjaj za kej pametnega, ne pa ta random
   $thumb_url = get_bloginfo('template_url') . "/images/home-fotka1.jpg";
 endif;
 
- ?>
+
+// Post gallery stuff
+$post_gallery = acf_photo_gallery('galerija_prispevka', $post_id);
+// $full_image_url = acf_photo_gallery_resize_image($full_image_url, 262, 160);
+
+?>
 
 <article id="post-<?php echo $post_id; ?>" <?php post_class('single'); ?>>
-  <!-- <img class="backgr" src="<?php echo $thumb_url?>" alt="fotka1"> -->
 
   <div class="text-tile-single">
     <header class="entry-header">
+      <!-- <img class="backgr" src="<?php echo $thumb_url?>" alt="fotka1"> -->
 
       <!-- Event title -->
       <h2 class="entry-title">
@@ -49,7 +56,6 @@ endif;
       <?php vivarse_posted_on(); ?>
 
   	</header><!-- .entry-header -->
-
 
   	<div class="entry-content">
       <!-- TO ZAENKRAT PUSTIM TAKO, PREŠTUDIRAJ! -->
@@ -81,4 +87,28 @@ endif;
   	</footer>
 
   </div><!-- .text-tile -->
+
+  <div class="post-gallery">
+
+  <?php
+    // preveri, če je kaj slik v galeriji
+    if (count($post_gallery)) :
+      foreach($post_gallery as $image): ?>
+
+        <!-- thumbnail -->
+        <img class="pg-img" src="<?php echo $image['full_image_url']; ?>" onclick="open_modal(this.src)" alt="test">
+
+        <?php
+      endforeach;
+    endif;
+   ?>
+
+  </div>
+
+  <!-- modal box container -->
+  <div id="pg-modal" class="pg-modal">
+    <img id="pg-modal-image" class="pg-modal-image" src="" alt="">
+    <!-- <img class="pg-modal-close-btn" src="<?php bloginfo('template_url'); ?>/images/close_white_24dp.png" alt="close filter"> -->
+  </div>
+
 </article><!-- #post-ID -->

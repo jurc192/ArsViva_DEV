@@ -1,13 +1,13 @@
 <?php
 // disable direct access
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
 
 class vsel_widget extends WP_Widget {
 	// Constructor 
 	public function __construct() {
-		$widget_ops = array( 'classname' => 'vsel_widget', 'description' => __('Display your events in a widget.', 'very-simple-event-list') );
+		$widget_ops = array( 'classname' => 'vsel-widget', 'description' => __('Display your events in a widget.', 'very-simple-event-list') );
 		parent::__construct( 'vsel_widget', __('Very Simple Event List', 'very-simple-event-list'), $widget_ops );
 	}
 

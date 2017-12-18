@@ -476,9 +476,9 @@ plačilo. Sure! :)
 
 ## GENERAL TODO:
 0. ~~Cleanup stuff a little~~
-1. Na vstopni strani zamenjaj video za galerijo slik
+1. ~~Na vstopni strani zamenjaj video za galerijo slik~~
 2. ~~Namesto objav, prikaži zadnjih 10 dogodkov~~
-3. Uredi galerijo slik za posamezne dogodke
+3. ~~Uredi galerijo slik za posamezne dogodke~~
 4. Naredi da lahko oni dodajajo nove produkte
 
 5. POPRAVI FONT (naslovi v ploščicah imajo falš šumnike)
@@ -515,11 +515,44 @@ Deleted remote branches, only keeping master branch!
 - Kako to shranit, da pokažem?
   - mogoče delaj v novem branchu, pa boš pol se sekiral kako in kaj
 
+- Probam ta Carousel Slider plugin [https://en-gb.wordpress.org/plugins/carousel-slider/]
+- Add a hook to the functions.php
+
+- TODO: preštudiraj kaj je z višinami slik, naj bo felksible!
+https://stackoverflow.com/questions/21574698/image-slider-maintaining-equal-height-for-all-images-while-keeping-slider-respo
+- TODO: če slučajno plugin kej faila, fallback na video?
+
 ## 2. Adding events/posts
 - Nima več smisla uporabljat fullpage plugin, naredi isto kot events- nofp
 - Kako naredit da bo layout uredu brez nofp? Kopiraj stvari iz home.php
 - Added site-main-nofp FRONT class
 
+
+## 3. Adding gallery to single posts
+- Kaj imam zdej?
+- Probaj ACF dol potegnit
+- Ok,ne seri z plugini itak je simpl stvar:
+  - uploadaj slike in jih linkaj z postom
+  - prikaži slike
+
+### Writing my plugin
+- Naredi custom meta box [DONE]
+- Naredi gumb za dodajanje slik
+- Ok jebeš to- najdu plugin ki dela točno to kar sm hotu nardit!
+[https://wordpress.org/plugins/navz-photo-gallery/]
+
+- pogruntaj kako prikazat slike na lep način
+- preštudiraj kaj dela plugin:
+
+- function acf_photo_gallery():
+  - dobi ID objave [OK]
+  - get_post_meta(post_id=post_id, field='gallery_images', )
+  - zajebal sem - un field je ubistvu naslov "ADF fielda"
+
+- Kaj če bi dodal "masonry" v to? Nah
+- z Flexboxom, simple in dela. [DONE]
+- Dodam še modal/image view? [DONE]
+- Naredi še za telefone/responsive [DONE]
 
 ## MERGING BRANCHES TOGETHER
 - zmergaj post-gallery v vse branche, pusti image in video @frontpage ločen

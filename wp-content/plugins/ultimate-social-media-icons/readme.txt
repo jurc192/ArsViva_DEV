@@ -2,8 +2,8 @@
 Contributors: socialdude
 Tags: social media, share, buttons, social, icons, share icons, share buttons, sharing icons, sharing buttons, social share, sharing, social sharing
 Requires at least: 2.8
-Tested up to: 4.8.2
-Stable tag: 1.7.9
+Tested up to: 4.9
+Stable tag: 1.8.2
 License: GPLv2 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -266,6 +266,15 @@ You cannot use the same plugin twice, however you can install both the USM as we
 
 
 == Changelog ==
+
+= 1.8.2 =
+* Links updated
+
+= 1.8.1 =
+* Themed icon notifications optimized
+
+= 1.8.0 =
+* CSS & JAVASCRIPT files are added in footer instead of header
 
 = 1.7.9 =
 * Banners added
@@ -637,5 +646,5 @@ You cannot use the same plugin twice, however you can install both the USM as we
 
 == Upgrade Notice ==
 
-= 1.7.9 =
+= 1.8.2 =
 Please upgrade

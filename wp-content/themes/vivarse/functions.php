@@ -167,6 +167,7 @@ function vivarse_scripts() {
 
 	/* Modal Pictures */
 	wp_enqueue_script( 'modal-pictures', get_template_directory_uri() . '/js/modal-pictures.js', array(), '20151215', true );
+	wp_enqueue_script( 'pg-modal', get_template_directory_uri() . '/js/pg-modal.js', array(), '20151215', true );
 
 
 	/* Original */
@@ -327,6 +328,13 @@ function event_gallery_get_images($post_id) {
 /* Jure -remove VSEL single post filter */
 remove_filter( 'the_content', 'vsel_single_content' );
 
+
+/* Jure - Carousel-slider plugin script loading */
+function carousel_slider_load_scripts($load_scripts) {
+	if (is_front_page()) return true;
+	return $load_scripts;
+}
+add_filter('carousel_slider_load_scripts', 'carousel_slider_load_scripts');
 
 /* Jure title character count - copy/paste */
 // http://passwordincorrect.com/add-character-count-to-title-and-excerpt-in-wordpress-post-editor/

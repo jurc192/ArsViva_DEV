@@ -1,7 +1,7 @@
 <?php
 // disable direct access
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
 
 // add admin options page
@@ -22,6 +22,12 @@ function vsel_admin_init() {
 	add_settings_field( 'vsel-field-9', __( 'Title', 'very-simple-event-list' ), 'vsel_field_callback_9', 'vsel', 'vsel-section-3' );
 	register_setting( 'vsel-options', 'vsel-setting-9', 'esc_attr' );
 
+	add_settings_field( 'vsel-field-29', __( 'Image', 'very-simple-event-list' ), 'vsel_field_callback_29', 'vsel', 'vsel-section-3' );
+	register_setting( 'vsel-options', 'vsel-setting-29', 'esc_attr' );
+
+	add_settings_field( 'vsel-field-30', __( 'Image size', 'very-simple-event-list' ), 'vsel_field_callback_30', 'vsel', 'vsel-section-3' );
+	register_setting( 'vsel-options', 'vsel-setting-30', 'sanitize_text_field' );
+
 	add_settings_field( 'vsel-field-13', __( 'Summary', 'very-simple-event-list' ), 'vsel_field_callback_13', 'vsel', 'vsel-section-3' );
 	register_setting( 'vsel-options', 'vsel-setting-13', 'esc_attr' );
 
@@ -36,6 +42,12 @@ function vsel_admin_init() {
 
 	add_settings_field( 'vsel-field-12', __( 'Location', 'very-simple-event-list' ), 'vsel_field_callback_12', 'vsel', 'vsel-section-3' );
 	register_setting( 'vsel-options', 'vsel-setting-12', 'esc_attr' );
+
+	add_settings_field( 'vsel-field-27', __( 'Image', 'very-simple-event-list' ), 'vsel_field_callback_27', 'vsel', 'vsel-section-3' );
+	register_setting( 'vsel-options', 'vsel-setting-27', 'esc_attr' );
+
+	add_settings_field( 'vsel-field-28', __( 'Content', 'very-simple-event-list' ), 'vsel_field_callback_28', 'vsel', 'vsel-section-3' );
+	register_setting( 'vsel-options', 'vsel-setting-28', 'esc_attr' );
 
 	add_settings_field( 'vsel-field-10', __( 'Link to more info', 'very-simple-event-list' ), 'vsel_field_callback_10', 'vsel', 'vsel-section-3' );
 	register_setting( 'vsel-options', 'vsel-setting-10', 'esc_attr' );
@@ -59,6 +71,12 @@ function vsel_admin_init() {
 
 	add_settings_field( 'vsel-field-14', __( 'Title', 'very-simple-event-list' ), 'vsel_field_callback_14', 'vsel', 'vsel-section-2' );
 	register_setting( 'vsel-options', 'vsel-setting-14', 'esc_attr' );
+
+	add_settings_field( 'vsel-field-31', __( 'Image', 'very-simple-event-list' ), 'vsel_field_callback_31', 'vsel', 'vsel-section-2' );
+	register_setting( 'vsel-options', 'vsel-setting-31', 'esc_attr' );
+
+	add_settings_field( 'vsel-field-32', __( 'Image size', 'very-simple-event-list' ), 'vsel_field_callback_32', 'vsel', 'vsel-section-2' );
+	register_setting( 'vsel-options', 'vsel-setting-32', 'sanitize_text_field' );
 
 	add_settings_field( 'vsel-field-1', __( 'Summary', 'very-simple-event-list' ), 'vsel_field_callback_1', 'vsel', 'vsel-section-2' );
 	register_setting( 'vsel-options', 'vsel-setting-1', 'esc_attr' );
@@ -125,8 +143,28 @@ function vsel_field_callback_9() {
 	$value = esc_attr( get_option( 'vsel-setting-9' ) );
 	?>
 	<input type='hidden' name='vsel-setting-9' value='no'>
-	<label><input type='checkbox' name='vsel-setting-9' <?php checked( $value, 'yes' ); ?> value='yes'> <?php _e( 'Link title to the event page.', 'very-simple-event-list' ); ?></label>
+	<label><input type='checkbox' name='vsel-setting-9' <?php checked( $value, 'yes' ); ?> value='yes'> <?php _e( 'Link to the event page.', 'very-simple-event-list' ); ?></label>
 	<?php
+}
+
+function vsel_field_callback_29() {
+	$value = esc_attr( get_option( 'vsel-setting-29' ) );
+	?>
+	<input type='hidden' name='vsel-setting-29' value='no'>
+	<label><input type='checkbox' name='vsel-setting-29' <?php checked( $value, 'yes' ); ?> value='yes'> <?php _e( 'Link to the event page.', 'very-simple-event-list' ); ?></label>
+	<?php
+}
+
+function vsel_field_callback_30() {
+	$setting = esc_attr( get_option( 'vsel-setting-30' ) );
+ 	?>
+	<select id='vsel-setting-30' name='vsel-setting-30'> 
+		<option value='post-thumbnail'<?php echo ($setting == 'post-thumbnail')?'selected':''; ?>><?php _e( 'Default', 'very-simple-event-list' ); ?></option> 
+		<option value='large'<?php echo ($setting == 'large')?'selected':''; ?>><?php _e( 'Large', 'very-simple-event-list' ); ?></option> 
+		<option value='medium'<?php echo ($setting == 'medium')?'selected':''; ?>><?php _e( 'Medium', 'very-simple-event-list' ); ?></option> 
+		<option value='small'<?php echo ($setting == 'small')?'selected':''; ?>><?php _e( 'Small', 'very-simple-event-list' ); ?></option> 
+	</select> 
+	<?php 
 }
 
 function vsel_field_callback_13() {
@@ -166,6 +204,22 @@ function vsel_field_callback_12() {
 	?>
 	<input type='hidden' name='vsel-setting-12' value='no'>
 	<label><input type='checkbox' name='vsel-setting-12' <?php checked( $value, 'yes' ); ?> value='yes'> <?php _e( 'Hide on page with all events.', 'very-simple-event-list' ); ?></label>
+	<?php
+}
+
+function vsel_field_callback_27() { 
+	$value = esc_attr( get_option( 'vsel-setting-27' ) );
+	?>
+	<input type='hidden' name='vsel-setting-27' value='no'>
+	<label><input type='checkbox' name='vsel-setting-27' <?php checked( $value, 'yes' ); ?> value='yes'> <?php _e( 'Hide on page with all events.', 'very-simple-event-list' ); ?></label>
+	<?php
+}
+
+function vsel_field_callback_28() { 
+	$value = esc_attr( get_option( 'vsel-setting-28' ) );
+	?>
+	<input type='hidden' name='vsel-setting-28' value='no'>
+	<label><input type='checkbox' name='vsel-setting-28' <?php checked( $value, 'yes' ); ?> value='yes'> <?php _e( 'Hide on page with all events.', 'very-simple-event-list' ); ?></label>
 	<?php
 }
 
@@ -211,8 +265,28 @@ function vsel_field_callback_14() {
 	$value = esc_attr( get_option( 'vsel-setting-14' ) );
 	?>
 	<input type='hidden' name='vsel-setting-14' value='no'>
-	<label><input type='checkbox' name='vsel-setting-14' <?php checked( $value, 'yes' ); ?> value='yes'> <?php _e( 'Link title to the event page.', 'very-simple-event-list' ); ?></label>
+	<label><input type='checkbox' name='vsel-setting-14' <?php checked( $value, 'yes' ); ?> value='yes'> <?php _e( 'Link to the event page.', 'very-simple-event-list' ); ?></label>
 	<?php
+}
+
+function vsel_field_callback_31() {
+	$value = esc_attr( get_option( 'vsel-setting-31' ) );
+	?>
+	<input type='hidden' name='vsel-setting-31' value='no'>
+	<label><input type='checkbox' name='vsel-setting-31' <?php checked( $value, 'yes' ); ?> value='yes'> <?php _e( 'Link to the event page.', 'very-simple-event-list' ); ?></label>
+	<?php
+}
+
+function vsel_field_callback_32() {
+	$setting = esc_attr( get_option( 'vsel-setting-32' ) );
+ 	?>
+	<select id='vsel-setting-32' name='vsel-setting-32'> 
+		<option value='post-thumbnail'<?php echo ($setting == 'post-thumbnail')?'selected':''; ?>><?php _e( 'Default', 'very-simple-event-list' ); ?></option> 
+		<option value='large'<?php echo ($setting == 'large')?'selected':''; ?>><?php _e( 'Large', 'very-simple-event-list' ); ?></option> 
+		<option value='medium'<?php echo ($setting == 'medium')?'selected':''; ?>><?php _e( 'Medium', 'very-simple-event-list' ); ?></option> 
+		<option value='small'<?php echo ($setting == 'small')?'selected':''; ?>><?php _e( 'Small', 'very-simple-event-list' ); ?></option> 
+	</select> 
+	<?php 
 }
 
 function vsel_field_callback_1() {
