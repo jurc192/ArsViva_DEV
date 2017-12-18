@@ -542,3 +542,13 @@ https://stackoverflow.com/questions/21574698/image-slider-maintaining-equal-heig
 [https://wordpress.org/plugins/navz-photo-gallery/]
 
 - pogruntaj kako prikazat slike na lep način
+- preštudiraj kaj dela plugin:
+
+- function acf_photo_gallery():
+  - dobi ID objave [OK]
+  - get_post_meta(post_id=post_id, field='gallery_images', )
+  - zajebal sem - un field je ubistvu naslov "ADF fielda"
+
+- Kaj če bi dodal "masonry" v to?
+- z Flexboxom, simple in dela.
+- Dodam še modal/image view?

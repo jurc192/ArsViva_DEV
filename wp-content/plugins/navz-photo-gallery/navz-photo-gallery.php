@@ -18,7 +18,7 @@ if( ! defined( 'ABSPATH' ) ) exit;
 if( !class_exists('acf_plugin_photo_gallery') ) :
 
 class acf_plugin_photo_gallery {
-	
+
 	/*
 	*  __construct
 	*
@@ -31,29 +31,29 @@ class acf_plugin_photo_gallery {
 	*  @param	n/a
 	*  @return	n/a
 	*/
-	
+
 	function __construct() {
-		
+
 		// vars
 		$this->settings = array(
 			'version'	=> '1.6.1',
 			'url'		=> plugin_dir_url( __FILE__ ),
 			'path'		=> plugin_dir_path( __FILE__ )
 		);
-		
-		
+
+
 		// set text domain
 		// https://codex.wordpress.org/Function_Reference/load_plugin_textdomain
-		load_plugin_textdomain( 'acf-photo_gallery', false, plugin_basename( dirname( __FILE__ ) ) . '/lang' ); 
-		
-		add_action( 'admin_enqueue_scripts', array($this, 'acf_photo_gallery_sortable') );			
-		
+		load_plugin_textdomain( 'acf-photo_gallery', false, plugin_basename( dirname( __FILE__ ) ) . '/lang' );
+
+		add_action( 'admin_enqueue_scripts', array($this, 'acf_photo_gallery_sortable') );
+
 		// include field
 		add_action('acf/include_field_types', 	array($this, 'include_field_types')); // v5
 		add_action('acf/register_fields', 		array($this, 'include_field_types')); // v4
-	
+
 	}
-	
+
 	function acf_photo_gallery_sortable($hook) {
 		if ( 'post.php' == $hook ) {
 			wp_enqueue_script( 'jquery-ui-sortable', 'jquery-ui-sortable', 'jquery', '9999', true);
@@ -72,18 +72,18 @@ class acf_plugin_photo_gallery {
 	*  @param	$version (int) major ACF version. Defaults to false
 	*  @return	n/a
 	*/
-	
+
 	function include_field_types( $version = false ) {
-		
+
 		// support empty $version
 		if( !$version ) $version = 4;
-		
-		
+
+
 		// include
 		include_once('fields/acf-photo_gallery-v' . $version . '.php');
-		
+
 	}
-	
+
 }
 
 // initialize
@@ -96,10 +96,11 @@ endif;
 function acf_photo_gallery($field = null, $post_id){
 	$images = get_post_meta($post_id, $field, true);
 	$images = explode(',', $images);
-	$args = array( 'post_type' => 'attachment', 'posts_per_page' => -1, 'post__in' => $images, 'orderby' => 'post__in' ); 
+	$args = array( 'post_type' => 'attachment', 'posts_per_page' => -1, 'post__in' => $images, 'orderby' => 'post__in' );
 	$images = get_posts( $args );
 	$images = array_filter($images);
 	$array = array();
+
 	if( count($images) ):
 		foreach($images as $image):
 			$title = $image->post_title;
@@ -167,5 +168,5 @@ add_filter( 'acf_photo_gallery_image_fields', 'acf_photo_gallery_image_fields', 
 
 
 
-	
+
 ?>

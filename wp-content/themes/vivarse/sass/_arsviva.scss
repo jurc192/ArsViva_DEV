@@ -1175,6 +1175,30 @@ article.single {
   }
 }
 
+
+/* Single post gallery */
+.post-gallery {
+  margin: 0 auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+/* Post gallery image */
+.pg-img {
+  display: block;
+  float: left;
+
+  margin: 5px;
+  width: 600px;
+  height: 450px;
+  object-fit: cover;
+  object-position: center;
+}
+
+
 /*----event gallery--------*/
 .event-gallery-wrapper{
 	overflow-x: auto;
