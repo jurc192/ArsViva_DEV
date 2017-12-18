@@ -43,7 +43,6 @@ get_header('nofp'); ?>
 			<img src="<?php echo get_bloginfo('template_url').'/images/home-fotka2.jpg' ?>" title="Your browser does not support the <video> tag">
 		</video>
 		<img id="intro-napis" src="<?php echo get_bloginfo('template_url').'/images/intro-napis.png' ?>" alt="Ars viva: Na krilih priložnosti za prihodnost">
-		<!-- <img id="intro-scroll" src="<?php echo get_bloginfo('template_url').'/images/scroll-white.png' ?>" alt="Puščica navzdol"> -->
 	</section>
 
 

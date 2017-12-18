@@ -556,3 +556,4 @@ https://stackoverflow.com/questions/21574698/image-slider-maintaining-equal-heig
 
 ## MERGING BRANCHES TOGETHER
 - zmergaj post-gallery v vse branche, pusti image in video @frontpage ločen
+- ok zdej imam v branchu WIP to kar rabim: video na prvi strani in galerijo pri postih
