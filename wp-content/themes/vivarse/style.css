@@ -1013,18 +1013,19 @@ html, body {
 /*--------------------------------------------------------------
 # Landing image / video
 --------------------------------------------------------------*/
+.landing_image {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; }
+
 .landing-art {
   position: relative;
   height: 300px;
   overflow: hidden;
   white-space: nowrap; }
-  .landing-art img {
-    display: inline-block;
-    height: 100%;
-    width: 500px;
-    margin: 10px;
-    object-fit: cover;
-    object-position: center; }
 
 .photostrip {
   height: 100%; }
@@ -1057,6 +1058,7 @@ html, body {
   height: 100%;
   width: 100%;
   left: 0;
+  top: 0;
   object-fit: contain;
   object-position: center; }
 

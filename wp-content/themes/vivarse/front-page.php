@@ -38,11 +38,33 @@ get_header('nofp'); ?>
 	<main id="main" class="site-main-nofp front">
 
 	<section class="landing-art">
-		<video id="intro-video" muted loop autoplay data-keepplaying data-autoplay>
-			<source src="<?php echo get_bloginfo('template_url').'/images/Intro_exp.mp4' ?>" type="video/mp4">
-			<img src="<?php echo get_bloginfo('template_url').'/images/home-fotka2.jpg' ?>" title="Your browser does not support the <video> tag">
-		</video>
-		<img id="intro-napis" src="<?php echo get_bloginfo('template_url').'/images/intro-napis.png' ?>" alt="Ars viva: Na krilih priložnosti za prihodnost">
+		<?php
+
+			$landing_art = get_field("landing_art");
+			$quote_overlay = get_field("quote_overlay");
+
+			// If landing_art is not empty, display image. Else display video.
+			if ($landing_art) :
+				
+				?>
+
+
+				<img src="<?php echo $landing_art; ?>" class="landing_image" alt="landing image">
+				<img id="intro-napis" src="<?php echo get_bloginfo('template_url').'/images/intro-napis.png' ?>" alt="Ars viva: Na krilih priložnosti za prihodnost">
+
+			<?php else: ?>
+
+				<video id="intro-video" muted loop autoplay data-keepplaying data-autoplay>
+					<source src="<?php echo get_bloginfo('template_url').'/images/Intro_exp.mp4' ?>" type="video/mp4">
+					<img src="<?php echo get_bloginfo('template_url').'/images/home-fotka2.jpg' ?>" title="Your browser does not support the <video> tag">
+				</video>
+				<img id="intro-napis" src="<?php echo get_bloginfo('template_url').'/images/intro-napis.png' ?>" alt="Ars viva: Na krilih priložnosti za prihodnost">
+
+				<?php
+			endif;
+				?>
+
+
 	</section>
 
 

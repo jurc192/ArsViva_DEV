@@ -557,3 +557,21 @@ https://stackoverflow.com/questions/21574698/image-slider-maintaining-equal-heig
 ## MERGING BRANCHES TOGETHER
 - zmergaj post-gallery v vse branche, pusti image in video @frontpage ločen
 - ok zdej imam v branchu WIP to kar rabim: video na prvi strani in galerijo pri postih
+- [DONE]
+
+## HOW TO SHOW TWO VERSIONS?
+- Pure/whole WP multisite is too risky to do live.
+- Download whole website (html, css. js) and upload it to server
+  - git to the right branch/version
+  wget --mirror -p --html-extension --convert-links -P ~/Documents/ArsViva_stuff/test/ localhost/ArsViva_DEV/
+  - yeah
+
+
+## TODO2:
+- Add possibility of selecting/uploading cover video/image
+  - Maybe even positioning?
+- Add possiblity of adding products
+
+- Ostal pri add quote overlay checkboxu
+- Dokončaj to landing slika vs video. Premisli če se bo dalo naredit pozicioniranje
+- 
