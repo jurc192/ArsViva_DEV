@@ -519,3 +519,7 @@ Deleted remote branches, only keeping master branch!
 - Nima več smisla uporabljat fullpage plugin, naredi isto kot events- nofp
 - Kako naredit da bo layout uredu brez nofp? Kopiraj stvari iz home.php
 - Added site-main-nofp FRONT class
+
+
+## MERGING BRANCHES TOGETHER
+- zmergaj post-gallery v vse branche, pusti image in video @frontpage ločen
