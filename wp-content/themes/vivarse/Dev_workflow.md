@@ -567,7 +567,7 @@ https://stackoverflow.com/questions/21574698/image-slider-maintaining-equal-heig
   - yeah
 
 
-## TODO2:
+## TODO2 [DONE]:
 - Add possibility of selecting/uploading cover video/image
   - Maybe even positioning?
 - Add possiblity of adding products
@@ -575,3 +575,7 @@ https://stackoverflow.com/questions/21574698/image-slider-maintaining-equal-heig
 - Ostal pri add quote overlay checkboxu
 - Dokončaj to landing slika vs video. Premisli če se bo dalo naredit pozicioniranje
 - [DONE] vse razn pozicije
+
+
+## TODO3:
+- Bi se dalo naredit ponudbo, da je kot objava posebnega tipa?
