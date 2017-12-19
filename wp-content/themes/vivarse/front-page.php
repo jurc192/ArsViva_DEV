@@ -32,7 +32,8 @@ $myquery_args = array(
 
 $my_event_query = new WP_Query($myquery_args);
 
-$landing_art = get_field("landing_art");
+$banner_image_slider = acf_photo_gallery("banner_image_slider", 7) ;
+$banner_image = get_field("banner_image");
 $quote_overlay = get_field("quote_overlay");
 
 get_header('nofp'); ?>
@@ -42,7 +43,7 @@ get_header('nofp'); ?>
 
 	<section class="landing-art">
 		<!-- Using custom template-tag for readability @/inc/template-tags.php -->
-		<?php landing_video($landing_art, $quote_overlay); ?>
+		<?php landing_art($banner_image_slider, $banner_image, $quote_overlay); ?>
 	</section>
 
 
