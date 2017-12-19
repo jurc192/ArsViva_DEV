@@ -579,3 +579,6 @@ https://stackoverflow.com/questions/21574698/image-slider-maintaining-equal-heig
 
 ## TODO3:
 - Bi se dalo naredit ponudbo, da je kot objava posebnega tipa?
+  - Ja, ker smo tko že naredili PROJEKTE
+  - Already done? JA XD [DONE]
+    - NE POZABI DA MORŠ SPREMENIT LINKE IN FLUSHAT SPREMEMBE PERMALINKOV!
