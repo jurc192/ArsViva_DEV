@@ -574,4 +574,4 @@ https://stackoverflow.com/questions/21574698/image-slider-maintaining-equal-heig
 
 - Ostal pri add quote overlay checkboxu
 - Dokončaj to landing slika vs video. Premisli če se bo dalo naredit pozicioniranje
-- 
+- [DONE] vse razn pozicije

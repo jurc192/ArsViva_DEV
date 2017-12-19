@@ -10,6 +10,32 @@
 
 /*
 	JURE EDIT
+	Front-page landing art
+*/
+function landing_video($landing_art, $quote_overlay) {
+
+	// If landing_art is not empty, display image. Else display video.
+	if ($landing_art) :
+		echo "<img src='{$landing_art}' class='landing_image' alt='landing image'>";
+
+	else:
+		echo "<video id='intro-video' muted loop autoplay data-keepplaying data-autoplay>";
+		echo   "<source src='".get_bloginfo('template_url')."/images/Intro_exp.mp4' type='video/mp4'>";
+		echo   "<img src='".get_bloginfo('template_url')."/images/home-fotka2.jpg' title='Your browser does not support the <video> tag'>";
+		echo "</video>";
+
+	endif;
+
+	// If quote overlay is enabled, show it
+	if ($quote_overlay) :
+		echo "<img id='intro-napis' src='".get_bloginfo('template_url')."/images/intro-napis.png'  alt='Ars viva: Na krilih priložnosti za prihodnost'>";
+	endif;
+
+}
+
+
+/*
+	JURE EDIT
 	Custom template tag, for displaying sidebar-filter options
 */
 function vivarse_event_options() {
