@@ -80,6 +80,8 @@ get_header('nofp'); ?>
 
 	</section>
 
+	<a href="<?php echo get_site_url(); ?>/events/">Več dogodkov</a>
+
 <?php
 get_sidebar();
 get_footer('nofp');
