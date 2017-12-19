@@ -16,9 +16,9 @@ function landing_art($banner_image_slider, $banner_image, $quote_overlay) {
 
 	// Choose between banner image, banner image slider and video
 	if ($banner_image_slider) :
-		foreach($banner_image_slider as $image) {
-
+		foreach($banner_image_slider as $ndx=>$image) {
 			$img_url = $image['full_image_url'];
+
 			echo "<img src='{$img_url}' class='image_slide' alt='landing image'>";
 		}
 

@@ -582,3 +582,9 @@ https://stackoverflow.com/questions/21574698/image-slider-maintaining-equal-heig
   - Ja, ker smo tko že naredili PROJEKTE
   - Already done? JA XD [DONE]
     - NE POZABI DA MORŠ SPREMENIT LINKE IN FLUSHAT SPREMEMBE PERMALINKOV!
+
+## BANNER IMAGE SLIDER STUFF [DONE]:
+- ful kul scena [http://urbaninfluence.com/2015/05/make-a-background-image-slider-with-css-keyframes/]
+- ampak ni fleksibilno? Dinamično število slik? abllergh
+- delam svojo skripto @js/myImageSlider.js po:
+[https://www.sitepoint.com/make-a-simple-javascript-slideshow-without-jquery/]
