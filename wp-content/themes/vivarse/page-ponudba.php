@@ -10,6 +10,8 @@
 		'post_status' => 'publish',
 		'category_name' => 'ponudba',
 		'posts_per_page' => 10,
+		'orderby' => 'date',
+		'order' => 'ASC'
 	);
 
 	$my_project_query = new WP_Query($my_project_query_args);
