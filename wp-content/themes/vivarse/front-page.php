@@ -51,11 +51,16 @@ get_header('nofp'); ?>
 
 		<?php
 		/* Custom query za front page - front page POSTS */
+
+		// Line added as stackoverflow says. For pagination stuff
+		// $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
 		$my_post_query_args = array(
 			'post_type' => 'post',
 			'post_status' => 'publish',
 			'category_name' => 'front-page',
 			'posts_per_page' => 10,
+			// 'page' => $paged,
 		);
 
 		$my_post_query = new WP_Query($my_post_query_args);
@@ -66,12 +71,15 @@ get_header('nofp'); ?>
 				while( $my_post_query->have_posts() ) : $my_post_query->the_post();
 					get_template_part( 'template-parts/content', 'posts' );
 				endwhile;
+				the_posts_pagination( array('mid_size' => 5));
 
 			else:
+				// not front page
 				// echo "<h1 style='z-index: 15; position: absolute; top: 100px; left: 100px;'>NOT FIRST PAGE!</h1>";
 			endif;
 
 		else:
+			// no posts to show
 			// echo "<h1 style='z-index: 15; position: absolute; top: 200px; left: 100px;'>I DON'T HAVE ANY POSTS</h1>";
 		endif;
 

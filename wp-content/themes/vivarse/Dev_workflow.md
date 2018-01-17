@@ -588,3 +588,8 @@ https://stackoverflow.com/questions/21574698/image-slider-maintaining-equal-heig
 - ampak ni fleksibilno? Dinamično število slik? abllergh
 - delam svojo skripto @js/myImageSlider.js po:
 [https://www.sitepoint.com/make-a-simple-javascript-slideshow-without-jquery/]
+
+
+# NOT OVER YET
+## CHANGING FRONT PAGE TO BLOG
+- Moram spremenit link na dnu prve strani -> zamenjat s paginacijo (essentially isto kot dogodki stran)
